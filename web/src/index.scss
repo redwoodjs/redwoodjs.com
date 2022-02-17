@@ -1,0 +1,43 @@
+/**
+ * START --- SETUP TAILWINDCSS EDIT
+ *
+ * `yarn rw setup ui tailwindcss` placed these imports here
+ * to inject Tailwind's styles into your CSS.
+ * For more information, see: https://tailwindcss.com/docs/installation#include-tailwind-in-your-css
+ */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/**
+ * END --- SETUP TAILWINDCSS EDIT
+ */
+
+$color_bg: #FDF8F5;
+$color_accent: #BF4722;
+$color_accent2: #F3C7BA;
+$color_neutral: #1A202C;
+
+body, #redwood-app {
+  height: 100vw;
+  width: 100vw;
+  background-color: $color_bg;
+}
+
+a {
+  color: $color_accent
+}
+
+p, span {
+  color: $color_neutral
+}
+
+main {
+  max-width: 1024px;
+  @apply flex flex-col m-auto p-2;
+
+> * {
+  @apply w-full;
+}
+}
+

@@ -1,0 +1,93 @@
+@import 'src/index';
+
+.project {
+  @apply flex;
+  @apply mt-4 ml-4;
+  @apply rounded;
+  @apply md:w-64;
+  background-color: $color_accent2;
+}
+
+.project header {
+  h1 {
+    @apply p-2;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-align: center;
+    text-transform: capitalize;
+    color: $color_accent;
+  }
+}
+
+
+.project .content {
+  display: flex;
+  flex-direction: column;
+  @apply p-4;
+  font-size: .9rem;
+
+  > *:nth-child(1n+2) {
+    @apply mt-2;
+  }
+
+  a {
+    color: $color_accent;
+    text-decoration: underline;
+  }
+}
+
+.project footer {
+  display: flex;
+  flex-direction: row;
+  @apply p-2;
+}
+
+
+.project.highlight {
+  display: flex;
+  flex-direction: column;
+  @apply w-full m-auto;
+  @apply md:w-2/3 md:flex-row;
+
+  picture > img {
+    @apply w-1/2 h-full m-auto;
+  }
+
+  h2 {
+    width: 100%;
+    text-align: center;
+    color: $color_neutral;
+  }
+
+  footer {
+    padding: 0;
+  }
+}
+
+.project.showcase {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.project.external {
+  display: flex;
+  flex-direction: column;
+  min-width: 90px;
+  background-color: white;
+  border: 1px solid $color_accent2;
+  @apply p-4;
+
+  .title {
+    font-weight: 600;
+  }
+
+  .description {
+    font-size: .8rem;
+  }
+}
+
+.project.external:hover {
+  @apply shadow-2xl;
+}
