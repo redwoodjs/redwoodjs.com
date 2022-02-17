@@ -19,3 +19,13 @@ You'll need to create a `.env` file containing at least a `SESSION_SECRET` var f
 ```bash
 yarn rw g secret
 ```
+
+### Account Creation
+
+Start the dev server:
+
+```bash
+yarn rw dev
+```
+
+And then go to [http://localhost:8910/signup](http://localhost:8910/signup) to create an account.
