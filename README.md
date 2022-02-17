@@ -4,6 +4,14 @@ This repo contains the latest iteration of redwoodjs.com, redesiged for our v1.0
 
 ## Development Quick Start
 
+### Database
+
+Setup your local database and see any required data:
+
+```bash
+yarn rw prisma migrate dev
+```
+
 ### .env
 
 You'll need to create a `.env` file containing at least a `SESSION_SECRET` var for dbAuth. To generate this secret:
