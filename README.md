@@ -6,7 +6,7 @@ This repo contains the latest iteration of redwoodjs.com, redesiged for our v1.0
 
 ### Database
 
-Setup your local database and see any required data:
+Setup your local database and seed any required data:
 
 ```bash
 yarn rw prisma migrate dev
