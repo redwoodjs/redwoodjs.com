@@ -1,17 +1,16 @@
 import { Link, navigate, routes } from '@redwoodjs/router'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import {
+  FieldError,
   Form,
   Label,
-  TextField,
   PasswordField,
   Submit,
-  FieldError,
+  TextField,
 } from '@redwoodjs/forms'
 import { useAuth } from '@redwoodjs/auth'
 import { MetaTags } from '@redwoodjs/web'
 import { toast, Toaster } from '@redwoodjs/web/toast'
-import { useEffect } from 'react'
 
 const LoginPage = () => {
   const { isAuthenticated, logIn } = useAuth()

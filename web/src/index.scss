@@ -36,8 +36,8 @@ main {
   max-width: 1024px;
   @apply flex flex-col m-auto p-2;
 
-> * {
-  @apply w-full;
-}
+  > * {
+    @apply w-full;
+  }
 }
 

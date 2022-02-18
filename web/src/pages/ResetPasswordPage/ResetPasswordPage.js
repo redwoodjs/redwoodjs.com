@@ -4,11 +4,11 @@ import { navigate, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 import { toast, Toaster } from '@redwoodjs/web/toast'
 import {
+  FieldError,
   Form,
   Label,
   PasswordField,
   Submit,
-  FieldError,
 } from '@redwoodjs/forms'
 
 const ResetPasswordPage = ({ resetToken }) => {
