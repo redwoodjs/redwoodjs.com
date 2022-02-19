@@ -45,7 +45,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
 
                 <li className="">
                   <Link
-                    to={routes.home()}
+                    to={routes.examples()}
                     className="hover:text-red-800 flex items-center transition duration-150"
                   >
                     Examples
