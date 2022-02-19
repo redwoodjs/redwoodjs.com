@@ -7,6 +7,16 @@ export const showcases = () => {
   return db.showcase.findMany()
 }
 
+export const examples = ({ input }) => {
+  const type = input?.type ?? 'sample'
+
+  const isHighlight = input?.isHighlight ?? false
+
+  return db.showcase.findMany({
+    where: { type, isPublished: true, isHighlight },
+  })
+}
+
 export const showcase = ({ id }: Prisma.ShowcaseWhereUniqueInput) => {
   return db.showcase.findUnique({
     where: { id },

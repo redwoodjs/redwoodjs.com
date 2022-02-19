@@ -1,11 +1,11 @@
 import External, { ExternalProps } from 'web/src/components/Project/External'
 import Highlight from 'web/src/components/Project/Highlight'
-import Showcase, { ShowcaseProps } from 'web/src/components/Project/Showcase'
+import Standard, { StandardProps } from 'web/src/components/Project/Standard'
 import { TagProps } from 'web/src/components/Tag/Tag'
 
 export enum ProjectVariant {
   highlight = 'highlight',
-  showcase = 'showcase',
+  standard = 'standard',
   external = 'external',
 }
 
@@ -18,7 +18,7 @@ export interface ProjectProps {
   tags: Array<string & TagProps>
 }
 
-interface ProxyProps extends ProjectProps, ShowcaseProps, ExternalProps {
+interface ProxyProps extends ProjectProps, StandardProps, ExternalProps {
   variant: ProjectVariant
 }
 
@@ -29,8 +29,8 @@ const Project: React.FC<ProxyProps> = ({
   switch (variant) {
     case ProjectVariant.highlight:
       return <Highlight {...props} />
-    case ProjectVariant.showcase:
-      return <Showcase {...props} />
+    case ProjectVariant.standard:
+      return <Standard {...props} />
     default:
       return <External {...props} />
   }

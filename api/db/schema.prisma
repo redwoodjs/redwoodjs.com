@@ -25,6 +25,14 @@ enum Pronoun {
   she
 }
 
+model RW_DataMigration {
+  version    String   @id
+  name       String
+  startedAt  DateTime
+  finishedAt DateTime
+}
+
+
 model User {
   id                  Int @id @default(autoincrement())
   email               String  @unique
@@ -59,6 +67,7 @@ model Showcase {
   createdAt     DateTime @default(now())
   updatedAt     DateTime?
   isPublished   Boolean @default(false)
+  isHighlight   Boolean @default(false)
   // Data.
   type          ApplicationType
   link          String

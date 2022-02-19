@@ -1,10 +1,10 @@
 @import "src/index";
 
-section {
+.page_examples section {
   @apply p-4;
 }
 
-section:first-child {
+.page_examples section:first-child {
 
   h1 {
     width: 100%;
@@ -36,12 +36,12 @@ section:first-child {
   }
 }
 
-section h2 {
+.page_examples section h2 {
   width: 100%;
   color: $color_accent;
 }
 
-section > .content {
+.page_examples section > .content {
   flex-wrap: wrap;
   @apply flex flex-col items-stretch;
   @apply flex md:flex-row md:items-start ;

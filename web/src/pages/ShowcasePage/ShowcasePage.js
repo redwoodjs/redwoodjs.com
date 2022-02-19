@@ -1,6 +1,5 @@
 import { MetaTags } from '@redwoodjs/web'
 import Project, { ProjectVariant } from 'src/components/Project/Project'
-import './ShowcasePage.scss'
 
 const ShowcasePage = () => {
   return (

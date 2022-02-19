@@ -23,9 +23,15 @@ export const schema = gql`
     module
   }
 
+  input ExamplesInput {
+    type: String
+    isHighlight: Boolean
+  }
+
   type Query {
     showcases: [Showcase!]! @requireAuth
     showcase(id: Int!): Showcase @requireAuth
+    examples(input: ExamplesInput): [Showcase] @skipAuth
   }
 
   input CreateShowcaseInput {

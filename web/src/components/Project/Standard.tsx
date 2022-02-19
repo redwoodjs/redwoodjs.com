@@ -2,18 +2,18 @@ import { ProjectProps } from 'web/src/components/Project/Project'
 import Tag from 'web/src/components/Tag/Tag'
 import './Project.scss'
 
-export interface ShowcaseProps extends ProjectProps {
+export interface StandardProps extends ProjectProps {
   source: string
 }
 
-const Showcase: React.FC<ShowcaseProps> = ({
+const Standard: React.FC<StandardProps> = ({
   title,
   imgProps,
   description,
   tags,
   source,
 }) => (
-  <article className="project showcase">
+  <article className="project standard">
     <header>
       <h1>{title}</h1>
       {imgProps && <img alt={'Example app'} {...imgProps} />}
@@ -38,4 +38,4 @@ const Showcase: React.FC<ShowcaseProps> = ({
   </article>
 )
 
-export default Showcase
+export default Standard
