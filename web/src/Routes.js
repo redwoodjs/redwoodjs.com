@@ -9,10 +9,23 @@
 
 import { Private, Route, Router, Set } from '@redwoodjs/router'
 import AdminLayout from 'src/layouts/AdminLayout/AdminLayout'
+import MainLayout from 'src/layouts/MainLayout/MainLayout'
 
 const Routes = () => {
   return (
     <Router>
+      <Set wrap={MainLayout}>
+        <Route path="/job" page={JobPage} name="job" />
+        <Route path="/jobs" page={JobsPage} name="jobs" />
+        <Route path="/login" page={LoginPage} name="login" />
+        <Route path="/signup" page={SignupPage} name="signup" />
+        <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
+        <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
+        <Route path="/showcase" page={ShowcasePage} name="showcase" />
+        <Route path="/" page={HomePage} name="home" />
+
+        <Route notfound page={NotFoundPage} />
+      </Set>
       <Private unauthenticated={'index'}>
         <Set wrap={[AdminLayout]}>
           <Route path="/tags/new" page={AdminTagNewTagPage} name="newTag" />
@@ -32,13 +45,6 @@ const Routes = () => {
           <Route path="/medias" page={AdminMediaMediasPage} name="medias" />
         </Set>
       </Private>
-      <Route path="/" page={HomePage} name="home" />
-      <Route path="/login" page={LoginPage} name="login" />
-      <Route path="/signup" page={SignupPage} name="signup" />
-      <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
-      <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
-      <Route path="/showcase" page={ShowcasePage} name="showcase" />
-      <Route notfound page={NotFoundPage} />
     </Router>
   )
 }

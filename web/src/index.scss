@@ -18,12 +18,6 @@ $color_accent: #BF4722;
 $color_accent2: #F3C7BA;
 $color_neutral: #1A202C;
 
-body, #redwood-app {
-  height: 100vw;
-  width: 100vw;
-  background-color: $color_bg;
-}
-
 a {
   color: $color_accent
 }
@@ -32,12 +26,26 @@ p, span {
   color: $color_neutral
 }
 
-main {
-  max-width: 1024px;
-  @apply flex flex-col m-auto p-2;
+/* Material icon sizes */
+.material-icons.md-14 { font-size: 14px; }
+.material-icons.md-16 { font-size: 16px; }
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-20 { font-size: 20px; }
+.material-icons.md-22 { font-size: 22px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
 
-  > * {
-    @apply w-full;
-  }
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #682712;
+  background-image: url('/public/images/logo-outline.svg'), linear-gradient(#682712, #84331b);
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: -1
 }
-
