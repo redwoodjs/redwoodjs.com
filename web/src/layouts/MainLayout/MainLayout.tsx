@@ -1,19 +1,21 @@
+import { Link, routes } from '@redwoodjs/router'
+
 type MainLayoutProps = {
   children?: React.ReactNode
 }
 
 const MainLayout = ({ children }: MainLayoutProps) => {
   return (
-    <div className="flex-grow flex-shrink-0 flex-auto">
+    <>
       <section
-        className="bg-red-100 text-red-900"
+        className="bg-red-200 text-red-900"
         data-target="application.header"
       >
         <div className="max-w-screen-xl mx-auto px-4 lg:px-8">
-          <header className="flex items-center justify-between border-b-2 border-white py-6">
-            <a
+          <header className="flex items-center justify-between border-b-2 border-white py-4">
+            <Link
+              to={routes.home()}
               className="flex items-center text-2xl text-black font-bold tracking-tight"
-              href="/"
             >
               <img
                 src="/images/logo.svg"
@@ -21,20 +23,48 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                 data-target="application.logo"
                 alt="RedwoodJS Logo"
               />
-              <h1 className="ml-2">RedwoodJS</h1>
-            </a>
+              <h1 className="ml-2">
+                <img
+                  src="/images/wordmark.svg"
+                  className="w-36"
+                  data-target="application.logo"
+                  alt="RedwoodJS Logo"
+                />
+              </h1>
+            </Link>
             <nav className="hidden lg:block flex-1 mx-8">
               <ul className="flex items-center space-x-8 font-semibold text-sm text-red-700 ml-8">
                 <li className="">
-                  <a href="/docs" className="flex items-center">
+                  <a
+                    href="https://learn.redwoodjs.com"
+                    className="hover:text-red-800 flex items-center transition duration-150"
+                  >
                     Docs
                   </a>
                 </li>
 
                 <li className="">
+                  <Link
+                    to={routes.home()}
+                    className="hover:text-red-800 flex items-center transition duration-150"
+                  >
+                    Examples
+                  </Link>
+                </li>
+
+                <li className="">
+                  <Link
+                    to={routes.showcase()}
+                    className="hover:text-red-800 flex items-center transition duration-150"
+                  >
+                    Showcase
+                  </Link>
+                </li>
+
+                <li className="">
                   <a
                     href="https://community.redwoodjs.com/"
-                    className="flex items-center"
+                    className="hover:text-red-800 flex items-center transition duration-150"
                   >
                     Community
                   </a>
@@ -42,30 +72,37 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                 <li className="">
                   <a
                     href="https://shop.redwoodjs.com"
-                    className="flex items-center"
+                    className="hover:text-red-800 flex items-center transition duration-150"
                   >
                     Shop
                   </a>
                 </li>
                 <li className="">
-                  <a href="/news.html">News</a>
+                  <Link
+                    to={routes.jobs()}
+                    className="hover:text-red-800 flex items-center transition duration-150"
+                  >
+                    Jobs
+                  </Link>
                 </li>
                 <li className="">
-                  <a href="/news.html">Jobs</a>
-                </li>
-                <li className="">
-                  <a href="/roadmap.html">Roadmap</a>
+                  <a
+                    href="/roadmap.html"
+                    className="hover:text-red-800 flex items-center transition duration-150"
+                  >
+                    Roadmap
+                  </a>
                 </li>
               </ul>
             </nav>
             <div className="flex items-center">
-              <div className="text-red-700 font-mono font-semibold mr-8">
+              <div className="mr-8">
                 <a
-                  className="hover:underline"
+                  className="rounded-full px-2 py-1 bg-red-500 hover:bg-red-600 text-red-100 text-sm font-mono font-medium transition duration-150"
                   href="https://github.com/redwoodjs/redwood/releases"
                   title="Go to Redwood's Releases"
                 >
-                  @@version
+                  v1.0
                 </a>
               </div>
               <div
@@ -208,7 +245,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
       <footer className="p-6 bg-red-100 text-red-700 text-sm">
         Copyright &copy;{new Date().getFullYear()} Tom Preston-Werner
       </footer>
-    </div>
+    </>
   )
 }
 
