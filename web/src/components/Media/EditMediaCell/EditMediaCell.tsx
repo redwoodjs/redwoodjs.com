@@ -10,7 +10,7 @@ export const QUERY = gql`
   query EditMediaById($id: Int!) {
     media: media(id: $id) {
       id
-      url
+      src
       type
     }
   }
@@ -19,7 +19,7 @@ const UPDATE_MEDIA_MUTATION = gql`
   mutation UpdateMediaMutation($id: Int!, $input: UpdateMediaInput!) {
     updateMedia(id: $id, input: $input) {
       id
-      url
+      src
       type
     }
   }

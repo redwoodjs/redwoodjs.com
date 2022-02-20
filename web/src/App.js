@@ -8,6 +8,7 @@ import Routes from 'src/Routes'
 
 import './scaffold.css'
 import './index.scss'
+import './i18n'
 
 const App = () => (
   <FatalErrorBoundary page={FatalErrorPage}>

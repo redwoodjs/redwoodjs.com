@@ -78,7 +78,7 @@ const Media = ({ media }) => {
             </tr>
             <tr>
               <th>Url</th>
-              <td>{media.url}</td>
+              <td>{media.src}</td>
             </tr>
             <tr>
               <th>Type</th>

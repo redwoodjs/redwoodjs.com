@@ -7,7 +7,7 @@ export const QUERY = gql`
   query FindMediaById($id: Int!) {
     media: media(id: $id) {
       id
-      url
+      src
       type
     }
   }

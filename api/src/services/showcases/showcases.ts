@@ -10,10 +10,12 @@ export const showcases = () => {
 export const examples = ({ input }) => {
   const type = input?.type ?? 'sample'
 
-  const isHighlight = input?.isHighlight ?? false
-
   return db.showcase.findMany({
-    where: { type, isPublished: true, isHighlight },
+    where: {
+      type,
+      isPublished: true,
+      tags: { some: { label: input.tag } },
+    },
   })
 }
 

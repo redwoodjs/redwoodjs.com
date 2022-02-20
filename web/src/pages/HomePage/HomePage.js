@@ -1,50 +1,28 @@
-import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
+import Hero  from 'src/components/Hero/Hero'
+import { useTranslation, Trans } from 'react-i18next'
 
 const HomePage = () => {
+  const { t } = useTranslation()
+
   return (
     <>
       <MetaTags title="Home" description="The fullstack JS framework for startups" />
 
       {/* Hero */}
 
-      <div className="hero">
-        <div className="lg:flex lg:items-center max-w-screen-xl mx-auto px-8 py-12 md:py-32">
-          <div className="hidden lg:block lg:w-1/3 pl-4">
-            <img
-              src="/images/diecut.svg"
-              alt="Redwood Logo"
-              className="w-4/5 mx-auto"
-            />
-          </div>
-          <div className="w-full lg:w-2/3 lg:pr-4">
-            <h2 className="text-3xl md:text-6xl text-center lg:text-left text-white font-semibold tracking-tight leading-10">
-              The JS App Framework<br/>for Startups
-            </h2>
-            <p className="max-w-2xl mx-auto lg:mx-0 text-center font-light lg:text-left md:text-lg xl:text-xl mt-6 xl:leading-8 text-white">
-              <span className="text-red-300">Ship today with architecture for tomorrow.</span> Redwood includes deploy support for Netlify, Vercel, Render.com, AWS and more. Deploy serverless or serverfull and scale from zero servers to a thousand. Built on <span className="text-red-300">React</span>, <span className="text-red-300">GraphQL</span>, and <span className="text-red-300">Prisma</span>, with full <span className="text-red-300">TypeScript</span> support, and <span className="text-red-300">Webpack/Babel</span> ready to go with zero config. Redwood gives you the workflow you love, but with simple conventions and helpers to make your experience even better.
-            </p>
-            <ul className="flex flex-wrap mt-8 justify-center lg:justify-start lg:-ml-2">
-              <li className="px-2 whitespace-no-wrap">
-                <a
-                  href="https://learn.redwoodjs.com/docs/tutorial/welcome-to-redwood"
-                  className="block mt-2 bg-red-700 text-white px-4 py-3 font-semibold rounded hover:bg-red-600 transition duration-200 text-lg"
-                >
-                  Start the Tutorial
-                </a>
-              </li>
-              <li className="px-4 whitespace-no-wrap">
-                <a
-                  href="/docs"
-                  className="block mt-2 bg-white text-red-700 px-4 py-3 font-semibold rounded hover:bg-red-300 hover:text-red-800 transition duration-200 text-lg"
-                >
-                  Read the Docs
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <Hero
+        imgProps={{
+          src: '/images/diecut.svg',
+          alt: 'Redwood Logo'
+        }}
+        title={<Trans i18nKey={'HomePage.hero.title'} components={{ break: <br/> }}/>}
+        text={<Trans i18nKey={'HomePage.hero.text'} components={{ red: <span className="text-red-300" />}}/>}
+        links={[
+          { pointer: t('HomePage.hero.links.tutorial'), href: 'https://learn.redwoodjs.com/docs/tutorial/welcome-to-redwood'},
+          { pointer: t('HomePage.hero.links.docs'), href: 'https://redwoodjs.com/docs'},
+        ]}
+      />
 
       {/* Testimonials */}
 

@@ -1,14 +1,12 @@
 @import 'src/index';
 
-.project {
-  @apply flex;
-  @apply mt-4 ml-4;
-  @apply rounded;
-  @apply md:w-64;
+.card {
+  @apply flex mt-4 rounded;
+  @apply md:w-64  md:ml-4;
   background-color: $color_accent2;
 }
 
-.project header {
+.card header {
   h1 {
     @apply p-2;
     width: 100%;
@@ -21,10 +19,10 @@
 }
 
 
-.project .content {
+.card .content {
   display: flex;
   flex-direction: column;
-  @apply p-4;
+  @apply py-8 px-4;
   font-size: .9rem;
 
   > *:nth-child(1n+2) {
@@ -37,14 +35,14 @@
   }
 }
 
-.project footer {
+.card footer {
   display: flex;
   flex-direction: row;
   @apply p-2;
 }
 
 
-.project.highlight {
+.card.highlight {
   display: flex;
   flex-direction: column;
   @apply w-full m-auto;
@@ -65,13 +63,13 @@
   }
 }
 
-.project.standard {
+.card.standard {
   display: flex;
   flex-direction: column;
 }
 
 
-.project.external {
+.card.external {
   display: flex;
   flex-direction: column;
   min-width: 90px;
@@ -88,6 +86,6 @@
   }
 }
 
-.project.external:hover {
+.card.external:hover {
   @apply shadow-2xl;
 }

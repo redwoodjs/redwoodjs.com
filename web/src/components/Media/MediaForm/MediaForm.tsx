@@ -24,7 +24,7 @@ const MediaForm = (props) => {
         />
 
         <Label
-          name="url"
+          name="src"
           className="rw-label"
           errorClassName="rw-label rw-label-error"
         >
@@ -32,14 +32,14 @@ const MediaForm = (props) => {
         </Label>
 
         <TextField
-          name="url"
-          defaultValue={props.media?.url}
+          name="src"
+          defaultValue={props.media?.src}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
         />
 
-        <FieldError name="url" className="rw-field-error" />
+        <FieldError name="src" className="rw-field-error" />
 
         <Label
           name="type"

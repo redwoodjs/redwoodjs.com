@@ -1,0 +1,29 @@
+{
+  "Welcome to RedwoodJS": "Welcome to RedwoodJS",
+  "info": "This is your English translation file",
+  "see": "https://www.i18next.com/translation-function/essentials",
+  "ExamplesPage": {
+    "title": "Build with RedwoodJS",
+    "canon": {
+      "title": "Canon examples",
+      "description": "Those community driven examples will let you see how creative you\n            can be with Redwood and get the most out of many situations"
+    },
+    "community": {
+      "title": "Community examples"
+    }
+  },
+  "HomePage": {
+    "title": "Home Page",
+    "info": "Find me in",
+    "route": "My default route is named",
+    "link": "link to me with",
+    "hero": {
+      "title": "The JS App Framework<break />for Startups",
+      "text": "<red>Ship today with architecture for tomorrow.</red> Redwood includes deploy support for Netlify, Vercel, Render.com, AWS and more. Deploy serverless or serverfull and scale from zero servers to a thousand. Built on <red>React</red>, <red>GraphQL</red>, and <red>Prisma</red>, with full <red>TypeScript</red> support, and <red>Webpack/Babel</red> ready to go with zero config. Redwood gives you the workflow you love, but with simple conventions and helpers to make your experience even better.",
+      "links": {
+        "docs": "Read the Docs",
+        "tutorial": "Start the Tutorial"
+      }
+    }
+  }
+}

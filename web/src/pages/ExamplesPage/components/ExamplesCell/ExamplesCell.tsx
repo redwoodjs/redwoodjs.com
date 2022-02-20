@@ -1,14 +1,14 @@
-import Project, { ProjectVariant } from 'src/components/Project/Project'
+import Card, { CardVariant } from 'src/components/Card/Card'
 import { ApplicationType, FindExamples } from 'types/graphql'
 
 interface SuccessProps extends FindExamples {
-  isHighlight?: boolean
+  tag?: string
   type?: ApplicationType
 }
 
 export const QUERY = gql`
-  query FindExamples($type: String, $isHighlight: Boolean) {
-    examples(input: { type: $type, isHighlight: $isHighlight }) {
+  query FindExamples($type: String, $tag: String) {
+    examples(input: { type: $type, tag: $tag }) {
       id
       type
       link
@@ -18,18 +18,28 @@ export const QUERY = gql`
       source
       description
       productHunt
+      media {
+        id
+        src
+      }
+      tags {
+        id
+        label
+      }
     }
   }
 `
 
-export const Success: React.FC<SuccessProps> = ({ examples, isHighlight }) => (
+export const Success: React.FC<SuccessProps> = ({
+  examples,
+  variant = CardVariant.standard,
+}) => (
   <>
     {examples.map((example, index) => (
-      <Project
+      <Card
         key={`Example #${index} - #${example.id}`}
-        variant={
-          isHighlight ? ProjectVariant.highlight : ProjectVariant.standard
-        }
+        variant={variant}
+        imgProps={{ src: example?.media?.src }}
         {...example}
       />
     ))}

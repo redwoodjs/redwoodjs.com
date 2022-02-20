@@ -1,45 +1,37 @@
-import Project from 'src/components/Project/Project'
+import { useTranslation } from 'react-i18next'
+import { CardVariant } from 'src/components/Card/Card'
 import ExamplesCell from './components/ExamplesCell/ExamplesCell'
 
 import './ExamplesPage.scss'
 
 const ExamplesPage = () => {
+  const { t } = useTranslation()
+
   return (
     <div className={'page_examples'}>
       <section>
-        <h1>Build with RedwoodJS</h1>
+        <h1>{t('ExamplesPage.title')}</h1>
         <div className={'content'}>
-          <ExamplesCell isHighlight />
+          <ExamplesCell tag={'highlight'} variant={CardVariant.highlight} />
+        </div>
+      </section>
+      <section className={'canon'}>
+        <header>
+          <h2>{t('ExamplesPage.canon.title')}</h2>
+          <p>{t('ExamplesPage.canon.description')}</p>
+        </header>
+        <div className={'content'}>
+          <ExamplesCell type={'sample'} tag={'canon'} />
         </div>
       </section>
       <section className={'community'}>
-        <header>
-          <h2>Community</h2>
-          <p>
-            Those community driven examples will let you see how creative you
-            can be with Redwood
-          </p>
-        </header>
-        <div className={'content'}>
-          <ExamplesCell type={'sample'} />
-        </div>
-      </section>
-      <section>
-        <h1>Certified community examples</h1>
+        <h1>{t('ExamplesPage.community.title')}</h1>
         <div className="content">
-          <Project
-            label={'AWS Deploy'}
-            description={'Blue-Green deploy w/ Redwood & AWS'}
-            link={'https://github.com/redwoodjs/redwood/releases/tag/v0.41.0'}
+          <ExamplesCell
+            type="sample"
+            tag={'community'}
+            variant={CardVariant.external}
           />
-          {[...Array(8)].map((x) => (
-            <Project
-              key={`CCE - ${x}`}
-              label={'And so on'}
-              description={'Blue-Green deploy w/ Redwood & AWS'}
-              link={'https://github.com/redwoodjs/redwood/releases/tag/v0.41.0'}
-            />
-          ))}
         </div>
       </section>
     </div>

@@ -54,7 +54,7 @@ model Media {
   // Meta.
   id    Int @id @default(autoincrement())
   // Data.
-  url   String
+  src   String
   type  MediaType
   // Relations.
   author    Author?

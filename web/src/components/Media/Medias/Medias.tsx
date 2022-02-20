@@ -89,7 +89,7 @@ const MediasList = ({ medias }) => {
           {medias.map((media) => (
             <tr key={media.id}>
               <td>{truncate(media.id)}</td>
-              <td>{truncate(media.url)}</td>
+              <td>{truncate(media.src)}</td>
               <td>{formatEnum(media.type)}</td>
               <td>
                 <nav className="rw-table-actions">

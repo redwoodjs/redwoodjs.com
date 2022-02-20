@@ -1,6 +1,6 @@
 import type { CellFailureProps, CellSuccessProps } from '@redwoodjs/web'
 
-import Tag from 'src/components/Tag/Tag'
+import Display from 'src/components/Tag/Tag'
 import type { FindTagById } from 'types/graphql'
 
 export const QUERY = gql`
@@ -21,5 +21,5 @@ export const Failure = ({ error }: CellFailureProps) => (
 )
 
 export const Success = ({ tag }: CellSuccessProps<FindTagById>) => {
-  return <Tag tag={tag} />
+  return <Display tag={tag} />
 }

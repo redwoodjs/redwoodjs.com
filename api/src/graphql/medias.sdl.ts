@@ -1,7 +1,7 @@
 export const schema = gql`
   type Media {
     id: Int!
-    url: String!
+    src: String!
     type: MediaType!
     author: Author
     showcase: Showcase

@@ -8,7 +8,7 @@ export const QUERY = gql`
   query FindMedias {
     medias {
       id
-      url
+      src
       type
     }
   }

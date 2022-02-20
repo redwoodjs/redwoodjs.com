@@ -25,7 +25,7 @@ export const schema = gql`
 
   input ExamplesInput {
     type: String
-    isHighlight: Boolean
+    tag: String
   }
 
   type Query {

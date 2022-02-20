@@ -21,19 +21,23 @@
     flex-direction: column;
   }
 
-  .project {
+  .card {
     background-color: $color_bg;
     @apply mt-4;
   }
 
-  .project.highlight:nth-child(2n+2) {
-    flex-direction: row-reverse;
+  .card.highlight:nth-child(2n+2) {
+    @apply md:flex-row-reverse;
     background-color: $color_neutral;
 
     p, h2 {
       color: white;
     }
   }
+}
+
+.page_examples section:nth-child(1n+2) {
+  margin-top: 2rem;
 }
 
 .page_examples section h2 {
