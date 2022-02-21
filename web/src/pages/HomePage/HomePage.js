@@ -93,7 +93,7 @@ const HomePage = () => {
 
         <div className="md:w-1/3 mt-8 md:mt-0">
           <header className="text-center">
-            <a href="/stickers.html" className="hover:underline text-red-700">
+            <a href="/stickers.html" className="hover:underline text-red-700 no-underline">
               <h2 className="text-red-700 text-2xl font-semibold tracking-tight">
                 Get Some Swag
               </h2>
@@ -104,7 +104,7 @@ const HomePage = () => {
           </header>
           <a
             href="https://shop.redwoodjs.com"
-            className="block mt-4 text-center text-2xl tracking-tight text-red-100 bg-red-700 hover:bg-red-600 transition duration-200 py-3 rounded"
+            className="mt-4 button"
           >
             The Redwood Shop &rarr;
           </a>
@@ -112,9 +112,9 @@ const HomePage = () => {
 
         <div className="md:w-1/3 mt-8 md:mt-0">
           <header className="text-center">
-            <a href="/stickers.html" className="hover:underline text-red-700">
+            <a href="/stickers.html" className="hover:underline text-red-700 no-underline">
               <h2 className="text-red-700 text-2xl font-semibold tracking-tight">
-                Get Free Stickers
+                Get Stickers
               </h2>
             </a>
             <p className="text-sm mt-1">
@@ -148,7 +148,7 @@ const HomePage = () => {
           <div className="flex flex-col md:flex-row lg:flex-col justify-between lg:w-1/3 text-center">
             <img src="/images/icon-edge.svg" className="block w-40 mx-auto" />
             <div className="ml-0 md:ml-8 lg:ml-0 text-center md:text-left lg:text-center w-full">
-              <h2 className="text-2xl font-bold mt-2 py-2 bg-red-800 text-red-200 tracking-tight rounded">
+              <h2 className="text-2xl font-semibold mt-2 py-2 bg-red-800 text-red-200 tracking-tight rounded">
                 Edge–ready
               </h2>
               <p className="lg:mt-4 px-2 text-red-800">
@@ -164,7 +164,7 @@ const HomePage = () => {
           <div className="flex flex-col md:flex-row lg:flex-col justify-between lg:w-1/3 text-center mt-8 md:mt-4 lg:mt-0">
             <img src="/images/icon-organization.svg" className="block w-40 mx-auto" />
             <div className="ml-0 md:ml-8 lg:ml-0 text-center md:text-left lg:text-center w-full">
-              <h2 className="text-2xl font-bold mt-2 py-2 bg-red-700 text-red-200 tracking-tight rounded">
+              <h2 className="text-2xl font-semibold mt-2 py-2 bg-red-700 text-red-200 tracking-tight rounded">
                 Code Organization
               </h2>
               <p className="lg:mt-4 px-2 text-red-800">
@@ -178,7 +178,7 @@ const HomePage = () => {
           <div className="flex flex-col md:flex-row lg:flex-col justify-between lg:w-1/3 text-center mt-8 md:mt-4 lg:mt-0">
             <img src="/images/icon-code.svg" className="block w-40 mx-auto" />
             <div className="ml-0 md:ml-8 lg:ml-0 text-center md:text-left lg:text-center w-full">
-              <h2 className="text-2xl font-bold mt-2 py-2 bg-red-600 text-red-200 tracking-tight rounded">
+              <h2 className="text-2xl font-semibold mt-2 py-2 bg-red-600 text-red-200 tracking-tight rounded">
                 Developer Experience
               </h2>
               <p className="lg:mt-4 px-2 text-red-800">
@@ -196,7 +196,7 @@ const HomePage = () => {
 
       <section className="md:flex mt-12 pt-12 max-w-screen-lg mx-auto">
         <div className="md:w-2/5 pr-4">
-          <h3 className="text-2xl text-red-700 font-bold tracking-tight">
+          <h3 className="text-2xl text-red-700 font-semibold tracking-tight">
             How it's Organized
           </h3>
           <p className="my-3">
@@ -263,7 +263,7 @@ const Admin = () => {
         </div>
 
         <div className="md:w-2/5 pl-4">
-          <h3 className="text-2xl text-red-700 font-bold tracking-tight">
+          <h3 className="text-2xl text-red-700 font-semibold tracking-tight">
             Routing
           </h3>
           <p className="my-3">
@@ -287,7 +287,7 @@ const Admin = () => {
 
       <section className="md:flex mt-24 max-w-screen-lg mx-auto">
         <div className="md:w-2/5 pr-4 text-right">
-          <h3 className="text-2xl text-red-700 font-bold tracking-tight">Cells</h3>
+          <h3 className="text-2xl text-red-700 font-semibold tracking-tight">Cells</h3>
           <p className="my-3">
             The sequence of retrieving data from an API, showing a loading
             placeholder, and then displaying the result is so common that
@@ -386,7 +386,7 @@ export const Success = ({ users }) => {
           </pre>
         </div>
         <div className="md:w-2/5 pl-4">
-          <h3 className="text-2xl text-red-700 font-bold tracking-tight">
+          <h3 className="text-2xl text-red-700 font-semibold tracking-tight">
             Services
           </h3>
           <p className="my-3">
@@ -416,7 +416,7 @@ export const Success = ({ users }) => {
 
       <section className="md:flex mt-24 max-w-screen-lg mx-auto">
         <div className="md:w-2/5 pr-4 text-right">
-          <h3 className="text-2xl text-red-700 font-bold tracking-tight">
+          <h3 className="text-2xl text-red-700 font-semibold tracking-tight">
             CLI Tools
           </h3>
           <p className="my-3">
@@ -499,7 +499,7 @@ export const Comment = () => {
           </pre>
         </div>
         <div className="md:w-2/5 pl-4 text">
-          <h3 className="text-2xl text-red-700 font-bold tracking-tight">Forms</h3>
+          <h3 className="text-2xl text-red-700 font-semibold tracking-tight">Forms</h3>
           <p className="my-2">
             Working with forms is notoriously annoying in React apps. Redwood
             removes the complexity and gives you the freedom to work with

@@ -37,7 +37,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                 <li className="">
                   <a
                     href="https://learn.redwoodjs.com"
-                    className="hover:text-red-800 flex items-center transition duration-150"
+                    className="hover:text-red-800 flex items-center transition duration-150 no-underline hover:underline"
                   >
                     Docs
                   </a>
@@ -46,7 +46,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                 <li className="">
                   <Link
                     to={routes.examples()}
-                    className="hover:text-red-800 flex items-center transition duration-150"
+                    className="hover:text-red-800 flex items-center transition duration-150 no-underline hover:underline"
                   >
                     Examples
                   </Link>
@@ -55,7 +55,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                 <li className="">
                   <Link
                     to={routes.showcase()}
-                    className="hover:text-red-800 flex items-center transition duration-150"
+                    className="hover:text-red-800 flex items-center transition duration-150 no-underline hover:underline"
                   >
                     Showcase
                   </Link>
@@ -64,7 +64,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                 <li className="">
                   <a
                     href="https://community.redwoodjs.com/"
-                    className="hover:text-red-800 flex items-center transition duration-150"
+                    className="hover:text-red-800 flex items-center transition duration-150 no-underline hover:underline"
                   >
                     Community
                   </a>
@@ -72,7 +72,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                 <li className="">
                   <a
                     href="https://shop.redwoodjs.com"
-                    className="hover:text-red-800 flex items-center transition duration-150"
+                    className="hover:text-red-800 flex items-center transition duration-150 no-underline hover:underline"
                   >
                     Shop
                   </a>
@@ -80,7 +80,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                 <li className="">
                   <Link
                     to={routes.jobs()}
-                    className="hover:text-red-800 flex items-center transition duration-150"
+                    className="hover:text-red-800 flex items-center transition duration-150 no-underline hover:underline"
                   >
                     Jobs
                   </Link>
@@ -88,7 +88,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                 <li className="">
                   <a
                     href="/roadmap.html"
-                    className="hover:text-red-800 flex items-center transition duration-150"
+                    className="hover:text-red-800 flex items-center transition duration-150 no-underline hover:underline"
                   >
                     Roadmap
                   </a>
