@@ -19,8 +19,8 @@ const HomePage = () => {
         title={<Trans i18nKey={'HomePage.hero.title'} components={{ break: <br/> }}/>}
         text={<Trans i18nKey={'HomePage.hero.text'} components={{ red: <span className="text-red-300" />}}/>}
         links={[
-          { pointer: t('HomePage.hero.links.tutorial'), href: 'https://learn.redwoodjs.com/docs/tutorial/welcome-to-redwood', className: "bg-red-700 text-white"},
-          { pointer: t('HomePage.hero.links.docs'), href: 'https://redwoodjs.com/docs', className: "bg-white text-red-700"},
+          { pointer: t('HomePage.hero.links.tutorial'), href: 'https://learn.redwoodjs.com/docs/tutorial/welcome-to-redwood', className: "button"},
+          { pointer: t('HomePage.hero.links.docs'), href: 'https://redwoodjs.com/docs', className: "button-invert"},
         ]}
       />
 
@@ -524,7 +524,7 @@ export const Comment = () => {
         <div className="flex justify-center">
           <a
             href="https://learn.redwoodjs.com/docs/tutorial/welcome-to-redwood"
-            className="block mt-8 bg-red-700 text-white px-4 py-3 font-semibold rounded-lg hover:bg-red-600"
+            className="mt-6 button no-underline"
           >
             Start the Tutorial
           </a>

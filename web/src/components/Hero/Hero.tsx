@@ -42,10 +42,7 @@ export const Hero: React.FC<HeroProps> = ({ imgProps, links, text, title }) => {
                   key={`Hero - links - ${link.href}`}
                   className="px-2 whitespace-no-wrap"
                 >
-                  <a
-                    href={link.href}
-                    className={`${link.className} block mt-2  px-4 py-3 font-semibold rounded hover:bg-red-600 transition duration-200 text-lg`}
-                  >
+                  <a href={link.href} className={link.className}>
                     {link.pointer}
                   </a>
                 </li>

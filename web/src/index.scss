@@ -7,12 +7,24 @@ $color_accent: #BF4722;
 $color_accent2: #F3C7BA;
 $color_neutral: #1A202C;
 
-a {
-  color: $color_accent
+@layer base {
+  a {
+    @apply text-red-800 underline;
+  }
+
+  strong {
+    @apply font-semibold;
+  }
 }
 
-p, span {
-  color: $color_neutral
+@layer components {
+  .button {
+    @apply block px-4 py-3 font-semibold rounded bg-red-700 text-white hover:bg-red-600 transition duration-200 text-lg no-underline;
+  }
+
+  .button-invert {
+    @apply button bg-white text-red-700 hover:bg-red-300 hover:text-red-800;
+  }
 }
 
 /* Material icon sizes */
