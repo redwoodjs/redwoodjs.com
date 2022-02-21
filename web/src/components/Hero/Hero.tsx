@@ -1,6 +1,7 @@
 interface HeroLink {
   href: string
   pointer: string
+  className: string
 }
 
 interface HeroProps {
@@ -12,7 +13,15 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ imgProps, links, text, title }) => {
   return (
-    <div className="hero">
+    <div
+      className="bg-red-800"
+      style={{
+        backgroundImage:
+          "url('/images/logo-outline.svg'), linear-gradient(#682712, #84331b)",
+        backgroundSize: 'cover',
+        backgroundPosition: '50% 50%',
+      }}
+    >
       <div className="lg:flex lg:items-center max-w-screen-xl mx-auto px-8 py-12 md:py-32">
         {imgProps?.src && (
           <div className="hidden lg:block lg:w-1/3 pl-4">
@@ -35,7 +44,7 @@ export const Hero: React.FC<HeroProps> = ({ imgProps, links, text, title }) => {
                 >
                   <a
                     href={link.href}
-                    className="block mt-2 bg-red-700 text-white px-4 py-3 font-semibold rounded hover:bg-red-600 transition duration-200 text-lg"
+                    className={`${link.className} block mt-2  px-4 py-3 font-semibold rounded hover:bg-red-600 transition duration-200 text-lg`}
                   >
                     {link.pointer}
                   </a>

@@ -1,17 +1,6 @@
-/**
- * START --- SETUP TAILWINDCSS EDIT
- *
- * `yarn rw setup ui tailwindcss` placed these imports here
- * to inject Tailwind's styles into your CSS.
- * For more information, see: https://tailwindcss.com/docs/installation#include-tailwind-in-your-css
- */
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-
-/**
- * END --- SETUP TAILWINDCSS EDIT
- */
 
 $color_bg: #FDF8F5;
 $color_accent: #BF4722;
@@ -35,17 +24,3 @@ p, span {
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #682712;
-  background-image: url('/public/images/logo-outline.svg'), linear-gradient(#682712, #84331b);
-  background-size: cover;
-  background-position: 50% 50%;
-  z-index: -1
-}

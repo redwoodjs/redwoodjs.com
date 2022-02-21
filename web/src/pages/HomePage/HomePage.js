@@ -19,8 +19,8 @@ const HomePage = () => {
         title={<Trans i18nKey={'HomePage.hero.title'} components={{ break: <br/> }}/>}
         text={<Trans i18nKey={'HomePage.hero.text'} components={{ red: <span className="text-red-300" />}}/>}
         links={[
-          { pointer: t('HomePage.hero.links.tutorial'), href: 'https://learn.redwoodjs.com/docs/tutorial/welcome-to-redwood'},
-          { pointer: t('HomePage.hero.links.docs'), href: 'https://redwoodjs.com/docs'},
+          { pointer: t('HomePage.hero.links.tutorial'), href: 'https://learn.redwoodjs.com/docs/tutorial/welcome-to-redwood', className: "bg-red-700 text-white"},
+          { pointer: t('HomePage.hero.links.docs'), href: 'https://redwoodjs.com/docs', className: "bg-white text-red-700"},
         ]}
       />
 
@@ -228,9 +228,9 @@ const HomePage = () => {
       </section>
 
       <div className="flex w-36 mx-auto">
-        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" />
-        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" />
-        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" />
+        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" alt="divider" />
+        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" alt="divider" />
+        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" alt="divider" />
       </div>
 
       <section className="md:flex mt-24 max-w-screen-lg mx-auto">
@@ -280,9 +280,9 @@ const Admin = () => {
       </section>
 
       <div className="flex w-36 mx-auto">
-        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" />
-        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" />
-        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" />
+        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" alt="divider" />
+        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" alt="divider" />
+        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" alt="divider" />
       </div>
 
       <section className="md:flex mt-24 max-w-screen-lg mx-auto">
@@ -333,9 +333,9 @@ export const Success = ({ users }) => {
       </section>
 
       <div className="flex w-36 mx-auto">
-        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" />
-        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" />
-        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" />
+        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" alt="divider" />
+        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" alt="divider" />
+        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" alt="divider" />
       </div>
 
       <section className="md:flex mt-24 max-w-screen-lg mx-auto">
@@ -409,9 +409,9 @@ export const Success = ({ users }) => {
       </section>
 
       <div className="flex w-36 mx-auto">
-        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" />
-        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" />
-        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" />
+        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" alt="divider" />
+        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" alt="divider" />
+        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" alt="divider" />
       </div>
 
       <section className="md:flex mt-24 max-w-screen-lg mx-auto">
@@ -464,9 +464,9 @@ $ yarn rw setup deploy netlify`}
       </section>
 
       <div className="flex w-36 mx-auto">
-        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" />
-        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" />
-        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" />
+        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" alt="divider" />
+        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" alt="divider" />
+        <img src="/images/logo.svg" className="mt-24 w-8 mx-auto" alt="divider" />
       </div>
 
       <section className="md:flex mt-24 max-w-screen-lg mx-auto">
@@ -511,9 +511,15 @@ export const Comment = () => {
         </div>
       </section>
 
-      <section className="hero mt-12 py-36 text-center">
+      <section className="mt-12 py-36 text-center bg-red-800"
+      style={{
+        backgroundImage:
+          "url('/images/logo-outline.svg'), linear-gradient(#682712, #84331b)",
+        backgroundSize: 'cover',
+        backgroundPosition: '50% 50%',
+      }}>
         <p className="text-white text-3xl font-light tracking-tight">
-          Ready for Redwood?
+          Ready to start learning RedwoodJS?
         </p>
         <div className="flex justify-center">
           <a
