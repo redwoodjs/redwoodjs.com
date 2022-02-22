@@ -25,6 +25,10 @@ module.exports = {
           900: '#341309',
         },
       },
+      lineHeight: {
+        11: '2.75rem',
+        12: '3rem',
+      },
     },
   },
   plugins: [],

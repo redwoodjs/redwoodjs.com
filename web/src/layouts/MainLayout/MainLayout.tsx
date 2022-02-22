@@ -8,11 +8,11 @@ const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <>
       <section
-        className="bg-red-200 text-red-900"
+        className="bg-red-100 text-red-900 border-b border-red-300"
         data-target="application.header"
       >
         <div className="max-w-screen-xl mx-auto px-4 lg:px-8">
-          <header className="flex items-center justify-between border-b-2 border-white py-4">
+          <header className="flex items-center justify-between py-4">
             <Link
               to={routes.home()}
               className="flex items-center text-2xl text-black font-bold tracking-tight"
@@ -240,9 +240,9 @@ const MainLayout = ({ children }: MainLayoutProps) => {
         </div>
       </section>
 
-      <main className="flex-1 w-full">{children}</main>
+      <main className="flex-1 w-full bg-red-100 pb-12">{children}</main>
 
-      <footer className="p-6 bg-red-100 text-red-700 text-sm">
+      <footer className="p-6 bg-red-100 text-red-700 text-sm border-t border-red-300">
         Copyright &copy;{new Date().getFullYear()} Tom Preston-Werner
       </footer>
     </>

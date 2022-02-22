@@ -20,8 +20,8 @@ const JobsPage = () => {
           </p>
         </header>
 
-        <div className="border rounded-lg mt-12">
-          <table className="w-full">
+        <div className="border border-red-200 rounded-lg mt-12">
+          <table className="w-full bg-white rounded-lg">
             <tbody>
               <tr className="hover:bg-red-100 cursor-pointer">
                 <td className="py-4 px-8">Snaplet</td>
@@ -36,7 +36,7 @@ const JobsPage = () => {
                 </td>
                 <td className="py-4 px-8">Remote</td>
               </tr>
-              <tr className="border-t hover:bg-red-100 cursor-pointer">
+              <tr className="border-t border-red-200 hover:bg-red-100 cursor-pointer">
                 <td className="py-4 px-8">Everfund</td>
                 <td className="py-4 px-8">
                   <strong className="font-semibold text-red-800">
@@ -61,15 +61,15 @@ const JobsPage = () => {
             <span className="">Developers</span>
           </h1>
           <p className="mt-1 text-gray-800">
-            Experience RedwoodJS devs looking for work
+            Experienced RedwoodJS devs looking for their next role
           </p>
         </header>
 
-        <div className="border rounded-lg mt-12">
-          <table className="w-full">
+        <div className="border border-red-200 rounded-lg mt-12">
+          <table className="w-full bg-white rounded-lg">
             <tbody>
               <tr className="hover:bg-red-100 cursor-pointer">
-                <td className="py-4 px-8">Snaplet</td>
+                <td className="py-4 px-8 whitespace-nowrap">Rob Cameron</td>
                 <td className="py-4 px-8">
                   <strong className="font-semibold text-red-800">
                     Sr. Developer
@@ -81,8 +81,8 @@ const JobsPage = () => {
                 </td>
                 <td className="py-4 px-8">Remote</td>
               </tr>
-              <tr className="border-t hover:bg-red-100 cursor-pointer">
-                <td className="py-4 px-8">Everfund</td>
+              <tr className="border-t border-red-200 hover:bg-red-100 cursor-pointer">
+                <td className="py-4 px-8">John Doe</td>
                 <td className="py-4 px-8">
                   <strong className="font-semibold text-red-800">
                     Jr. Developer

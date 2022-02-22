@@ -22,16 +22,16 @@ export const Hero: React.FC<HeroProps> = ({ imgProps, links, text, title }) => {
         backgroundPosition: '50% 50%',
       }}
     >
-      <div className="lg:flex lg:items-center max-w-screen-xl mx-auto px-8 py-12 md:py-32">
+      <h2 className="pt-12 text-5xl leading-12 md:leading-none md:text-7xl text-center text-white font-black tracking-tight px-8">
+        {title}
+      </h2>
+      <div className="lg:flex lg:items-center max-w-screen-xl mx-auto px-8 py-12 md:pt-8 md:pb-24">
         {imgProps?.src && (
           <div className="hidden lg:block lg:w-1/3 pl-4">
             <img alt={''} {...imgProps} className="w-4/5 mx-auto" />
           </div>
         )}
         <div className="w-full lg:w-2/3 lg:pr-4">
-          <h2 className="text-3xl md:text-6xl text-center lg:text-left text-white font-semibold tracking-tight leading-10">
-            {title}
-          </h2>
           <p className="max-w-2xl mx-auto lg:mx-0 text-center font-light lg:text-left md:text-lg xl:text-xl mt-6 xl:leading-8 text-white">
             {text}
           </p>
