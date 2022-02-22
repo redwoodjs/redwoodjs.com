@@ -113,6 +113,7 @@ export default async () => {
       link: `https://github.com/redwoodjs/redwood/releases/tag/v0.${
         index + 1
       }.0`,
+      source: 'https://redwoodjs.com',
       tags: { connect: [tags.sample, tags.canon] },
     }))
 

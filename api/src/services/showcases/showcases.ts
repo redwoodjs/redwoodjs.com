@@ -3,6 +3,22 @@ import type { ResolverArgs } from '@redwoodjs/graphql-server'
 
 import { db } from 'src/lib/db'
 
+export const connectTagToShowcase = async ({ id, input: { tagId } }) => {
+  const showcaseHasTag = await db.showcase
+    .count({
+      where: { id, tags: { some: { id: tagId } } },
+    })
+    .then(Boolean)
+
+  const connection = showcaseHasTag ? 'disconnect' : 'connect'
+
+  return db.showcase.update({
+    where: { id },
+    data: { tags: { [connection]: { id: tagId } }, updatedAt: new Date() },
+    select: { id: true },
+  })
+}
+
 export const showcases = () => {
   return db.showcase.findMany()
 }

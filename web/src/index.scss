@@ -25,14 +25,81 @@ $color_neutral: #1A202C;
   .button-invert {
     @apply button bg-white text-red-700 hover:bg-red-300 hover:text-red-800;
   }
+
+  .card {
+    @apply flex mt-4 rounded md:w-64 md:ml-4;
+    background-color: $color_accent2;
+  }
+
+  .card header {
+    h1 {
+      color: $color_accent;
+    }
+  }
+
+  .card footer {
+    @apply flex flex-row;
+  }
+
+  .card .content {
+    @apply flex flex-col text-sm py-8 px-4;
+
+    > *:nth-child(1n+2) {
+      @apply mt-2;
+    }
+
+    a {
+      @apply underline;
+      color: $color_accent;
+    }
+  }
+
+  .card.highlight {
+    h2 {
+      color: $color_neutral;
+    }
+  }
+
+  .card.external {
+    min-width: 90px;
+    border: 1px solid $color_accent2;
+  }
+
+  .tag {
+    @apply text-xs px-2 py-1 rounded shadow;
+    background-color: $color_bg;
+  }
 }
 
 /* Material icon sizes */
-.material-icons.md-14 { font-size: 14px; }
-.material-icons.md-16 { font-size: 16px; }
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-20 { font-size: 20px; }
-.material-icons.md-22 { font-size: 22px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-14 {
+  font-size: 14px;
+}
+
+.material-icons.md-16 {
+  font-size: 16px;
+}
+
+.material-icons.md-18 {
+  font-size: 18px;
+}
+
+.material-icons.md-20 {
+  font-size: 20px;
+}
+
+.material-icons.md-22 {
+  font-size: 22px;
+}
+
+.material-icons.md-24 {
+  font-size: 24px;
+}
+
+.material-icons.md-36 {
+  font-size: 36px;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
