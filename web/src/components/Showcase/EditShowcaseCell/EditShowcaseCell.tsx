@@ -3,6 +3,7 @@ import type { CellFailureProps, CellSuccessProps } from '@redwoodjs/web'
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 
+import TagsCell from 'src/components/Showcase/TagsCell/TagsCell'
 import ShowcaseForm from 'src/components/Showcase/ShowcaseForm'
 import type { EditShowcaseById } from 'types/graphql'
 
@@ -22,9 +23,14 @@ export const QUERY = gql`
       description
       mediaId
       productHunt
+      tags {
+        id
+        label
+      }
     }
   }
 `
+
 const UPDATE_SHOWCASE_MUTATION = gql`
   mutation UpdateShowcaseMutation($id: Int!, $input: UpdateShowcaseInput!) {
     updateShowcase(id: $id, input: $input) {
@@ -71,20 +77,23 @@ export const Success = ({ showcase }: CellSuccessProps<EditShowcaseById>) => {
   }
 
   return (
-    <div className="rw-segment">
-      <header className="rw-segment-header">
-        <h2 className="rw-heading rw-heading-secondary">
-          Edit Showcase {showcase.id}
-        </h2>
-      </header>
-      <div className="rw-segment-main">
-        <ShowcaseForm
-          showcase={showcase}
-          onSave={onSave}
-          error={error}
-          loading={loading}
-        />
+    <>
+      <div className="rw-segment w-2/3">
+        <header className="rw-segment-header">
+          <h2 className="rw-heading rw-heading-secondary">
+            Edit Showcase {showcase.id}
+          </h2>
+        </header>
+        <div className="rw-segment-main">
+          <ShowcaseForm
+            showcase={showcase}
+            onSave={onSave}
+            error={error}
+            loading={loading}
+          />
+        </div>
       </div>
-    </div>
+      <TagsCell showcaseId={showcase.id} />
+    </>
   )
 }

@@ -80,9 +80,6 @@ const ShowcasesList = ({ showcases }) => {
         <thead>
           <tr>
             <th>Id</th>
-            <th>Created at</th>
-            <th>Updated at</th>
-            <th>Is published</th>
             <th>Type</th>
             <th>Link</th>
             <th>Label</th>
@@ -98,12 +95,21 @@ const ShowcasesList = ({ showcases }) => {
         <tbody>
           {showcases.map((showcase) => (
             <tr key={showcase.id}>
-              <td>{truncate(showcase.id)}</td>
-              <td>{timeTag(showcase.createdAt)}</td>
-              <td>{timeTag(showcase.updatedAt)}</td>
-              <td>{checkboxInputTag(showcase.isPublished)}</td>
+              <td>
+                <span
+                  className={`p-2 font-bold text-white ${
+                    showcase.isPublished ? 'bg-green-500' : 'bg-amber-500'
+                  }`}
+                >
+                  {truncate(showcase.id)}
+                </span>
+              </td>
               <td>{formatEnum(showcase.type)}</td>
-              <td>{truncate(showcase.link)}</td>
+              <td>
+                <Link to={showcase.link} target={'_blank'}>
+                  link
+                </Link>
+              </td>
               <td>{truncate(showcase.label)}</td>
               <td>{truncate(showcase.title)}</td>
               <td>{truncate(showcase.subtitle)}</td>

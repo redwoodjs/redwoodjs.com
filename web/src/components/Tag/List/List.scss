@@ -1,7 +1,0 @@
-.tags__list {
-  @apply flex flex-wrap;
-}
-
-.tags__list :nth-child(1n+2) {
-  @apply ml-2;
-}

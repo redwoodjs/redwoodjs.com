@@ -1,13 +1,18 @@
-import { Link, routes } from '@redwoodjs/router'
+import { useAuth } from '@redwoodjs/auth'
+import {Link, navigate, routes} from '@redwoodjs/router'
+import { Toaster } from '@redwoodjs/web/toast'
 
 type AdminLayoutProps = {
   children?: React.ReactNode
 }
 
 const AdminLayout = ({ children }: AdminLayoutProps) => {
+  const { logOut } = useAuth()
+
   return (
-    <>
-      <ul>
+    <div className={'flex flex-row'}>
+      <Toaster />
+      <ul className={'w-64 p-4'}>
         <li>
           <Link to={routes.showcases()}>Showcases</Link>
         </li>
@@ -20,9 +25,18 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
         <li>
           <Link to={routes.medias()}>Medias</Link>
         </li>
+        <li>
+          <a href={'#'}
+            onClick={() => {
+              logOut()
+            }}
+          >
+            -> Log out
+          </a>
+        </li>
       </ul>
-      <main>{children}</main>
-    </>
+      <main className={'flex flex-row ml-4 w-full'}>{children}</main>
+    </div>
   )
 }
 

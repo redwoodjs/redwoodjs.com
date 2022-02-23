@@ -27,7 +27,7 @@ const Routes = () => {
 
         <Route notfound page={NotFoundPage} />
       </Set>
-      <Private unauthenticated={'index'}>
+      <Private unauthenticated={'home'}>
         <Set wrap={[AdminLayout]}>
           <Route path="/admin" page={AdminIndexPage} name="adminIndex" />
           <Route path="/admin/tags/new" page={AdminTagNewTagPage} name="newTag" />

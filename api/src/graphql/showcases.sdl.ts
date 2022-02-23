@@ -29,8 +29,8 @@ export const schema = gql`
   }
 
   type Query {
-    showcases: [Showcase!]! @requireAuth
-    showcase(id: Int!): Showcase @requireAuth
+    showcases: [Showcase!]! @skipAuth
+    showcase(id: Int!): Showcase @skipAuth
     examples(input: ExamplesInput): [Showcase] @skipAuth
   }
 
@@ -58,6 +58,11 @@ export const schema = gql`
     description: String
     mediaId: Int
     productHunt: String
+    tags: [Int]
+  }
+
+  input ConnectTagToShowcaseInput {
+    tagId: Int!
   }
 
   type Mutation {
@@ -65,5 +70,9 @@ export const schema = gql`
     updateShowcase(id: Int!, input: UpdateShowcaseInput!): Showcase!
       @requireAuth
     deleteShowcase(id: Int!): Showcase! @requireAuth
+    connectTagToShowcase(
+      id: Int!
+      input: ConnectTagToShowcaseInput!
+    ): Showcase! @requireAuth
   }
 `

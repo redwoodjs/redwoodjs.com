@@ -1,6 +1,5 @@
 import List from 'src/components/Tag/List/List'
 import { CardProps } from 'web/src/components/Card/Card'
-import './Card.scss'
 
 export interface StandardProps extends CardProps {
   source: string
@@ -13,9 +12,13 @@ const Standard: React.FC<StandardProps> = ({
   tags,
   source,
 }) => (
-  <article className="card standard">
+  <article className="card standard flex flex-col">
     <header>
-      <h1>{title}</h1>
+      <h1
+        className={'w-full p-2 text-lg font-extrabold text-center capitalize'}
+      >
+        {title}
+      </h1>
       {media && <img alt={'Example app'} {...media} />}
     </header>
     <div className="content">
@@ -26,7 +29,7 @@ const Standard: React.FC<StandardProps> = ({
         </a>
       )}
     </div>
-    <footer>
+    <footer className={'p-4'}>
       <List tags={tags} rootKey={title} />
     </footer>
   </article>
