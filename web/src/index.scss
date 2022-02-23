@@ -8,8 +8,16 @@ $color_accent2: #F3C7BA;
 $color_neutral: #1A202C;
 
 @layer base {
+  h1 {
+    @apply text-6xl font-black tracking-tight;
+  }
+
   a {
-    @apply text-red-800 underline;
+    @apply text-teal-600 hover:text-red-700 underline hover:no-underline transition duration-100;
+  }
+
+  code {
+    @apply text-red-700 bg-red-200 py-[2px] px-1 mx-1 rounded text-sm;
   }
 
   strong {
@@ -19,20 +27,57 @@ $color_neutral: #1A202C;
 
 @layer components {
   .button {
-    @apply block px-4 py-3 text-center font-semibold rounded bg-red-700 text-white hover:bg-red-600 transition duration-200 text-lg no-underline;
+    @apply block px-4 py-3 text-center font-semibold rounded bg-teal-600 hover:bg-teal-700 text-white hover:text-white transition duration-200 text-lg no-underline;
+  }
+
+  .button-sm {
+    @apply button text-base px-3 py-2;
   }
 
   .button-invert {
-    @apply button bg-white text-red-700 hover:bg-red-300 hover:text-red-800;
+    @apply button bg-white text-teal-600 hover:bg-teal-100 hover:text-teal-700;
   }
 }
 
-/* Material icon sizes */
-.material-icons.md-14 { font-size: 14px; }
-.material-icons.md-16 { font-size: 16px; }
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-20 { font-size: 20px; }
-.material-icons.md-22 { font-size: 22px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
+@layer utilities {
+  .title {
+    @apply text-2xl text-teal-600 font-semibold tracking-tight;
+  }
+
+  .icon {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+  .icon.md-12 { font-size: 12px; }
+  .icon.md-13 { font-size: 13px; }
+  .icon.md-14 { font-size: 14px; }
+  .icon.md-16 { font-size: 16px; }
+  .icon.md-18 { font-size: 18px; }
+  .icon.md-20 { font-size: 20px; }
+  .icon.md-22 { font-size: 22px; }
+  .icon.md-24 { font-size: 24px; }
+  .icon.md-36 { font-size: 36px; }
+  .icon.md-48 { font-size: 48px; }
+  .icon.md-14 { font-size: 14px; }
+}

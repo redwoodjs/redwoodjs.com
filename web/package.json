@@ -23,6 +23,7 @@
     "prop-types": "15.8.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-highlight": "^0.14.0",
     "react-i18next": "^11.15.4",
     "sass": "^1.49.7",
     "sass-loader": "^12.6.0"

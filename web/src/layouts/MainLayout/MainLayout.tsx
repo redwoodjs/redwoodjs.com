@@ -33,11 +33,11 @@ const MainLayout = ({ children }: MainLayoutProps) => {
               </h1>
             </Link>
             <nav className="hidden lg:block flex-1 mx-8">
-              <ul className="flex items-center space-x-8 font-semibold text-sm text-red-700 ml-8">
+              <ul className="flex items-center space-x-8 font-semibold text-sm ml-8">
                 <li className="">
                   <a
                     href="https://learn.redwoodjs.com"
-                    className="hover:text-red-800 flex items-center transition duration-150 no-underline hover:underline"
+                    className="text-red-700 hover:text-teal-700 no-underline"
                   >
                     Docs
                   </a>
@@ -46,7 +46,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                 <li className="">
                   <Link
                     to={routes.examples()}
-                    className="hover:text-red-800 flex items-center transition duration-150 no-underline hover:underline"
+                    className="text-red-700 hover:text-teal-700 no-underline"
                   >
                     Examples
                   </Link>
@@ -55,7 +55,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                 <li className="">
                   <Link
                     to={routes.showcase()}
-                    className="hover:text-red-800 flex items-center transition duration-150 no-underline hover:underline"
+                    className="text-red-700 hover:text-teal-700 no-underline"
                   >
                     Showcase
                   </Link>
@@ -64,23 +64,15 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                 <li className="">
                   <a
                     href="https://community.redwoodjs.com/"
-                    className="hover:text-red-800 flex items-center transition duration-150 no-underline hover:underline"
+                    className="text-red-700 hover:text-teal-700 no-underline"
                   >
                     Community
                   </a>
                 </li>
                 <li className="">
-                  <a
-                    href="https://shop.redwoodjs.com"
-                    className="hover:text-red-800 flex items-center transition duration-150 no-underline hover:underline"
-                  >
-                    Shop
-                  </a>
-                </li>
-                <li className="">
                   <Link
                     to={routes.jobs()}
-                    className="hover:text-red-800 flex items-center transition duration-150 no-underline hover:underline"
+                    className="text-red-700 hover:text-teal-700 no-underline"
                   >
                     Jobs
                   </Link>
@@ -88,9 +80,17 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                 <li className="">
                   <a
                     href="/roadmap.html"
-                    className="hover:text-red-800 flex items-center transition duration-150 no-underline hover:underline"
+                    className="text-red-700 hover:text-teal-700 no-underline"
                   >
                     Roadmap
+                  </a>
+                </li>
+                <li className="">
+                  <a
+                    href="https://shop.redwoodjs.com"
+                    className="text-red-700 hover:text-teal-700 no-underline"
+                  >
+                    Shop
                   </a>
                 </li>
               </ul>
@@ -98,7 +98,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
             <div className="flex items-center">
               <div className="mr-8">
                 <a
-                  className="rounded-full px-2 py-1 bg-red-500 hover:bg-red-600 text-red-100 text-sm font-mono font-medium transition duration-150"
+                  className="rounded-full px-2 py-1 bg-teal-500 hover:bg-teal-600 text-red-100 text-sm font-mono font-normal no-underline transition duration-100"
                   href="https://github.com/redwoodjs/redwood/releases"
                   title="Go to Redwood's Releases"
                 >
@@ -122,21 +122,16 @@ const MainLayout = ({ children }: MainLayoutProps) => {
             <ul className="hidden lg:flex items-center">
               <li className="mr-1">
                 <a
-                  className="block flex"
+                  className="block flex no-underline"
                   href="https://github.com/redwoodjs/redwood"
                   title="Go to Redwood's GitHub repo"
                 >
-                  <span className="text-xs font-semibold bg-red-300 text-red-600 px-2 rounded-l">
-                    stars
-                  </span>
-                  <span
-                    className="text-xs font-bold bg-red-500 text-red-200 pl-2 pr-1"
-                    data-target="application.stars"
-                  ></span>
-                  <span
-                    className="border-red-700 arrow-right"
-                    data-target="application.stars"
-                  ></span>
+                  <div className="flex items-center pt-[1px] text-xs font-semibold bg-red-500 text-red-100 px-2 rounded-l">
+                    <span className="icon md-13 mr-1">star</span>11,432
+                  </div>
+                  <div className="w-3 overflow-hidden inline-block">
+                    <div className="h-3 bg-red-500 rotate-45 transform origin-top-left"></div>
+                  </div>
                 </a>
               </li>
               <li className="mr-3">
@@ -240,7 +235,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
         </div>
       </section>
 
-      <main className="flex-1 w-full bg-red-100 pb-12">{children}</main>
+      <main className="flex-1 w-full bg-red-100">{children}</main>
 
       <footer className="p-6 bg-red-100 text-red-700 text-sm border-t border-red-300">
         Copyright &copy;{new Date().getFullYear()} Tom Preston-Werner
