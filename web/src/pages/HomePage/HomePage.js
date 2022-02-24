@@ -58,7 +58,7 @@ const HomePage = () => {
             Built with the best parts of
           </h2>
           <ul className="mt-24 max-w-screen-lg mx-auto flex items-stretch justify-center space-x-8">
-            <li className="bg-white border border-red-200 p-8 rounded-lg">
+            <li className="bg-white border border-red-200 hover:border-red-300 p-8 rounded-lg cursor-pointer transition duration-100">
               <h3 className="title">React</h3>
               <p className="mt-2 text-sm">
                 Selfies actually succulents pork belly shabby chic trust fund
@@ -66,7 +66,7 @@ const HomePage = () => {
                 aesthetic banh mi cliche heirloom iceland 90's skateboard
               </p>
             </li>
-            <li className="bg-white border border-red-200 p-8 rounded-lg">
+            <li className="bg-white border border-red-200 hover:border-red-300 p-8 rounded-lg cursor-pointer transition duration-100">
               <h3 className="title">GraphQL</h3>
               <p className="mt-2 text-sm">
                 Selfies actually succulents pork belly shabby chic trust fund
@@ -74,7 +74,7 @@ const HomePage = () => {
                 aesthetic banh mi cliche heirloom iceland 90's skateboard
               </p>
             </li>
-            <li className="bg-white border border-red-200 p-8 rounded-lg">
+            <li className="bg-white border border-red-200 hover:border-red-300 p-8 rounded-lg cursor-pointer transition duration-100">
               <h3 className="title">Prisma</h3>
               <p className="mt-2 text-sm">
                 Selfies actually succulents pork belly shabby chic trust fund
@@ -84,7 +84,7 @@ const HomePage = () => {
             </li>
           </ul>
           <ul className="mt-12 max-w-screen-lg mx-auto flex items-stretch justify-center space-x-8">
-            <li className="bg-white border border-red-200 p-8 rounded-lg">
+            <li className="bg-white border border-red-200 hover:border-red-300 p-8 rounded-lg cursor-pointer transition duration-100">
               <h3 className="title">Typescript</h3>
               <p className="mt-2 text-sm">
                 Selfies actually succulents pork belly shabby chic trust fund
@@ -92,7 +92,7 @@ const HomePage = () => {
                 aesthetic banh mi cliche heirloom iceland 90's skateboard
               </p>
             </li>
-            <li className="bg-white border border-red-200 p-8 rounded-lg">
+            <li className="bg-white border border-red-200 hover:border-red-300 p-8 rounded-lg cursor-pointer transition duration-100">
               <h3 className="title">Jest</h3>
               <p className="mt-2 text-sm">
                 Selfies actually succulents pork belly shabby chic trust fund
@@ -100,7 +100,7 @@ const HomePage = () => {
                 aesthetic banh mi cliche heirloom iceland 90's skateboard
               </p>
             </li>
-            <li className="bg-white border border-red-200 p-8 rounded-lg">
+            <li className="bg-white border border-red-200 hover:border-red-300 p-8 rounded-lg cursor-pointer transition duration-100">
               <h3 className="title">Storybook</h3>
               <p className="mt-2 text-sm">
                 Selfies actually succulents pork belly shabby chic trust fund
@@ -111,7 +111,7 @@ const HomePage = () => {
           </ul>
         </section>
 
-        <section className="bg-red-800 text-white py-12">
+        <section className="bg-red-800 text-white py-16">
           <div className="flex items-center justify-center max-w-screen-lg mx-auto">
             <div className="text-5xl text-red-400 font-black text-right px-4">
               Startups using Redwood <br />
@@ -269,7 +269,7 @@ const HomePage = () => {
               </p>
             </div>
             <div className="w-1/3 text-center px-8">
-              <h3 className="mt-4 title text-red-700">Create an App</h3>
+              <h3 className="mt-4 title text-red-700">Build an App</h3>
               <p className="mt-2 text-sm text-stone-500 text-center">
                 Take one of those domains you bought on a whim and start
                 building it. Use your new network to help you if you get stuck
@@ -297,7 +297,7 @@ const HomePage = () => {
           </div>
         </section>
 
-        <section className="bg-red-100">
+        <section className="bg-red-200">
           <div className="max-w-screen-lg mx-auto py-24">
             <h2 className="text-center text-6xl font-black text-stone-700">
               One API to Rule Them All
@@ -308,9 +308,102 @@ const HomePage = () => {
 
             <div className="mt-24 flex justify-center">
               <div className="">
-                <img src="/images/graphql.svg" />
+                <img src="/images/graphql_map.svg" />
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="bg-red-100 py-24">
+          <div className="max-w-screen-lg mx-auto">
+            <h2 className="text-center text-6xl font-black text-teal-800">
+              End-to-end Development the Redwood Way
+            </h2>
+            <h3 className="text-center mt-4 text-xl text-stone-500">
+              From design to deployment, Redwood includes everything you need
+              for modern app development
+            </h3>
+
+            <div className="mt-24 flex flex-col space-y-8">
+              <div className="flex items-end">
+                <div className="w-2/5 bg-white border-4 border-red-700 hover:border-red-300 p-8 rounded-lg cursor-pointer transition duration-100">
+                  <h3 className="title">Design</h3>
+                  <p className="mt-2 text-sm">
+                    Mockup, build and verify components in{' '}
+                    <a href="#">Storybook</a>, even in complete isolation from
+                    the backend. Work on design without worrying about data.
+                  </p>
+                </div>
+                <img src="/images/step_arrow2.svg" className="-mb-4 -ml-1" />
+              </div>
+
+              <div className="flex items-end">
+                <div className="w-1/6"></div>
+                <div className="w-2/5 -ml-8 bg-white border-4 border-red-700 hover:border-red-300 p-8 rounded-lg cursor-pointer transition duration-100">
+                  <h3 className="title">Test</h3>
+                  <p className="mt-2 text-sm">
+                    Whether it's TDD or DDT, Redwood uses Jest along with{' '}
+                    <a href="#">mocks</a> and <a href="#">scenarios</a> to
+                    verify functionality on the frontend and the backend.
+                  </p>
+                </div>
+                <img src="/images/step_arrow2.svg" className="-mb-4 -ml-1" />
+              </div>
+
+              <div className="flex items-end">
+                <div className="w-2/6"></div>
+                <div className="w-2/5 -ml-8 bg-white border-4 border-red-700 hover:border-red-300 p-8 rounded-lg cursor-pointer transition duration-100">
+                  <h3 className="title">Auth & Security</h3>
+                  <p className="mt-2 text-sm">
+                    Lock down your front and backends with your own{' '}
+                    <a href="#">hosted auth</a> or integrate with nearly a dozen{' '}
+                    <a href="#">third party auth providers</a>. Verify access
+                    with <a href="#">RBAC</a> and <a href="#">Validators</a>.
+                  </p>
+                </div>
+                <img src="/images/step_arrow2.svg" className="-mb-4 -ml-1" />
+              </div>
+
+              <div className="flex items-end">
+                <div className="w-3/6"></div>
+                <div className="w-2/5 -ml-8 bg-white border-4 border-red-700 hover:border-red-300 p-8 rounded-lg cursor-pointer transition duration-100">
+                  <h3 className="title">Data & Transport</h3>
+                  <p className="mt-2 text-sm">
+                    When your API is <a href="#">GraphQL</a> you're ready for
+                    any client, from native mobile apps to VR. Keep your
+                    business logic organized and reusable within{' '}
+                    <a href="#">Services</a>.
+                  </p>
+                </div>
+                <img src="/images/step_arrow2.svg" className="-mb-4 -ml-1" />
+              </div>
+
+              <div className="flex items-end">
+                <div className="w-4/6"></div>
+                <div className="w-2/5 bg-white border-4 border-red-700 hover:border-red-300 p-8 rounded-lg cursor-pointer transition duration-100">
+                  <h3 className="title">Deploy</h3>
+                  <p className="mt-2 text-sm">
+                    Deploy your app to serverless hosts divke{' '}
+                    <a href="#">Netlify</a> and <a href="#">Vercel</a>, build
+                    for <a href="#">containers</a>, or deploy to{' '}
+                    <a href="#">bare metal</a>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-red-800 text-white py-24">
+          <div className="flex items-center justify-center max-w-screen-lg mx-auto">
+            <div className="text-6xl text-red-400 font-black text-right px-4">
+              Ready to learn Redwood?
+            </div>
+          </div>
+          <div className="max-w-screen-lg mx-auto mt-24 pb-4 flex justify-center">
+            <button type="button" className="button">
+              Start the Tutorial
+            </button>
           </div>
         </section>
       </div>
