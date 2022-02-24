@@ -9,7 +9,7 @@ $color_neutral: #1A202C;
 
 @layer base {
   h1 {
-    @apply text-6xl font-black tracking-tight;
+    @apply text-6xl font-black tracking-normal;
   }
 
   a {
@@ -81,12 +81,14 @@ $color_neutral: #1A202C;
     @apply text-xs px-2 py-1 rounded shadow;
     background-color: $color_bg;
   }
+
+  .title {
+    @apply text-xl text-teal-600 font-semibold tracking-tight;
+  }
+
 }
 
 @layer utilities {
-  .title {
-    @apply text-2xl text-teal-600 font-semibold tracking-tight;
-  }
 
   .icon {
     font-family: 'Material Icons';
