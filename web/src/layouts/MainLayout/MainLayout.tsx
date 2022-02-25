@@ -32,6 +32,15 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                 />
               </h1>
             </Link>
+            <div className="ml-4">
+              <a
+                className="rounded-full px-2 py-1 bg-teal-500 hover:bg-teal-600 text-red-100 text-sm font-mono font-normal no-underline transition duration-100"
+                href="https://github.com/redwoodjs/redwood/releases"
+                title="Go to Redwood's Releases"
+              >
+                v1.0
+              </a>
+            </div>
             <nav className="hidden lg:block flex-1 mx-8">
               <ul className="flex items-center space-x-8 font-semibold text-sm ml-8">
                 <li className="">
@@ -42,7 +51,14 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                     Docs
                   </a>
                 </li>
-
+                <li className="">
+                  <Link
+                    to={routes.examples()}
+                    className="text-red-700 hover:text-teal-700 no-underline"
+                  >
+                    Showcase
+                  </Link>
+                </li>
                 <li className="">
                   <Link
                     to={routes.examples()}
@@ -51,16 +67,6 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                     Examples
                   </Link>
                 </li>
-
-                <li className="">
-                  <Link
-                    to={routes.showcase()}
-                    className="text-red-700 hover:text-teal-700 no-underline"
-                  >
-                    Showcase
-                  </Link>
-                </li>
-
                 <li className="">
                   <a
                     href="https://community.redwoodjs.com/"
@@ -77,34 +83,9 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                     Jobs
                   </Link>
                 </li>
-                <li className="">
-                  <a
-                    href="/roadmap.html"
-                    className="text-red-700 hover:text-teal-700 no-underline"
-                  >
-                    Roadmap
-                  </a>
-                </li>
-                <li className="">
-                  <a
-                    href="https://shop.redwoodjs.com"
-                    className="text-red-700 hover:text-teal-700 no-underline"
-                  >
-                    Shop
-                  </a>
-                </li>
               </ul>
             </nav>
             <div className="flex items-center">
-              <div className="mr-8">
-                <a
-                  className="rounded-full px-2 py-1 bg-teal-500 hover:bg-teal-600 text-red-100 text-sm font-mono font-normal no-underline transition duration-100"
-                  href="https://github.com/redwoodjs/redwood/releases"
-                  title="Go to Redwood's Releases"
-                >
-                  v1.0
-                </a>
-              </div>
               <div
                 className="ml-8 lg:hidden w-10 p-2"
                 data-action="click->application#toggleNav"
@@ -149,7 +130,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                   </svg>
                 </a>
               </li>
-              <li className="mx-2">
+              {/* <li className="mx-2">
                 <a
                   className="block w-6"
                   href="https://twitter.com/redwoodjs"
@@ -229,7 +210,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                     </svg>
                   </div>
                 </a>
-              </li>
+              </li> */}
             </ul>
           </header>
         </div>
