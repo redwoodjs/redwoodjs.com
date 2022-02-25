@@ -327,21 +327,40 @@ const HomePage = () => {
             </h3>
 
             <div className="mt-24 flex flex-col space-y-8">
-              <div className="flex items-end">
-                <div className="w-2/5 bg-white border-4 border-orange-700 hover:border-orange-300 p-8 rounded-lg cursor-pointer transition duration-100">
+              <div className="relative flex items-end">
+                <div className="w-2/5 bg-white border-4 border-orange-400 hover:border-orange-300 p-8 pl-12 rounded-lg cursor-pointer transition duration-100">
                   <h3 className="title">Design</h3>
                   <p className="mt-2 text-sm">
                     Mockup, build and verify components in{' '}
                     <a href="#">Storybook</a>, even in complete isolation from
                     the backend. Work on design without worrying about data.
                   </p>
+                  <div className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1/2 flex items-center justify-center bg-white border-4 w-20 h-20 border-orange-400 rounded-full">
+                    <span className="icon md-48 text-teal-500">touch_app</span>
+                  </div>
                 </div>
-                <img src="/images/step_arrow2.svg" className="-mb-4 -ml-1" />
+
+                <svg
+                  viewBox="0 0 68 50"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-16 -ml-1 -mb-4 fill-current text-orange-400"
+                >
+                  <clipPath id="a">
+                    <path d="m0 0h68v50h-68z" />
+                  </clipPath>
+                  <g clipPath="url(#a)">
+                    <path
+                      clipRule="evenodd"
+                      d="m3 .00000308c-1.38071.00000009-2.5 1.11928692-2.5 2.49999692 0 1.38072 1.11929 2.5 2.5 2.5h43.5v35.9645l-11.6421-11.6422c-.9763-.9763-2.5592-.9763-3.5356 0-.9763.9763-.9763 2.5593 0 3.5356l15.9099 15.9099c.9763.9763 2.5593.9763 3.5356 0l15.9099-15.9099c.9763-.9763.9763-2.5593 0-3.5356s-2.5592-.9763-3.5356 0l-11.6421 11.6422v-37.9645c0-.08439-.0042-.16778-.0123-.25002.0081-.08222.0123-.16561.0123-.24998 0-1.38071-1.1193-2.5-2.5-2.5z"
+                      fillRule="evenodd"
+                    />
+                  </g>
+                </svg>
               </div>
 
               <div className="flex items-end">
                 <div className="w-1/6"></div>
-                <div className="w-2/5 -ml-8 bg-white border-4 border-orange-700 hover:border-orange-300 p-8 rounded-lg cursor-pointer transition duration-100">
+                <div className="relative w-2/5 -ml-8 bg-white border-4 border-orange-500 hover:border-orange-300 p-8 pl-12 rounded-lg cursor-pointer transition duration-100">
                   <h3 className="title">Test</h3>
                   <p className="mt-2 text-sm">
                     Whether it's{' '}
@@ -362,13 +381,32 @@ const HomePage = () => {
                     <a href="#">mocks</a> and <a href="#">scenarios</a> to
                     verify functionality on the frontend and the backend.
                   </p>
+                  <div className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1/2 -ml-[2px] flex items-center justify-center bg-white border-4 w-20 h-20 border-orange-500 rounded-full">
+                    <span className="icon md-48 text-teal-600">bug_report</span>
+                  </div>
                 </div>
-                <img src="/images/step_arrow2.svg" className="-mb-4 -ml-1" />
+
+                <svg
+                  viewBox="0 0 68 50"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-16 -ml-1 -mb-4 fill-current text-orange-500"
+                >
+                  <clipPath id="a">
+                    <path d="m0 0h68v50h-68z" />
+                  </clipPath>
+                  <g clipPath="url(#a)">
+                    <path
+                      clipRule="evenodd"
+                      d="m3 .00000308c-1.38071.00000009-2.5 1.11928692-2.5 2.49999692 0 1.38072 1.11929 2.5 2.5 2.5h43.5v35.9645l-11.6421-11.6422c-.9763-.9763-2.5592-.9763-3.5356 0-.9763.9763-.9763 2.5593 0 3.5356l15.9099 15.9099c.9763.9763 2.5593.9763 3.5356 0l15.9099-15.9099c.9763-.9763.9763-2.5593 0-3.5356s-2.5592-.9763-3.5356 0l-11.6421 11.6422v-37.9645c0-.08439-.0042-.16778-.0123-.25002.0081-.08222.0123-.16561.0123-.24998 0-1.38071-1.1193-2.5-2.5-2.5z"
+                      fillRule="evenodd"
+                    />
+                  </g>
+                </svg>
               </div>
 
               <div className="flex items-end">
                 <div className="w-2/6"></div>
-                <div className="w-2/5 -ml-8 bg-white border-4 border-orange-700 hover:border-orange-300 p-8 rounded-lg cursor-pointer transition duration-100">
+                <div className="relative w-2/5 -ml-8 bg-white border-4 border-orange-600 hover:border-orange-300 p-8 pl-12 rounded-lg cursor-pointer transition duration-100">
                   <h3 className="title">Auth & Security</h3>
                   <p className="mt-2 text-sm">
                     Lock down your front and backends with your own{' '}
@@ -376,13 +414,31 @@ const HomePage = () => {
                     <a href="#">third party auth providers</a>. Verify access
                     with <a href="#">RBAC</a> and <a href="#">Validators</a>.
                   </p>
+                  <div className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1/2 -ml-[2px] flex items-center justify-center bg-white border-4 w-20 h-20 border-orange-600 rounded-full">
+                    <span className="icon md-48 text-teal-700">lock</span>
+                  </div>
                 </div>
-                <img src="/images/step_arrow2.svg" className="-mb-4 -ml-1" />
+                <svg
+                  viewBox="0 0 68 50"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-16 -ml-1 -mb-4 fill-current text-orange-600"
+                >
+                  <clipPath id="a">
+                    <path d="m0 0h68v50h-68z" />
+                  </clipPath>
+                  <g clipPath="url(#a)">
+                    <path
+                      clipRule="evenodd"
+                      d="m3 .00000308c-1.38071.00000009-2.5 1.11928692-2.5 2.49999692 0 1.38072 1.11929 2.5 2.5 2.5h43.5v35.9645l-11.6421-11.6422c-.9763-.9763-2.5592-.9763-3.5356 0-.9763.9763-.9763 2.5593 0 3.5356l15.9099 15.9099c.9763.9763 2.5593.9763 3.5356 0l15.9099-15.9099c.9763-.9763.9763-2.5593 0-3.5356s-2.5592-.9763-3.5356 0l-11.6421 11.6422v-37.9645c0-.08439-.0042-.16778-.0123-.25002.0081-.08222.0123-.16561.0123-.24998 0-1.38071-1.1193-2.5-2.5-2.5z"
+                      fillRule="evenodd"
+                    />
+                  </g>
+                </svg>
               </div>
 
               <div className="flex items-end">
                 <div className="w-3/6"></div>
-                <div className="w-2/5 -ml-8 bg-white border-4 border-orange-700 hover:border-orange-300 p-8 rounded-lg cursor-pointer transition duration-100">
+                <div className="relative w-2/5 -ml-8 bg-white border-4 border-orange-700 hover:border-orange-300 p-8 pl-12 rounded-lg cursor-pointer transition duration-100">
                   <h3 className="title">Data & Transport</h3>
                   <p className="mt-2 text-sm">
                     When your API is <a href="#">GraphQL</a> you're ready for
@@ -391,13 +447,33 @@ const HomePage = () => {
                     your business logic organized and reusable within{' '}
                     <a href="#">Services</a>.
                   </p>
+                  <div className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1/2 -ml-[2px] flex items-center justify-center bg-white border-4 w-20 h-20 border-orange-700 rounded-full">
+                    <span className="icon md-48 text-teal-800">
+                      local_shipping
+                    </span>
+                  </div>
                 </div>
-                <img src="/images/step_arrow2.svg" className="-mb-4 -ml-1" />
+                <svg
+                  viewBox="0 0 68 50"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-16 -ml-1 -mb-4 fill-current text-orange-700"
+                >
+                  <clipPath id="a">
+                    <path d="m0 0h68v50h-68z" />
+                  </clipPath>
+                  <g clipPath="url(#a)">
+                    <path
+                      clipRule="evenodd"
+                      d="m3 .00000308c-1.38071.00000009-2.5 1.11928692-2.5 2.49999692 0 1.38072 1.11929 2.5 2.5 2.5h43.5v35.9645l-11.6421-11.6422c-.9763-.9763-2.5592-.9763-3.5356 0-.9763.9763-.9763 2.5593 0 3.5356l15.9099 15.9099c.9763.9763 2.5593.9763 3.5356 0l15.9099-15.9099c.9763-.9763.9763-2.5593 0-3.5356s-2.5592-.9763-3.5356 0l-11.6421 11.6422v-37.9645c0-.08439-.0042-.16778-.0123-.25002.0081-.08222.0123-.16561.0123-.24998 0-1.38071-1.1193-2.5-2.5-2.5z"
+                      fillRule="evenodd"
+                    />
+                  </g>
+                </svg>
               </div>
 
               <div className="flex items-end">
                 <div className="w-4/6"></div>
-                <div className="w-2/5 bg-white border-4 border-orange-700 hover:border-orange-300 p-8 rounded-lg cursor-pointer transition duration-100">
+                <div className="relative w-2/5 bg-white border-4 border-orange-800 hover:border-orange-300 p-8 pl-12 rounded-lg cursor-pointer transition duration-100">
                   <h3 className="title">Deploy</h3>
                   <p className="mt-2 text-sm">
                     Deploy your app to serverless hosts divke{' '}
@@ -405,6 +481,11 @@ const HomePage = () => {
                     for <a href="#">containers</a>, or deploy to{' '}
                     <a href="#">bare metal</a>.
                   </p>
+                  <div className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1/2 -ml-[2px] flex items-center justify-center bg-white border-4 w-20 h-20 border-orange-800 rounded-full">
+                    <span className="icon md-48 text-teal-900">
+                      cloud_upload
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
