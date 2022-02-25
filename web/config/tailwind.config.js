@@ -12,18 +12,8 @@ module.exports = {
       ],
     },
     extend: {
-      colors: {
-        red: {
-          100: '#FDF8F6',
-          200: '#FAEAE5',
-          300: '#F3C7BA',
-          400: '#EBA48E',
-          500: '#E38163',
-          600: '#DC5E38',
-          700: '#BF4722',
-          800: '#682712',
-          900: '#341309',
-        },
+      borderWidth: {
+        16: '16px',
       },
       lineHeight: {
         11: '2.75rem',

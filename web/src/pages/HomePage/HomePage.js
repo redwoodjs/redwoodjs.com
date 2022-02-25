@@ -14,7 +14,7 @@ const HomePage = () => {
       />
 
       <div className="bg-white">
-        <section className="max-w-screen-lg mx-auto py-32 text-center">
+        <section className="max-w-screen-lg mx-auto pt-48 pb-32 text-center">
           <h1 className="flex flex-col text-7xl leading-tighter text-center text-stone-800">
             <span>From side project</span>
             <span>to startup</span>
@@ -53,12 +53,12 @@ const HomePage = () => {
           </ul>
         </section>
 
-        <section className="bg-red-100 pt-24 pb-36">
-          <h2 className="text-center text-6xl font-black text-stone-700">
+        <section className="bg-orange-50 pt-24 pb-36">
+          <h2 className="text-center text-6xl font-black text-orange-900">
             Built with the best parts of
           </h2>
           <ul className="mt-24 max-w-screen-lg mx-auto flex items-stretch justify-center space-x-8">
-            <li className="bg-white border border-red-200 hover:border-red-300 p-8 rounded-lg cursor-pointer transition duration-100">
+            <li className="bg-white border border-orange-200 hover:border-orange-300 p-8 rounded-lg cursor-pointer transition duration-100">
               <h3 className="title">React</h3>
               <p className="mt-2 text-sm">
                 Selfies actually succulents pork belly shabby chic trust fund
@@ -66,7 +66,7 @@ const HomePage = () => {
                 aesthetic banh mi cliche heirloom iceland 90's skateboard
               </p>
             </li>
-            <li className="bg-white border border-red-200 hover:border-red-300 p-8 rounded-lg cursor-pointer transition duration-100">
+            <li className="bg-white border border-orange-200 hover:border-orange-300 p-8 rounded-lg cursor-pointer transition duration-100">
               <h3 className="title">GraphQL</h3>
               <p className="mt-2 text-sm">
                 Selfies actually succulents pork belly shabby chic trust fund
@@ -74,7 +74,7 @@ const HomePage = () => {
                 aesthetic banh mi cliche heirloom iceland 90's skateboard
               </p>
             </li>
-            <li className="bg-white border border-red-200 hover:border-red-300 p-8 rounded-lg cursor-pointer transition duration-100">
+            <li className="bg-white border border-orange-200 hover:border-orange-300 p-8 rounded-lg cursor-pointer transition duration-100">
               <h3 className="title">Prisma</h3>
               <p className="mt-2 text-sm">
                 Selfies actually succulents pork belly shabby chic trust fund
@@ -84,7 +84,7 @@ const HomePage = () => {
             </li>
           </ul>
           <ul className="mt-12 max-w-screen-lg mx-auto flex items-stretch justify-center space-x-8">
-            <li className="bg-white border border-red-200 hover:border-red-300 p-8 rounded-lg cursor-pointer transition duration-100">
+            <li className="bg-white border border-orange-200 hover:border-orange-300 p-8 rounded-lg cursor-pointer transition duration-100">
               <h3 className="title">Typescript</h3>
               <p className="mt-2 text-sm">
                 Selfies actually succulents pork belly shabby chic trust fund
@@ -92,7 +92,7 @@ const HomePage = () => {
                 aesthetic banh mi cliche heirloom iceland 90's skateboard
               </p>
             </li>
-            <li className="bg-white border border-red-200 hover:border-red-300 p-8 rounded-lg cursor-pointer transition duration-100">
+            <li className="bg-white border border-orange-200 hover:border-orange-300 p-8 rounded-lg cursor-pointer transition duration-100">
               <h3 className="title">Jest</h3>
               <p className="mt-2 text-sm">
                 Selfies actually succulents pork belly shabby chic trust fund
@@ -100,7 +100,7 @@ const HomePage = () => {
                 aesthetic banh mi cliche heirloom iceland 90's skateboard
               </p>
             </li>
-            <li className="bg-white border border-red-200 hover:border-red-300 p-8 rounded-lg cursor-pointer transition duration-100">
+            <li className="bg-white border border-orange-200 hover:border-orange-300 p-8 rounded-lg cursor-pointer transition duration-100">
               <h3 className="title">Storybook</h3>
               <p className="mt-2 text-sm">
                 Selfies actually succulents pork belly shabby chic trust fund
@@ -111,20 +111,20 @@ const HomePage = () => {
           </ul>
         </section>
 
-        <section className="bg-red-800 text-white py-16">
+        <section className="bg-gradient-to-r from-orange-900 to-orange-800 text-white py-16">
           <div className="flex items-center justify-center max-w-screen-lg mx-auto">
-            <div className="text-5xl text-red-400 font-black text-right px-4">
+            <div className="text-5xl text-orange-300 font-black text-right px-4">
               Startups using Redwood <br />
               have raised over
             </div>
-            <div className="text-8xl text-red-300 font-black px-4">$19m</div>
+            <div className="text-8xl text-orange-100 font-black px-4">$19m</div>
           </div>
           <div className="max-w-screen-lg mx-auto pt-12 pb-4">
             <ul className="flex items-center justify-center space-x-48">
               <li>
                 <svg
                   viewBox="0 0 2698.39 585.2"
-                  className="w-full fill-current text-red-600"
+                  className="w-full fill-current text-orange-600"
                 >
                   <path d="M342.87 585.2c-15.25 0-31.68-8.15-51.71-25.64-9.68-8.46-17.65-16.89-20.29-19.74C150.66 426.64 76.88 346.6 38.72 288 2.85 232.89 0 200.58 0 164.06c0-37 18.05-78.13 48.29-110.12C80.66 19.7 123.08 0 164.67 0h.14c124.29 0 200.77 144.46 204 150.61a324.3 324.3 0 0044.79 62.16c34.4 37.23 69.66 56.12 104.74 56.12h1A106 106 0 00593.5 238a103.07 103.07 0 0030.55-73.53A104.57 104.57 0 00519.61 60c-27.55 0-60.14 5.08-93 42.71a30 30 0 11-45.22-39.44C430.85 6.58 483.93 0 519.57 0 610.24 0 684 73.79 684 164.44a162.68 162.68 0 01-48.2 116 165.65 165.65 0 01-115.93 48.4h-1.59c-123.06 0-198.89-143.09-202.78-150.6a324.66 324.66 0 00-44.77-61.77C246.84 90.73 209 60 164.8 60h-.08C139.54 60 113 72.84 91.89 95.16 72.22 116 60 142.37 60 164.06c0 25 0 46.64 29 91.19 35.08 53.89 108.29 132.93 223.8 241.63.6.56 1.17 1.15 1.72 1.76a183.91 183.91 0 0025.4 23.18c10.12-8.28 29.55-25.8 61.73-57.93 29.93-29.88 63.73-65.3 82.2-86.13a30 30 0 0144.9 39.8c-18 20.28-55.35 59.78-92 96-19.27 19-35.44 34.35-48.06 45.47-23.03 20.3-33.31 26.17-45.82 26.17z"></path>
                   <path d="M2647.26 153h-10.77v-4h25.94v4h-10.77v23.72h-4.4zm20-4h4.4l11.07 22.17L2694 149h4.4v27.72h-4.4v-19.3l-9.26 19.25h-3.64l-9.4-19.25v19.25h-4.4zM1038.53 356.2H865c8.48 29.53 36.13 44.92 70.92 44.92 22.75 0 42.82-5.82 59.77-19.55l27.21 27c-19.18 22.46-52.63 38.26-93.67 38.26-63.78 0-120.88-40.34-120.88-112.3 0-72.79 58-112.31 117.31-112.31 58.9.04 125.81 38.72 112.87 133.98zm-174.4-40.77h121.32c-3.57-30.78-31.22-46.17-59.32-46.17-27.66 0-54.42 14.98-62 46.17zM1037.06 226.42h61.11l64.23 150.16 63.78-150.16h61.56l-97.69 216.29h-55.75zM1514.1 356.2h-173.51c8.47 29.53 36.13 44.92 70.92 44.92 22.75 0 42.82-5.82 59.77-19.55l27.21 27c-19.18 22.46-52.64 38.26-93.67 38.26-63.79 0-120.88-40.34-120.88-112.3 0-72.79 58-112.31 117.31-112.31 58.88.04 125.75 38.72 112.85 133.98zm-174.41-40.77H1461c-3.57-30.78-31.22-46.17-59.33-46.17-27.67 0-54.39 14.98-61.98 46.17zM1691.49 223.92v53.25a92.5 92.5 0 00-15.17-1.25c-45 0-73.15 29.11-73.15 72.37v94.42h-59.77V226.42h59.77v56.15c8-33.27 30.78-60.31 72.71-60.31a66.9 66.9 0 0115.61 1.66zM1794.56 218.52v7.9h59.77v44.51h-59.77v171.78h-59.77V270.93h-29.44v-44.51h29.44v-14.14c0-63.65 47.28-74 78.06-74 12 0 28.55 1.24 41.48 8.32v43.67c-11.15-5-21.85-4.58-25.87-4.58-22.75-.04-33.9 11.61-33.9 32.83zM2096 226.42v216.29h-59.77v-29.53c-12.93 19.14-36.57 33.69-71.37 33.69-47.28 0-87.42-27.45-87.42-93.17V226.42h59.77v118.13c0 31.61 18.29 52.41 49.51 52.41 30.33 0 49.51-20.8 49.51-52.41V226.42zM2356.25 315.43v127.28h-59.77V324.58c0-31.61-18.28-52.41-49.51-52.41-30.77 0-49.51 20.8-49.51 52.41v118.13h-59.77V226.42h59.77V256c12.94-19.13 36.13-33.69 70.92-33.69 47.73-.05 87.87 27.4 87.87 93.12zM2618.75 147.39v295.32H2559V413.6h-1.34c-5.8 12.06-32.56 33.27-74 33.27-54 0-111.52-37.43-111.52-112.3s57.54-112.31 111.52-112.31c41.48 0 68.24 21.21 74 33.27h.89V147.39zm-58.43 187.18c0-40.77-31.23-62.4-64.68-62.4s-64.64 22.05-64.64 62.4 31.19 62.43 64.64 62.43 64.68-21.67 64.68-62.43z"></path>
@@ -133,7 +133,7 @@ const HomePage = () => {
               <li>
                 <svg
                   viewBox="0 0 165 46"
-                  className="w-full fill-current text-red-600"
+                  className="w-full fill-current text-orange-600"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path d="M63.2517 30.2877C65.177 30.2877 66.6919 29.8622 67.7966 29.0112C68.3374 28.5994 68.7703 28.0648 69.0587 27.4525C69.3471 26.8402 69.4825 26.1681 69.4535 25.493C69.4757 24.7969 69.3046 24.1081 68.959 23.5015C68.5642 22.8939 68.0051 22.4083 67.3453 22.1C66.3727 21.6219 65.3464 21.2594 64.2877 21.0202C63.0844 20.7199 62.1783 20.4624 61.5695 20.2479C61.1153 20.1111 60.6949 19.8822 60.3349 19.5757C60.1186 19.3435 60.002 19.037 60.01 18.7212C60.008 18.4395 60.0853 18.1628 60.2332 17.9222C60.3812 17.6816 60.5939 17.4865 60.8475 17.359C61.5088 17.0008 62.2627 16.8452 63.0134 16.912C63.8285 16.9154 64.6231 17.1649 65.2913 17.6271C65.7051 17.9146 66.019 18.3217 66.1902 18.7927C66.2334 18.9355 66.3265 19.0585 66.4528 19.1397C66.579 19.2209 66.7303 19.2551 66.8797 19.2361L68.8471 18.8785C68.9148 18.8687 68.9799 18.8453 69.0381 18.8097C69.0964 18.7741 69.1467 18.727 69.186 18.6714C69.2252 18.6158 69.2525 18.5528 69.2662 18.4864C69.28 18.4199 69.2798 18.3514 69.2658 18.285C69.0048 17.1692 68.3229 16.1945 67.3598 15.5605C66.0663 14.7103 64.5359 14.2838 62.9845 14.3413C61.1916 14.3413 59.7476 14.7573 58.6526 15.5891C58.1311 15.9661 57.7103 16.4634 57.4266 17.0378C57.1429 17.6122 57.0049 18.2465 57.0246 18.8857C57.0046 19.548 57.1708 20.2028 57.5047 20.7771C57.9279 21.3549 58.5002 21.8094 59.1616 22.0928C60.1663 22.5579 61.2146 22.9244 62.2914 23.1869C63.4947 23.5039 64.3864 23.7697 64.9664 23.9842C65.4032 24.107 65.7985 24.3442 66.1107 24.6707C66.3116 24.9371 66.4124 25.2646 66.3959 25.5967C66.4067 25.8997 66.3394 26.2005 66.2005 26.4707C66.0615 26.7409 65.8555 26.9717 65.6017 27.1413C64.9572 27.549 64.1994 27.7454 63.4358 27.7026C62.5327 27.7339 61.6406 27.4987 60.8727 27.0269C60.3526 26.6942 59.9501 26.2093 59.7212 25.6396C59.6743 25.5109 59.5851 25.4014 59.4679 25.3288C59.3508 25.2562 59.2124 25.2246 59.075 25.2392L57.0932 25.5431C57.0218 25.5521 56.9533 25.5759 56.8919 25.6131C56.8306 25.6502 56.7779 25.6998 56.7373 25.7586C56.6967 25.8174 56.6692 25.884 56.6565 25.9541C56.6437 26.0242 56.6462 26.0961 56.6636 26.1652C56.9629 27.3423 57.6839 28.3715 58.6923 29.0613C59.8764 29.8789 61.3962 30.2877 63.2517 30.2877Z" />
@@ -157,7 +157,7 @@ const HomePage = () => {
               <li>
                 <svg
                   viewBox="0 0 175 32"
-                  className="w-full fill-current text-red-600"
+                  className="w-full fill-current text-orange-600"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path d="M42.9209 0.943769H51.4958V5.28719C53.5236 2.04402 56.8851 0.0162354 61.6955 0.0162354C69.2277 0.0162354 72.8899 4.81383 72.8899 14.038V31.0727H64.187V14.5018C64.187 10.0976 61.9834 7.43332 58.2764 7.43332C54.1025 7.43332 51.4958 10.6765 51.4958 15.6596V31.0727H42.9209V0.943769Z" />
@@ -171,17 +171,17 @@ const HomePage = () => {
           </div>
         </section>
 
-        <section className="bg-red-100 pt-24 pb-36">
+        <section className="bg-orange-50 pt-24 pb-36">
           <ul className="max-w-screen-lg mx-auto flex items-start space-x-12">
-            <li className="w-1/3 relative">
-              <p className="bg-white border border-red-200 text-sm leading-6 p-6 rounded-lg">
+            <li className="mt-6 w-1/3 relative">
+              <p className="bg-white border border-orange-200 text-sm leading-6 p-6 rounded-lg">
                 "I needed to be able to run the most efficient crypto scam
                 possible. I finally found the framework that made it simple.
                 Thanks Redwood!"
               </p>
               <div className="-mb-9 -mr-6 flex items-end justify-right absolute bottom-0 right-0">
                 <div className="flex flex-col items-end text-xs mr-2">
-                  <span className="text-red-800 font-semibold">
+                  <span className="text-orange-800 font-semibold">
                     Rob Cameron
                   </span>
                   <span className="text-stone-500">Creator, Algostake</span>
@@ -189,19 +189,19 @@ const HomePage = () => {
                 <img
                   src="/images/rob.jpg"
                   alt="author"
-                  className="block rounded-full border-4 border-red-100 w-16 mt-12"
+                  className="block rounded-full border-4 border-orange-50 w-16 mt-12"
                 />
               </div>
             </li>
             <li className="w-1/3 relative">
-              <p className="bg-white border-2 border-red-200 text-base leading-7 p-6 rounded-lg">
+              <p className="bg-white border-2 border-orange-200 text-base leading-7 p-6 rounded-lg">
                 "My frontend, database access, open API, and great testing was a
                 breeze with Redwood. It freed me up to focus on my real product:
                 illustrated images of cat anuses."
               </p>
-              <div className="-mb-9 -mr-6 flex items-end justify-right absolute bottom-0 right-0">
-                <div className="flex flex-col items-end text-xs mr-2">
-                  <span className="text-red-800 font-semibold">
+              <div className="-mb-11 -mr-6 flex items-end justify-right absolute bottom-0 right-0">
+                <div className="flex flex-col items-end text-sm mr-2">
+                  <span className="text-orange-800 font-semibold">
                     Peter Pistorius
                   </span>
                   <span className="text-stone-500">Creator & CEO, Snaplet</span>
@@ -209,17 +209,17 @@ const HomePage = () => {
                 <img
                   src="/images/peter.gif"
                   alt="author"
-                  className="block rounded-full border-4 border-red-100 w-16 mt-12"
+                  className="block rounded-full border-4 border-orange-50 w-20 -mb-2 -mr-2"
                 />
               </div>
             </li>
-            <li className="w-1/3 relative">
-              <p className="bg-white border border-red-200 text-sm leading-6 p-6 rounded-lg">
+            <li className="mt-6 w-1/3 relative">
+              <p className="bg-white border border-orange-200 text-sm leading-6 p-6 rounded-lg">
                 "But what about CI/CD?"
               </p>
               <div className="-mb-9 -mr-6 flex items-end justify-right absolute bottom-0 right-0">
                 <div className="flex flex-col items-end text-xs mr-2">
-                  <span className="text-red-800 font-semibold">
+                  <span className="text-orange-800 font-semibold">
                     David Price
                   </span>
                   <span className="text-stone-500">CI/CD Enthusiast</span>
@@ -227,7 +227,7 @@ const HomePage = () => {
                 <img
                   src="/images/david.jpg"
                   alt="author"
-                  className="block border-4 border-red-100 rounded-full w-16 mt-12"
+                  className="block border-4 border-orange-50 rounded-full w-16 mt-12"
                 />
               </div>
             </li>
@@ -235,7 +235,7 @@ const HomePage = () => {
         </section>
 
         <section className="max-w-screen-lg mx-auto py-24">
-          <h2 className="text-center text-6xl font-black text-red-800">
+          <h2 className="text-center text-6xl font-black text-orange-900">
             Your Redwood Journey
           </h2>
 
@@ -253,24 +253,26 @@ const HomePage = () => {
 
           <div className="flex items-start justify-center">
             <div className="w-1/3 text-center px-8">
-              <h3 className="mt-4 title text-red-700">Complete the Tutorial</h3>
-              <p className="mt-2 text-sm text-stone-500 text-center">
+              <h3 className="mt-4 title text-orange-700">
+                Complete the Tutorial
+              </h3>
+              <p className="mt-2 text-sm text-stone-500 text-center leading-6">
                 The best way to learn Redwood is to build something! The Redwood
                 tutorial takes you through building a blog from scratch and
                 touches on all the major features of the framework.
               </p>
             </div>
             <div className="w-1/3 text-center px-8">
-              <h3 className="mt-4 title text-red-700">Join the Community</h3>
-              <p className="mt-2 text-sm text-stone-500 text-center">
+              <h3 className="mt-4 title text-orange-700">Join the Community</h3>
+              <p className="mt-2 text-sm text-stone-500 text-center leading-6">
                 Join hundreds of other developers in their Redwood journey.
                 Forums, chat and get togethers on Zoom. Make some friends while
                 building your app.
               </p>
             </div>
             <div className="w-1/3 text-center px-8">
-              <h3 className="mt-4 title text-red-700">Build an App</h3>
-              <p className="mt-2 text-sm text-stone-500 text-center">
+              <h3 className="mt-4 title text-orange-700">Build an App</h3>
+              <p className="mt-2 text-sm text-stone-500 text-center leading-6">
                 Take one of those domains you bought on a whim and start
                 building it. Use your new network to help you if you get stuck
                 and give back to others so we all grow together.
@@ -297,9 +299,9 @@ const HomePage = () => {
           </div>
         </section>
 
-        <section className="bg-red-200">
+        <section className="bg-orange-100">
           <div className="max-w-screen-lg mx-auto py-24">
-            <h2 className="text-center text-6xl font-black text-stone-700">
+            <h2 className="text-center text-6xl font-black text-orange-900">
               One API to Rule Them All
             </h2>
             <h3 className="text-center mt-4 text-xl text-stone-500">
@@ -308,13 +310,13 @@ const HomePage = () => {
 
             <div className="mt-24 flex justify-center">
               <div className="">
-                <img src="/images/graphql_map.svg" />
+                <img src="/images/graphql_map.svg" alt="GraphQL clients" HMM />
               </div>
             </div>
           </div>
         </section>
 
-        <section className="bg-red-100 py-24">
+        <section className="bg-orange-50 py-24">
           <div className="max-w-screen-lg mx-auto">
             <h2 className="text-center text-6xl font-black text-teal-800">
               End-to-end Development the Redwood Way
@@ -326,7 +328,7 @@ const HomePage = () => {
 
             <div className="mt-24 flex flex-col space-y-8">
               <div className="flex items-end">
-                <div className="w-2/5 bg-white border-4 border-red-700 hover:border-red-300 p-8 rounded-lg cursor-pointer transition duration-100">
+                <div className="w-2/5 bg-white border-4 border-orange-700 hover:border-orange-300 p-8 rounded-lg cursor-pointer transition duration-100">
                   <h3 className="title">Design</h3>
                   <p className="mt-2 text-sm">
                     Mockup, build and verify components in{' '}
@@ -339,10 +341,24 @@ const HomePage = () => {
 
               <div className="flex items-end">
                 <div className="w-1/6"></div>
-                <div className="w-2/5 -ml-8 bg-white border-4 border-red-700 hover:border-red-300 p-8 rounded-lg cursor-pointer transition duration-100">
+                <div className="w-2/5 -ml-8 bg-white border-4 border-orange-700 hover:border-orange-300 p-8 rounded-lg cursor-pointer transition duration-100">
                   <h3 className="title">Test</h3>
                   <p className="mt-2 text-sm">
-                    Whether it's TDD or DDT, Redwood uses Jest along with{' '}
+                    Whether it's{' '}
+                    <span
+                      className="border-b border-dashed border-stone-400 cursor-help"
+                      title="Test Driven Development"
+                    >
+                      TDD
+                    </span>{' '}
+                    or{' '}
+                    <span
+                      className="border-b border-dashed border-stone-400 cursor-help"
+                      title="Development Driven Testing"
+                    >
+                      DDT
+                    </span>
+                    , Redwood uses <a href="#">Jest</a> along with{' '}
                     <a href="#">mocks</a> and <a href="#">scenarios</a> to
                     verify functionality on the frontend and the backend.
                   </p>
@@ -352,7 +368,7 @@ const HomePage = () => {
 
               <div className="flex items-end">
                 <div className="w-2/6"></div>
-                <div className="w-2/5 -ml-8 bg-white border-4 border-red-700 hover:border-red-300 p-8 rounded-lg cursor-pointer transition duration-100">
+                <div className="w-2/5 -ml-8 bg-white border-4 border-orange-700 hover:border-orange-300 p-8 rounded-lg cursor-pointer transition duration-100">
                   <h3 className="title">Auth & Security</h3>
                   <p className="mt-2 text-sm">
                     Lock down your front and backends with your own{' '}
@@ -366,12 +382,13 @@ const HomePage = () => {
 
               <div className="flex items-end">
                 <div className="w-3/6"></div>
-                <div className="w-2/5 -ml-8 bg-white border-4 border-red-700 hover:border-red-300 p-8 rounded-lg cursor-pointer transition duration-100">
+                <div className="w-2/5 -ml-8 bg-white border-4 border-orange-700 hover:border-orange-300 p-8 rounded-lg cursor-pointer transition duration-100">
                   <h3 className="title">Data & Transport</h3>
                   <p className="mt-2 text-sm">
                     When your API is <a href="#">GraphQL</a> you're ready for
-                    any client, from native mobile apps to VR. Keep your
-                    business logic organized and reusable within{' '}
+                    any client, from the browser to native mobile apps and more.
+                    Transform your data with <a href="#">Directives</a> and keep
+                    your business logic organized and reusable within{' '}
                     <a href="#">Services</a>.
                   </p>
                 </div>
@@ -380,7 +397,7 @@ const HomePage = () => {
 
               <div className="flex items-end">
                 <div className="w-4/6"></div>
-                <div className="w-2/5 bg-white border-4 border-red-700 hover:border-red-300 p-8 rounded-lg cursor-pointer transition duration-100">
+                <div className="w-2/5 bg-white border-4 border-orange-700 hover:border-orange-300 p-8 rounded-lg cursor-pointer transition duration-100">
                   <h3 className="title">Deploy</h3>
                   <p className="mt-2 text-sm">
                     Deploy your app to serverless hosts divke{' '}
@@ -392,16 +409,47 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-        </section>
-
-        <section className="bg-red-800 text-white py-24">
-          <div className="flex items-center justify-center max-w-screen-lg mx-auto">
-            <div className="text-6xl text-red-400 font-black text-right px-4">
-              Ready to learn Redwood?
+          <div className="mt-24 flex flex-col items-center ">
+            <h2 className="text-center text-5xl font-black text-teal-800">
+              Watch it in action
+            </h2>
+            <h3 className="text-center mt-4 text-xl text-stone-500">
+              Watch a feature being designed, built and deployed in Redwood
+            </h3>
+            <div className="mt-12">
+              <iframe
+                width="1024"
+                height="576"
+                src="https://www.youtube.com/embed/tiF9SdM1i7M"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
           </div>
+        </section>
+
+        <section className="border-16 border-teal-600 bg-gradient-to-r from-teal-700 to-teal-500 text-white py-24">
+          <div className="flex flex-col items-center justify-center max-w-screen-lg mx-auto">
+            <h2 className="text-6xl font-black text-right px-4">
+              Ready to learn Redwood?
+            </h2>
+            <h3 className="text-center mt-4 text-xl text-teal-200">
+              Start from{' '}
+              <span
+                className="
+              bg-teal-500 rounded px-1 py-[2px] text-teal-100 font-mono"
+              >
+                yarn install
+              </span>{' '}
+              and end up with a deployed app,
+              <br />
+              taking a tour of all major Redwood features
+            </h3>
+          </div>
           <div className="max-w-screen-lg mx-auto mt-24 pb-4 flex justify-center">
-            <button type="button" className="button">
+            <button type="button" className="button-invert">
               Start the Tutorial
             </button>
           </div>
