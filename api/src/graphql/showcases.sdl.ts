@@ -4,7 +4,6 @@ export const schema = gql`
     createdAt: DateTime!
     updatedAt: DateTime
     isPublished: Boolean!
-    type: ApplicationType!
     link: String!
     label: String
     title: String
@@ -15,12 +14,6 @@ export const schema = gql`
     mediaId: Int
     productHunt: String
     tags: [Tag]!
-  }
-
-  enum ApplicationType {
-    sample
-    startup
-    module
   }
 
   input ExamplesInput {
@@ -36,7 +29,6 @@ export const schema = gql`
 
   input CreateShowcaseInput {
     isPublished: Boolean!
-    type: ApplicationType!
     link: String!
     label: String
     title: String
@@ -49,7 +41,6 @@ export const schema = gql`
 
   input UpdateShowcaseInput {
     isPublished: Boolean
-    type: ApplicationType
     link: String
     label: String
     title: String

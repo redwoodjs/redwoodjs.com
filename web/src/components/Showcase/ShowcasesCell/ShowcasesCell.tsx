@@ -11,7 +11,6 @@ export const QUERY = gql`
       createdAt
       updatedAt
       isPublished
-      type
       link
       label
       title
