@@ -2,7 +2,7 @@ import List from 'src/components/Tag/List/List'
 import { CardProps } from 'web/src/components/Card/Card'
 
 export interface StandardProps extends CardProps {
-  source: string
+  link: string
 }
 
 const Standard: React.FC<StandardProps> = ({
@@ -10,7 +10,7 @@ const Standard: React.FC<StandardProps> = ({
   media,
   description,
   tags,
-  source,
+  link,
 }) => (
   <article className="card standard flex flex-col">
     <header>
@@ -23,8 +23,8 @@ const Standard: React.FC<StandardProps> = ({
     </header>
     <div className="content">
       <p>{description}</p>
-      {source && (
-        <a href={source} target={'_blank'} rel="noreferrer">
+      {link && (
+        <a href={link} target={'_blank'} rel="noreferrer">
           Source
         </a>
       )}

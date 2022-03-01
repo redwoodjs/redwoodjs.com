@@ -24,11 +24,8 @@ export const showcases = () => {
 }
 
 export const examples = ({ input }) => {
-  const type = input?.type ?? 'sample'
-
   return db.showcase.findMany({
     where: {
-      type,
       isPublished: true,
       tags: { some: { label: input.tag } },
     },

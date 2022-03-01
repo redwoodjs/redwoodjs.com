@@ -8,12 +8,6 @@ generator client {
   binaryTargets = "native"
 }
 
-enum ApplicationType {
-  sample
-  startup
-  module
-}
-
 enum MediaType {
   video
   picture
@@ -67,18 +61,14 @@ model Showcase {
   createdAt     DateTime @default(now())
   updatedAt     DateTime?
   isPublished   Boolean @default(false)
-  isHighlight   Boolean @default(false)
   // Data.
-  type          ApplicationType
-  link          String
+  link          String // Link to the application. If the application can't have a link it shouldn't be listed.
   label         String?
   title         String?
   subtitle      String?
-  source        String?
   description   String
   media         Media? @relation(fields: [mediaId], references: [id])
   mediaId       Int?
-  productHunt   String?
   // Relations.
   tags          Tag[]
 }
@@ -94,11 +84,8 @@ model Author {
   email         String?
   isEmailPublic Boolean @default(false)
   pronoun       Pronoun @default(they)
-  linkedin      String?
-  github        String?
-  productHunt   String?
-  company       String?
-  discord       String?
+  companyName   String?
+  companyUrl    String?
   // Relations.
   avatar        Media? @relation(fields: [avatarId], references: [id])
   avatarId      Int?
