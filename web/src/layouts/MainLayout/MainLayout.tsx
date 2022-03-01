@@ -123,7 +123,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                                 </PopoverLink>
 
                                 <PopoverLink
-                                  route={routes.examples()}
+                                  route={routes.showcase()}
                                   title="Showcase"
                                   desc="Case studies of real-world apps and companies built with Redwood"
                                 >
