@@ -14,15 +14,12 @@ export const QUERY = gql`
       createdAt
       updatedAt
       isPublished
-      type
       link
       label
       title
       subtitle
-      source
       description
       mediaId
-      productHunt
       tags {
         id
         label
@@ -38,15 +35,12 @@ const UPDATE_SHOWCASE_MUTATION = gql`
       createdAt
       updatedAt
       isPublished
-      type
       link
       label
       title
       subtitle
-      source
       description
       mediaId
-      productHunt
     }
   }
 `

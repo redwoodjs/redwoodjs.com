@@ -43,52 +43,6 @@ const ShowcaseForm = (props) => {
         <FieldError name="isPublished" className="rw-field-error" />
 
         <Label
-          name="type"
-          className="rw-label"
-          errorClassName="rw-label rw-label-error"
-        >
-          Type
-        </Label>
-
-        <div className="rw-check-radio-items">
-          <RadioField
-            id="showcase-type-0"
-            name="type"
-            defaultValue="sample"
-            defaultChecked={props.showcase?.type?.includes('sample')}
-            className="rw-input"
-            errorClassName="rw-input rw-input-error"
-          />
-          <div>Sample</div>
-        </div>
-
-        <div className="rw-check-radio-items">
-          <RadioField
-            id="showcase-type-1"
-            name="type"
-            defaultValue="startup"
-            defaultChecked={props.showcase?.type?.includes('startup')}
-            className="rw-input"
-            errorClassName="rw-input rw-input-error"
-          />
-          <div>Startup</div>
-        </div>
-
-        <div className="rw-check-radio-items">
-          <RadioField
-            id="showcase-type-2"
-            name="type"
-            defaultValue="module"
-            defaultChecked={props.showcase?.type?.includes('module')}
-            className="rw-input"
-            errorClassName="rw-input rw-input-error"
-          />
-          <div>Module</div>
-        </div>
-
-        <FieldError name="type" className="rw-field-error" />
-
-        <Label
           name="link"
           className="rw-label"
           errorClassName="rw-label rw-label-error"
@@ -158,23 +112,6 @@ const ShowcaseForm = (props) => {
         <FieldError name="subtitle" className="rw-field-error" />
 
         <Label
-          name="source"
-          className="rw-label"
-          errorClassName="rw-label rw-label-error"
-        >
-          Source
-        </Label>
-
-        <TextField
-          name="source"
-          defaultValue={props.showcase?.source}
-          className="rw-input"
-          errorClassName="rw-input rw-input-error"
-        />
-
-        <FieldError name="source" className="rw-field-error" />
-
-        <Label
           name="description"
           className="rw-label"
           errorClassName="rw-label rw-label-error"
@@ -208,23 +145,6 @@ const ShowcaseForm = (props) => {
         />
 
         <FieldError name="mediaId" className="rw-field-error" />
-
-        <Label
-          name="productHunt"
-          className="rw-label"
-          errorClassName="rw-label rw-label-error"
-        >
-          Product hunt
-        </Label>
-
-        <TextField
-          name="productHunt"
-          defaultValue={props.showcase?.productHunt}
-          className="rw-input"
-          errorClassName="rw-input rw-input-error"
-        />
-
-        <FieldError name="productHunt" className="rw-field-error" />
 
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">

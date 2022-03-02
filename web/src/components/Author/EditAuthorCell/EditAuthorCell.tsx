@@ -17,11 +17,8 @@ export const QUERY = gql`
       email
       isEmailPublic
       pronoun
-      linkedin
-      github
-      productHunt
-      company
-      discord
+      companyName
+      companyUrl
       avatarId
     }
   }
@@ -37,11 +34,8 @@ const UPDATE_AUTHOR_MUTATION = gql`
       email
       isEmailPublic
       pronoun
-      linkedin
-      github
-      productHunt
-      company
-      discord
+      companyName
+      companyUrl
       avatarId
     }
   }

@@ -10,15 +10,12 @@ export const QUERY = gql`
       createdAt
       updatedAt
       isPublished
-      type
       link
       label
       title
       subtitle
-      source
       description
       mediaId
-      productHunt
     }
   }
 `

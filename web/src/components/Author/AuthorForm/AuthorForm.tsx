@@ -142,89 +142,38 @@ const AuthorForm = (props) => {
         <FieldError name="pronoun" className="rw-field-error" />
 
         <Label
-          name="linkedin"
+          name="companyName"
           className="rw-label"
           errorClassName="rw-label rw-label-error"
         >
-          Linkedin
+          Company Name
         </Label>
 
         <TextField
-          name="linkedin"
-          defaultValue={props.author?.linkedin}
+          name="companyName"
+          defaultValue={props.author?.companyName}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
         />
 
-        <FieldError name="linkedin" className="rw-field-error" />
+        <FieldError name="companyName" className="rw-field-error" />
 
         <Label
-          name="github"
+          name="companyUrl"
           className="rw-label"
           errorClassName="rw-label rw-label-error"
         >
-          Github
+          Company Site
         </Label>
 
         <TextField
-          name="github"
-          defaultValue={props.author?.github}
+          name="companyUrl"
+          defaultValue={props.author?.companyUrl}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
         />
 
-        <FieldError name="github" className="rw-field-error" />
-
-        <Label
-          name="productHunt"
-          className="rw-label"
-          errorClassName="rw-label rw-label-error"
-        >
-          Product hunt
-        </Label>
-
-        <TextField
-          name="productHunt"
-          defaultValue={props.author?.productHunt}
-          className="rw-input"
-          errorClassName="rw-input rw-input-error"
-        />
-
-        <FieldError name="productHunt" className="rw-field-error" />
-
-        <Label
-          name="company"
-          className="rw-label"
-          errorClassName="rw-label rw-label-error"
-        >
-          Company
-        </Label>
-
-        <TextField
-          name="company"
-          defaultValue={props.author?.company}
-          className="rw-input"
-          errorClassName="rw-input rw-input-error"
-        />
-
-        <FieldError name="company" className="rw-field-error" />
-
-        <Label
-          name="discord"
-          className="rw-label"
-          errorClassName="rw-label rw-label-error"
-        >
-          Discord
-        </Label>
-
-        <TextField
-          name="discord"
-          defaultValue={props.author?.discord}
-          className="rw-input"
-          errorClassName="rw-input rw-input-error"
-        />
-
-        <FieldError name="discord" className="rw-field-error" />
+        <FieldError name="companyUrl" className="rw-field-error" />
 
         <Label
           name="avatarId"

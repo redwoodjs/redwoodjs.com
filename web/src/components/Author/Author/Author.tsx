@@ -105,24 +105,12 @@ const Author = ({ author }) => {
               <td>{formatEnum(author.pronoun)}</td>
             </tr>
             <tr>
-              <th>Linkedin</th>
-              <td>{author.linkedin}</td>
+              <th>Company Name</th>
+              <td>{author.companyName}</td>
             </tr>
             <tr>
-              <th>Github</th>
-              <td>{author.github}</td>
-            </tr>
-            <tr>
-              <th>Product hunt</th>
-              <td>{author.productHunt}</td>
-            </tr>
-            <tr>
-              <th>Company</th>
-              <td>{author.company}</td>
-            </tr>
-            <tr>
-              <th>Discord</th>
-              <td>{author.discord}</td>
+              <th>Company Site</th>
+              <td>{author.companyUrl}</td>
             </tr>
             <tr>
               <th>Avatar id</th>
