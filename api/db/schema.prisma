@@ -10,6 +10,13 @@ generator client {
 
 //
 
+// We use ISO 639-3 as it has the most languages covered.
+// https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+enum Language {
+  eng
+  fra
+}
+
 enum MediaType {
   video
   picture
@@ -112,6 +119,17 @@ model Showcase {
   // Relations.
   socialLinks SocialLink[]
   tags        Tag[]
+}
+
+model ShowcaseLocalization {
+  // Meta.
+  id          Int          @id @default(autoincrement())
+  isValid     Boolean      @default(false)
+  language    Language    @default(eng)
+  // Data.
+  title       String?
+  subtitle    String?
+  description String
 }
 
 model Author {
