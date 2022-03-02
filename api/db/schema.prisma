@@ -8,6 +8,8 @@ generator client {
   binaryTargets = "native"
 }
 
+//
+
 enum MediaType {
   video
   picture
@@ -19,6 +21,22 @@ enum Pronoun {
   she
 }
 
+// Steps to add a new platform:
+// - Add the platform to the enum below.
+// - Add the platform to the `SocialLinkPlatform` enum in `api/src/graphql/socialLinks.sdl.ts`
+// - Add the platform's icon to `web/src/components/Icons/...`
+// - Configure the platform and its icons in the constants located at the top of `web/src/components/SocialLink/SocialLinkField`
+// - Add the platform's translations to each `web/src/locales/*.json > SocialLink.platforms`
+enum SocialLinkPlatform {
+  discord
+  github
+  linkedin
+  productHunt
+  twitter
+}
+
+//
+
 model RW_DataMigration {
   version    String   @id
   name       String
@@ -26,10 +44,9 @@ model RW_DataMigration {
   finishedAt DateTime
 }
 
-
 model User {
-  id                  Int @id @default(autoincrement())
-  email               String  @unique
+  id                  Int       @id @default(autoincrement())
+  email               String    @unique
   hashedPassword      String
   salt                String
   resetToken          String?
@@ -38,55 +55,72 @@ model User {
 
 model Tag {
   // Meta.
-  id        Int @id @default(autoincrement())
+  id        Int        @id @default(autoincrement())
   // Data.
   label     String
   showcases Showcase[]
 }
 
+model SocialLink {
+  // Meta
+  id         Int                @id @default(autoincrement())
+  createdAt  DateTime           @default(now())
+  updatedAt  DateTime           @updatedAt
+  // Data
+  link       String
+  platform   SocialLinkPlatform
+  // Relations
+  author     Author?            @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  authorId   Int?
+  showcase   Showcase?          @relation(fields: [showcaseId], references: [id], onDelete: Cascade)
+  showcaseId Int?
+}
+
 model Media {
   // Meta.
-  id    Int @id @default(autoincrement())
+  id       Int       @id @default(autoincrement())
   // Data.
-  src   String
-  type  MediaType
+  src      String
+  type     MediaType
   // Relations.
-  author    Author?
-  showcase  Showcase?
+  author   Author?
+  showcase Showcase?
 }
 
 model Showcase {
   // Meta.
-  id            Int @id @default(autoincrement())
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime?
-  isPublished   Boolean @default(false)
+  id          Int          @id @default(autoincrement())
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime?
+  isPublished Boolean      @default(false)
   // Data.
-  link          String // Link to the application. If the application can't have a link it shouldn't be listed.
-  label         String?
-  title         String?
-  subtitle      String?
-  description   String
-  media         Media? @relation(fields: [mediaId], references: [id])
-  mediaId       Int?
+  link        String // Link to the application. If the application can't have a link it shouldn't be listed.
+  label       String?
+  title       String?
+  subtitle    String?
+  description String
+  media       Media?       @relation(fields: [mediaId], references: [id])
+  mediaId     Int?         @unique
   // Relations.
-  tags          Tag[]
+  socialLinks SocialLink[]
+  tags        Tag[]
 }
 
 model Author {
   // Meta.
-  id            Int @id @default(autoincrement())
-  createdAt     DateTime @default(now())
+  id            Int          @id @default(autoincrement())
+  createdAt     DateTime     @default(now())
   updatedAt     DateTime?
   // Data.
   firstname     String
   lastname      String
   email         String?
-  isEmailPublic Boolean @default(false)
-  pronoun       Pronoun @default(they)
+  isEmailPublic Boolean      @default(false)
+  pronoun       Pronoun      @default(they)
   companyName   String?
   companyUrl    String?
   // Relations.
-  avatar        Media? @relation(fields: [avatarId], references: [id])
-  avatarId      Int?
+  avatar        Media?       @relation(fields: [avatarId], references: [id])
+  avatarId      Int?         @unique
+  socialLinks   SocialLink[]
 }
