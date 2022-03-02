@@ -9,7 +9,7 @@ import LinkedInIcon from 'src/components/Icons/LinkedInIcon'
 import ProductHuntIcon from 'src/components/Icons/ProductHuntIcon'
 import TwitterIcon from 'src/components/Icons/TwitterIcon'
 
-import { SocialLinkPlatform } from 'types/graphql'
+import type { SocialLinkPlatform } from 'types/graphql'
 
 // --
 
