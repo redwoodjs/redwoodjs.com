@@ -21,6 +21,13 @@ enum Pronoun {
   she
 }
 
+enum Roles {
+  admin
+  editor
+  translator
+  candidate
+}
+
 // Steps to add a new platform:
 // - Add the platform to the enum below.
 // - Add the platform to the `SocialLinkPlatform` enum in `api/src/graphql/socialLinks.sdl.ts`
@@ -47,6 +54,7 @@ model RW_DataMigration {
 model User {
   id                  Int       @id @default(autoincrement())
   email               String    @unique
+  roles               Roles[]
   hashedPassword      String
   salt                String
   resetToken          String?
