@@ -25,5 +25,27 @@
         "tutorial": "Start the Tutorial"
       }
     }
+  },
+  "SocialLink": {
+    "Field": {
+      "addLink": "Add $t(SocialLink.platforms.{{ platform }}) social link",
+      "removeLink": "Remove $t(SocialLink.platforms.{{ platform }}) social link",
+      "select": "Select social link",
+      "field": "$t(SocialLink.platforms.{{ platform }}) social link",
+      "placeholder": {
+        "discord": "Link to a Discord profile or server",
+        "github": "Link to a GitHub organization, profile, or repository",
+        "linkedin": "Link to a LinkedIn job or profile",
+        "productHunt": "Link to a Product Hunt post or profile",
+        "twitter": "Link to a Twitter profile"
+      }
+    },
+    "platforms": {
+      "discord": "Discord",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "productHunt": "Product Hunt",
+      "twitter": "Twitter"
+    }
   }
 }
