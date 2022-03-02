@@ -59,6 +59,14 @@ export default async () => {
         subtitle: 'Awesome music application example',
         title: 'Music Application',
         media: { connect: rwLogo },
+        localization: {
+          create: {
+            subtitle: 'Awesome music application example',
+            title: 'Music Application',
+            description:
+              'Some music application, with full library, artworks, lyrics, bits of original music videos',
+          },
+        },
         tags: { connect: [tags.highlight, tags.sample, tags.cms] },
       },
     })
@@ -72,6 +80,13 @@ export default async () => {
         subtitle: 'Awesome todo application example',
         title: 'Todo Application',
         media: { connect: jamstackGraph },
+        localization: {
+          create: {
+            description: 'Some ToDo sample application powered by RedwoodJS',
+            subtitle: 'Awesome todo application example',
+            title: 'Todo Application',
+          },
+        },
         tags: { connect: [tags.highlight, tags.sample, tags.tool] },
       },
     })
@@ -86,6 +101,14 @@ export default async () => {
         subtitle: 'Awesome stripe integration example',
         title: 'Stripe integration',
         media: { connect: randomImage },
+        localization: {
+          create: {
+            description:
+              'Some Stripe integration, with full catalogue, checkout & payment process',
+            subtitle: 'Awesome stripe integration example',
+            title: 'Stripe integration',
+          },
+        },
         tags: {
           connect: [
             tags.highlight,
@@ -105,6 +128,12 @@ export default async () => {
       link: `https://github.com/redwoodjs/redwood/releases/tag/v0.${
         index + 1
       }.0`,
+      localization: {
+        create: {
+          description:
+            'Generated canon example, not necessarily curated but with high value nonetheless.',
+        },
+      },
       tags: { connect: [tags.sample, tags.canon] },
     }))
 
@@ -119,6 +148,11 @@ export default async () => {
       link: `https://github.com/redwoodjs/redwood/releases/tag/v0.${
         index + 1
       }.0`,
+      localization: {
+        create: {
+          description: 'Generated community example',
+        },
+      },
       tags: { connect: [tags.sample, tags.community] },
     }))
 

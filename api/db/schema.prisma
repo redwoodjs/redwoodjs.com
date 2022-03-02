@@ -104,21 +104,23 @@ model Media {
 
 model Showcase {
   // Meta.
-  id          Int          @id @default(autoincrement())
-  createdAt   DateTime     @default(now())
-  updatedAt   DateTime?
-  isPublished Boolean      @default(false)
+  id              Int          @id @default(autoincrement())
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime?
+  isPublished     Boolean      @default(false)
   // Data.
-  link        String // Link to the application. If the application can't have a link it shouldn't be listed.
-  label       String?
-  title       String?
-  subtitle    String?
-  description String
-  media       Media?       @relation(fields: [mediaId], references: [id])
-  mediaId     Int?         @unique
+  link            String // Link to the application. If the application can't have a link it shouldn't be listed.
+  label           String?
+  title           String?
+  subtitle        String?
+  description     String
+  media           Media?       @relation(fields: [mediaId], references: [id])
+  mediaId         Int?         @unique
   // Relations.
-  socialLinks SocialLink[]
-  tags        Tag[]
+  socialLinks     SocialLink[]
+  tags            Tag[]
+  localization    ShowcaseLocalization @relation(fields: [localizationId], references: [id])
+  localizationId  Int
 }
 
 model ShowcaseLocalization {
@@ -130,6 +132,8 @@ model ShowcaseLocalization {
   title       String?
   subtitle    String?
   description String
+  // Relations.
+  showcase    Showcase?
 }
 
 model Author {

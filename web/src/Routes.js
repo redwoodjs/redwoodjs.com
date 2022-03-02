@@ -28,6 +28,12 @@ const Routes = () => {
         <Route notfound page={NotFoundPage} />
       </Set>
       <Private unauthenticated={'home'}>
+        <Set wrap={AdminLayout} role={['translator', 'editor', 'admin']}>
+          <Route path="/showcase-localizations/new" page={AdminShowcaseLocalizationNewShowcaseLocalizationPage} name="newShowcaseLocalization" />
+          <Route path="/showcase-localizations/{id:Int}/edit" page={AdminShowcaseLocalizationEditShowcaseLocalizationPage} name="editShowcaseLocalization" />
+          <Route path="/showcase-localizations/{id:Int}" page={AdminShowcaseLocalizationShowcaseLocalizationPage} name="showcaseLocalization" />
+          <Route path="/showcase-localizations" page={AdminShowcaseLocalizationShowcaseLocalizationsPage} name="showcaseLocalizations" />
+        </Set>
         <Set wrap={[AdminLayout]} role={'admin'}>
           <Route path="/users/new" page={AdminUserNewUserPage} name="newUser" />
           <Route path="/users/{id:Int}/edit" page={AdminUserEditUserPage} name="editUser" />

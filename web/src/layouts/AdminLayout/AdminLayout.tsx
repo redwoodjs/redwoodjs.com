@@ -32,6 +32,11 @@ const AdminLayout = ({children}: AdminLayoutProps) => {
             <Link to={routes.users()}>Users</Link>
           </li>
         )}
+        {hasRole(["editor", "admin", "translator"]) &&
+          <li>
+            <Link to={routes.showcaseLocalizations()}>Localizations</Link>
+          </li>
+        }
         <li>
           <a href={'#'}
              onClick={() => {
