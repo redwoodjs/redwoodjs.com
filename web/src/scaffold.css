@@ -232,6 +232,7 @@
 
 .rw-button-group {
   display: flex;
+  align-items: center;
   justify-content: center;
   margin: 0.75rem 0.5rem;
 }
