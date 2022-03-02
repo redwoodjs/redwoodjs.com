@@ -17,6 +17,10 @@ export const QUERY = gql`
       companyName
       companyUrl
       avatarId
+      socialLinks {
+        link
+        platform
+      }
     }
   }
 `

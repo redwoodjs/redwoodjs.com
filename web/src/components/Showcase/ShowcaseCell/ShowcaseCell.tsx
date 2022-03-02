@@ -16,6 +16,10 @@ export const QUERY = gql`
       subtitle
       description
       mediaId
+      socialLinks {
+        link
+        platform
+      }
     }
   }
 `

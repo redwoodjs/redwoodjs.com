@@ -24,13 +24,22 @@ export const QUERY = gql`
         id
         label
       }
+      socialLinks {
+        id
+        link
+        platform
+      }
     }
   }
 `
 
 const UPDATE_SHOWCASE_MUTATION = gql`
-  mutation UpdateShowcaseMutation($id: Int!, $input: UpdateShowcaseInput!) {
-    updateShowcase(id: $id, input: $input) {
+  mutation UpdateShowcaseMutation(
+    $id: Int!
+    $input: UpdateShowcaseInput!
+    $socialLinks: [SyncSocialLinkInput!]!
+  ) {
+    showcase: updateShowcase(id: $id, input: $input) {
       id
       createdAt
       updatedAt
@@ -41,6 +50,9 @@ const UPDATE_SHOWCASE_MUTATION = gql`
       subtitle
       description
       mediaId
+    }
+    SyncShowcaseSocialLinks(id: $id, input: $socialLinks) {
+      id
     }
   }
 `
@@ -65,9 +77,9 @@ export const Success = ({ showcase }: CellSuccessProps<EditShowcaseById>) => {
     }
   )
 
-  const onSave = (input, id) => {
+  const onSave = ({ socialLinks, ...input }, id) => {
     const castInput = Object.assign(input, { mediaId: parseInt(input.mediaId) })
-    updateShowcase({ variables: { id, input: castInput } })
+    updateShowcase({ variables: { id, input: castInput, socialLinks } })
   }
 
   return (
