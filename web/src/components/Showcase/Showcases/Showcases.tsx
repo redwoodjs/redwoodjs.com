@@ -80,15 +80,12 @@ const ShowcasesList = ({ showcases }) => {
         <thead>
           <tr>
             <th>Id</th>
-            <th>Type</th>
             <th>Link</th>
             <th>Label</th>
             <th>Title</th>
             <th>Subtitle</th>
-            <th>Source</th>
             <th>Description</th>
             <th>Media id</th>
-            <th>Product hunt</th>
             <th>&nbsp;</th>
           </tr>
         </thead>
@@ -104,7 +101,6 @@ const ShowcasesList = ({ showcases }) => {
                   {truncate(showcase.id)}
                 </span>
               </td>
-              <td>{formatEnum(showcase.type)}</td>
               <td>
                 <Link to={showcase.link} target={'_blank'}>
                   link
@@ -113,10 +109,8 @@ const ShowcasesList = ({ showcases }) => {
               <td>{truncate(showcase.label)}</td>
               <td>{truncate(showcase.title)}</td>
               <td>{truncate(showcase.subtitle)}</td>
-              <td>{truncate(showcase.source)}</td>
               <td>{truncate(showcase.description)}</td>
               <td>{truncate(showcase.mediaId)}</td>
-              <td>{truncate(showcase.productHunt)}</td>
               <td>
                 <nav className="rw-table-actions">
                   <Link

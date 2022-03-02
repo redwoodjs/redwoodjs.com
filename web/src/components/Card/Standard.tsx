@@ -12,7 +12,7 @@ const Standard: React.FC<StandardProps> = ({
   tags,
   link,
 }) => (
-  <article className="card standard flex flex-col">
+  <article className="card standard flex flex-col mt-4">
     <header>
       <h1
         className={'w-full p-2 text-lg font-extrabold text-center capitalize'}

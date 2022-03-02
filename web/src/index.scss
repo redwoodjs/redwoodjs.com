@@ -39,7 +39,7 @@ $color_neutral: #1A202C;
   }
 
   .card {
-    @apply flex mt-4 rounded md:w-64 md:ml-4;
+    @apply flex rounded md:w-64 md:ml-4;
     background-color: $color_accent2;
   }
 
@@ -85,6 +85,32 @@ $color_neutral: #1A202C;
   .title {
     @apply text-xl text-teal-600 font-semibold tracking-tight;
   }
+
+  .page_examples section:first-child {
+
+    h1 {
+      color: $color_accent;
+    }
+
+    .card {
+      @apply mt-8;
+      background-color: $color_bg;
+    }
+
+    .card.highlight:nth-child(2n+2) {
+      @apply md:flex-row-reverse;
+      background-color: $color_neutral;
+
+      p, h2 {
+        @apply text-white;
+      }
+    }
+  }
+
+  .page_examples section h2 {
+    color: $color_accent;
+  }
+
 
 }
 

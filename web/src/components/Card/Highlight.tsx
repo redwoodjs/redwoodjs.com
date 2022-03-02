@@ -12,7 +12,7 @@ const Highlight: React.FC<HighlightProps> = ({
   tags,
   title,
 }) => (
-  <article className="card highlight flex flex-col w-full m-auto md:w-2/3 md:flex-row">
+  <article className="card highlight flex flex-col w-full m-auto md:w-2/3 md:flex-row mt-4">
     <picture>
       <img className={'w-1/2 h-full m-auto'} {...media} />
     </picture>
