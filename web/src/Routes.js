@@ -37,6 +37,7 @@ const Routes = () => {
           <Route path="/admin/showcases/new" page={AdminShowcaseNewShowcasePage} name="newShowcase" />
           <Route path="/admin/showcases/{id:Int}/edit" page={AdminShowcaseEditShowcasePage} name="editShowcase" />
           <Route path="/admin/showcases" page={AdminShowcaseShowcasesPage} name="showcases" />
+          <Route path="/admin/showcases/{id:Int}" page={AdminShowcaseShowcasePage} name="adminShowcase" />
           <Route path="/admin/authors/new" page={AdminAuthorNewAuthorPage} name="newAuthor" />
           <Route path="/admin/authors/{id:Int}/edit" page={AdminAuthorEditAuthorPage} name="editAuthor" />
           <Route path="/admin/authors/{id:Int}" page={AdminAuthorAuthorPage} name="author" />

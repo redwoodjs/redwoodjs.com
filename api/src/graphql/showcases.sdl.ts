@@ -4,23 +4,15 @@ export const schema = gql`
     createdAt: DateTime!
     updatedAt: DateTime
     isPublished: Boolean!
-    type: ApplicationType!
     link: String!
     label: String
     title: String
     subtitle: String
-    source: String
     description: String!
     media: Media
     mediaId: Int
-    productHunt: String
+    socialLinks: [SocialLink!]!
     tags: [Tag]!
-  }
-
-  enum ApplicationType {
-    sample
-    startup
-    module
   }
 
   input ExamplesInput {
@@ -36,28 +28,23 @@ export const schema = gql`
 
   input CreateShowcaseInput {
     isPublished: Boolean!
-    type: ApplicationType!
     link: String!
     label: String
     title: String
     subtitle: String
-    source: String
     description: String!
     mediaId: Int
-    productHunt: String
+    socialLinks: [CreateSocialLinkInput!]!
   }
 
   input UpdateShowcaseInput {
     isPublished: Boolean
-    type: ApplicationType
     link: String
     label: String
     title: String
     subtitle: String
-    source: String
     description: String
     mediaId: Int
-    productHunt: String
     tags: [Int]
   }
 

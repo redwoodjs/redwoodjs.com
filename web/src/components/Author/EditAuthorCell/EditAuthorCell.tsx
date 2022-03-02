@@ -17,18 +17,24 @@ export const QUERY = gql`
       email
       isEmailPublic
       pronoun
-      linkedin
-      github
-      productHunt
-      company
-      discord
+      companyName
+      companyUrl
       avatarId
+      socialLinks {
+        id
+        link
+        platform
+      }
     }
   }
 `
 const UPDATE_AUTHOR_MUTATION = gql`
-  mutation UpdateAuthorMutation($id: Int!, $input: UpdateAuthorInput!) {
-    updateAuthor(id: $id, input: $input) {
+  mutation UpdateAuthorMutation(
+    $id: Int!
+    $input: UpdateAuthorInput!
+    $socialLinks: [SyncSocialLinkInput!]!
+  ) {
+    author: updateAuthor(id: $id, input: $input) {
       id
       createdAt
       updatedAt
@@ -37,12 +43,17 @@ const UPDATE_AUTHOR_MUTATION = gql`
       email
       isEmailPublic
       pronoun
-      linkedin
-      github
-      productHunt
-      company
-      discord
+      companyName
+      companyUrl
       avatarId
+      socialLinks {
+        id
+        link
+        platform
+      }
+    }
+    SyncAuthorSocialLinks(id: $id, input: $socialLinks) {
+      id
     }
   }
 `
@@ -67,11 +78,11 @@ export const Success = ({ author }: CellSuccessProps<EditAuthorById>) => {
     }
   )
 
-  const onSave = (input, id) => {
+  const onSave = ({ socialLinks, ...input }, id) => {
     const castInput = Object.assign(input, {
       avatarId: parseInt(input.avatarId),
     })
-    updateAuthor({ variables: { id, input: castInput } })
+    updateAuthor({ variables: { id, input: castInput, socialLinks } })
   }
 
   return (

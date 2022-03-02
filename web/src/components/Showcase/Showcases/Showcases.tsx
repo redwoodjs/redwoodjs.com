@@ -114,7 +114,7 @@ const ShowcasesList = ({ showcases }) => {
               <td>
                 <nav className="rw-table-actions">
                   <Link
-                    to={routes.showcase({ id: showcase.id })}
+                    to={routes.adminShowcase({ id: showcase.id })}
                     title={'Show showcase ' + showcase.id + ' detail'}
                     className="rw-button rw-button-small"
                   >

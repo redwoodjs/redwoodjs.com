@@ -4,6 +4,8 @@ import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 import humanize from 'humanize-string'
 
+import SocialLinkExternal from 'src/components/SocialLink/SocialLinkExternal'
+
 const DELETE_AUTHOR_MUTATION = gql`
   mutation DeleteAuthorMutation($id: Int!) {
     deleteAuthor(id: $id) {
@@ -105,28 +107,24 @@ const Author = ({ author }) => {
               <td>{formatEnum(author.pronoun)}</td>
             </tr>
             <tr>
-              <th>Linkedin</th>
-              <td>{author.linkedin}</td>
+              <th>Company Name</th>
+              <td>{author.companyName}</td>
             </tr>
             <tr>
-              <th>Github</th>
-              <td>{author.github}</td>
-            </tr>
-            <tr>
-              <th>Product hunt</th>
-              <td>{author.productHunt}</td>
-            </tr>
-            <tr>
-              <th>Company</th>
-              <td>{author.company}</td>
-            </tr>
-            <tr>
-              <th>Discord</th>
-              <td>{author.discord}</td>
+              <th>Company Site</th>
+              <td>{author.companyUrl}</td>
             </tr>
             <tr>
               <th>Avatar id</th>
               <td>{author.avatarId}</td>
+            </tr>
+            <tr>
+              <th>Social Links</th>
+              <td className="flex flex-row space-x-4">
+                {author.socialLinks.map((social, idx) => (
+                  <SocialLinkExternal key={idx} {...social} />
+                ))}
+              </td>
             </tr>
           </tbody>
         </table>

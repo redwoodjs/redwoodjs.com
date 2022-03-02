@@ -5,10 +5,11 @@ import {
   FormError,
   Label,
   NumberField,
-  RadioField,
   Submit,
   TextField,
 } from '@redwoodjs/forms'
+
+import SocialLinkField from 'src/components/SocialLink/SocialLinkField'
 
 const ShowcaseForm = (props) => {
   const onSubmit = (data) => {
@@ -145,6 +146,24 @@ const ShowcaseForm = (props) => {
         />
 
         <FieldError name="mediaId" className="rw-field-error" />
+
+        <Label
+          name="socialLinks"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          <span className="block">Social Links</span>
+          <span className="block font-normal text-sm mt-1">
+            Add links to this showcase&apos;s social media platforms.
+          </span>
+        </Label>
+
+        <SocialLinkField
+          defaultValue={props.showcase?.socialLinks}
+          name="socialLinks"
+        />
+
+        <FieldError name="socialLinks" className="rw-field-error" />
 
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">

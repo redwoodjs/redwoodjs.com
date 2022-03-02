@@ -15,11 +15,8 @@ export const QUERY = gql`
       email
       isEmailPublic
       pronoun
-      linkedin
-      github
-      productHunt
-      company
-      discord
+      companyName
+      companyUrl
       avatarId
     }
   }

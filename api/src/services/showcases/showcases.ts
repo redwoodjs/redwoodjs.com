@@ -3,6 +3,8 @@ import type { ResolverArgs } from '@redwoodjs/graphql-server'
 
 import { db } from 'src/lib/db'
 
+import type { MutationcreateShowcaseArgs } from 'types/graphql'
+
 export const connectTagToShowcase = async ({ id, input: { tagId } }) => {
   const showcaseHasTag = await db.showcase
     .count({
@@ -20,11 +22,12 @@ export const connectTagToShowcase = async ({ id, input: { tagId } }) => {
 }
 
 export const showcases = () => {
-  return db.showcase.findMany()
+  return db.showcase.findMany({ include: { socialLinks: true } })
 }
 
 export const examples = ({ input }) => {
   return db.showcase.findMany({
+    include: { socialLinks: true },
     where: {
       isPublished: true,
       tags: { some: { label: input.tag } },
@@ -34,17 +37,16 @@ export const examples = ({ input }) => {
 
 export const showcase = ({ id }: Prisma.ShowcaseWhereUniqueInput) => {
   return db.showcase.findUnique({
+    include: { socialLinks: true },
     where: { id },
   })
 }
 
-interface CreateShowcaseArgs {
-  input: Prisma.ShowcaseCreateInput
-}
-
-export const createShowcase = ({ input }: CreateShowcaseArgs) => {
+export const createShowcase = ({
+  input: { socialLinks, ...data },
+}: MutationcreateShowcaseArgs) => {
   return db.showcase.create({
-    data: input,
+    data: { ...data, socialLinks: { createMany: { data: socialLinks } } },
   })
 }
 
