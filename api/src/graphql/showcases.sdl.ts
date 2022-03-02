@@ -8,11 +8,10 @@ export const schema = gql`
     label: String
     title: String
     subtitle: String
-    source: String
     description: String!
     media: Media
     mediaId: Int
-    productHunt: String
+    socialLinks: [SocialLink!]!
     tags: [Tag]!
   }
 
@@ -33,10 +32,9 @@ export const schema = gql`
     label: String
     title: String
     subtitle: String
-    source: String
     description: String!
     mediaId: Int
-    productHunt: String
+    socialLinks: [CreateSocialLinkInput!]!
   }
 
   input UpdateShowcaseInput {
@@ -45,10 +43,8 @@ export const schema = gql`
     label: String
     title: String
     subtitle: String
-    source: String
     description: String
     mediaId: Int
-    productHunt: String
     tags: [Int]
   }
 

@@ -8,13 +8,11 @@ export const schema = gql`
     email: String
     isEmailPublic: Boolean!
     pronoun: Pronoun!
-    linkedin: String
-    github: String
-    productHunt: String
-    company: String
-    discord: String
+    companyName: String
+    companyUrl: String
     avatar: Media
     avatarId: Int
+    socialLinks: [SocialLink!]!
   }
 
   enum Pronoun {
@@ -34,12 +32,10 @@ export const schema = gql`
     email: String
     isEmailPublic: Boolean!
     pronoun: Pronoun!
-    linkedin: String
-    github: String
-    productHunt: String
-    company: String
-    discord: String
+    companyName: String
+    companyUrl: String
     avatarId: Int
+    socialLinks: [CreateSocialLinkInput!]!
   }
 
   input UpdateAuthorInput {
@@ -48,11 +44,8 @@ export const schema = gql`
     email: String
     isEmailPublic: Boolean
     pronoun: Pronoun
-    linkedin: String
-    github: String
-    productHunt: String
-    company: String
-    discord: String
+    companyName: String
+    companyUrl: String
     avatarId: Int
   }
 
