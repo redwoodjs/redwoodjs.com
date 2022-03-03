@@ -154,3 +154,21 @@ model Author {
   avatarId      Int?         @unique
   socialLinks   SocialLink[]
 }
+
+model Job {
+  id             Int      @id @default(autoincrement())
+  token          String   @default(cuid())
+  email          String
+  applyUrl       String
+  company        String
+  logo           String
+  title          String
+  locations      String   @db.Text
+  compensation   String   @db.Text
+  perks          String   @db.Text
+  aboutJob       String   @db.Text
+  aboutApplicant String   @db.Text
+  aboutCompany   String   @db.Text
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}

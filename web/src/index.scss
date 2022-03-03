@@ -38,6 +38,16 @@ $color_neutral: #1A202C;
     @apply button bg-white text-teal-600 hover:bg-teal-100 hover:text-teal-700;
   }
 
+  .job .markdown {
+    p {
+      @apply mt-4 leading-7;
+    }
+
+    ul {
+      @apply list-disc;
+    }
+  }
+
   .card {
     @apply flex rounded md:w-64 md:ml-4;
     background-color: $color_accent2;

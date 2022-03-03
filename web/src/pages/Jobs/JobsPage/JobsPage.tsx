@@ -1,4 +1,4 @@
-import { navigate, routes } from '@redwoodjs/router'
+import { Link, navigate, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
 const JobsPage = () => {
@@ -21,9 +21,9 @@ const JobsPage = () => {
         </header>
 
         <div className="flex justify-end mt-4">
-          <button type="button" className="button-sm">
+          <Link to={routes.newJob()} className="button-sm">
             + Post a Job
-          </button>
+          </Link>
         </div>
         <div className="border border-orange-200 rounded-lg mt-2">
           <table className="w-full bg-white rounded-lg">

@@ -10,19 +10,25 @@
 import { Private, Route, Router, Set } from '@redwoodjs/router'
 import AdminLayout from 'src/layouts/AdminLayout/AdminLayout'
 import MainLayout from 'src/layouts/MainLayout/MainLayout'
+import JobsPage from 'src/pages/Jobs/JobsPage'
+import JobPage from 'src/pages/Jobs/JobPage'
+import NewJobPage from 'src/pages/Jobs/NewJobPage'
 
 const Routes = () => {
   return (
     <Router>
       <Set wrap={MainLayout}>
-        <Route path="/jobs/{id:Int}" page={JobPage} name="job" />
-        <Route path="/jobs" page={JobsPage} name="jobs" />
         <Route path="/login" page={LoginPage} name="login" />
         <Route path="/signup" page={SignupPage} name="signup" />
         <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
         <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
         <Route path="/showcase" page={ShowcasePage} name="showcase" />
         <Route path="/examples" page={ExamplesPage} name="examples" />
+
+        <Route path="/jobs/new" page={NewJobPage} name="newJob" />
+        <Route path="/jobs/{id:Int}" page={JobPage} name="job" />
+        <Route path="/jobs" page={JobsPage} name="jobs" />
+
         <Route path="/" page={HomePage} name="home" />
 
         <Route notfound page={NotFoundPage} />
