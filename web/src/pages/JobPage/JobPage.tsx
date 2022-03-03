@@ -7,7 +7,7 @@ const JobPage = () => {
       <MetaTags title="Job" description="Job page" />
 
       <div className="max-w-screen-lg mx-auto">
-        <header className="mt-12">
+        <header className="mt-36">
           <h1 className="text-center">
             <span className="text-teal-800">Snaplet</span> is hiring a{' '}
             <span className="text-teal-800">Sr. Developer</span>!

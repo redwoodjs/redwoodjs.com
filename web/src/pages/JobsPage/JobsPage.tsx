@@ -11,8 +11,8 @@ const JobsPage = () => {
 
       <section className="max-w-screen-lg mx-auto">
         <header className="text-center">
-          <h1 className="mt-12">
-            <span className="text-red-800">RedwoodJS</span>{' '}
+          <h1 className="mt-36">
+            <span className="text-orange-900">RedwoodJS</span>{' '}
             <span className="">Jobs</span>
           </h1>
           <p className="mt-2 text-stone-500">
@@ -25,12 +25,12 @@ const JobsPage = () => {
             + Post a Job
           </button>
         </div>
-        <div className="border border-red-200 rounded-lg mt-2">
+        <div className="border border-orange-200 rounded-lg mt-2">
           <table className="w-full bg-white rounded-lg">
             <tbody>
               <tr
                 onClick={() => navigate(routes.job({ id: 1 }))}
-                className="border border-t-transparent hover:bg-red-100 cursor-pointer border-l-transparent border-r-transparent hover:border-l-red-300 hover:border-r-red-300 transition duration-100"
+                className="hover:bg-orange-50 cursor-pointer transition duration-100"
               >
                 <td className="py-4 px-8 rounded-tl-lg">
                   <img src="/images/snaplet_logo.svg" alt="Snaplet" />
@@ -55,7 +55,7 @@ const JobsPage = () => {
               </tr>
               <tr
                 onClick={() => navigate(routes.job({ id: 1 }))}
-                className="border border-t-red-200 hover:bg-red-100 cursor-pointer border-l-transparent border-r-transparent hover:border-l-red-300 hover:border-r-red-300 transition duration-100"
+                className="border-t border-orange-100 hover:bg-orange-50 cursor-pointer transition duration-100"
               >
                 <td className="py-4 px-8 w-48">
                   <svg
@@ -86,7 +86,7 @@ const JobsPage = () => {
               <tr className="">
                 <td
                   colSpan={3}
-                  className="text-center text-sm text-stone-500 hover:text-red-700 p-4 border-t border-t-red-200 hover:bg-red-100 cursor-pointer border-l-transparent border-r-transparent hover:border-l-red-300 hover:border-r-red-300 transition duration-100"
+                  className="text-center text-sm text-stone-500 hover:text-orange-700 p-4 border-t border-t-orange-200 hover:bg-orange-50 cursor-pointer rounded-b-lg transition duration-100"
                 >
                   See more...
                 </td>
@@ -99,7 +99,7 @@ const JobsPage = () => {
       <section className="max-w-screen-lg mx-auto mt-24 mb-24">
         <header className="text-center">
           <h1 className="mt-12">
-            <span className="text-red-800">RedwoodJS</span>{' '}
+            <span className="text-orange-900">RedwoodJS</span>{' '}
             <span className="">Developers</span>
           </h1>
           <p className="mt-2 text-stone-500">
@@ -112,10 +112,10 @@ const JobsPage = () => {
             + Create Profile
           </button>
         </div>
-        <div className="border border-red-200 rounded-lg mt-2">
+        <div className="border border-orange-200 rounded-lg mt-2">
           <table className="w-full bg-white rounded-lg">
             <tbody>
-              <tr className="hover:bg-red-100 cursor-pointer">
+              <tr className="hover:bg-orange-50 cursor-pointer">
                 <td className="text-center py-2 px-8">
                   <img
                     src="/images/rob.jpg"
@@ -146,7 +146,7 @@ const JobsPage = () => {
                   </ul>
                 </td>
               </tr>
-              <tr className="border-t border-red-200 hover:bg-red-100 cursor-pointer">
+              <tr className="border-t border-orange-200 hover:bg-orange-50 cursor-pointer">
                 <td className="text-center py-2 px-8">
                   <img
                     src="/images/peter.gif"
@@ -182,7 +182,7 @@ const JobsPage = () => {
               <tr className="">
                 <td
                   colSpan={3}
-                  className="text-center text-sm text-stone-500 hover:text-red-700 p-4 border-t border-t-red-200 hover:bg-red-100 cursor-pointer border-l-transparent border-r-transparent hover:border-l-red-300 hover:border-r-red-300 transition duration-100"
+                  className="text-center text-sm text-stone-500 hover:text-orange-700 p-4 border-t border-t-orange-200 hover:bg-orange-50 cursor-pointer border-l-transparent border-r-transparent hover:border-l-orange-300 hover:border-r-orange-300 transition duration-100"
                 >
                   See more...
                 </td>

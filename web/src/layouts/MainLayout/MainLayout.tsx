@@ -256,11 +256,11 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                     href="https://github.com/redwoodjs/redwood"
                     title="Go to Redwood's GitHub repo"
                   >
-                    <div className="flex items-center pt-[1px] text-xs font-semibold bg-orange-500 text-orange-100 px-2 rounded-l">
+                    <div className="flex items-center pt-[1px] text-xs font-semibold bg-orange-600 text-orange-100 px-2 rounded-l">
                       <span className="icon md-13 mr-1">star</span>11,432
                     </div>
                     <div className="w-3 overflow-hidden inline-block">
-                      <div className="h-3 bg-orange-500 rotate-45 transform origin-top-left"></div>
+                      <div className="h-3 bg-orange-600 rotate-45 transform origin-top-left"></div>
                     </div>
                   </a>
                 </li>
@@ -285,7 +285,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
         </div>
       </section>
 
-      <main className="flex-1 w-full bg-orange-100">{children}</main>
+      <main className="flex-1 w-full bg-orange-50">{children}</main>
 
       <footer className="p-6 bg-orange-50 text-orange-700 text-sm border-t border-orange-200">
         Copyright &copy;{new Date().getFullYear()} Tom Preston-Werner
