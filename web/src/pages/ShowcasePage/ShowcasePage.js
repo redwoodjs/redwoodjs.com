@@ -67,25 +67,25 @@ const ShowcasePage = () => {
         <ShowcaseCard
           title="Teamstream"
           subtitle="Grow your community, build your brand and make your presence felt. We are building the future of online gaming events."
-          src="https://user-images.githubusercontent.com/25166787/156474477-8df244e2-4505-4380-8958-3286fc3913c5.svg"
+          src="https://user-images.githubusercontent.com/25166787/156497740-be0b39ee-031f-4231-8628-4c5144e2f456.svg"
           to={routes.showcase({ id: '4' })}
         />
         <ShowcaseCard
           title="Snaplet"
           subtitle="Software developer's tool for working with safe, versioned, up-to-date, production-like data, at the snap of your fingers."
-          src="https://user-images.githubusercontent.com/25166787/156449843-b0ddfa75-b3ba-4e75-a309-b03a532326e3.svg"
+          src="https://user-images.githubusercontent.com/25166787/156497736-c1bb12d5-b1b3-463f-a12f-81554692c537.svg"
           to={routes.showcase({ id: '4' })}
         />
         <ShowcaseCard
           title="Everfund"
           subtitle="From non-profits to platforms, Everfund is evolving giving with the go-to infrastructure for the future of fundraising."
-          src="https://user-images.githubusercontent.com/25166787/156459446-fb049fcc-acb3-4f2b-9fae-f0ed2d022808.svg"
+          src="https://user-images.githubusercontent.com/25166787/156497741-a927b8ad-904a-4198-a906-f9effb3a7f54.svg"
           to={routes.showcase({ id: '4' })}
         />
         <ShowcaseCard
           title="Pullflow"
           subtitle="Smoother code reviews with GitHub + Slack"
-          src="https://user-images.githubusercontent.com/25166787/156481016-9edcd6d3-9c73-4422-9995-17e3ca479765.svg"
+          src="https://user-images.githubusercontent.com/25166787/156497742-b92ecef5-6f54-4ef2-9e3c-8e438cd944a5.svg"
           to={routes.showcase({ id: '4' })}
         />
       </section>
