@@ -21,7 +21,7 @@ const ShowcaseCard: FC<ShowcaseCardProps> = ({ src, subtitle, title, to }) => {
         className="aspect-auto rounded-t-md w-full"
         src={src}
       />
-      <span className="bg-white border-t border-orange-200 group-focus:border-orange-400 group-hover:border-orange-400 flex flex-col p-8 pt-6 rounded-b-md space-y-2">
+      <span className="bg-white flex flex-col p-8 pt-6 rounded-b-md space-y-2">
         <h3 className="title">{title}</h3>
         <p className="leading-relaxed text-sm text-stone-900">{subtitle}</p>
       </span>
