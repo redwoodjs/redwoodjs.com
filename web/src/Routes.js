@@ -28,7 +28,19 @@ const Routes = () => {
         <Route notfound page={NotFoundPage} />
       </Set>
       <Private unauthenticated={'home'}>
-        <Set wrap={[AdminLayout]}>
+        <Set wrap={AdminLayout} role={['translator', 'editor', 'admin']}>
+          <Route path="/showcase-localizations/new" page={AdminShowcaseLocalizationNewShowcaseLocalizationPage} name="newShowcaseLocalization" />
+          <Route path="/showcase-localizations/{id:Int}/edit" page={AdminShowcaseLocalizationEditShowcaseLocalizationPage} name="editShowcaseLocalization" />
+          <Route path="/showcase-localizations/{id:Int}" page={AdminShowcaseLocalizationShowcaseLocalizationPage} name="showcaseLocalization" />
+          <Route path="/showcase-localizations" page={AdminShowcaseLocalizationShowcaseLocalizationsPage} name="showcaseLocalizations" />
+        </Set>
+        <Set wrap={[AdminLayout]} role={'admin'}>
+          <Route path="/users/new" page={AdminUserNewUserPage} name="newUser" />
+          <Route path="/users/{id:Int}/edit" page={AdminUserEditUserPage} name="editUser" />
+          <Route path="/users/{id:Int}" page={AdminUserUserPage} name="user" />
+          <Route path="/users" page={AdminUserUsersPage} name="users" />
+        </Set>
+        <Set wrap={[AdminLayout]} role={['editor', 'admin']} private unauthenticated={'home'}>
           <Route path="/admin" page={AdminIndexPage} name="adminIndex" />
           <Route path="/admin/tags/new" page={AdminTagNewTagPage} name="newTag" />
           <Route path="/admin/tags/{id:Int}/edit" page={AdminTagEditTagPage} name="editTag" />
@@ -37,6 +49,7 @@ const Routes = () => {
           <Route path="/admin/showcases/new" page={AdminShowcaseNewShowcasePage} name="newShowcase" />
           <Route path="/admin/showcases/{id:Int}/edit" page={AdminShowcaseEditShowcasePage} name="editShowcase" />
           <Route path="/admin/showcases" page={AdminShowcaseShowcasesPage} name="showcases" />
+          <Route path="/admin/showcases/{id:Int}" page={AdminShowcaseShowcasePage} name="adminShowcase" />
           <Route path="/admin/authors/new" page={AdminAuthorNewAuthorPage} name="newAuthor" />
           <Route path="/admin/authors/{id:Int}/edit" page={AdminAuthorEditAuthorPage} name="editAuthor" />
           <Route path="/admin/authors/{id:Int}" page={AdminAuthorAuthorPage} name="author" />

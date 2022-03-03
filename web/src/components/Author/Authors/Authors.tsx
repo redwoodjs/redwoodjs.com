@@ -87,11 +87,8 @@ const AuthorsList = ({ authors }) => {
             <th>Email</th>
             <th>Is email public</th>
             <th>Pronoun</th>
-            <th>Linkedin</th>
-            <th>Github</th>
-            <th>Product hunt</th>
-            <th>Company</th>
-            <th>Discord</th>
+            <th>Company Name</th>
+            <th>Company Site</th>
             <th>Avatar id</th>
             <th>&nbsp;</th>
           </tr>
@@ -107,11 +104,8 @@ const AuthorsList = ({ authors }) => {
               <td>{truncate(author.email)}</td>
               <td>{checkboxInputTag(author.isEmailPublic)}</td>
               <td>{formatEnum(author.pronoun)}</td>
-              <td>{truncate(author.linkedin)}</td>
-              <td>{truncate(author.github)}</td>
-              <td>{truncate(author.productHunt)}</td>
-              <td>{truncate(author.company)}</td>
-              <td>{truncate(author.discord)}</td>
+              <td>{truncate(author.companyName)}</td>
+              <td>{truncate(author.companyUrl)}</td>
               <td>{truncate(author.avatarId)}</td>
               <td>
                 <nav className="rw-table-actions">

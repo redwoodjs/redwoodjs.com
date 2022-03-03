@@ -54,14 +54,19 @@ export default async () => {
         description:
           'Some music application, with full library, artworks, lyrics, bits of original music videos',
         isPublished: true,
-        isHighlight: true,
         label: 'Music app',
         link: 'https://redwoodjs.com',
-        source: 'https://redwoodjs.com',
         subtitle: 'Awesome music application example',
         title: 'Music Application',
-        type: 'sample',
         media: { connect: rwLogo },
+        localization: {
+          create: {
+            subtitle: 'Awesome music application example',
+            title: 'Music Application',
+            description:
+              'Some music application, with full library, artworks, lyrics, bits of original music videos',
+          },
+        },
         tags: { connect: [tags.highlight, tags.sample, tags.cms] },
       },
     })
@@ -72,11 +77,16 @@ export default async () => {
         isPublished: true,
         label: 'Todo App',
         link: 'https://redwoodjs.com',
-        source: 'https://redwoodjs.com',
         subtitle: 'Awesome todo application example',
         title: 'Todo Application',
-        type: 'sample',
         media: { connect: jamstackGraph },
+        localization: {
+          create: {
+            description: 'Some ToDo sample application powered by RedwoodJS',
+            subtitle: 'Awesome todo application example',
+            title: 'Todo Application',
+          },
+        },
         tags: { connect: [tags.highlight, tags.sample, tags.tool] },
       },
     })
@@ -88,11 +98,17 @@ export default async () => {
         isPublished: true,
         label: 'Stripe integration',
         link: 'https://redwoodjs.com',
-        source: 'https://redwoodjs.com',
         subtitle: 'Awesome stripe integration example',
         title: 'Stripe integration',
-        type: 'sample',
         media: { connect: randomImage },
+        localization: {
+          create: {
+            description:
+              'Some Stripe integration, with full catalogue, checkout & payment process',
+            subtitle: 'Awesome stripe integration example',
+            title: 'Stripe integration',
+          },
+        },
         tags: {
           connect: [
             tags.highlight,
@@ -106,14 +122,18 @@ export default async () => {
 
     const canonExamples = [...Array(5)].map((_value, index) => ({
       title: 'Canon Example',
-      type: 'sample',
       isPublished: true,
       description:
         'Generated canon example, not necessarily curated but with high value nonetheless.',
       link: `https://github.com/redwoodjs/redwood/releases/tag/v0.${
         index + 1
       }.0`,
-      source: 'https://redwoodjs.com',
+      localization: {
+        create: {
+          description:
+            'Generated canon example, not necessarily curated but with high value nonetheless.',
+        },
+      },
       tags: { connect: [tags.sample, tags.canon] },
     }))
 
@@ -123,12 +143,16 @@ export default async () => {
 
     const communityExamples = [...Array(20)].map((_value, index) => ({
       label: 'Community Example',
-      type: 'sample',
       isPublished: true,
       description: 'Generated community example',
       link: `https://github.com/redwoodjs/redwood/releases/tag/v0.${
         index + 1
       }.0`,
+      localization: {
+        create: {
+          description: 'Generated community example',
+        },
+      },
       tags: { connect: [tags.sample, tags.community] },
     }))
 

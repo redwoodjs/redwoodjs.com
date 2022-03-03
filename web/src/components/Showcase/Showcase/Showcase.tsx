@@ -4,6 +4,8 @@ import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 import humanize from 'humanize-string'
 
+import SocialLinkExternal from 'src/components/SocialLink/SocialLinkExternal'
+
 const DELETE_SHOWCASE_MUTATION = gql`
   mutation DeleteShowcaseMutation($id: Int!) {
     deleteShowcase(id: $id) {
@@ -89,10 +91,6 @@ const Showcase = ({ showcase }) => {
               <td>{checkboxInputTag(showcase.isPublished)}</td>
             </tr>
             <tr>
-              <th>Type</th>
-              <td>{formatEnum(showcase.type)}</td>
-            </tr>
-            <tr>
               <th>Link</th>
               <td>{showcase.link}</td>
             </tr>
@@ -109,10 +107,6 @@ const Showcase = ({ showcase }) => {
               <td>{showcase.subtitle}</td>
             </tr>
             <tr>
-              <th>Source</th>
-              <td>{showcase.source}</td>
-            </tr>
-            <tr>
               <th>Description</th>
               <td>{showcase.description}</td>
             </tr>
@@ -121,8 +115,12 @@ const Showcase = ({ showcase }) => {
               <td>{showcase.mediaId}</td>
             </tr>
             <tr>
-              <th>Product hunt</th>
-              <td>{showcase.productHunt}</td>
+              <th>Social Links</th>
+              <td>
+                {showcase.socialLinks.map((social, idx) => (
+                  <SocialLinkExternal key={idx} {...social} />
+                ))}
+              </td>
             </tr>
           </tbody>
         </table>

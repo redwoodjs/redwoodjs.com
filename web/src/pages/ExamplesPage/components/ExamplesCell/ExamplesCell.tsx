@@ -10,14 +10,11 @@ export const QUERY = gql`
   query FindExamples($type: String, $tag: String) {
     examples(input: { type: $type, tag: $tag }) {
       id
-      type
       link
       label
       title
       subtitle
-      source
       description
-      productHunt
       media {
         id
         src

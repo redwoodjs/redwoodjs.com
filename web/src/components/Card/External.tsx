@@ -6,7 +6,7 @@ export interface ExternalProps extends CardProps {
 
 const External: React.FC<ExternalProps> = ({ description, link, label }) => (
   <a
-    className="card external flex flex-col p-4 bg-white hover:shadow-2xl"
+    className="card external flex flex-col p-4 bg-white hover:shadow-2xl mt-4"
     href={link}
     target={'_blank'}
     rel="noreferrer"

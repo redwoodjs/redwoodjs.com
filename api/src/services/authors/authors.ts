@@ -3,41 +3,37 @@ import type { ResolverArgs } from '@redwoodjs/graphql-server'
 
 import { db } from 'src/lib/db'
 
+import type {
+  MutationcreateAuthorArgs,
+  MutationupdateAuthorArgs,
+} from 'types/graphql'
+
 export const authors = () => {
-  return db.author.findMany()
+  return db.author.findMany({ include: { socialLinks: true } })
 }
 
 export const author = ({ id }: Prisma.AuthorWhereUniqueInput) => {
-  return db.author.findUnique({
-    where: { id },
-  })
+  return db.author.findUnique({ include: { socialLinks: true }, where: { id } })
 }
 
-interface CreateAuthorArgs {
-  input: Prisma.AuthorCreateInput
-}
-
-export const createAuthor = ({ input }: CreateAuthorArgs) => {
+export const createAuthor = ({
+  input: { socialLinks, ...data },
+}: MutationcreateAuthorArgs) => {
   return db.author.create({
-    data: input,
+    data: { ...data, socialLinks: { createMany: { data: socialLinks } } },
   })
 }
 
-interface UpdateAuthorArgs extends Prisma.AuthorWhereUniqueInput {
-  input: Prisma.AuthorUpdateInput
-}
-
-export const updateAuthor = ({ id, input }: UpdateAuthorArgs) => {
+export const updateAuthor = ({ id, input: data }: MutationupdateAuthorArgs) => {
   return db.author.update({
-    data: input,
+    data,
+    include: { socialLinks: true },
     where: { id },
   })
 }
 
 export const deleteAuthor = ({ id }: Prisma.AuthorWhereUniqueInput) => {
-  return db.author.delete({
-    where: { id },
-  })
+  return db.author.delete({ where: { id } })
 }
 
 export const Author = {
