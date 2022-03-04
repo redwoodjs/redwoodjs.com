@@ -3,7 +3,7 @@ import type { CellFailureProps, CellSuccessProps } from '@redwoodjs/web'
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 
-import TagsCell from 'src/components/Showcase/TagsCell/TagsCell'
+import TagsCell from 'src/components/Showcase/TagsCell'
 import ShowcaseForm from 'src/components/Showcase/ShowcaseForm'
 import type { EditShowcaseById } from 'types/graphql'
 

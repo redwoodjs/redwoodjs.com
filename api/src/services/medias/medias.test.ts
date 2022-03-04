@@ -22,10 +22,10 @@ describe('medias', () => {
 
   scenario('creates a media', async () => {
     const result = await createMedia({
-      input: { url: 'String', type: 'video' },
+      input: { src: 'String', type: 'video' },
     })
 
-    expect(result.url).toEqual('String')
+    expect(result.src).toEqual('String')
     expect(result.type).toEqual('video')
   })
 
@@ -33,10 +33,10 @@ describe('medias', () => {
     const original = await media({ id: scenario.media.one.id })
     const result = await updateMedia({
       id: original.id,
-      input: { url: 'String2' },
+      input: { src: 'String2' },
     })
 
-    expect(result.url).toEqual('String2')
+    expect(result.src).toEqual('String2')
   })
 
   scenario('deletes a media', async (scenario: StandardScenario) => {

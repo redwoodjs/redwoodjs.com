@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { CardVariant } from 'src/components/Card/Card'
-import ExamplesCell from './components/ExamplesCell/ExamplesCell'
+import ExamplesCell from './components/ExamplesCell'
 
 const ExamplesPage = () => {
   const { t } = useTranslation()
@@ -29,7 +29,11 @@ const ExamplesPage = () => {
             'flex flex-wrap flex-col items-stretch md:flex-row md:items-start'
           }
         >
-          <ExamplesCell type={'sample'} tag={'canon'} />
+          <ExamplesCell
+            type={'sample'}
+            tag={'canon'}
+            variant={CardVariant.standard}
+          />
         </div>
       </section>
       <section className={'community p-4 mt-4'}>

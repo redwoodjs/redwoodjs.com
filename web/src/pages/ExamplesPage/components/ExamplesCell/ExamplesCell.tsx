@@ -1,18 +1,19 @@
 import Card, { CardVariant } from 'src/components/Card/Card'
 import i18n from 'src/i18n'
-import { ApplicationType, FindExamples } from 'types/graphql'
+import { FindExamples } from 'types/graphql'
 
 interface SuccessProps extends FindExamples {
   tag?: string
-  type?: ApplicationType
+  type?: string
+  variant: CardVariant
 }
 
 export const beforeQuery = (variables) => {
   return {
     variables: {
-    ...variables,
-      language: i18n.language
-    }
+      ...variables,
+      language: i18n.language,
+    },
   }
 }
 
@@ -46,7 +47,7 @@ export const Success: React.FC<SuccessProps> = ({
       <Card
         key={`Example #${index} - #${example.id}`}
         variant={variant}
-        imgProps={{ src: example?.media?.src }}
+        media={{ src: example?.media?.src }}
         {...example}
       />
     ))}

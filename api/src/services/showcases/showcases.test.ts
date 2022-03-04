@@ -28,22 +28,28 @@ describe('showcases', () => {
 
   scenario('creates a showcase', async () => {
     const result = await createShowcase({
-      input: { type: 'sample', link: 'String', description: 'String' },
+      input: {
+        link: 'String',
+        description: 'String',
+        isPublished: false,
+        socialLinks: [],
+      },
     })
 
-    expect(result.type).toEqual('sample')
+    expect(result.isPublished).toEqual(false)
     expect(result.link).toEqual('String')
     expect(result.description).toEqual('String')
   })
 
   scenario('updates a showcase', async (scenario: StandardScenario) => {
     const original = await showcase({ id: scenario.showcase.one.id })
+    expect(original.isPublished).toBe(false)
     const result = await updateShowcase({
       id: original.id,
-      input: { type: 'module' },
+      input: { isPublished: true },
     })
 
-    expect(result.type).toEqual('module')
+    expect(result.isPublished).toBe(true)
   })
 
   scenario('deletes a showcase', async (scenario: StandardScenario) => {

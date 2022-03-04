@@ -2,8 +2,8 @@ import type { Prisma } from '@prisma/client'
 
 export const standard = defineScenario<Prisma.MediaCreateArgs>({
   media: {
-    one: { data: { url: 'String', type: 'video' } },
-    two: { data: { url: 'String', type: 'video' } },
+    one: { data: { src: 'String', type: 'video' } },
+    two: { data: { src: 'String', type: 'video' } },
   },
 })
 

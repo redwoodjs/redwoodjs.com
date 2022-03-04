@@ -28,7 +28,13 @@ describe('authors', () => {
 
   scenario('creates a author', async () => {
     const result = await createAuthor({
-      input: { firstname: 'String', lastname: 'String' },
+      input: {
+        firstname: 'String',
+        lastname: 'String',
+        isEmailPublic: false,
+        pronoun: 'they',
+        socialLinks: [],
+      },
     })
 
     expect(result.firstname).toEqual('String')

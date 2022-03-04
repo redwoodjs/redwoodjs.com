@@ -8,7 +8,7 @@ import SocialLinkField from './SocialLinkField'
 describe('SocialLinkField', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<SocialLinkField />)
+      render(<SocialLinkField name="github" />)
     }).not.toThrow()
   })
 })

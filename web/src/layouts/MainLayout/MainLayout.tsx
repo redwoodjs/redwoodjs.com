@@ -6,7 +6,21 @@ type MainLayoutProps = {
   children?: React.ReactNode
 }
 
-const PopoverLink = ({ children, route, link, title, desc }) => {
+type PopoverLinkProps = {
+  children?: React.ReactNode
+  route?: string
+  link?: string
+  title?: string
+  desc?: string
+}
+
+const PopoverLink = ({
+  children,
+  route,
+  link,
+  title,
+  desc,
+}: PopoverLinkProps) => {
   const body = (
     <>
       <div className="flex items-center justify-center flex-shrink-0 p-2 w-10 h-10 bg-orange-100 rounded-lg sm:h-12 sm:w-12">

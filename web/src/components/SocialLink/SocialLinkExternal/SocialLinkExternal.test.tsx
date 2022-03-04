@@ -8,7 +8,7 @@ import SocialLinkExternal from './SocialLinkExternal'
 describe('SocialLinkExternal', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<SocialLinkExternal />)
+      render(<SocialLinkExternal link="#" platform="github" />)
     }).not.toThrow()
   })
 })

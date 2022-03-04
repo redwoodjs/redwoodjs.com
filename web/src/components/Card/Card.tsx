@@ -10,16 +10,17 @@ export enum CardVariant {
 }
 
 export interface CardProps {
-  label: string
+  label?: string
   link: string
-  title: string
-  media?: Record<string, string>
+  title?: string
+  media?: Record<string, string | number>
   description?: string
-  tags: Array<string & TagProps>
+  tags?: Array<string & TagProps>
 }
 
 interface ProxyProps extends CardProps, StandardProps, ExternalProps {
   variant: CardVariant
+  [x: string]: any
 }
 
 const Card: React.FC<ProxyProps> = ({
