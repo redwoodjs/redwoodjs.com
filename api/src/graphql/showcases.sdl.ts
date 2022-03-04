@@ -36,7 +36,7 @@ export const schema = gql`
     subtitle: String
     description: String!
     mediaId: Int
-    socialLinks: [CreateSocialLinkInput!]
+    socialLinks: [CreateSocialLinkInput!]!
   }
 
   input UpdateShowcaseInput {
