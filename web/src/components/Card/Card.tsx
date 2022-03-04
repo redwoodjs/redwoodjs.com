@@ -20,7 +20,6 @@ export interface CardProps {
 
 interface ProxyProps extends CardProps, StandardProps, ExternalProps {
   variant: CardVariant
-  [x: string]: any
 }
 
 const Card: React.FC<ProxyProps> = ({
