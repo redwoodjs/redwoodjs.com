@@ -18,6 +18,7 @@
     "@redwoodjs/forms": "^0.46.1",
     "@redwoodjs/router": "^0.46.1",
     "@redwoodjs/web": "^0.46.1",
+    "date-fns": "^2.28.0",
     "i18n": "^0.14.1",
     "i18next": "^21.6.11",
     "i18next-browser-languagedetector": "^6.1.3",
