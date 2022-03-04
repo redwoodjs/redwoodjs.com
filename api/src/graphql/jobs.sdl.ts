@@ -1,7 +1,6 @@
 export const schema = gql`
   type Job {
     id: Int!
-    token: String!
     email: String!
     applyUrl: String!
     company: String!
