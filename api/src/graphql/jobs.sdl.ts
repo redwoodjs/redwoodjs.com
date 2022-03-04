@@ -18,7 +18,7 @@ export const schema = gql`
   }
 
   type Query {
-    jobs: [Job!]! @skipAuth
+    jobs(limit: Int): [Job!]! @skipAuth
     job(id: Int!): Job @skipAuth
   }
 

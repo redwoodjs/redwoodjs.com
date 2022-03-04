@@ -2,8 +2,16 @@ import type { Prisma } from '@prisma/client'
 
 import { db } from 'src/lib/db'
 
-export const jobs = () => {
-  return db.job.findMany()
+export const jobs = ({ limit }) => {
+  const options = {
+    orderBy: { createdAt: 'desc' },
+  }
+
+  if (limit) {
+    options.take = limit
+  }
+
+  return db.job.findMany(options)
 }
 
 export const job = ({ id }: Prisma.JobWhereUniqueInput) => {

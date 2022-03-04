@@ -43,28 +43,34 @@ export const Success = ({ job }: CellSuccessProps<FindJobQuery>) => {
 
       <div className="max-w-screen-lg mx-auto job">
         <header className="mt-36">
-          <h1 className="text-center">
+          <h1 className="text-5xl font-black tracking-normal text-center">
             <span className="text-teal-800">{job.company}</span> is hiring a{' '}
-            <span className="text-teal-800">{job.title}</span>!
+            <span className="text-teal-800">{job.title}</span>
           </h1>
         </header>
 
-        <div className="max-w-screen-lg mt-16 bg-white rounded-lg border border-red-200 mb-12">
+        <div className="max-w-screen-lg mt-27 bg-white rounded-lg border border-red-200 mb-12">
           <section className="md:flex items-stretch">
             <div className="md:w-1/3 py-8 px-12">
-              <h3 className="title">Location(s)</h3>
+              <h3 className="text-xl text-teal-600 font-semibold tracking-tight text-center">
+                Location(s)
+              </h3>
               <ReactMarkdown className="mt-2 text-stone-500 text-sm leading-6">
                 {job.locations}
               </ReactMarkdown>
             </div>
             <div className="md:w-1/3 py-8 px-12 border-t md:border-t-0 md:border-l border-red-200">
-              <h3 className="title">Compensation</h3>
+              <h3 className="text-xl text-teal-600 font-semibold tracking-tight text-center">
+                Compensation
+              </h3>
               <ReactMarkdown className="mt-2 text-stone-500 text-sm leading-6">
                 {job.compensation}
               </ReactMarkdown>
             </div>
             <div className="md:w-1/3 py-8 px-12 border-t md:border-t-0 md:border-l border-red-200">
-              <h3 className="title">Perks</h3>
+              <h3 className="text-xl text-teal-600 font-semibold tracking-tight text-center">
+                Perks
+              </h3>
               <ReactMarkdown className="mt-2 text-stone-500 text-sm leading-6">
                 {job.perks}
               </ReactMarkdown>
@@ -86,13 +92,11 @@ export const Success = ({ job }: CellSuccessProps<FindJobQuery>) => {
               {job.aboutCompany}
             </ReactMarkdown>
             <div className="mt-8 flex justify-center">
-              <div className="max-w-64 max-h-64">
-                <img
-                  src={job.logo}
-                  alt={`${job.company} logo`}
-                  className="w-full"
-                />
-              </div>
+              <img
+                src={job.logo}
+                alt={`${job.company} logo`}
+                className="w-full max-w-64 max-h-32"
+              />
             </div>
           </section>
         </div>

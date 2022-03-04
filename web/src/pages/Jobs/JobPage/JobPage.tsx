@@ -4,11 +4,12 @@ import JobCell from 'src/components/Jobs/JobCell'
 const JobPage = ({ id }) => {
   return (
     <>
-      <MetaTags title="Job" description="Job page" />
+      <MetaTags
+        title="Job"
+        description="Job opening for RedwoodJS developers"
+      />
 
-      <div className="mt-24">
-        <JobCell id={id} />
-      </div>
+      <JobCell id={id} />
     </>
   )
 }
