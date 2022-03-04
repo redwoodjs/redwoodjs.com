@@ -1,5 +1,8 @@
 import { MetaTags } from '@redwoodjs/web'
+import type { CellFailureProps, CellSuccessProps } from '@redwoodjs/web'
 import ReactMarkdown from 'react-markdown'
+
+import type { FindJobQuery } from 'types/graphql'
 
 export const QUERY = gql`
   query FindJobQuery($id: Int!) {
