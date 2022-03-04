@@ -13,6 +13,8 @@ import MainLayout from 'src/layouts/MainLayout/MainLayout'
 import JobsPage from 'src/pages/Jobs/JobsPage'
 import JobPage from 'src/pages/Jobs/JobPage'
 import NewJobPage from 'src/pages/Jobs/NewJobPage'
+import JobProfilePage from 'src/pages/Jobs/JobProfilePage'
+import NewJobProfilePage from 'src/pages/Jobs/NewJobProfilePage'
 
 const Routes = () => {
   return (
@@ -28,6 +30,8 @@ const Routes = () => {
         <Route path="/jobs/new" page={NewJobPage} name="newJob" />
         <Route path="/jobs/{id:Int}" page={JobPage} name="job" />
         <Route path="/jobs" page={JobsPage} name="jobs" />
+        <Route path="/job-profiles/new" page={NewJobProfilePage} name="newJobProfile" />
+        <Route path="/job-profiles/{id:Int}" page={JobProfilePage} name="jobProfile" />
 
         <Route path="/" page={HomePage} name="home" />
 

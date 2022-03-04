@@ -1,17 +1,21 @@
-import type { JobsQuery } from 'types/graphql'
+import type { JobProfilesQuery } from 'types/graphql'
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
 
 import { navigate, routes } from '@redwoodjs/router'
 import ReactMarkdown from 'react-markdown'
 
+import Status from 'src/components/Jobs/Shared/Status'
+
 export const QUERY = gql`
-  query JobsQuery($limit: Int) {
-    jobs(limit: $limit) {
+  query JobProfilesQuery($limit: Int) {
+    jobProfiles(limit: $limit) {
       id
-      company
-      logo
+      status
+      name
       title
-      aboutJob
+      photo
+      title
+      about
       locations
       createdAt
     }
@@ -34,39 +38,59 @@ export const Failure = ({ error }: CellFailureProps) => (
   <div style={{ color: 'red' }}>Error: {error.message}</div>
 )
 
-export const Success = ({ jobs }: CellSuccessProps<JobsQuery>) => {
+export const Success = ({
+  jobProfiles,
+}: CellSuccessProps<JobProfilesQuery>) => {
   return (
     <table className="w-full bg-white rounded-lg">
       <tbody>
-        {jobs.map((job, i) => (
+        {jobProfiles.map((profile, i) => (
           <tr
-            key={job.id}
-            onClick={() => navigate(routes.job({ id: job.id }))}
+            key={profile.id}
+            onClick={() => navigate(routes.jobProfile({ id: profile.id }))}
             className={`${
               i !== 0 && 'border-t'
             } border-orange-200 hover:bg-orange-50 cursor-pointer transition duration-250`}
           >
-            <td className={`py-4 px-8 ${i === 0 && 'rounded-tl-lg'}`}>
+            <td
+              className={`flex flex-col items-center py-4 px-8 ${
+                i === 0 && 'rounded-tl-lg'
+              }`}
+            >
               <img
-                src={job.logo}
-                alt={`${job.company} logo`}
-                className="w-full max-w-64 max-h-16"
+                src={profile.photo}
+                alt={`${profile.name}`}
+                className="w-full max-w-36 rounded-full"
               />
             </td>
             <td className="py-4 text-sm">
               <strong className="font-semibold text-teal-600">
-                {job.title}
+                {profile.name}
               </strong>
-              <p>{job.aboutJob.split(' ').slice(0, 25).join(' ')}...</p>
+              <div className="text-xs font-semibold text-stone-400">
+                {profile.title}
+              </div>
+              <p className="mt-1">
+                {profile.about.split(' ').slice(0, 25).join(' ')}...
+              </p>
             </td>
             <td
               className={`py-4 px-8 text-sm text-stone-500 ${
                 i === 0 && 'rounded-tr-lg'
               }`}
             >
-              <ReactMarkdown className="whitespace-nowrap">
-                {job.locations}
-              </ReactMarkdown>
+              <div className="flex flex-col items-start justify">
+                <ReactMarkdown className="whitespace-nowrap">
+                  {profile.locations}
+                </ReactMarkdown>
+                <div className="-ml-1 mt-1">
+                  <Status
+                    status={profile.status}
+                    textClassName="text-xs"
+                    iconClassName="md-16"
+                  />
+                </div>
+              </div>
             </td>
           </tr>
         ))}

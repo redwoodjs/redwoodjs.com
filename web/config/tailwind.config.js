@@ -20,14 +20,20 @@ module.exports = {
         12: '3rem',
       },
       margin: {
+        19: '4.75rem',
         27: '6.76rem',
       },
       maxHeight: {
         16: '4rem',
       },
       maxWidth: {
+        24: '6rem',
+        28: '7rem',
         32: '8rem',
         36: '9rem',
+        40: '10rem',
+        44: '11rem',
+        48: '12rem',
         64: '16rem',
       },
     },
