@@ -43,10 +43,15 @@ export const showcase = ({ id }: Prisma.ShowcaseWhereUniqueInput) => {
 }
 
 export const createShowcase = ({
-  input: { socialLinks, ...data },
+  input: { mediaId, socialLinks, ...data },
 }: MutationcreateShowcaseArgs) => {
   return db.showcase.create({
-    data: { ...data, socialLinks: { createMany: { data: socialLinks } } },
+    data: {
+      ...data,
+      localization: undefined, // TODO: Localize
+      media: { connect: { id: mediaId } },
+      socialLinks: { createMany: { data: socialLinks } },
+    },
   })
 }
 
