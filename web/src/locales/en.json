@@ -48,13 +48,21 @@
       "twitter": "Twitter"
     }
   },
+  "ShowcaseJobsCell": {
+    "Empty": {
+      "notFound": "This startup does not have any open positions.",
+      "checkSite": "Double check the startup's \"Homepage\" for any positions we don't know about."
+    },
+    "Loading": "Checking for open positions..."
+  },
   "ShowcasePage": {
-    "title": "Redwood <teal>Showcase</teal>",
-    "subtitle": "Get to know some of the startups and projects that are being built with RedwoodJS.",
+    "title": "<teal>RedwoodJS</teal> Showcase",
+    "subtitle": "Curated case-studies on the startups RedwoodJS empowers across the globe.",
     "contact": {
       "title": "Are you the founder of an upcoming startup?",
       "subtitle": "Please consider taking the time to introduce yourself and your project on the <b>Show and Tell</b> section of the forums.<br />We strive for a relaxed and welcoming environment - so feel free to share whatever feels relevant and don't be afraid to ask for help.",
       "action": "Reach Out"
-    }
+    },
+    "startups": {}
   }
 }
