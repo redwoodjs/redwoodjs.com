@@ -8,8 +8,11 @@
 // 'src/pages/Admin/BooksPage/BooksPage.js' -> AdminBooksPage
 
 import { Private, Route, Router, Set } from '@redwoodjs/router'
+
 import AdminLayout from 'src/layouts/AdminLayout/AdminLayout'
 import MainLayout from 'src/layouts/MainLayout/MainLayout'
+import ShowcaseLayout from 'src/layouts/ShowcaseLayout'
+
 import JobsPage from 'src/pages/Jobs/JobsPage'
 import JobPage from 'src/pages/Jobs/JobPage'
 import NewJobPage from 'src/pages/Jobs/NewJobPage'
@@ -24,7 +27,6 @@ const Routes = () => {
         <Route path="/signup" page={SignupPage} name="signup" />
         <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
         <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
-        <Route path="/showcase" page={ShowcasePage} name="showcase" />
         <Route path="/examples" page={ExamplesPage} name="examples" />
 
         <Route path="/jobs/new" page={NewJobPage} name="newJob" />
@@ -32,6 +34,14 @@ const Routes = () => {
         <Route path="/jobs" page={JobsPage} name="jobs" />
         <Route path="/job-profiles/new" page={NewJobProfilePage} name="newJobProfile" />
         <Route path="/job-profiles/{id:Int}" page={JobProfilePage} name="jobProfile" />
+
+        {/* Pre-Rendered Showcase Pages */}
+        <Set prerender>
+          <Route path="/showcase" page={ShowcasePage} name="showcase" />
+          <Set wrap={[ShowcaseLayout]}>
+            <Route path="/showcase/snaplet" page={ShowcaseSnapletPage} name="showcaseSnaplet" />
+          </Set>
+        </Set>
 
         <Route path="/" page={HomePage} name="home" />
 
