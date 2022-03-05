@@ -72,6 +72,10 @@ export const deleteShowcase = ({ id }: Prisma.ShowcaseWhereUniqueInput) => {
   })
 }
 
+export const showcaseJobs = ({ company }) => {
+  return db.job.findMany({ orderBy: { createdAt: 'desc' }, where: { company } })
+}
+
 export const Showcase = {
   media: (_obj, { root }: ResolverArgs<ReturnType<typeof showcase>>) =>
     db.showcase.findUnique({ where: { id: root.id } }).media(),

@@ -23,6 +23,7 @@ export const schema = gql`
   type Query {
     showcases: [Showcase!]! @skipAuth
     showcase(id: Int!): Showcase @skipAuth
+    showcaseJobs(company: String!): [Job!]! @skipAuth
     examples(input: ExamplesInput): [Showcase] @skipAuth
   }
 
