@@ -15,7 +15,7 @@ export interface CardProps {
   title?: string
   media?: Record<string, string | number>
   description?: string
-  tags?: Array<string & TagProps>
+  tags?: Array<TagProps>
 }
 
 interface ProxyProps extends CardProps, StandardProps, ExternalProps {
