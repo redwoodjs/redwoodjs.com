@@ -26,17 +26,16 @@ const Routes = () => {
         <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
         <Route path="/showcase" page={ShowcasePage} name="showcase" />
         <Route path="/examples" page={ExamplesPage} name="examples" />
-
         <Route path="/jobs/new" page={NewJobPage} name="newJob" />
         <Route path="/jobs/{id:Int}" page={JobPage} name="job" />
         <Route path="/jobs" page={JobsPage} name="jobs" />
         <Route path="/job-profiles/new" page={NewJobProfilePage} name="newJobProfile" />
         <Route path="/job-profiles/{id:Int}" page={JobProfilePage} name="jobProfile" />
-
         <Route path="/" page={HomePage} name="home" />
 
         <Route notfound page={NotFoundPage} />
       </Set>
+
       <Private unauthenticated={'home'}>
         <Set wrap={AdminLayout} role={['translator', 'editor', 'admin']}>
           <Route path="/showcase-localizations/new" page={AdminShowcaseLocalizationNewShowcaseLocalizationPage} name="newShowcaseLocalization" />
