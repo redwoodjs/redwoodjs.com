@@ -72,7 +72,7 @@ model Tag {
   // Meta.
   id        Int        @id @default(autoincrement())
   // Data.
-  label     String
+  label     String     @unique
   showcases Showcase[]
 }
 
@@ -93,13 +93,14 @@ model SocialLink {
 
 model Media {
   // Meta.
-  id       Int       @id @default(autoincrement())
+  id        Int       @id @default(autoincrement())
   // Data.
-  src      String
-  type     MediaType
+  label     String?
+  src       String
+  type      MediaType @default(picture)
   // Relations.
-  author   Author?
-  showcase Showcase?
+  author    Author?
+  showcase  Showcase?
 }
 
 model Showcase {
@@ -109,7 +110,7 @@ model Showcase {
   updatedAt       DateTime?
   isPublished     Boolean      @default(false)
   // Data.
-  link            String // Link to the application. If the application can't have a link it shouldn't be listed.
+  link            String       @unique // Link to the application. If the application can't have a link it shouldn't be listed.
   label           String?
   title           String?
   subtitle        String?
@@ -127,7 +128,7 @@ model ShowcaseLocalization {
   // Meta.
   id          Int          @id @default(autoincrement())
   isValid     Boolean      @default(false)
-  language    Language    @default(eng)
+  language    Language     @default(eng)
   // Data.
   title       String?
   subtitle    String?
