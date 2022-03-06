@@ -1,4 +1,6 @@
-import {createTransformerDirective, TransformerDirectiveFunc,} from '@redwoodjs/graphql-server'
+import {createTransformerDirective, TransformerDirectiveFunc,} from '@redwoodjs/graphql-server';
+
+const AcceptLanguageParser = require('accept-language-parser')
 
 enum LanguageISOCode {
   fr = "fra",
@@ -37,7 +39,10 @@ function applyTransformation(node, iso_code) {
 
 const transform: TransformerDirectiveFunc = ({context, directiveArgs, resolvedValue}) => {
   // @ts-ignore
-  const language = LanguageISOCode[context.variables?.language] ?? DEFAULT_LANGUAGE
+  const requestLanguage = context.variables?.language ?? AcceptLanguageParser.parse(context.event.headers['accept-language'])?.shift()?.code
+
+  // @ts-ignore
+  const language = LanguageISOCode[requestLanguage] ?? DEFAULT_LANGUAGE
 
   if (resolvedValue instanceof Array) {
     return resolvedValue.map(node => applyTransformation(node, language))
