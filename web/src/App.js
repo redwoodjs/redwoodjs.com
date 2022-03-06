@@ -14,7 +14,7 @@ const App = () => (
   <FatalErrorBoundary page={FatalErrorPage}>
     <RedwoodProvider titleTemplate="%PageTitle | %AppTitle">
       <AuthProvider type="dbAuth">
-        <RedwoodApolloProvider>
+        <RedwoodApolloProvider context={{language: 'fra'}}>
           <Routes />
         </RedwoodApolloProvider>
       </AuthProvider>

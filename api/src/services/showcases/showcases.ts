@@ -27,7 +27,7 @@ export const showcases = () => {
 
 export const examples = ({ input }) => {
   return db.showcase.findMany({
-    include: { socialLinks: true },
+    include: { socialLinks: true, localizations: true },
     where: {
       isPublished: true,
       tags: { some: { label: input.tag } },
@@ -48,7 +48,7 @@ export const createShowcase = ({
   return db.showcase.create({
     data: {
       ...data,
-      localization: undefined, // TODO: Localize
+      localizations: undefined, // TODO: Localize
       media: { connect: { id: mediaId } },
       socialLinks: { createMany: { data: socialLinks } },
     },

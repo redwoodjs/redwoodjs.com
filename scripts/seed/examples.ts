@@ -1,3 +1,4 @@
+import {Language} from '@prisma/client'
 import {db} from 'api/src/lib/db'
 import SeedMedia from './media'
 import SeedTag from './tag'
@@ -12,14 +13,15 @@ const HighlightIndex = (tags, media) => ({
     subtitle: 'Awesome music application example',
     title: 'Music Application',
     media: {connect: {id: media.rwLogo.id}},
-    localization: {
-      create: {
-        subtitle: 'Awesome music application example',
+    localizations: {
+      create: [{
+        language: Language.fra,
+        subtitle: "Super example d'application de musique",
         isValid: true,
-        title: 'Music Application',
+        title: 'Application de Gestion de Musique',
         description:
-          'Some music application, with full library, artworks, lyrics, bits of original music videos',
-      },
+          'Tout un texte très en français',
+      }],
     },
     tags: {connect: [tags.highlight, tags.sample, tags.cms]},
   }, todoApplication: {
@@ -30,13 +32,14 @@ const HighlightIndex = (tags, media) => ({
     subtitle: 'Awesome todo application example',
     title: 'Todo Application',
     media: {connect: {id: media.jamstackGraph.id}},
-    localization: {
-      create: {
+    localizations: {
+      create: [{
         isValid: true,
+        language: Language.eng,
         description: 'Some ToDo sample application powered by RedwoodJS',
         subtitle: 'Awesome todo application example',
         title: 'Todo Application',
-      },
+      }],
     },
     tags: {connect: [tags.highlight, tags.sample, tags.tool]},
   }, paymentApplication: {
@@ -48,14 +51,15 @@ const HighlightIndex = (tags, media) => ({
     subtitle: 'Awesome stripe integration example',
     title: 'Stripe integration',
     media: {connect: {id: media.randomImage.id}},
-    localization: {
-      create: {
+    localizations: {
+      create: [{
         isValid: false,
+        language: Language.eng,
         description:
           'Some Stripe integration, with full catalogue, checkout & payment process',
         subtitle: 'Awesome stripe integration example',
         title: 'Stripe integration',
-      },
+      }],
     },
     tags: {
       connect: [
@@ -82,11 +86,11 @@ function* CanonGenerator(tags) {
       link: `https://github.com/redwoodjs/redwood/releases/tag/v0.${
         index + 20
       }.0`,
-      localization: {
-        create: {
+      localizations: {
+        create: [{
           description:
-            'Generated canon example, not necessarily curated but with high value nonetheless.',
-        },
+            'Example canon généré, pas nécessairement maintenu mais à forte valeur ajoutée.',
+        }],
       },
       tags: {connect: [tags.sample, tags.canon]},
     }
@@ -106,10 +110,11 @@ function* CommunityGenerator(tags) {
       link: `https://github.com/redwoodjs/redwood/releases/tag/v0.${
         index + 50
       }.0`,
-      localization: {
-        create: {
-          description: 'Generated community example',
-        },
+      localizations: {
+        create: [{
+          language: Language.fra,
+          description: 'Example communautaire généré',
+        }],
       },
       tags: {connect: [tags.sample, tags.community]},
     }
@@ -122,10 +127,18 @@ export default async function Examples() {
   const tags = await SeedTag()
 
   for (const showcase of Object.values(HighlightIndex(tags, medias))) {
-    await db.showcase.upsert({
-      create: showcase,
-      update: {link: showcase.link},
-      where: {link: showcase.link}
+    const {localizations: {create: [Localization]}, ...record} = showcase
+
+    const updatedShowcase = await db.showcase.upsert({
+      create: record,
+      update: {link: record.link},
+      where: {link: record.link}
+    })
+
+    await db.showcaseLocalization.upsert({
+      create: {showcaseId: updatedShowcase.id, ...Localization},
+      update: {showcaseId: updatedShowcase.id, ...Localization},
+      where: {language_showcaseId: {language: Localization.language, showcaseId: updatedShowcase.id}}
     })
   }
 

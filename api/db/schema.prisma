@@ -120,8 +120,7 @@ model Showcase {
   // Relations.
   socialLinks     SocialLink[]
   tags            Tag[]
-  localization    ShowcaseLocalization @relation(fields: [localizationId], references: [id])
-  localizationId  Int
+  localizations   ShowcaseLocalization[]
 }
 
 model ShowcaseLocalization {
@@ -134,7 +133,9 @@ model ShowcaseLocalization {
   subtitle    String?
   description String
   // Relations.
-  showcase    Showcase?
+  showcase    Showcase @relation(fields: [showcaseId], references: [id])
+  showcaseId  Int
+  @@unique([language, showcaseId])
 }
 
 model Author {
