@@ -9,7 +9,7 @@ export const standard = (/* vars, { ctx, req } */) => ({
       photo: 'string',
       about: 'string',
       locations: 'string',
-      createdAt: 'string',
+      createdAt: new Date().toISOString(),
     },
     {
       id: 43,
@@ -19,7 +19,7 @@ export const standard = (/* vars, { ctx, req } */) => ({
       photo: 'string',
       about: 'string',
       locations: 'string',
-      createdAt: 'string',
+      createdAt: new Date().toISOString(),
     },
     {
       id: 44,
@@ -29,7 +29,7 @@ export const standard = (/* vars, { ctx, req } */) => ({
       photo: 'string',
       about: 'string',
       locations: 'string',
-      createdAt: 'string',
+      createdAt: new Date().toISOString(),
     },
   ],
 })

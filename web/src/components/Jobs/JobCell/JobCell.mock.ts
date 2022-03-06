@@ -12,6 +12,6 @@ export const standard = (/* vars, { ctx, req } */) => ({
     aboutJob: 'string',
     aboutApplicant: 'string',
     aboutCompany: 'string',
-    createdAt: 'string',
+    createdAt: new Date().toISOString(),
   },
 })

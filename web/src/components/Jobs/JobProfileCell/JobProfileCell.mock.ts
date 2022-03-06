@@ -10,6 +10,6 @@ export const standard = (/* vars, { ctx, req } */) => ({
     title: 'string',
     locations: 'string',
     about: 'string',
-    updatedAt: 'string',
+    updatedAt: new Date().toISOString(),
   },
 })
