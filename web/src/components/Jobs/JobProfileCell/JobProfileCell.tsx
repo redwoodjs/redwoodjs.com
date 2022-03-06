@@ -1,4 +1,6 @@
 import { MetaTags } from '@redwoodjs/web'
+import type { CellFailureProps, CellSuccessProps } from '@redwoodjs/web'
+import type { FindJobProfileQuery } from 'types/graphql'
 import ReactMarkdown from 'react-markdown'
 import { format, formatDistance } from 'date-fns'
 
@@ -35,7 +37,9 @@ export const Failure = ({ error }: CellFailureProps) => (
   <div style={{ color: 'red' }}>Error: {error.message}</div>
 )
 
-export const Success = ({ jobProfile }: CellSuccessProps<FindJobQuery>) => {
+export const Success = ({
+  jobProfile,
+}: CellSuccessProps<FindJobProfileQuery>) => {
   return (
     <>
       <MetaTags

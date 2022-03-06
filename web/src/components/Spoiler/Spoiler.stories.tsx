@@ -1,7 +1,7 @@
 import Spoiler from './Spoiler'
 
 export const generated = () => {
-  return <Spoiler />
+  return <Spoiler title="string" />
 }
 
 export default { title: 'Components/Spoiler' }

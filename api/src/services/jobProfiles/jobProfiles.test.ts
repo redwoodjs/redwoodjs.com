@@ -40,7 +40,7 @@ describe('jobProfiles', () => {
         title: 'String',
         locations: 'String',
         about: 'String',
-        updatedAt: '2022-03-04T22:30:16Z',
+        token: 'String',
       },
     })
 
@@ -52,7 +52,7 @@ describe('jobProfiles', () => {
     expect(result.title).toEqual('String')
     expect(result.locations).toEqual('String')
     expect(result.about).toEqual('String')
-    expect(result.updatedAt).toEqual('2022-03-04T22:30:16Z')
+    expect(result.token).toEqual('String')
   })
 
   scenario('updates a jobProfile', async (scenario: StandardScenario) => {

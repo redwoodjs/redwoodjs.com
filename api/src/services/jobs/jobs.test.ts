@@ -34,7 +34,7 @@ describe('jobs', () => {
         aboutJob: 'String',
         aboutApplicant: 'String',
         aboutCompany: 'String',
-        updatedAt: '2022-03-03T23:15:59Z',
+        token: 'String',
       },
     })
 
@@ -49,7 +49,7 @@ describe('jobs', () => {
     expect(result.aboutJob).toEqual('String')
     expect(result.aboutApplicant).toEqual('String')
     expect(result.aboutCompany).toEqual('String')
-    expect(result.updatedAt).toEqual('2022-03-03T23:15:59Z')
+    expect(result.token).toEqual('String')
   })
 
   scenario('updates a job', async (scenario: StandardScenario) => {

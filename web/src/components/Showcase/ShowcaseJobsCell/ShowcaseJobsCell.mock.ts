@@ -1,4 +1,26 @@
 // Define your own mock data here:
 export const standard = (/* vars, { ctx, req } */) => ({
-  showcaseJobs: [{ id: 42 }, { id: 43 }, { id: 44 }],
+  jobs: [
+    {
+      id: 42,
+      title: 'string',
+      locations: 'string',
+      aboutJob: 'string',
+      createdAt: 'string',
+    },
+    {
+      id: 43,
+      title: 'string',
+      locations: 'string',
+      aboutJob: 'string',
+      createdAt: 'string',
+    },
+    {
+      id: 44,
+      title: 'string',
+      locations: 'string',
+      aboutJob: 'string',
+      createdAt: 'string',
+    },
+  ],
 })

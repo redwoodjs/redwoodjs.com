@@ -7,8 +7,15 @@ import ShowcaseJobCard from './ShowcaseJobCard'
 
 describe('ShowcaseJobCard', () => {
   it('renders successfully', () => {
+    const props = {
+      id: 1,
+      title: 'string',
+      locations: 'string',
+      aboutJob: 'string',
+      createdAt: 'string',
+    }
     expect(() => {
-      render(<ShowcaseJobCard />)
+      render(<ShowcaseJobCard {...props} />)
     }).not.toThrow()
   })
 })

@@ -8,7 +8,7 @@ import JobPage from './JobPage'
 describe('JobPage', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<JobPage />)
+      render(<JobPage id={1} />)
     }).not.toThrow()
   })
 })

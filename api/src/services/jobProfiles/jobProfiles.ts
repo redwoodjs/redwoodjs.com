@@ -1,11 +1,18 @@
 import type { Prisma } from '@prisma/client'
 
+import {
+  QueryjobProfilesArgs,
+  MutationcreateJobProfileArgs,
+  MutationupdateJobProfileArgs,
+  QueryjobProfileArgs,
+  MutationdeleteJobProfileArgs,
+} from 'types/graphql'
 import { db } from 'src/lib/db'
 
-export const jobProfiles = ({ limit }) => {
+export const jobProfiles = ({ limit }: QueryjobProfilesArgs = {}) => {
   const options = {
     orderBy: { createdAt: 'desc' },
-  }
+  } as Prisma.JobProfileFindManyArgs
 
   if (limit) {
     options.take = limit
@@ -14,34 +21,29 @@ export const jobProfiles = ({ limit }) => {
   return db.jobProfile.findMany(options)
 }
 
-export const jobProfile = ({ id }: Prisma.JobProfileWhereUniqueInput) => {
+export const jobProfile = ({ id }: QueryjobProfileArgs) => {
   return db.jobProfile.findUnique({
     where: { id },
   })
 }
 
-interface CreateJobProfileArgs {
-  input: Prisma.JobProfileCreateInput
-}
-
-export const createJobProfile = ({ input }: CreateJobProfileArgs) => {
+export const createJobProfile = ({ input }: MutationcreateJobProfileArgs) => {
   return db.jobProfile.create({
     data: input,
   })
 }
 
-interface UpdateJobProfileArgs extends Prisma.JobProfileWhereUniqueInput {
-  input: Prisma.JobProfileUpdateInput
-}
-
-export const updateJobProfile = ({ id, input }: UpdateJobProfileArgs) => {
+export const updateJobProfile = ({
+  id,
+  input,
+}: MutationupdateJobProfileArgs) => {
   return db.jobProfile.update({
     data: input,
     where: { id },
   })
 }
 
-export const deleteJobProfile = ({ id }: Prisma.JobProfileWhereUniqueInput) => {
+export const deleteJobProfile = ({ id }: MutationdeleteJobProfileArgs) => {
   return db.jobProfile.delete({
     where: { id },
   })

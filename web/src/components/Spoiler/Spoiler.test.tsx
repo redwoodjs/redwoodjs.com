@@ -8,7 +8,7 @@ import Spoiler from './Spoiler'
 describe('Spoiler', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<Spoiler />)
+      render(<Spoiler title="string" />)
     }).not.toThrow()
   })
 })

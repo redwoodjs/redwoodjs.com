@@ -35,7 +35,7 @@ describe('ShowcaseJobsCell', () => {
 
   it('renders Success successfully', async () => {
     expect(() => {
-      render(<Success showcaseJobs={standard().showcaseJobs} />)
+      render(<Success jobs={standard().jobs} />)
     }).not.toThrow()
   })
 })
