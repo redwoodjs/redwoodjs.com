@@ -1,4 +1,5 @@
 import Card, { CardVariant } from 'src/components/Card/Card'
+import i18n from 'src/i18n'
 import { ApplicationType, FindExamples } from 'types/graphql'
 
 interface SuccessProps extends FindExamples {
@@ -6,9 +7,18 @@ interface SuccessProps extends FindExamples {
   type?: ApplicationType
 }
 
+export const beforeQuery = (variables) => {
+  return {
+    variables: {
+    ...variables,
+      language: i18n.language
+    }
+  }
+}
+
 export const QUERY = gql`
-  query FindExamples($type: String, $tag: String) {
-    examples(input: { type: $type, tag: $tag }) {
+  query FindExamples($type: String, $tag: String, $language: String) {
+    examples(input: { type: $type, tag: $tag }, language: $language) {
       id
       link
       label

@@ -59,7 +59,9 @@ const ShowcasePage = () => {
             target="_blank"
           >
             <span>{t('ShowcasePage.contact.action')}</span>
-            <span className="icon md-18">launch</span>
+            <span aria-hidden="true" className="icon md-18">
+              launch
+            </span>
           </a>
         </div>
       </section>
@@ -74,7 +76,7 @@ const ShowcasePage = () => {
           title="Snaplet"
           subtitle="Software developer's tool for working with safe, versioned, up-to-date, production-like data, at the snap of your fingers."
           src="https://user-images.githubusercontent.com/25166787/156497736-c1bb12d5-b1b3-463f-a12f-81554692c537.svg"
-          to={routes.showcase({ id: '4' })}
+          to={routes.showcaseSnaplet()}
         />
         <ShowcaseCard
           title="Everfund"

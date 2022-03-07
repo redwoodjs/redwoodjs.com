@@ -27,7 +27,7 @@ export const showcases = () => {
 
 export const examples = ({ input }) => {
   return db.showcase.findMany({
-    include: { socialLinks: true },
+    include: { socialLinks: true, localizations: true },
     where: {
       isPublished: true,
       tags: { some: { label: input.tag } },
@@ -43,10 +43,15 @@ export const showcase = ({ id }: Prisma.ShowcaseWhereUniqueInput) => {
 }
 
 export const createShowcase = ({
-  input: { socialLinks, ...data },
+  input: { mediaId, socialLinks, ...data },
 }: MutationcreateShowcaseArgs) => {
   return db.showcase.create({
-    data: { ...data, socialLinks: { createMany: { data: socialLinks } } },
+    data: {
+      ...data,
+      localizations: undefined, // TODO: Localize
+      media: { connect: { id: mediaId } },
+      socialLinks: { createMany: { data: socialLinks } },
+    },
   })
 }
 
@@ -65,6 +70,10 @@ export const deleteShowcase = ({ id }: Prisma.ShowcaseWhereUniqueInput) => {
   return db.showcase.delete({
     where: { id },
   })
+}
+
+export const showcaseJobs = ({ company }) => {
+  return db.job.findMany({ orderBy: { createdAt: 'desc' }, where: { company } })
 }
 
 export const Showcase = {
