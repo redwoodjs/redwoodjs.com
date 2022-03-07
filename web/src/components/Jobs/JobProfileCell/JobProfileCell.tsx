@@ -1,8 +1,7 @@
-import { Link, routes, back } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 import ReactMarkdown from 'react-markdown'
-import { format, formatDistance } from 'date-fns'
 
+import JobDetailLayout from 'src/components/Jobs/Shared/JobDetailLayout'
 import Status from 'src/components/Jobs/Shared/Status'
 
 export const QUERY = gql`
@@ -44,90 +43,58 @@ export const Success = ({ jobProfile }: CellSuccessProps<FindJobQuery>) => {
         description="RedwoodJS Jobs"
       />
 
-      <div className="max-w-screen-lg mx-auto job">
-        <header className="mt-36">
-          <h1 className="relative text-5xl px-16 font-black tracking-normal text-center">
-            <div className="absolute left-0 top-1/2 -translate-y-1/2">
-              <button
-                type="button"
-                onClick={back}
-                className="bg-orange-100 hover:bg-orange-200 w-16 h-16 rounded-full text-teal-600 hover:text-teal-800 text-6xl font-mono font-normal transition duration-150"
-                title="Back to all jobs"
-              >
-                &larr;
-              </button>
-            </div>
+      <JobDetailLayout
+        title={
+          <>
             <span className="text-teal-800">{jobProfile.name}</span> is looking
             for a{' '}
             <span className="block">
               <span className="text-teal-800">{jobProfile.title}</span> role
             </span>
-          </h1>
-          <div className="mt-2 text-center">
-            <time
-              dateTime={format(
-                new Date(jobProfile.updatedAt),
-                "yyyy-MM-dd'T'HH:mm:ss'Z'"
-              )}
-              className="text-sm text-stone-500"
-            >
-              Last Updated{' '}
-              {formatDistance(new Date(), new Date(jobProfile.updatedAt))} ago
-            </time>
+          </>
+        }
+        postedDateTime={jobProfile.updatedAt}
+        postedLabel="Last Updated"
+        buttonLink={`mailto:${jobProfile.email}`}
+        buttonLabel="Send a Message"
+      >
+        <section className="md:flex items-stretch">
+          <div className="md:w-1/3 flex flex-col items-center py-8 px-12">
+            <h3 className="text-xl text-teal-600 font-semibold tracking-tight text-center">
+              Status
+            </h3>
+            <div className="mt-1">
+              <Status
+                status={jobProfile.status}
+                textClassName="text-base tracking-tight"
+                iconClassName="md-24"
+              />
+            </div>
           </div>
-        </header>
-
-        <div className="max-w-screen-lg mt-19 bg-white rounded-lg border border-red-200 mb-12">
-          <section className="md:flex items-stretch">
-            <div className="md:w-1/3 flex flex-col items-center py-8 px-12">
-              <h3 className="text-xl text-teal-600 font-semibold tracking-tight text-center">
-                Status
-              </h3>
-              <div className="mt-1">
-                <Status
-                  status={jobProfile.status}
-                  textClassName="text-base tracking-tight"
-                  iconClassName="md-24"
-                />
-              </div>
+          <div className="md:w-1/3 py-8 px-12 border-t md:border-t-0 md:border-l border-red-200">
+            <h3 className="text-xl text-teal-600 font-semibold tracking-tight text-center">
+              Portfolio/Profile
+            </h3>
+            <div className="mt-2 text-sm text-center">
+              <a href={jobProfile.portfolioUrl} className="text-stone-500">
+                {jobProfile.portfolioUrl}
+              </a>
             </div>
-            <div className="md:w-1/3 py-8 px-12 border-t md:border-t-0 md:border-l border-red-200">
-              <h3 className="text-xl text-teal-600 font-semibold tracking-tight text-center">
-                Portfolio/Profile
-              </h3>
-              <div className="mt-2 text-sm text-center">
-                <a href={jobProfile.portfolioUrl} className="text-stone-500">
-                  {jobProfile.portfolioUrl}
-                </a>
-              </div>
-            </div>
-            <div className="md:w-1/3 py-8 px-12 border-t md:border-t-0 md:border-l border-red-200">
-              <h3 className="text-xl text-teal-600 font-semibold tracking-tight text-center">
-                Where I'll Work
-              </h3>
-              <ReactMarkdown className="mt-2 text-stone-500 text-sm leading-6 text-center">
-                {jobProfile.locations}
-              </ReactMarkdown>
-            </div>
-          </section>
-          <section className="border-t border-red-200 p-12">
-            <h2 className="title">About Me</h2>
-            <ReactMarkdown className="markdown">
-              {jobProfile.about}
+          </div>
+          <div className="md:w-1/3 py-8 px-12 border-t md:border-t-0 md:border-l border-red-200">
+            <h3 className="text-xl text-teal-600 font-semibold tracking-tight text-center">
+              Where I'll Work
+            </h3>
+            <ReactMarkdown className="mt-2 text-stone-500 text-sm leading-6 text-center">
+              {jobProfile.locations}
             </ReactMarkdown>
-          </section>
-        </div>
-      </div>
-      <div className="flex justify-center mb-12">
-        <a
-          href={`mailto:${jobProfile.email}`}
-          target="_blank"
-          rel="nofollow noreferrer"
-          className="button"
-        >
-          Send a Message
-        </a>
-      </div>
+          </div>
+        </section>
+        <section className="border-t border-red-200 p-12">
+          <h2 className="title">About Me</h2>
+          <ReactMarkdown className="markdown">{jobProfile.about}</ReactMarkdown>
+        </section>
+      </JobDetailLayout>
     </>
   )
 }

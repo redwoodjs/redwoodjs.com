@@ -14,7 +14,7 @@ const JobsPage = () => {
       <section className="max-w-screen-lg mx-auto">
         <header className="text-center">
           <h1 className="mt-36">
-            <span className="text-orange-900">RedwoodJS</span>{' '}
+            <span className="text-teal-800">RedwoodJS</span>{' '}
             <span className="">Jobs</span>
           </h1>
           <p className="mt-2 text-stone-500">
@@ -35,7 +35,7 @@ const JobsPage = () => {
       <section className="max-w-screen-lg mx-auto mt-24 mb-24">
         <header className="text-center">
           <h1 className="mt-12">
-            <span className="text-orange-900">RedwoodJS</span>{' '}
+            <span className="text-teal-800">RedwoodJS</span>{' '}
             <span className="">Developers</span>
           </h1>
           <p className="mt-2 text-stone-500">
