@@ -64,7 +64,7 @@ export const Success = ({ job }: CellSuccessProps<FindJobQuery>) => {
             <h3 className="text-xl text-teal-600 font-semibold tracking-tight text-center">
               Location(s)
             </h3>
-            <ReactMarkdown className="mt-2 text-stone-500 text-sm leading-6 text-center">
+            <ReactMarkdown className="mt-2 text-stone-600 text-sm leading-6 text-center">
               {job.locations}
             </ReactMarkdown>
           </div>
@@ -72,7 +72,7 @@ export const Success = ({ job }: CellSuccessProps<FindJobQuery>) => {
             <h3 className="text-xl text-teal-600 font-semibold tracking-tight text-center">
               Compensation
             </h3>
-            <ReactMarkdown className="mt-2 text-stone-500 text-sm leading-6 text-center">
+            <ReactMarkdown className="mt-2 text-stone-600 text-sm leading-6 text-center">
               {job.compensation}
             </ReactMarkdown>
           </div>
@@ -80,7 +80,7 @@ export const Success = ({ job }: CellSuccessProps<FindJobQuery>) => {
             <h3 className="text-xl text-teal-600 font-semibold tracking-tight text-center">
               Perks
             </h3>
-            <ReactMarkdown className="mt-2 text-stone-500 text-sm leading-6 text-center">
+            <ReactMarkdown className="mt-2 text-stone-600 text-sm leading-6 text-center">
               {job.perks}
             </ReactMarkdown>
           </div>

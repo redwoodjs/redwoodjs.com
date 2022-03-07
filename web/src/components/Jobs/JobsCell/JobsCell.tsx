@@ -40,7 +40,7 @@ export const Success = ({ jobs }: CellSuccessProps<JobsQuery>) => {
       <tbody>
         {jobs.map((job, i) => (
           <tr
-            key={job.id}
+            key={`job-${job.id}`}
             onClick={() => navigate(routes.job({ id: job.id }))}
             className={`${
               i !== 0 && 'border-t'

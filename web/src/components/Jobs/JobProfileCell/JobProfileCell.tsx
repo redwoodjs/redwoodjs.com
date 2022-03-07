@@ -76,7 +76,7 @@ export const Success = ({ jobProfile }: CellSuccessProps<FindJobQuery>) => {
               Portfolio/Profile
             </h3>
             <div className="mt-2 text-sm text-center">
-              <a href={jobProfile.portfolioUrl} className="text-stone-500">
+              <a href={jobProfile.portfolioUrl} className="text-stone-600">
                 {jobProfile.portfolioUrl}
               </a>
             </div>
@@ -85,7 +85,7 @@ export const Success = ({ jobProfile }: CellSuccessProps<FindJobQuery>) => {
             <h3 className="text-xl text-teal-600 font-semibold tracking-tight text-center">
               Where I'll Work
             </h3>
-            <ReactMarkdown className="mt-2 text-stone-500 text-sm leading-6 text-center">
+            <ReactMarkdown className="mt-2 text-stone-600 text-sm leading-6 text-center">
               {jobProfile.locations}
             </ReactMarkdown>
           </div>

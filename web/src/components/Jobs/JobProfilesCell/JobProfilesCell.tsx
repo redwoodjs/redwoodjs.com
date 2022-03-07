@@ -46,7 +46,7 @@ export const Success = ({
       <tbody>
         {jobProfiles.map((profile, i) => (
           <tr
-            key={profile.id}
+            key={`job_profiles-${profile.id}`}
             onClick={() => navigate(routes.jobProfile({ id: profile.id }))}
             className={`${
               i !== 0 && 'border-t'
