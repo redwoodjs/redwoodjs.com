@@ -38,6 +38,7 @@ function applyTransformation(node, iso_code) {
 }
 
 const transform: TransformerDirectiveFunc = ({context, directiveArgs, resolvedValue}) => {
+  console.log(context)
   // @ts-ignore
   const requestLanguage = context.variables?.language ?? AcceptLanguageParser.parse(context.event.headers['accept-language'])?.shift()?.code
 
