@@ -40,16 +40,21 @@ const NewJobPage = () => {
     },
   })
 
+  const taggables = (data) => {
+    return {
+      locations: locations.length ? locations : [data.locations],
+      compensation: compensation.length ? compensation : [data.compensation],
+      perks: perks.length ? perks : [data.perks],
+    }
+  }
+
   const onSubmit = (data) => {
-    console.info('onsubmit')
     createJob({
       variables: {
         input: {
           ...data,
+          ...taggables(data),
           logo: '/images/snaplet_logo.svg',
-          locations,
-          compensation,
-          perks,
         },
       },
     })
@@ -58,10 +63,8 @@ const NewJobPage = () => {
   const onPreview = (data) => {
     setPreviewJob({
       ...data,
+      ...taggables(data),
       logo: '/images/snaplet_logo.svg',
-      locations,
-      compensation,
-      perks,
       createdAt: new Date(),
     })
   }
@@ -332,7 +335,7 @@ const NewJobPage = () => {
         </Form>
       </div>
 
-      {Object.keys(previewJob).length && (
+      {Object.keys(previewJob).length > 0 && (
         <>
           <div className="fixed inset-0 z-10">
             <div className="absolute inset-0 bg-black opacity-80"></div>

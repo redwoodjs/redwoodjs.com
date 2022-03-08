@@ -36,8 +36,9 @@ const FormTaggable = ({ name, get, set }) => {
           errorClassName="error"
           onKeyPress={onKeyPress}
           validation={{
-            validate: () =>
+            validate: (val) =>
               !!get.length ||
+              val !== '' ||
               `At least one ${name} required. Did you click the ADD button?`,
           }}
         />
