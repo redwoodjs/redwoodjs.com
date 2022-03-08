@@ -57,6 +57,7 @@ export const Success = ({ jobProfile }: CellSuccessProps<FindJobQuery>) => {
         postedLabel="Last Updated"
         buttonLink={`mailto:${jobProfile.email}`}
         buttonLabel="Send a Message"
+        back="true"
       >
         <section className="md:flex items-stretch">
           <div className="md:w-1/3 flex flex-col items-center py-8 px-12">
@@ -85,13 +86,14 @@ export const Success = ({ jobProfile }: CellSuccessProps<FindJobQuery>) => {
             <h3 className="text-xl text-teal-600 font-semibold tracking-tight text-center">
               Where I'll Work
             </h3>
-            <ReactMarkdown className="mt-2 text-stone-600 text-sm leading-6 text-center">
-              {jobProfile.locations}
-            </ReactMarkdown>
+            <ul className="mt-2 text-stone-600 text-sm leading-6 text-center">
+              {jobProfile.locations.map((location, i) => (
+                <li key={`locations-${i}`}>{location}</li>
+              ))}
+            </ul>
           </div>
         </section>
-        <section className="border-t border-red-200 p-12">
-          <h2 className="title">About Me</h2>
+        <section className="border-t border-red-200 p-12 pt-8">
           <ReactMarkdown className="markdown">{jobProfile.about}</ReactMarkdown>
         </section>
       </JobDetailLayout>

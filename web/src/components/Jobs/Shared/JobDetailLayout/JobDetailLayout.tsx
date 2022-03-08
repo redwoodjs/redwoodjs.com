@@ -1,6 +1,5 @@
 import { format, formatDistance } from 'date-fns'
-
-import { back } from '@redwoodjs/router'
+import { navigate, routes } from '@redwoodjs/router'
 
 const JobDetailLayout = ({
   title,
@@ -8,6 +7,7 @@ const JobDetailLayout = ({
   postedLabel,
   buttonLink,
   buttonLabel,
+  back,
   children,
 }) => {
   return (
@@ -15,16 +15,18 @@ const JobDetailLayout = ({
       <div className="max-w-screen-lg mx-auto job">
         <header className="mt-36">
           <h1 className="relative text-5xl px-16 font-black tracking-normal text-center">
-            <div className="absolute left-0 top-1/2 -translate-y-1/2">
-              <button
-                type="button"
-                onClick={back}
-                className="bg-orange-100 hover:bg-orange-200 w-16 h-16 rounded-full text-teal-600 hover:text-teal-800 text-6xl font-mono font-normal transition duration-150"
-                title="Back to all jobs"
-              >
-                &larr;
-              </button>
-            </div>
+            {back !== false && (
+              <div className="absolute left-0 top-1/2 -translate-y-1/2">
+                <button
+                  type="button"
+                  onClick={() => navigate(routes.jobs())}
+                  className="bg-orange-100 hover:bg-orange-200 w-16 h-16 rounded-full text-teal-600 hover:text-teal-800 text-6xl font-mono font-normal transition duration-150"
+                  title="Back to all jobs"
+                >
+                  &larr;
+                </button>
+              </div>
+            )}
             {title}
           </h1>
           <div className="mt-2 text-center">

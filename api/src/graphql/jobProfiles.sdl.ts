@@ -7,7 +7,7 @@ export const schema = gql`
     photo: String!
     status: String!
     title: String!
-    locations: String!
+    locations: [String!]!
     about: String!
     createdAt: DateTime!
     updatedAt: DateTime!

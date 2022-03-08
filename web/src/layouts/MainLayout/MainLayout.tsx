@@ -1,4 +1,5 @@
 import { Link, routes } from '@redwoodjs/router'
+import { Toaster } from '@redwoodjs/web/toast'
 import { Popover, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
 
@@ -39,6 +40,7 @@ const PopoverLink = ({ children, route, link, title, desc }) => {
 const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <>
+      <Toaster toastOptions={{ className: 'mt-16' }} />
       <section
         className="fixed w-full z-10 bg-orange-50 text-orange-900 border-b border-orange-200"
         data-target="application.header"

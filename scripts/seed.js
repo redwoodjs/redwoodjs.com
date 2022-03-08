@@ -1,4 +1,4 @@
-import {db} from 'api/src/lib/db'
+import { db } from 'api/src/lib/db'
 import SeedMedia from './seed/media'
 import SeedTag from './seed/tag'
 import SeedExamples from './seed/examples'
@@ -11,9 +11,9 @@ const JOBS = [
     company: 'Snaplet',
     logo: '/images/snaplet_logo.svg',
     title: 'Sr. Developer',
-    locations: '* Remote\n* Cape Town, South Africa',
-    compensation: '* $150,000 - $200,000 USD\n* Cats',
-    perks: '* 401k\n* Heatlhcare',
+    locations: '["Remote","Cape Town, South Africa"]',
+    compensation: '["$150,000 - $200,000 USD","Cats"]',
+    perks: '["401k","Heatlhcare"]',
     aboutJob:
       "Seitan wolf small batch tote bag actually mustache 8-bit skateboard hot chicken artisan. Flannel gastropub tbh, organic sartorial knausgaard XOXO fingerstache normcore af craft beer kombucha. Hot chicken tacos locavore, raw denim occupy pabst ramps subway tile cold-pressed gastropub. Kinfolk hexagon lomo thundercats sustainable, 8-bit tumblr. Fanny pack everyday carry you probably haven't heard of them, quinoa 3 wolf moon disrupt cold-pressed tacos chillwave brunch.\n\nSemiotics mixtape artisan seitan, edison bulb pinterest snackwave. Four dollar toast post-ironic cardigan, intelligentsia ennui venmo everyday carry portland tofu microdosing shoreditch keytar crucifix. Ethical farm-to-table hammock, actually leggings prism +1. Pour-over hell of pok pok post-ironic, scenester marfa farm-to-table poutine freegan mumblecore fixie live-edge jianbing. Art party church-key DIY adaptogen live-edge gochujang.",
     aboutApplicant:
@@ -28,9 +28,9 @@ const JOBS = [
     company: 'Everfund',
     logo: '/images/everfund_logo.svg',
     title: 'Junior Dev',
-    locations: 'Remote',
-    compensation: '$150,000 - $200,000 USD',
-    perks: '* 401k\n* Heatlhcare\n* Fish and Chips',
+    locations: '["Remote"]',
+    compensation: '["$150,000 - $200,000 USD"]',
+    perks: '["401k","Heatlhcare","Fish and Chips"]',
     aboutJob:
       "Seitan wolf small batch tote bag actually mustache 8-bit skateboard hot chicken artisan. Flannel gastropub tbh, organic sartorial knausgaard XOXO fingerstache normcore af craft beer kombucha. Hot chicken tacos locavore, raw denim occupy pabst ramps subway tile cold-pressed gastropub. Kinfolk hexagon lomo thundercats sustainable, 8-bit tumblr. Fanny pack everyday carry you probably haven't heard of them, quinoa 3 wolf moon disrupt cold-pressed tacos chillwave brunch.\n\nSemiotics mixtape artisan seitan, edison bulb pinterest snackwave. Four dollar toast post-ironic cardigan, intelligentsia ennui venmo everyday carry portland tofu microdosing shoreditch keytar crucifix. Ethical farm-to-table hammock, actually leggings prism +1. Pour-over hell of pok pok post-ironic, scenester marfa farm-to-table poutine freegan mumblecore fixie live-edge jianbing. Art party church-key DIY adaptogen live-edge gochujang.",
     aboutApplicant:
@@ -45,9 +45,9 @@ const JOBS = [
     company: 'RedwoodJS Foundation',
     logo: '/images/logo.svg',
     title: 'Developer Relations Specialist',
-    locations: 'Remote',
-    compensation: '$150,000 - $200,000 USD',
-    perks: '* 401k\n* Cones',
+    locations: '["Remote"]',
+    compensation: '["$150,000 - $200,000 USD"]',
+    perks: '["401k","Cones"]',
     aboutJob:
       "Seitan wolf small batch tote bag actually mustache 8-bit skateboard hot chicken artisan. Flannel gastropub tbh, organic sartorial knausgaard XOXO fingerstache normcore af craft beer kombucha. Hot chicken tacos locavore, raw denim occupy pabst ramps subway tile cold-pressed gastropub. Kinfolk hexagon lomo thundercats sustainable, 8-bit tumblr. Fanny pack everyday carry you probably haven't heard of them, quinoa 3 wolf moon disrupt cold-pressed tacos chillwave brunch.\n\nSemiotics mixtape artisan seitan, edison bulb pinterest snackwave. Four dollar toast post-ironic cardigan, intelligentsia ennui venmo everyday carry portland tofu microdosing shoreditch keytar crucifix. Ethical farm-to-table hammock, actually leggings prism +1. Pour-over hell of pok pok post-ironic, scenester marfa farm-to-table poutine freegan mumblecore fixie live-edge jianbing. Art party church-key DIY adaptogen live-edge gochujang.",
     aboutApplicant:
@@ -66,7 +66,7 @@ const JOB_PROFILES = [
     photo: '/images/rob.jpg',
     status: 'available',
     title: 'Senior Developer',
-    locations: 'Remote Only',
+    locations: '["Remote Only"]',
     about:
       "Seitan wolf small batch tote bag actually mustache 8-bit skateboard hot chicken artisan. Flannel gastropub tbh, organic sartorial knausgaard XOXO fingerstache normcore af craft beer kombucha. Hot chicken tacos locavore, raw denim occupy pabst ramps subway tile cold-pressed gastropub. Kinfolk hexagon lomo thundercats sustainable, 8-bit tumblr. Fanny pack everyday carry you probably haven't heard of them, quinoa 3 wolf moon disrupt cold-pressed tacos chillwave brunch.\n\nSemiotics mixtape artisan seitan, edison bulb pinterest snackwave. Four dollar toast post-ironic cardigan, intelligentsia ennui venmo everyday carry portland tofu microdosing shoreditch keytar crucifix. Ethical farm-to-table hammock, actually leggings prism +1. Pour-over hell of pok pok post-ironic, scenester marfa farm-to-table poutine freegan mumblecore fixie live-edge jianbing. Art party church-key DIY adaptogen live-edge gochujang.",
   },
@@ -78,7 +78,7 @@ const JOB_PROFILES = [
     photo: '/images/peter.gif',
     status: 'booked',
     title: 'Long Distance Cyclist',
-    locations: 'Berlin, Germany',
+    locations: '["Berlin, Germany"]',
     about:
       "Seitan wolf small batch tote bag actually mustache 8-bit skateboard hot chicken artisan. Flannel gastropub tbh, organic sartorial knausgaard XOXO fingerstache normcore af craft beer kombucha. Hot chicken tacos locavore, raw denim occupy pabst ramps subway tile cold-pressed gastropub. Kinfolk hexagon lomo thundercats sustainable, 8-bit tumblr. Fanny pack everyday carry you probably haven't heard of them, quinoa 3 wolf moon disrupt cold-pressed tacos chillwave brunch.\n\nSemiotics mixtape artisan seitan, edison bulb pinterest snackwave. Four dollar toast post-ironic cardigan, intelligentsia ennui venmo everyday carry portland tofu microdosing shoreditch keytar crucifix. Ethical farm-to-table hammock, actually leggings prism +1. Pour-over hell of pok pok post-ironic, scenester marfa farm-to-table poutine freegan mumblecore fixie live-edge jianbing. Art party church-key DIY adaptogen live-edge gochujang.",
   },
@@ -90,7 +90,7 @@ const JOB_PROFILES = [
     photo: '/images/tom.jpg',
     status: 'booked',
     title: 'Scotch Enthusiast',
-    locations: '* Mendocino, CA\n* San Francisco, CA',
+    locations: '["Mendocino, CA","San Francisco,CA"]',
     about:
       "Seitan wolf small batch tote bag actually mustache 8-bit skateboard hot chicken artisan. Flannel gastropub tbh, organic sartorial knausgaard XOXO fingerstache normcore af craft beer kombucha. Hot chicken tacos locavore, raw denim occupy pabst ramps subway tile cold-pressed gastropub. Kinfolk hexagon lomo thundercats sustainable, 8-bit tumblr. Fanny pack everyday carry you probably haven't heard of them, quinoa 3 wolf moon disrupt cold-pressed tacos chillwave brunch.\n\nSemiotics mixtape artisan seitan, edison bulb pinterest snackwave. Four dollar toast post-ironic cardigan, intelligentsia ennui venmo everyday carry portland tofu microdosing shoreditch keytar crucifix. Ethical farm-to-table hammock, actually leggings prism +1. Pour-over hell of pok pok post-ironic, scenester marfa farm-to-table poutine freegan mumblecore fixie live-edge jianbing. Art party church-key DIY adaptogen live-edge gochujang.",
   },
@@ -101,7 +101,7 @@ export default async () => {
     //
     // Manually seed via `yarn rw prisma db seed`
     // Seeds automatically with `yarn rw prisma migrate dev` and `yarn rw prisma migrate reset`
-    const {rwLogo, jamstackGraph, randomImage} = await SeedMedia()
+    const { rwLogo, jamstackGraph, randomImage } = await SeedMedia()
 
     const tags = await SeedTag()
 
@@ -109,7 +109,7 @@ export default async () => {
 
     for (const job of JOBS) {
       await db.job.upsert({
-        where: {id: job.id},
+        where: { id: job.id },
         update: job,
         create: job,
       })
@@ -117,7 +117,7 @@ export default async () => {
 
     for (const profile of JOB_PROFILES) {
       await db.jobProfile.upsert({
-        where: {id: profile.id},
+        where: { id: profile.id },
         update: profile,
         create: profile,
       })

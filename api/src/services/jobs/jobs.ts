@@ -2,7 +2,7 @@ import type { Prisma } from '@prisma/client'
 
 import { db } from 'src/lib/db'
 
-export const jobs = ({ limit }) => {
+export const jobs = async ({ limit }) => {
   const options = {
     orderBy: { createdAt: 'desc' },
   }
@@ -11,13 +11,27 @@ export const jobs = ({ limit }) => {
     options.take = limit
   }
 
-  return db.job.findMany(options)
+  const jobs = await db.job.findMany(options)
+
+  return jobs.map((job) => ({
+    ...job,
+    locations: JSON.parse(job.locations),
+    compensation: JSON.parse(job.compensation),
+    perks: JSON.parse(job.perks),
+  }))
 }
 
-export const job = ({ id }: Prisma.JobWhereUniqueInput) => {
-  return db.job.findUnique({
+export const job = async ({ id }: Prisma.JobWhereUniqueInput) => {
+  const job = await db.job.findUnique({
     where: { id },
   })
+
+  return {
+    ...job,
+    locations: JSON.parse(job.locations),
+    compensation: JSON.parse(job.compensation),
+    perks: JSON.parse(job.perks),
+  }
 }
 
 interface CreateJobArgs {
@@ -26,7 +40,12 @@ interface CreateJobArgs {
 
 export const createJob = ({ input }: CreateJobArgs) => {
   return db.job.create({
-    data: input,
+    data: {
+      ...input,
+      locations: JSON.stringify(input.locations),
+      compensation: JSON.stringify(input.compensation),
+      perks: JSON.stringify(input.perks),
+    },
   })
 }
 

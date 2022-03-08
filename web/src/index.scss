@@ -154,7 +154,77 @@ $color_neutral: #1A202C;
     color: $color_accent;
   }
 
+  .jobForm {
 
+    .input {
+      @apply flex items-start mt-12;
+    }
+
+    .column {
+      @apply w-1/2 px-4;
+    }
+
+    .help {
+      @apply mt-8 text-sm text-stone-500 leading-6;
+    }
+
+    .tags {
+      @apply flex flex-wrap items-center mt-1;
+
+      li {
+        @apply mt-1 mr-2 px-2 py-1 flex items-center text-sm bg-orange-200 text-orange-700 rounded whitespace-nowrap;
+
+        .icon {
+          @apply ml-2 text-orange-400 transition duration-150;
+
+          &:hover {
+            @apply font-semibold text-red-700;
+          }
+        }
+      }
+    }
+
+    label {
+      @apply block text-lg text-teal-600 font-semibold;
+
+      &.error {
+        @apply text-red-600;
+      }
+    }
+
+    input, textarea {
+      @apply block w-full mt-2 py-3 px-4 bg-white border border-orange-200 rounded;
+
+      &.error {
+        @apply outline outline-2 outline-red-600;
+      }
+    }
+
+    textarea {
+      @apply h-72;
+    }
+
+    input:focus, textarea:focus {
+      @apply outline-teal-600;
+    }
+
+    .button-attach {
+      input {
+        @apply rounded-r-none border-r-transparent;
+      }
+      button {
+        @apply mt-2 py-3 px-8 bg-orange-400 font-semibold uppercase text-orange-100 rounded-r border border-orange-400 transition duration-150;
+
+        &:hover {
+          @apply bg-orange-500 text-white border-orange-500;
+        }
+      }
+    }
+
+    .fieldError {
+      @apply block mt-2 text-sm text-red-600;
+    }
+  }
 }
 
 @layer utilities {
@@ -194,5 +264,4 @@ $color_neutral: #1A202C;
   .icon.md-24 { font-size: 24px; }
   .icon.md-36 { font-size: 36px; }
   .icon.md-48 { font-size: 48px; }
-  .icon.md-14 { font-size: 14px; }
 }

@@ -2,7 +2,7 @@ import type { Prisma } from '@prisma/client'
 
 import { db } from 'src/lib/db'
 
-export const jobProfiles = ({ limit }) => {
+export const jobProfiles = async ({ limit }) => {
   const options = {
     orderBy: { createdAt: 'desc' },
   }
@@ -11,13 +11,20 @@ export const jobProfiles = ({ limit }) => {
     options.take = limit
   }
 
-  return db.jobProfile.findMany(options)
+  const profiles = await db.jobProfile.findMany(options)
+
+  return profiles.map((profile) => ({
+    ...profile,
+    locations: JSON.parse(profile.locations),
+  }))
 }
 
-export const jobProfile = ({ id }: Prisma.JobProfileWhereUniqueInput) => {
-  return db.jobProfile.findUnique({
+export const jobProfile = async ({ id }: Prisma.JobProfileWhereUniqueInput) => {
+  const profile = await db.jobProfile.findUnique({
     where: { id },
   })
+
+  return { ...profile, locations: JSON.parse(profile.locations) }
 }
 
 interface CreateJobProfileArgs {

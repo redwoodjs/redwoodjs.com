@@ -6,9 +6,9 @@ export const schema = gql`
     company: String!
     logo: String!
     title: String!
-    locations: String!
-    compensation: String!
-    perks: String!
+    locations: [String!]!
+    compensation: [String!]!
+    perks: [String!]!
     aboutJob: String!
     aboutApplicant: String!
     aboutCompany: String!
@@ -18,41 +18,39 @@ export const schema = gql`
 
   type Query {
     jobs(limit: Int): [Job!]! @skipAuth
-    job(id: Int!): Job @skipAuth
+    job(id: Int!): Job! @skipAuth
   }
 
   input CreateJobInput {
-    token: String!
     email: String!
     applyUrl: String!
     company: String!
     logo: String!
     title: String!
-    locations: String!
-    compensation: String!
-    perks: String!
+    locations: [String!]!
+    compensation: [String!]!
+    perks: [String!]!
     aboutJob: String!
     aboutApplicant: String!
     aboutCompany: String!
   }
 
   input UpdateJobInput {
-    token: String
     email: String
     applyUrl: String
     company: String
     logo: String
     title: String
-    locations: String
-    compensation: String
-    perks: String
+    locations: [String!]
+    compensation: [String!]
+    perks: [String!]
     aboutJob: String
     aboutApplicant: String
     aboutCompany: String
   }
 
   type Mutation {
-    createJob(input: CreateJobInput!): Job! @requireAuth
+    createJob(input: CreateJobInput!): Job! @skipAuth
     updateJob(id: Int!, input: UpdateJobInput!): Job! @requireAuth
     deleteJob(id: Int!): Job! @requireAuth
   }
