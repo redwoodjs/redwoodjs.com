@@ -197,7 +197,7 @@ const NewJobPage = ({ token }) => {
               ) : (
                 <button
                   type="button"
-                  className="mt-2 button"
+                  className="mt-2 button-alt"
                   onClick={onOpenPicker}
                 >
                   Choose Image...
@@ -338,9 +338,20 @@ const NewJobPage = ({ token }) => {
             <div className="column help">
               Tell prospective employees what they can expect in this role. This
               isn't necessarily job <em>requirements</em> (you can add those in
-              the <strong>About You</strong> section below) but what the job
-              itself entails. <strong>Markdown is supported</strong> so get
-              creative with lists, pull quotes or even an image or two.
+              the <strong>Job Requirements</strong> section below) but what the
+              job itself entails.{' '}
+              <strong>
+                <a
+                  href="https://www.markdownguide.org/cheat-sheet/"
+                  className="text-stone-500"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Markdown
+                </a>{' '}
+                is supported
+              </strong>{' '}
+              so get creative with lists, pull quotes or even an image or two.
             </div>
           </div>
 
@@ -358,7 +369,18 @@ const NewJobPage = ({ token }) => {
             </div>
             <div className="column help">
               Let employees know what experience they should have to be
-              considered for this role. <strong>Markdown is supported.</strong>
+              considered for this role.{' '}
+              <strong>
+                <a
+                  href="https://www.markdownguide.org/cheat-sheet/"
+                  className="text-stone-500"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Markdown
+                </a>{' '}
+                is supported.
+              </strong>
             </div>
           </div>
 
@@ -377,7 +399,17 @@ const NewJobPage = ({ token }) => {
             <div className="column help">
               Tell everyone what's so amazing about your company and why
               everyone would want to work there.{' '}
-              <strong>Markdown is supported.</strong>
+              <strong>
+                <a
+                  href="https://www.markdownguide.org/cheat-sheet/"
+                  className="text-stone-500"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Markdown
+                </a>{' '}
+                is supported.
+              </strong>
             </div>
           </div>
 
