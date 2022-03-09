@@ -50,7 +50,7 @@ export const Success = ({ jobs }: CellSuccessProps<JobsQuery>) => {
               <img
                 src={job.logo}
                 alt={`${job.company} logo`}
-                className="w-full max-w-64 max-h-16"
+                className="w-64 h-16 object-contain"
               />
             </td>
             <td className="py-4 text-sm">
