@@ -64,7 +64,7 @@ const JobDisplay = ({ job, back }) => {
           <img
             src={job.logo}
             alt={`${job.company} logo`}
-            className="w-full max-w-64 max-h-32"
+            className="w-64 h-32 object-contain"
           />
         </div>
       </section>

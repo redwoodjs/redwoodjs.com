@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import * as filestack from 'filestack-js'
 
 import {
   FieldError,
@@ -25,11 +26,13 @@ const CREATE_JOB = gql`
   }
 `
 
-const NewJobPage = () => {
+const NewJobPage = ({ token }) => {
   const [locations, setLocations] = useState([])
   const [compensation, setCompensation] = useState([])
   const [perks, setPerks] = useState([])
+  const [imageUrl, setImageUrl] = useState(null)
   const [previewJob, setPreviewJob] = useState({})
+  const fsClient = filestack.init(process.env.FILESTACK_API_KEY)
 
   const formMethods = useForm()
 
@@ -48,13 +51,39 @@ const NewJobPage = () => {
     }
   }
 
+  const onOpenPicker = () => {
+    fsClient
+      .picker({
+        accept: ['image/jpeg', 'image/png', 'image/gif'],
+        maxFiles: 1,
+        onUploadDone: onUpload,
+      })
+      .open()
+  }
+
+  const onChangeImage = () => {
+    setImageUrl(null)
+    onOpenPicker()
+  }
+
+  const onUpload = ({ filesUploaded, filesFailed }) => {
+    if (filesFailed.length) {
+      toast.error(
+        'There was a problem uploading your selected image. Try again, or pick a different image.',
+        { duration: 10000 }
+      )
+    } else {
+      setImageUrl(filesUploaded[0].url)
+    }
+  }
+
   const onSubmit = (data) => {
     createJob({
       variables: {
         input: {
           ...data,
           ...taggables(data),
-          logo: '/images/snaplet_logo.svg',
+          logo: imageUrl,
         },
       },
     })
@@ -64,9 +93,21 @@ const NewJobPage = () => {
     setPreviewJob({
       ...data,
       ...taggables(data),
-      logo: '/images/snaplet_logo.svg',
+      logo: imageUrl,
       createdAt: new Date(),
     })
+  }
+
+  if (!token || token !== 'cl0hf47710001iq2f7307b18y') {
+    return (
+      <div className="mt-36 text-center text-lg">
+        To list your job, email{' '}
+        <a href="mailto:jobs@redwoodjs.com?subject=New%20job%20post">
+          jobs@redwoodjs.com
+        </a>{' '}
+        and we'll get you set up!
+      </div>
+    )
   }
 
   return (
@@ -99,7 +140,13 @@ const NewJobPage = () => {
               <TextField
                 name="email"
                 errorClassName="error"
-                validation={{ required: true }}
+                validation={{
+                  required: true,
+                  pattern: {
+                    value: /^\S+@\S+\.\S+$/i,
+                    message: "Doesn't look like an email address",
+                  },
+                }}
               />
               <FieldError name="email" className="fieldError" />
             </div>
@@ -124,6 +171,42 @@ const NewJobPage = () => {
             <div className="column help">
               The name of the company that any hires will be working for. If you
               work for an agency, this should be your client's name.
+            </div>
+          </div>
+
+          <div className="input">
+            <div className="column">
+              <Label name="company" errorClassName="error">
+                Logo
+              </Label>
+              {imageUrl ? (
+                <div className="flex flex-col items-center">
+                  <img
+                    src={imageUrl}
+                    alt="Uploaded logo"
+                    className="max-w-48 max-h-48"
+                  />
+                  <button
+                    type="button"
+                    className="mt-4 button-sm"
+                    onClick={onChangeImage}
+                  >
+                    Change Image
+                  </button>
+                </div>
+              ) : (
+                <button
+                  type="button"
+                  className="mt-2 button"
+                  onClick={onOpenPicker}
+                >
+                  Choose Image...
+                </button>
+              )}
+            </div>
+            <div className="column help">
+              Include your company's logo to help make your job post stand out.
+              PNG, JPG or GIF only, please.
             </div>
           </div>
 
@@ -154,7 +237,14 @@ const NewJobPage = () => {
               <TextField
                 name="applyUrl"
                 errorClassName="error"
-                validation={{ required: true }}
+                validation={{
+                  required: true,
+                  pattern: {
+                    value: /^(\S+@\S+\.\S+|https?:\/\/\S+)$/i,
+                    message:
+                      "Doesn't look like an email address or URL (be sure to include https://)",
+                  },
+                }}
               />
               <FieldError name="applyUrl" className="fieldError" />
             </div>
@@ -172,6 +262,7 @@ const NewJobPage = () => {
               </Label>
               <FormTaggable
                 name="locations"
+                singular="location"
                 get={locations}
                 set={setLocations}
               />
@@ -215,7 +306,12 @@ const NewJobPage = () => {
               <Label name="perks" errorClassName="error">
                 Perks
               </Label>
-              <FormTaggable name="perks" get={perks} set={setPerks} />
+              <FormTaggable
+                name="perks"
+                singular="perk"
+                get={perks}
+                set={setPerks}
+              />
               <FieldError name="perks" className="fieldError" />
             </div>
             <div className="column help">
@@ -342,7 +438,7 @@ const NewJobPage = () => {
             <div className="absolute inset-0 bg-orange-50 m-8 p-8 rounded-xl overflow-y-scroll">
               <button
                 type="button"
-                className="absolute top-0 right-0 mt-4 mr-4 text-orange-400 hover:text-orange-700 transition duration-150"
+                className="fixed top-0 right-0 mt-12 mr-12 text-orange-400 hover:text-orange-700 transition duration-150"
                 onClick={() => setPreviewJob({})}
               >
                 <span className="icon md-48">close</span>
