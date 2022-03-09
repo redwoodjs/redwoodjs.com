@@ -13,10 +13,7 @@ const JobsPage = () => {
 
       <section className="max-w-screen-lg mx-auto">
         <header className="text-center">
-          <h1 className="mt-36">
-            <span className="text-teal-800">RedwoodJS</span>{' '}
-            <span className="">Jobs</span>
-          </h1>
+          <h1 className="mt-36 text-orange-800">RedwoodJS Jobs</h1>
           <p className="mt-2 text-stone-500">
             Companies looking for RedwoodJS devs
           </p>
@@ -28,15 +25,14 @@ const JobsPage = () => {
           </Link>
         </div>
         <div className="border border-orange-200 rounded-lg mt-2">
-          <JobsCell limit={5} />
+          <JobsCell limit={5} showAll={true} />
         </div>
       </section>
 
       <section className="max-w-screen-lg mx-auto mt-24 mb-24">
         <header className="text-center">
-          <h1 className="mt-12">
-            <span className="text-teal-800">RedwoodJS</span>{' '}
-            <span className="">Developers</span>
+          <h1 className="mt-12" className="text-orange-800">
+            RedwoodJS Developers
           </h1>
           <p className="mt-2 text-stone-500">
             Experienced RedwoodJS devs looking for their next role
@@ -49,7 +45,7 @@ const JobsPage = () => {
           </Link>
         </div>
         <div className="border border-orange-200 rounded-lg mt-2">
-          <JobProfilesCell limit={5} />
+          <JobProfilesCell limit={5} showAll={true} />
         </div>
       </section>
     </>

@@ -18,6 +18,8 @@ import JobPage from 'src/pages/Jobs/JobPage'
 import NewJobPage from 'src/pages/Jobs/NewJobPage'
 import JobProfilePage from 'src/pages/Jobs/JobProfilePage'
 import NewJobProfilePage from 'src/pages/Jobs/NewJobProfilePage'
+import AllJobsPage from 'src/pages/Jobs/AllJobsPage'
+import AllJobProfilesPage from 'src/pages/Jobs/AllJobProfilesPage'
 
 const Routes = () => {
   return (
@@ -29,9 +31,11 @@ const Routes = () => {
         <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
         <Route path="/examples" page={ExamplesPage} name="examples" />
         <Route path="/jobs/new" page={NewJobPage} name="newJob" />
+        <Route path="/jobs/all" page={AllJobsPage} name="allJobs" />
         <Route path="/jobs/{id:Int}" page={JobPage} name="job" />
         <Route path="/jobs" page={JobsPage} name="jobs" />
         <Route path="/job-profiles/new" page={NewJobProfilePage} name="newJobProfile" />
+        <Route path="/job-profiles/all" page={AllJobProfilesPage} name="allJobProfiles" />
         <Route path="/job-profiles/{id:Int}" page={JobProfilePage} name="jobProfile" />
 
         {/* Pre-Rendered Showcase Pages */}
