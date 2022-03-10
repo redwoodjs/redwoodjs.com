@@ -179,7 +179,7 @@ model JobProfile {
   id             Int      @id @default(autoincrement())
   token          String   @default(cuid())
   email          String
-  portfolioUrl   String
+  portfolioUrl   String?
   name           String
   photo          String
   status         String
