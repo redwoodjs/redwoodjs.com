@@ -7,9 +7,9 @@ const AllJobsPage = () => {
     <>
       <MetaTags title="AllJobs" description="AllJobs page" />
 
-      <section className="max-w-screen-lg mx-auto">
+      <section className="max-w-screen-lg mx-auto mt-36 mb-24">
         <header className="text-center">
-          <h1 className="mt-36 text-orange-800">RedwoodJS Jobs</h1>
+          <h1 className="text-orange-800">RedwoodJS Jobs</h1>
           <p className="mt-2 text-stone-500">
             Companies looking for RedwoodJS devs
           </p>
