@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import * as filestack from 'filestack-js'
+import { Switch } from '@headlessui/react'
 
 import {
   FieldError,
@@ -17,6 +18,7 @@ import { toast } from '@redwoodjs/web/toast'
 
 import FormTaggable from 'src/components/Jobs/Shared/FormTaggable'
 import JobProfileDisplay from 'src/components/Jobs/JobProfileDisplay'
+import Status from 'src/components/Jobs/Shared/Status'
 
 const CREATE_JOB = gql`
   mutation CreateJobProfileMutation($input: CreateJobProfileInput!) {
@@ -28,8 +30,7 @@ const CREATE_JOB = gql`
 
 const NewJobProfilePage = () => {
   const [locations, setLocations] = useState([])
-  const [compensation, setCompensation] = useState([])
-  const [perks, setPerks] = useState([])
+  const [status, setStatus] = useState('available')
   const [imageUrl, setImageUrl] = useState(null)
   const [previewProfile, setPreviewProfile] = useState({})
   const fsClient = filestack.init(process.env.FILESTACK_API_KEY)
@@ -82,6 +83,7 @@ const NewJobProfilePage = () => {
           ...data,
           ...taggables(data),
           photo: imageUrl,
+          status,
         },
       },
     })
@@ -94,7 +96,7 @@ const NewJobProfilePage = () => {
     setPreviewProfile({
       ...data,
       ...taggables(data),
-      status: 'available',
+      status,
       logo: resizedImage(),
       updatedAt: new Date(),
     })
@@ -248,8 +250,49 @@ const NewJobProfilePage = () => {
               <FieldError name="portfolioUrl" className="fieldError" />
             </div>
             <div className="column help">
-              This can be a link a portfolio site, your GitHub profile, your
+              This can be a link to a portfolio site, your GitHub profile, your
               Twitter page or anything else!
+            </div>
+          </div>
+
+          <div className="input">
+            <div className="column">
+              <Label name="status" errorClassName="error">
+                Status
+              </Label>
+              <div className="my-8 flex items-center justify-center">
+                <div className={status === 'booked' && 'opacity-40'}>
+                  <Status status="available" />
+                </div>
+
+                <Switch
+                  checked={status === 'booked'}
+                  onChange={() =>
+                    setStatus(status === 'booked' ? 'available' : 'booked')
+                  }
+                  className={`${
+                    status === 'booked' ? 'bg-yellow-500' : 'bg-green-600'
+                  }
+          relative inline-flex flex-shrink-0 mt-1 h-8 w-14 mx-2 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
+                >
+                  <span className="sr-only">Set status</span>
+                  <span
+                    aria-hidden="true"
+                    className={`${
+                      status === 'booked' ? 'translate-x-6' : 'translate-x-1'
+                    }
+            pointer-events-none inline-block mt-[2px] h-6 w-6 rounded-full bg-white shadow-lg transform ring-0 transition ease-in-out duration-200`}
+                  />
+                </Switch>
+                <div className={status === 'available' && 'opacity-50'}>
+                  <Status status="booked" />
+                </div>
+              </div>
+              <FieldError name="status" className="fieldError" />
+            </div>
+            <div className="column help">
+              If you're available for work select <strong>Available</strong>,
+              otherwise flip it to <strong>Booked</strong>.
             </div>
           </div>
 

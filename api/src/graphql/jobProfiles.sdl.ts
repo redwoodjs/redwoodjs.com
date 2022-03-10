@@ -26,6 +26,7 @@ export const schema = gql`
     title: String!
     locations: [String!]!
     about: String!
+    status: String!
   }
 
   input UpdateJobProfileInput {

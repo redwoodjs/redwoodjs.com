@@ -38,7 +38,6 @@ export const createJobProfile = ({ input }: CreateJobProfileArgs) => {
     data: {
       ...input,
       locations: JSON.stringify(input.locations),
-      status: 'available',
     },
   })
 }
