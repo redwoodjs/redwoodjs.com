@@ -22,6 +22,13 @@ export const QUERY = gql`
   }
 `
 
+const resizeImage = (imageUrl) => {
+  const imageUrlParts = imageUrl.split('/')
+  imageUrlParts.splice(3, 0, 'resize=width:160,height:160,fit:crop')
+
+  return imageUrlParts.join('/')
+}
+
 export const Loading = () => (
   <div className="flex justify-center bg-white py-12 rounded-lg text-stone-400">
     <span className="icon animate-spin mr-2">refresh</span> Loading...
@@ -59,9 +66,9 @@ export const Success = ({
               }`}
             >
               <img
-                src={profile.photo}
+                src={resizeImage(profile.photo)}
                 alt={`${profile.name}`}
-                className="w-full max-w-36 rounded-full"
+                className="w-24 rounded-full"
               />
             </td>
             <td className="py-4 text-sm">

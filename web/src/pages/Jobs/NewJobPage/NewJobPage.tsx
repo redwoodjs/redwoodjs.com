@@ -176,7 +176,7 @@ const NewJobPage = ({ token }) => {
 
           <div className="input">
             <div className="column">
-              <Label name="company" errorClassName="error">
+              <Label name="logo" errorClassName="error">
                 Logo
               </Label>
               {imageUrl ? (

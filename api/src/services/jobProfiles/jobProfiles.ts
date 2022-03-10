@@ -32,8 +32,14 @@ interface CreateJobProfileArgs {
 }
 
 export const createJobProfile = ({ input }: CreateJobProfileArgs) => {
+  console.info(input)
+
   return db.jobProfile.create({
-    data: input,
+    data: {
+      ...input,
+      locations: JSON.stringify(input.locations),
+      status: 'available',
+    },
   })
 }
 

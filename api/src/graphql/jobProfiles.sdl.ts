@@ -19,14 +19,12 @@ export const schema = gql`
   }
 
   input CreateJobProfileInput {
-    token: String!
     email: String!
     portfolioUrl: String!
     name: String!
     photo: String!
-    status: String!
     title: String!
-    locations: String!
+    locations: [String!]!
     about: String!
   }
 
@@ -43,7 +41,7 @@ export const schema = gql`
   }
 
   type Mutation {
-    createJobProfile(input: CreateJobProfileInput!): JobProfile! @requireAuth
+    createJobProfile(input: CreateJobProfileInput!): JobProfile! @skipAuth
     updateJobProfile(id: Int!, input: UpdateJobProfileInput!): JobProfile!
       @requireAuth
     deleteJobProfile(id: Int!): JobProfile! @requireAuth
