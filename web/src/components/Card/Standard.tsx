@@ -29,8 +29,14 @@ const Standard: React.FC<StandardProps> = ({
       <div className="content">
         <p className={'text-white'}>{description}</p>
         {link && (
-          <a href={link} target={'_blank'} rel="noreferrer">
-            Source
+          <a
+            href={link}
+            target={'_blank'}
+            rel="noreferrer"
+            className={'flex flex-row align-middle no-underline mt-2'}
+          >
+            <span>Source</span>
+            <span className="text-white icon md-18 ml-2">launch</span>
           </a>
         )}
       </div>

@@ -107,13 +107,12 @@ $color_neutral: #1A202C;
   .card .content > div {
     @apply flex flex-col text-sm py-8 px-4;
 
-    > *:nth-child(1n+2) {
-      @apply mt-2;
+    a {
+      @apply text-white;
     }
 
-    a {
+    a:not([target="_blank"]) {
       @apply underline;
-      color: $color_accent;
     }
   }
 
@@ -137,7 +136,7 @@ $color_neutral: #1A202C;
 
     .bar {
       @apply from-[#BF4722] to-amber-50 bg-blend-overlay bg-gradient-to-l;
-      @apply justify-items-center flex flex-row w-full p-4;
+      @apply justify-items-center flex flex-row w-full flex-wrap p-4;
     }
 
     p {
@@ -161,18 +160,20 @@ $color_neutral: #1A202C;
     }
 
     .card.highlight:hover .content {
-      @apply -translate-x-1/4;
+      @apply -translate-x-1/4 scale-105;
 
     }
 
     .card.highlight {
 
-      @apply grid grid-cols-1 grid-rows-2 w-full m-auto mt-4 ;
-      @apply md:w-2/3 md:grid-cols-2 grid-rows-1;
+      @apply grid grid-cols-1 grid-rows-2 w-full m-auto mt-4;
+      @apply md:w-2/3 md:grid-cols-2 md:grid-rows-1;
       @apply bg-gradient-to-r from-teal-600 to-teal-800;
+      @apply duration-300;
+
 
       .content {
-        transition: all 300ms;
+        @apply scale-95 duration-300;
       }
 
       .content div {

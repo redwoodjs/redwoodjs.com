@@ -1,7 +1,7 @@
 import Display from 'src/components/Tag/Display'
 
 const List = ({ rootKey, tags, onClick, excludeTag = undefined }) => (
-  <div className={'flex flex-wrap'}>
+  <div className={'flex flex-row flex-wrap'}>
     {tags
       ?.filter((tag) => tag.label !== excludeTag)
       ?.map((tag) => (
