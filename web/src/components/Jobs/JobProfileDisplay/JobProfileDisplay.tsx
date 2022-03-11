@@ -2,6 +2,7 @@ import ReactMarkdown from 'react-markdown'
 
 import JobDetailLayout from 'src/components/Jobs/Shared/JobDetailLayout'
 import Status from 'src/components/Jobs/Shared/Status'
+import { resizeFilestackImage } from 'src/lib/utility'
 
 const JobProfileDisplay = ({ profile }) => {
   if (!profile) {
@@ -60,6 +61,17 @@ const JobProfileDisplay = ({ profile }) => {
       </section>
       <section className="border-t border-red-200 p-12 pt-8">
         <ReactMarkdown className="markdown">{profile.about}</ReactMarkdown>
+        <div className="mt-8 flex justify-center">
+          <img
+            src={resizeFilestackImage(profile.photo, {
+              width: 512,
+              height: 512,
+              fit: 'crop',
+            })}
+            alt={`${profile.name}`}
+            className="w-64 h-64 rounded-full object-contain"
+          />
+        </div>
       </section>
     </JobDetailLayout>
   )
