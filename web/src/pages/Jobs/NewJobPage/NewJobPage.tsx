@@ -17,6 +17,7 @@ import { toast } from '@redwoodjs/web/toast'
 
 import FormTaggable from 'src/components/Jobs/Shared/FormTaggable'
 import JobDisplay from 'src/components/Jobs/JobDisplay'
+import { resizeFilestackImage } from 'src/lib/utility'
 
 const CREATE_JOB = gql`
   mutation CreateJobMutation($input: CreateJobInput!) {
@@ -182,9 +183,12 @@ const NewJobPage = ({ token }) => {
               {imageUrl ? (
                 <div className="flex flex-col items-center">
                   <img
-                    src={imageUrl}
+                    src={resizeFilestackImage(imageUrl, {
+                      width: 768,
+                      height: 384,
+                    })}
                     alt="Uploaded logo"
-                    className="max-w-48 max-h-48"
+                    className="w-96 h-48 mx-auto object-contain"
                   />
                   <button
                     type="button"

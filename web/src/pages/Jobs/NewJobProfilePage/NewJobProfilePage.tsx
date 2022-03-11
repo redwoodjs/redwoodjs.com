@@ -19,6 +19,7 @@ import { toast } from '@redwoodjs/web/toast'
 import FormTaggable from 'src/components/Jobs/Shared/FormTaggable'
 import JobProfileDisplay from 'src/components/Jobs/JobProfileDisplay'
 import Status from 'src/components/Jobs/Shared/Status'
+import { resizeFilestackImage } from 'src/lib/utility'
 
 const CREATE_JOB = gql`
   mutation CreateJobProfileMutation($input: CreateJobProfileInput!) {
@@ -90,23 +91,13 @@ const NewJobProfilePage = () => {
   }
 
   const onPreview = (data) => {
-    const imageUrlParts = imageUrl.split('/')
-    imageUrlParts.splice(3, 0, 'resize=width:400')
-
     setPreviewProfile({
       ...data,
       ...taggables(data),
       status,
-      logo: resizedImage(),
+      logo: imageUrl,
       updatedAt: new Date(),
     })
-  }
-
-  const resizedImage = () => {
-    const imageUrlParts = imageUrl.split('/')
-    imageUrlParts.splice(3, 0, 'resize=width:400,height:400,fit:crop')
-
-    return imageUrlParts.join('/')
   }
 
   return (
@@ -182,7 +173,11 @@ const NewJobProfilePage = () => {
               {imageUrl ? (
                 <div className="flex flex-col items-center">
                   <img
-                    src={resizedImage()}
+                    src={resizeFilestackImage(imageUrl, {
+                      width: 384,
+                      height: 384,
+                      fit: 'crop',
+                    })}
                     alt="Uploaded logo"
                     className="max-w-48 max-h-48 rounded-full"
                   />

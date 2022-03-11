@@ -1,6 +1,7 @@
 import ReactMarkdown from 'react-markdown'
 
 import JobDetailLayout from 'src/components/Jobs/Shared/JobDetailLayout'
+import { resizeFilestackImage } from 'src/lib/utility'
 
 const JobDisplay = ({ job, back }) => {
   return (
@@ -62,7 +63,7 @@ const JobDisplay = ({ job, back }) => {
         <ReactMarkdown className="markdown">{job.aboutCompany}</ReactMarkdown>
         <div className="mt-8 flex justify-center">
           <img
-            src={job.logo}
+            src={resizeFilestackImage(job.logo, { width: 512, height: 256 })}
             alt={`${job.company} logo`}
             className="w-64 h-32 object-contain"
           />

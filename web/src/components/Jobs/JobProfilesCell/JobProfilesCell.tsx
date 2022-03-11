@@ -5,6 +5,7 @@ import { Link, navigate, routes } from '@redwoodjs/router'
 import ReactMarkdown from 'react-markdown'
 
 import Status from 'src/components/Jobs/Shared/Status'
+import { resizeFilestackImage } from 'src/lib/utility'
 
 export const QUERY = gql`
   query JobProfilesQuery($limit: Int) {
@@ -21,13 +22,6 @@ export const QUERY = gql`
     }
   }
 `
-
-const resizeImage = (imageUrl) => {
-  const imageUrlParts = imageUrl.split('/')
-  imageUrlParts.splice(3, 0, 'resize=width:160,height:160,fit:crop')
-
-  return imageUrlParts.join('/')
-}
 
 export const Loading = () => (
   <div className="flex justify-center bg-white py-12 rounded-lg text-stone-400">
@@ -61,12 +55,16 @@ export const Success = ({
             } border-orange-200 hover:bg-orange-50 cursor-pointer transition duration-250`}
           >
             <td
-              className={`flex flex-col items-center py-4 px-8 ${
+              className={`flex flex-col items-center py-4 w-36 ${
                 i === 0 && 'rounded-tl-lg'
               }`}
             >
               <img
-                src={resizeImage(profile.photo)}
+                src={resizeFilestackImage(profile.photo, {
+                  width: 192,
+                  height: 192,
+                  fit: 'crop',
+                })}
                 alt={`${profile.name}`}
                 className="w-24 rounded-full"
               />
@@ -79,7 +77,7 @@ export const Success = ({
                 {profile.title}
               </div>
               <p className="mt-1">
-                {profile.about.split(' ').slice(0, 25).join(' ')}...
+                {profile.about.split(' ').slice(0, 35).join(' ')}...
               </p>
             </td>
             <td
