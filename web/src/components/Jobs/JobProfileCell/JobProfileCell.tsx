@@ -1,8 +1,5 @@
 import { MetaTags } from '@redwoodjs/web'
-import ReactMarkdown from 'react-markdown'
-
-import JobDetailLayout from 'src/components/Jobs/Shared/JobDetailLayout'
-import Status from 'src/components/Jobs/Shared/Status'
+import JobProfileDisplay from 'src/components/Jobs/JobProfileDisplay'
 
 export const QUERY = gql`
   query FindJobProfileQuery($id: Int!) {
@@ -43,60 +40,7 @@ export const Success = ({ jobProfile }: CellSuccessProps<FindJobQuery>) => {
         description="RedwoodJS Jobs"
       />
 
-      <JobDetailLayout
-        title={
-          <>
-            <span className="text-teal-800">{jobProfile.name}</span> is looking
-            for a{' '}
-            <span className="block">
-              <span className="text-teal-800">{jobProfile.title}</span> role
-            </span>
-          </>
-        }
-        postedDateTime={jobProfile.updatedAt}
-        postedLabel="Last Updated"
-        buttonLink={`mailto:${jobProfile.email}`}
-        buttonLabel="Send a Message"
-        back="true"
-      >
-        <section className="md:flex items-stretch">
-          <div className="md:w-1/3 flex flex-col items-center py-8 px-12">
-            <h3 className="text-xl text-teal-600 font-semibold tracking-tight text-center">
-              Status
-            </h3>
-            <div className="mt-1">
-              <Status
-                status={jobProfile.status}
-                textClassName="text-base tracking-tight"
-                iconClassName="md-24"
-              />
-            </div>
-          </div>
-          <div className="md:w-1/3 py-8 px-12 border-t md:border-t-0 md:border-l border-red-200">
-            <h3 className="text-xl text-teal-600 font-semibold tracking-tight text-center">
-              Portfolio/Profile
-            </h3>
-            <div className="mt-2 text-sm text-center">
-              <a href={jobProfile.portfolioUrl} className="text-stone-600">
-                {jobProfile.portfolioUrl}
-              </a>
-            </div>
-          </div>
-          <div className="md:w-1/3 py-8 px-12 border-t md:border-t-0 md:border-l border-red-200">
-            <h3 className="text-xl text-teal-600 font-semibold tracking-tight text-center">
-              Where I'll Work
-            </h3>
-            <ul className="mt-2 text-stone-600 text-sm leading-6 text-center">
-              {jobProfile.locations.map((location, i) => (
-                <li key={`locations-${i}`}>{location}</li>
-              ))}
-            </ul>
-          </div>
-        </section>
-        <section className="border-t border-red-200 p-12 pt-8">
-          <ReactMarkdown className="markdown">{jobProfile.about}</ReactMarkdown>
-        </section>
-      </JobDetailLayout>
+      <JobProfileDisplay profile={jobProfile} />
     </>
   )
 }
