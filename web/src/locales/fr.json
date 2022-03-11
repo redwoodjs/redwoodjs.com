@@ -1,29 +1,34 @@
 {
-  "Welcome to RedwoodJS": "Bienvenue sur RedwoodJS",
-  "info": "Ceci est votre fichier de traduction",
-  "see": "https://www.i18next.com/translation-function/essentials",
   "ExamplesPage": {
-    "title": "Elaboré avec RedwoodJS",
     "canon": {
-      "title": "Exemples canons",
-      "description": "Ces exemples de la communauté montrent à quel point RedwoodJS soutient votre créativité et vous permet de tirer le meilleur de chaque situation"
+      "description": "Ces exemples de la communauté montrent à quel point RedwoodJS soutient votre créativité et vous permet de tirer le meilleur de chaque situation",
+      "title": "Exemples canons"
     },
     "community": {
       "title": "Exemples de la communauté"
-    }
+    },
+    "filters": {
+      "clear": "Vider",
+      "text": "Vous recherchez:"
+    },
+    "subtitle": "Examples de ce que la communauté de RedwoodJS sait faire avec le framework.",
+    "title": "Examples <teal>RedwoodJS</teal>"
   },
   "HomePage": {
-    "title": "Page d'accueil",
-    "info": "Trouve moi dans",
-    "route": "Ma route par default se nomme",
-    "link": "le lien vers moi avec",
     "hero": {
-      "title": "Le Framework JS<break />pour les Startups",
-      "text": "<red>Ship today with architecture for tomorrow.</red> Redwood includes deploy support for Netlify, Vercel, Render.com, AWS and more. Deploy serverless or serverfull and scale from zero servers to a thousand. Built on <red>React</red>, <red>GraphQL</red>, and <red>Prisma</red>, with full <red>TypeScript</red> support, and <red>Webpack/Babel</red> ready to go with zero config. Redwood gives you the workflow you love, but with simple conventions and helpers to make your experience even better.",
       "links": {
         "docs": "Lire la Doc",
         "tutorial": "Commencer le Tutoriel"
-      }
-    }
-  }
+      },
+      "text": "<red>Ship today with architecture for tomorrow.</red> Redwood includes deploy support for Netlify, Vercel, Render.com, AWS and more. Deploy serverless or serverfull and scale from zero servers to a thousand. Built on <red>React</red>, <red>GraphQL</red>, and <red>Prisma</red>, with full <red>TypeScript</red> support, and <red>Webpack/Babel</red> ready to go with zero config. Redwood gives you the workflow you love, but with simple conventions and helpers to make your experience even better.",
+      "title": "Le Framework JS<break />pour les Startups"
+    },
+    "info": "Trouve moi dans",
+    "link": "le lien vers moi avec",
+    "route": "Ma route par default se nomme",
+    "title": "Page d'accueil"
+  },
+  "Welcome to RedwoodJS": "Bienvenue sur RedwoodJS",
+  "info": "Ceci est votre fichier de traduction",
+  "see": "https://www.i18next.com/translation-function/essentials"
 }

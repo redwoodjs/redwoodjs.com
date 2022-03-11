@@ -1,36 +1,58 @@
 {
-  "Welcome to RedwoodJS": "Welcome to RedwoodJS",
-  "info": "This is your English translation file",
-  "see": "https://www.i18next.com/translation-function/essentials",
   "ExamplesPage": {
-    "title": "Build with RedwoodJS",
     "canon": {
-      "title": "Canon examples",
-      "description": "Those community driven examples will let you see how creative you\n            can be with Redwood and get the most out of many situations"
+      "description": "Those community driven examples will let you see how creative you\n            can be with Redwood and get the most out of many situations",
+      "title": "Canon examples"
     },
     "community": {
       "title": "Community examples"
-    }
+    },
+    "contact": {
+      "action": "Reach Out",
+      "subtitle": "Please consider taking the time to introduce yourself and your work on the <b>Show and Tell</b> section of the forums.<br />We strive for a relaxed and welcoming environment - so feel free to share whatever feels relevant and don't be afraid to ask for help.",
+      "title": "Are you the author of an awesome Redwood example?"
+    },
+    "filters": {
+      "clear": "Clear",
+      "text": "You are looking for:"
+    },
+    "subtitle": "Examples of what RedwoodJS community can achieve with the framework.",
+    "title": "<teal>RedwoodJS</teal> Examples"
   },
   "HomePage": {
-    "title": "Home Page",
-    "info": "Find me in",
-    "route": "My default route is named",
-    "link": "link to me with",
     "hero": {
-      "title": "The JS App Framework<break />for Startups",
-      "text": "<strong>Ship today with architecture for tomorrow.</strong> RedwoodJS includes deploy support for Netlify, Vercel, Render.com, AWS and more. Deploy serverless or serverfull and scale from zero servers to a thousand. Built on <strong>React</strong>, <strong>GraphQL</strong>, and <strong>Prisma</strong>, with full <strong>TypeScript</strong> support, and <strong>Webpack/Babel</strong> ready to go with zero config. Redwood gives you the workflow you love, but with simple conventions and helpers to make your experience even better.",
       "links": {
         "docs": "Read the Docs",
         "tutorial": "Start the Tutorial"
-      }
-    }
+      },
+      "text": "<strong>Ship today with architecture for tomorrow.</strong> RedwoodJS includes deploy support for Netlify, Vercel, Render.com, AWS and more. Deploy serverless or serverfull and scale from zero servers to a thousand. Built on <strong>React</strong>, <strong>GraphQL</strong>, and <strong>Prisma</strong>, with full <strong>TypeScript</strong> support, and <strong>Webpack/Babel</strong> ready to go with zero config. Redwood gives you the workflow you love, but with simple conventions and helpers to make your experience even better.",
+      "title": "The JS App Framework<break />for Startups"
+    },
+    "info": "Find me in",
+    "link": "link to me with",
+    "route": "My default route is named",
+    "title": "Home Page"
+  },
+  "ShowcaseJobsCell": {
+    "Empty": {
+      "checkSite": "Double check the startup's \"Homepage\" for any positions we don't know about.",
+      "notFound": "This startup does not have any open positions."
+    },
+    "Loading": "Checking for open positions..."
+  },
+  "ShowcasePage": {
+    "contact": {
+      "action": "Reach Out",
+      "subtitle": "Please consider taking the time to introduce yourself and your project on the <b>Show and Tell</b> section of the forums.<br />We strive for a relaxed and welcoming environment - so feel free to share whatever feels relevant and don't be afraid to ask for help.",
+      "title": "Are you the founder of an upcoming startup?"
+    },
+    "startups": {},
+    "subtitle": "Curated case-studies on the startups RedwoodJS empowers across the globe.",
+    "title": "<teal>RedwoodJS</teal> Showcase"
   },
   "SocialLink": {
     "Field": {
       "addLink": "Add $t(SocialLink.platforms.{{ platform }}) social link",
-      "removeLink": "Remove $t(SocialLink.platforms.{{ platform }}) social link",
-      "select": "Select social link",
       "field": "$t(SocialLink.platforms.{{ platform }}) social link",
       "placeholder": {
         "discord": "Link to a Discord profile or server",
@@ -38,7 +60,9 @@
         "linkedin": "Link to a LinkedIn job or profile",
         "productHunt": "Link to a Product Hunt post or profile",
         "twitter": "Link to a Twitter profile"
-      }
+      },
+      "removeLink": "Remove $t(SocialLink.platforms.{{ platform }}) social link",
+      "select": "Select social link"
     },
     "platforms": {
       "discord": "Discord",
@@ -48,21 +72,7 @@
       "twitter": "Twitter"
     }
   },
-  "ShowcaseJobsCell": {
-    "Empty": {
-      "notFound": "This startup does not have any open positions.",
-      "checkSite": "Double check the startup's \"Homepage\" for any positions we don't know about."
-    },
-    "Loading": "Checking for open positions..."
-  },
-  "ShowcasePage": {
-    "title": "<teal>RedwoodJS</teal> Showcase",
-    "subtitle": "Curated case-studies on the startups RedwoodJS empowers across the globe.",
-    "contact": {
-      "title": "Are you the founder of an upcoming startup?",
-      "subtitle": "Please consider taking the time to introduce yourself and your project on the <b>Show and Tell</b> section of the forums.<br />We strive for a relaxed and welcoming environment - so feel free to share whatever feels relevant and don't be afraid to ask for help.",
-      "action": "Reach Out"
-    },
-    "startups": {}
-  }
+  "Welcome to RedwoodJS": "Welcome to RedwoodJS",
+  "info": "This is your English translation file",
+  "see": "https://www.i18next.com/translation-function/essentials"
 }

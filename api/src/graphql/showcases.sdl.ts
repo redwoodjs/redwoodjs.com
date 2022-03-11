@@ -17,7 +17,6 @@ export const schema = gql`
   }
 
   input ExamplesInput {
-    type: String
     tag: String
   }
 

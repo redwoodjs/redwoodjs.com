@@ -2,7 +2,7 @@ export const schema = gql`
   type Tag {
     id: Int!
     label: String!
-    showcases: [Showcase]!
+    showcases: [Showcase]
   }
 
   type Query {

@@ -11,18 +11,22 @@ const Standard: React.FC<StandardProps> = ({
   description,
   tags,
   link,
+  onTagClick,
+  excludeTag,
 }) => (
   <article className="card standard flex flex-col mt-4">
     <header>
       <h1
-        className={'w-full p-2 text-lg font-extrabold text-center capitalize'}
+        className={
+          'w-full p-2 text-lg font-extrabold text-center capitalize text-white'
+        }
       >
         {title}
       </h1>
       {media && <img alt={'Example app'} {...media} />}
     </header>
     <div className="content">
-      <p>{description}</p>
+      <p className={'text-white'}>{description}</p>
       {link && (
         <a href={link} target={'_blank'} rel="noreferrer">
           Source
@@ -30,7 +34,12 @@ const Standard: React.FC<StandardProps> = ({
       )}
     </div>
     <footer className={'p-4'}>
-      <List tags={tags} rootKey={title} />
+      <List
+        tags={tags}
+        rootKey={title}
+        onClick={onTagClick}
+        excludeTag={excludeTag}
+      />
     </footer>
   </article>
 )
