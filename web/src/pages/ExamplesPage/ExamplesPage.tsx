@@ -70,7 +70,7 @@ const Body = () => {
         </div>
       </section>
       <Filters />
-      <section className={'p-4'}>
+      <section className={'highlights p-4'}>
         <div
           className={
             'flex flex-wrap flex-col items-stretch md:flex-row md:items-start'

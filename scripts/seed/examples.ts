@@ -97,6 +97,7 @@ function* CanonGenerator(tags) {
         create: [
           {
             language: Language.fra,
+            title: 'Titre pour un exemple canon',
             description:
               'Example canon généré, pas nécessairement maintenu mais à forte valeur ajoutée.',
           },
