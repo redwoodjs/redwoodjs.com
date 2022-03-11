@@ -48,15 +48,19 @@ $color_neutral: #1A202C;
     &.discord {
       @apply bg-[#5865F2] hover:bg-[#4150f1];
     }
+
     &.github {
       @apply bg-[#333] hover:bg-[#262626];
     }
+
     &.linkedin {
       @apply bg-[#0077b5] hover:bg-[#006399];
     }
+
     &.productHunt {
       @apply bg-[#da552f] hover:bg-[#cc4824];
     }
+
     &.twitter {
       @apply bg-[#1da1f2] hover:bg-[#0d94e7];
     }
@@ -87,10 +91,10 @@ $color_neutral: #1A202C;
 
   .card {
     @apply flex rounded md:w-64 md:ml-4;
-    background-color: $color_accent2;
+    background-color: $color_accent;
   }
 
-  .card header {
+  .card.external header {
     h1 {
       color: $color_accent;
     }
@@ -100,22 +104,15 @@ $color_neutral: #1A202C;
     @apply flex flex-row;
   }
 
-  .card .content {
+  .card .content > div {
     @apply flex flex-col text-sm py-8 px-4;
 
-    > *:nth-child(1n+2) {
-      @apply mt-2;
-    }
-
     a {
-      @apply underline;
-      color: $color_accent;
+      @apply text-white;
     }
-  }
 
-  .card.highlight {
-    h2 {
-      color: $color_neutral;
+    a:not([target="_blank"]) {
+      @apply underline;
     }
   }
 
@@ -133,29 +130,62 @@ $color_neutral: #1A202C;
     @apply text-xl text-teal-600 font-semibold tracking-tight;
   }
 
-  .page_examples section:first-child {
+  .page_examples .filters {
+    @apply sticky top-0 z-10 w-full shadow-teal-50 shadow-xl;
 
-    h1 {
-      color: $color_accent;
+
+    .bar {
+      @apply from-[#BF4722] to-amber-50 bg-blend-overlay bg-gradient-to-l;
+      @apply justify-items-center flex flex-row w-full flex-wrap p-4;
     }
+
+    p {
+      color: $color_accent
+    }
+
+    .tag {
+      @apply ml-2 mr-0 mb-0;
+    }
+
+    .button {
+      @apply py-0 font-normal;
+    }
+  }
+
+  .page_examples section.highlights {
 
     .card {
       @apply mt-8;
       background-color: $color_bg;
     }
 
-    .card.highlight:nth-child(2n+2) {
-      @apply md:flex-row-reverse;
-      background-color: $color_neutral;
+    .card.highlight:hover .content {
+      @apply -translate-x-1/4 scale-105;
 
-      p, h2 {
-        @apply text-white;
-      }
     }
-  }
 
-  .page_examples section h2 {
-    color: $color_accent;
+    .card.highlight {
+
+      @apply grid grid-cols-1 grid-rows-2 w-full m-auto mt-4;
+      @apply md:w-2/3 md:grid-cols-2 md:grid-rows-1;
+      @apply bg-gradient-to-r from-teal-600 to-teal-800;
+      @apply duration-300;
+
+
+      .content {
+        @apply scale-95 duration-300;
+      }
+
+      .content div {
+        @apply relative float-right;
+      }
+
+    }
+
+    .card.highlight:nth-child(2n+2) {
+      background-color: $color_neutral;
+    }
+
   }
 
   .jobForm {
@@ -225,6 +255,7 @@ $color_neutral: #1A202C;
       input {
         @apply rounded-r-none border-r-transparent;
       }
+
       button {
         @apply mt-2 py-3 px-8 button-alt border border-orange-400 rounded-l-none;
 
@@ -246,7 +277,7 @@ $color_neutral: #1A202C;
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
+    font-size: 24px; /* Preferred icon size */
     display: inline-block;
     line-height: 1;
     text-transform: none;
@@ -267,14 +298,43 @@ $color_neutral: #1A202C;
     font-feature-settings: 'liga';
   }
 
-  .icon.md-12 { font-size: 12px; }
-  .icon.md-13 { font-size: 13px; }
-  .icon.md-14 { font-size: 14px; }
-  .icon.md-16 { font-size: 16px; }
-  .icon.md-18 { font-size: 18px; }
-  .icon.md-20 { font-size: 20px; }
-  .icon.md-22 { font-size: 22px; }
-  .icon.md-24 { font-size: 24px; }
-  .icon.md-36 { font-size: 36px; }
-  .icon.md-48 { font-size: 48px; }
+  .icon.md-12 {
+    font-size: 12px;
+  }
+
+  .icon.md-13 {
+    font-size: 13px;
+  }
+
+  .icon.md-14 {
+    font-size: 14px;
+  }
+
+  .icon.md-16 {
+    font-size: 16px;
+  }
+
+  .icon.md-18 {
+    font-size: 18px;
+  }
+
+  .icon.md-20 {
+    font-size: 20px;
+  }
+
+  .icon.md-22 {
+    font-size: 22px;
+  }
+
+  .icon.md-24 {
+    font-size: 24px;
+  }
+
+  .icon.md-36 {
+    font-size: 36px;
+  }
+
+  .icon.md-48 {
+    font-size: 48px;
+  }
 }

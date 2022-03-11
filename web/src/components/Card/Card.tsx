@@ -1,3 +1,4 @@
+import { OnTagClick } from 'src/pages/ExamplesPage/components/Filters/useFilters'
 import External, { ExternalProps } from 'web/src/components/Card/External'
 import Highlight from 'web/src/components/Card/Highlight'
 import Standard, { StandardProps } from 'web/src/components/Card/Standard'
@@ -13,9 +14,11 @@ export interface CardProps {
   label: string
   link: string
   title: string
-  media?: Record<string, string>
-  description?: string
   tags: Array<string & TagProps>
+  excludeTag?: string
+  description?: string
+  media?: Record<string, string>
+  onTagClick?: OnTagClick
 }
 
 interface ProxyProps extends CardProps, StandardProps, ExternalProps {

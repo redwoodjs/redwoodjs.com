@@ -1,24 +1,25 @@
 import Card, { CardVariant } from 'src/components/Card/Card'
 import i18n from 'src/i18n'
-import { ApplicationType, FindExamples } from 'types/graphql'
+import useFilters from 'src/pages/ExamplesPage/components/Filters/useFilters'
+import { FindExamples } from 'types/graphql'
 
 interface SuccessProps extends FindExamples {
   tag?: string
-  type?: ApplicationType
+  variant: CardVariant
 }
 
 export const beforeQuery = (variables) => {
   return {
     variables: {
-    ...variables,
-      language: i18n.language
-    }
+      ...variables,
+      language: i18n.language,
+    },
   }
 }
 
 export const QUERY = gql`
-  query FindExamples($type: String, $tag: String, $language: String) {
-    examples(input: { type: $type, tag: $tag }, language: $language) {
+  query FindExamples($tag: String, $language: String) {
+    examples(input: { tag: $tag }, language: $language) {
       id
       link
       label
@@ -40,15 +41,25 @@ export const QUERY = gql`
 export const Success: React.FC<SuccessProps> = ({
   examples,
   variant = CardVariant.standard,
-}) => (
-  <>
-    {examples.map((example, index) => (
-      <Card
-        key={`Example #${index} - #${example.id}`}
-        variant={variant}
-        imgProps={{ src: example?.media?.src }}
-        {...example}
-      />
-    ))}
-  </>
-)
+  tag,
+  ...props
+}) => {
+  const { filterOn } = useFilters()
+
+  return (
+    <>
+      {examples
+        .filter((e) => filterOn(e, tag))
+        .map((example, index) => (
+          <Card
+            key={`Example #${index} - #${example.id}`}
+            variant={variant}
+            imgProps={{ src: example?.media?.src }}
+            excludeTag={tag}
+            {...example}
+            {...props}
+          />
+        ))}
+    </>
+  )
+}
