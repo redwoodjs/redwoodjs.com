@@ -18,7 +18,7 @@ export const schema = gql`
 
   type Query {
     jobs(limit: Int): [Job!]! @skipAuth
-    job(id: Int!): Job! @skipAuth
+    job(id: Int!, token: String): Job! @skipAuth
   }
 
   input CreateJobInput {
@@ -51,7 +51,7 @@ export const schema = gql`
 
   type Mutation {
     createJob(input: CreateJobInput!): Job! @skipAuth
-    updateJob(id: Int!, input: UpdateJobInput!): Job! @requireAuth
+    updateJob(id: Int!, token: String!, input: UpdateJobInput!): Job! @skipAuth
     deleteJob(id: Int!): Job! @requireAuth
   }
 `

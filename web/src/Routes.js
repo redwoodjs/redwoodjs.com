@@ -16,8 +16,10 @@ import ShowcaseLayout from 'src/layouts/ShowcaseLayout'
 import JobsPage from 'src/pages/Jobs/JobsPage'
 import JobPage from 'src/pages/Jobs/JobPage'
 import NewJobPage from 'src/pages/Jobs/NewJobPage'
+import EditJobPage from 'src/pages/Jobs/EditJobPage'
 import JobProfilePage from 'src/pages/Jobs/JobProfilePage'
 import NewJobProfilePage from 'src/pages/Jobs/NewJobProfilePage'
+import EditJobProfilePage from 'src/pages/Jobs/EditJobProfilePage'
 import AllJobsPage from 'src/pages/Jobs/AllJobsPage'
 import AllJobProfilesPage from 'src/pages/Jobs/AllJobProfilesPage'
 
@@ -33,10 +35,12 @@ const Routes = () => {
         <Route path="/jobs/new" page={NewJobPage} name="newJob" />
         <Route path="/jobs/all" page={AllJobsPage} name="allJobs" />
         <Route path="/jobs/{id:Int}" page={JobPage} name="job" />
+        <Route path="/jobs/{id:Int}/edit" page={EditJobPage} name="editJob" />
         <Route path="/jobs" page={JobsPage} name="jobs" />
         <Route path="/job-profiles/new" page={NewJobProfilePage} name="newJobProfile" />
         <Route path="/job-profiles/all" page={AllJobProfilesPage} name="allJobProfiles" />
         <Route path="/job-profiles/{id:Int}" page={JobProfilePage} name="jobProfile" />
+        <Route path="/job-profiles/{id:Int}/edit" page={EditJobProfilePage} name="editJobProfile" />
 
         {/* Pre-Rendered Showcase Pages */}
         <Set prerender>
