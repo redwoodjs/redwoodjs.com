@@ -261,7 +261,11 @@ const NewJobProfilePage = () => {
                 Status
               </Label>
               <div className="my-8 flex items-center justify-center">
-                <div className={status === 'booked' && 'opacity-40'}>
+                <div
+                  className={`transition duration-150 ${
+                    status === 'booked' && 'opacity-40'
+                  }`}
+                >
                   <Status status="available" />
                 </div>
 
@@ -284,7 +288,11 @@ const NewJobProfilePage = () => {
             pointer-events-none inline-block mt-[2px] h-6 w-6 rounded-full bg-white shadow-lg transform ring-0 transition ease-in-out duration-200`}
                   />
                 </Switch>
-                <div className={status === 'available' && 'opacity-50'}>
+                <div
+                  className={`transition duration-150 ${
+                    status === 'available' && 'opacity-50'
+                  }`}
+                >
                   <Status status="booked" />
                 </div>
               </div>
