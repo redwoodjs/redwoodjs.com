@@ -4,6 +4,11 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 import fr from './locales/fr.json'
 import en from './locales/en.json'
 
+export enum Languages {
+  en = 'en',
+  fr = 'fr',
+}
+
 // This is a simple i18n configuration with English and French translations.
 // You can find the translations in web/src/locales/{language}.json
 // see: https://react.i18next.com
