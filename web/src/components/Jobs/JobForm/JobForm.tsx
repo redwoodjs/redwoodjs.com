@@ -18,9 +18,9 @@ import FormTaggable from 'src/components/Jobs/Shared/FormTaggable'
 import { resizeFilestackImage } from 'src/lib/utility'
 
 const JobForm = ({ job = {}, token, loading, error, saveFunc }) => {
-  const [locations, setLocations] = useState(job.locations)
-  const [compensation, setCompensation] = useState(job.compensation)
-  const [perks, setPerks] = useState(job.perks)
+  const [locations, setLocations] = useState(job.locations || [])
+  const [compensation, setCompensation] = useState(job.compensation || [])
+  const [perks, setPerks] = useState(job.perks || [])
   const [imageUrl, setImageUrl] = useState(job.logo)
   const [previewJob, setPreviewJob] = useState({})
   const fsClient = filestack.init(process.env.FILESTACK_API_KEY)

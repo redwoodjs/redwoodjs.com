@@ -15,7 +15,7 @@ export const schema = gql`
 
   type Query {
     jobProfiles(limit: Int): [JobProfile!]! @skipAuth
-    jobProfile(id: Int!): JobProfile @skipAuth
+    jobProfile(id: Int!, token: String): JobProfile! @skipAuth
   }
 
   input CreateJobProfileInput {
@@ -30,21 +30,23 @@ export const schema = gql`
   }
 
   input UpdateJobProfileInput {
-    token: String
     email: String
     portfolioUrl: String
     name: String
     photo: String
     status: String
     title: String
-    locations: String
+    locations: [String]
     about: String
   }
 
   type Mutation {
     createJobProfile(input: CreateJobProfileInput!): JobProfile! @skipAuth
-    updateJobProfile(id: Int!, input: UpdateJobProfileInput!): JobProfile!
-      @requireAuth
+    updateJobProfile(
+      id: Int!
+      token: String!
+      input: UpdateJobProfileInput!
+    ): JobProfile! @skipAuth
     deleteJobProfile(id: Int!): JobProfile! @requireAuth
   }
 `
