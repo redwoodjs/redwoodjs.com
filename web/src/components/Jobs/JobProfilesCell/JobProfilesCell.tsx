@@ -1,10 +1,11 @@
 import type { JobProfilesQuery } from 'types/graphql'
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
 
-import { navigate, routes } from '@redwoodjs/router'
+import { Link, navigate, routes } from '@redwoodjs/router'
 import ReactMarkdown from 'react-markdown'
 
 import Status from 'src/components/Jobs/Shared/Status'
+import { resizeFilestackImage } from 'src/lib/utility'
 
 export const QUERY = gql`
   query JobProfilesQuery($limit: Int) {
@@ -40,6 +41,7 @@ export const Failure = ({ error }: CellFailureProps) => (
 
 export const Success = ({
   jobProfiles,
+  showAll,
 }: CellSuccessProps<JobProfilesQuery>) => {
   return (
     <table className="w-full bg-white rounded-lg">
@@ -53,14 +55,18 @@ export const Success = ({
             } border-orange-200 hover:bg-orange-50 cursor-pointer transition duration-250`}
           >
             <td
-              className={`flex flex-col items-center py-4 px-8 ${
+              className={`flex flex-col items-center py-4 w-36 ${
                 i === 0 && 'rounded-tl-lg'
               }`}
             >
               <img
-                src={profile.photo}
+                src={resizeFilestackImage(profile.photo, {
+                  width: 192,
+                  height: 192,
+                  fit: 'crop',
+                })}
                 alt={`${profile.name}`}
-                className="w-full max-w-36 rounded-full"
+                className="w-24 rounded-full"
               />
             </td>
             <td className="py-4 text-sm">
@@ -71,7 +77,7 @@ export const Success = ({
                 {profile.title}
               </div>
               <p className="mt-1">
-                {profile.about.split(' ').slice(0, 25).join(' ')}...
+                {profile.about.split(' ').slice(0, 35).join(' ')}...
               </p>
             </td>
             <td
@@ -94,14 +100,21 @@ export const Success = ({
             </td>
           </tr>
         ))}
-        <tr className="">
-          <td
-            colSpan={3}
-            className="text-center text-sm text-stone-500 hover:text-orange-700 p-4 border-t border-t-orange-200 hover:bg-orange-50 cursor-pointer rounded-b-lg transition duration-250"
-          >
-            See all...
-          </td>
-        </tr>
+        {showAll && (
+          <tr className="">
+            <td
+              colSpan={3}
+              className="text-center text-sm text-stone-500 hover:text-orange-700 border-t border-t-orange-200 hover:bg-orange-50 cursor-pointer rounded-b-lg transition duration-250"
+            >
+              <Link
+                to={routes.allJobProfiles()}
+                className="block p-4 w-full text-stone-500 no-underline"
+              >
+                See all...
+              </Link>
+            </td>
+          </tr>
+        )}
       </tbody>
     </table>
   )

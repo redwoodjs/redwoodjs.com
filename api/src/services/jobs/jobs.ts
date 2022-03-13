@@ -1,6 +1,7 @@
 import type { Prisma } from '@prisma/client'
 
 import { db } from 'src/lib/db'
+import { AuthenticationError } from '@redwoodjs/graphql-server'
 
 export const jobs = async ({ limit }) => {
   const options = {
@@ -21,10 +22,14 @@ export const jobs = async ({ limit }) => {
   }))
 }
 
-export const job = async ({ id }: Prisma.JobWhereUniqueInput) => {
+export const job = async ({ id, token }) => {
   const job = await db.job.findUnique({
     where: { id },
   })
+
+  if (token && job.token !== token) {
+    throw new AuthenticationError('Job not found')
+  }
 
   return {
     ...job,
@@ -53,11 +58,24 @@ interface UpdateJobArgs extends Prisma.JobWhereUniqueInput {
   input: Prisma.JobUpdateInput
 }
 
-export const updateJob = ({ id, input }: UpdateJobArgs) => {
-  return db.job.update({
-    data: input,
-    where: { id },
+export const updateJob = async ({ id, token, input }: UpdateJobArgs) => {
+  const job = db.job.findFirst({
+    where: { id, token },
   })
+
+  if (job) {
+    return db.job.update({
+      data: {
+        ...input,
+        locations: JSON.stringify(input.locations),
+        compensation: JSON.stringify(input.compensation),
+        perks: JSON.stringify(input.perks),
+      },
+      where: { id },
+    })
+  } else {
+    throw new AuthenticationError('Job not found')
+  }
 }
 
 export const deleteJob = ({ id }: Prisma.JobWhereUniqueInput) => {

@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { TextField } from '@redwoodjs/forms'
 
-const FormTaggable = ({ name, get, set }) => {
+const FormTaggable = ({ name, singular, get, set }) => {
   const inputRef = useRef()
 
   const onAdd = () => {
@@ -39,7 +39,9 @@ const FormTaggable = ({ name, get, set }) => {
             validate: (val) =>
               !!get.length ||
               val !== '' ||
-              `At least one ${name} required. Did you click the ADD button?`,
+              `At least one ${
+                singular || name
+              } required. Did you click the ADD button?`,
           }}
         />
         <button type="button" onClick={onAdd}>

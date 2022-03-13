@@ -1,10 +1,16 @@
 import Display from 'src/components/Tag/Display'
 
-const List = ({ rootKey, tags }) => (
-  <div className={'flex flex-wrap'}>
-    {tags?.map((tag) => (
-      <Display key={`${rootKey} - tag - ${tag?.link ?? tag.label}`} {...tag} />
-    ))}
+const List = ({ rootKey, tags, onClick, excludeTag = undefined }) => (
+  <div className={'flex flex-row flex-wrap'}>
+    {tags
+      ?.filter((tag) => tag.label !== excludeTag)
+      ?.map((tag) => (
+        <Display
+          key={`${rootKey} - tag - ${tag?.link ?? tag.label}`}
+          {...tag}
+          onClick={onClick}
+        />
+      ))}
   </div>
 )
 

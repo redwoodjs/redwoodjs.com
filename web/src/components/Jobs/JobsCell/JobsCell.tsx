@@ -1,8 +1,10 @@
+import ReactMarkdown from 'react-markdown'
+
 import type { JobsQuery } from 'types/graphql'
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
+import { Link, navigate, routes } from '@redwoodjs/router'
 
-import { navigate, routes } from '@redwoodjs/router'
-import ReactMarkdown from 'react-markdown'
+import { resizeFilestackImage } from 'src/lib/utility'
 
 export const QUERY = gql`
   query JobsQuery($limit: Int) {
@@ -34,7 +36,7 @@ export const Failure = ({ error }: CellFailureProps) => (
   <div style={{ color: 'red' }}>Error: {error.message}</div>
 )
 
-export const Success = ({ jobs }: CellSuccessProps<JobsQuery>) => {
+export const Success = ({ jobs, showAll }: CellSuccessProps<JobsQuery>) => {
   return (
     <table className="w-full bg-white rounded-lg">
       <tbody>
@@ -46,11 +48,18 @@ export const Success = ({ jobs }: CellSuccessProps<JobsQuery>) => {
               i !== 0 && 'border-t'
             } border-orange-200 hover:bg-orange-50 cursor-pointer transition duration-250`}
           >
-            <td className={`py-4 px-8 ${i === 0 && 'rounded-tl-lg'}`}>
+            <td
+              className={`flex items-center py-4 w-48 ${
+                i === 0 && 'rounded-tl-lg'
+              }`}
+            >
               <img
-                src={job.logo}
+                src={resizeFilestackImage(job.logo, {
+                  width: 288,
+                  height: 128,
+                })}
                 alt={`${job.company} logo`}
-                className="w-full max-w-64 max-h-16"
+                className="w-36 h-16 mx-auto object-contain"
               />
             </td>
             <td className="py-4 text-sm">
@@ -70,14 +79,21 @@ export const Success = ({ jobs }: CellSuccessProps<JobsQuery>) => {
             </td>
           </tr>
         ))}
-        <tr className="">
-          <td
-            colSpan={3}
-            className="text-center text-sm text-stone-500 hover:text-orange-700 p-4 border-t border-t-orange-200 hover:bg-orange-50 cursor-pointer rounded-b-lg transition duration-250"
-          >
-            See all...
-          </td>
-        </tr>
+        {showAll && (
+          <tr>
+            <td
+              colSpan={3}
+              className="text-center text-sm text-stone-500 hover:text-orange-700 border-t border-t-orange-200 hover:bg-orange-50 cursor-pointer rounded-b-lg transition duration-250"
+            >
+              <Link
+                to={routes.allJobs()}
+                className="block p-4 w-full text-stone-500 no-underline"
+              >
+                See all...
+              </Link>
+            </td>
+          </tr>
+        )}
       </tbody>
     </table>
   )
