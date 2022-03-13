@@ -5,7 +5,8 @@ import Context, {
   defaultState,
 } from 'src/pages/ExamplesPage/components/Filters/Context'
 import useFilters from 'src/pages/ExamplesPage/components/Filters/useFilters'
-import ExamplesCell from './components/ExamplesCell/ExamplesCell'
+import TagsCell from 'src/pages/ExamplesPage/components/TagsCell'
+import ExamplesCell from './components/ExamplesCell'
 
 const Body = () => {
   const { t } = useTranslation()
@@ -14,12 +15,12 @@ const Body = () => {
 
   return (
     <div className={'page_examples'}>
-      <section className="bg-gradient-to-r from-teal-600 to-teal-800 relative overflow-hidden z-0">
+      <section className="bg-gradient-to-r from-orange-700 to-orange-600 relative overflow-hidden z-0">
         <div className="max-w-screen-xl mx-auto pt-28 pb-12 px-8 space-y-6 text-center md:text-right relative z-10">
           <h1 className="relative text-5xl text-white drop-shadow-md">
             <Trans
               i18nKey="ExamplesPage.title"
-              components={{ teal: <span className="text-teal-200" /> }}
+              components={{ teal: <span className="text-orange-200" /> }}
               t={t}
             />
           </h1>
@@ -28,7 +29,7 @@ const Body = () => {
           </h2>
         </div>
         <svg
-          className="absolute -left-28 -top-6 rotate-12 w-1/3 min-w-[26rem] max-w-md text-teal-500 text-opacity-30 z-0"
+          className="absolute -left-28 -top-6 rotate-12 w-1/3 min-w-[26rem] max-w-md text-teal-50 text-opacity-30 z-0"
           fill="currentColor"
           viewBox="0 0 917 1000"
         >
@@ -40,7 +41,7 @@ const Body = () => {
         </svg>
       </section>
       <section className="max-w-screen-xl my-10 mx-auto px-8">
-        <div className="bg-gradient-to-r from-orange-700 to-orange-600 flex flex-col sm:flex-row items-center px-7 py-5 rounded-md space-x-0 sm:space-x-20 space-y-6 sm:space-y-0">
+        <div className="bg-gradient-to-r from-teal-600 to-teal-800 flex flex-col sm:flex-row items-center px-7 py-5 rounded-md space-x-0 sm:space-x-20 space-y-6 sm:space-y-0">
           <div className="flex-grow space-y-3">
             <h3 className="font-semibold text-xl text-white">
               {t('ExamplesPage.contact.title')}
@@ -57,7 +58,7 @@ const Body = () => {
             </p>
           </div>
           <a
-            className="button-invert text-orange-600 hover:bg-orange-100 hover:text-orange-700 px-3 py-2 flex items-center space-x-3 whitespace-nowrap"
+            className="button-invert text-teal-600 hover:bg-teal-100 hover:text-teal-700 px-3 py-2 flex items-center space-x-3 whitespace-nowrap"
             href="https://community.redwoodjs.com/c/show-tell/7"
             rel="noreferrer"
             target="_blank"
@@ -69,7 +70,6 @@ const Body = () => {
           </a>
         </div>
       </section>
-      <Filters />
       <section className={'highlights p-4'}>
         <div
           className={
@@ -97,7 +97,8 @@ const Body = () => {
         </div>
       </section>
       <section className={'community p-4 mt-4'}>
-        <h2 className={'text-2xl'}>{t('ExamplesPage.community.title')}</h2>
+        <TagsCell />
+        <Filters />
         <div className="flex flex-wrap flex-col items-stretch md:flex-row md:items-start">
           <ExamplesCell
             type="sample"

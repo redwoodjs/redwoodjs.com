@@ -2,10 +2,10 @@
   "ExamplesPage": {
     "canon": {
       "description": "Those community driven examples will let you see how creative you\n            can be with Redwood and get the most out of many situations",
-      "title": "Canon examples"
+      "title": "Community's Standouts!"
     },
     "community": {
-      "title": "Community examples"
+      "title": "But wait! There's a lot more..."
     },
     "contact": {
       "action": "Reach Out",
@@ -13,6 +13,7 @@
       "title": "Are you the author of an awesome Redwood example?"
     },
     "filters": {
+      "browseBy": "Browse more awesomeness by",
       "clear": "Clear",
       "text": "You are looking for:"
     },

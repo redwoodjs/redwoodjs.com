@@ -5,6 +5,7 @@ export default async function Tag() {
     { label: 'canon' },
     { label: 'cms' },
     { label: 'community' },
+    { label: 'core-maintained' },
     { label: 'e-commerce' },
     { label: 'highlight' },
     { label: 'integration' },

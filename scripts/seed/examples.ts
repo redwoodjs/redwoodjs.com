@@ -24,7 +24,9 @@ const HighlightIndex = (tags, media) => ({
         },
       ],
     },
-    tags: { connect: [tags.highlight, tags.sample, tags.cms] },
+    tags: {
+      connect: [tags.highlight, tags.sample, tags.cms, tags['core-maintained']],
+    },
   },
   todoApplication: {
     description: 'Some ToDo sample application powered by RedwoodJS',
@@ -45,7 +47,14 @@ const HighlightIndex = (tags, media) => ({
         },
       ],
     },
-    tags: { connect: [tags.highlight, tags.sample, tags.tool] },
+    tags: {
+      connect: [
+        tags.highlight,
+        tags.sample,
+        tags.tool,
+        tags['core-maintained'],
+      ],
+    },
   },
   paymentApplication: {
     description:
@@ -74,6 +83,7 @@ const HighlightIndex = (tags, media) => ({
         tags.sample,
         tags.integration,
         tags['e-commerce'],
+        tags['core-maintained'],
       ],
     },
   },
@@ -103,7 +113,13 @@ function* CanonGenerator(tags) {
           },
         ],
       },
-      tags: { connect: [tags.sample, tags.canon] },
+      tags: {
+        connect: [
+          tags.sample,
+          tags.canon,
+          index % 2 ? tags.integration : tags['e-commerce'],
+        ],
+      },
     }
   }
 }
@@ -129,7 +145,13 @@ function* CommunityGenerator(tags) {
           },
         ],
       },
-      tags: { connect: [tags.sample, tags.community] },
+      tags: {
+        connect: [
+          tags.sample,
+          tags.community,
+          index % 2 ? tags.tool : tags.cms,
+        ],
+      },
     }
   }
 }
@@ -145,7 +167,7 @@ async function insertCollection(collection: any[]) {
 
     const updatedShowcase = await db.showcase.upsert({
       create: record,
-      update: { link: record.link },
+      update: record,
       where: { link: record.link },
     })
 
