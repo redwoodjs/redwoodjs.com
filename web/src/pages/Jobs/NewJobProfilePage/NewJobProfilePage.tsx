@@ -1,6 +1,4 @@
-import { useState } from 'react'
-import * as filestack from 'filestack-js'
-import { Switch } from '@headlessui/react'
+import { useEffect } from 'react'
 
 import { navigate, routes } from '@redwoodjs/router'
 import { MetaTags, useMutation } from '@redwoodjs/web'
@@ -21,11 +19,22 @@ const NewJobProfilePage = () => {
     CREATE_JOB_PROFILE,
     {
       onCompleted: ({ createJobProfile }) => {
-        toast.success('Job post created!')
+        toast.success('Job profile created!', { id: 'saving' })
         navigate(routes.jobProfile({ id: createJobProfile.id }))
       },
     }
   )
+
+  useEffect(() => {
+    if (error) {
+      toast.error(error.message, { id: 'saving' })
+    }
+  }, [error])
+
+  const createJobProfileWithMessage = (args) => {
+    toast.loading('Saving profile...', { id: 'saving' })
+    createJobProfile(args)
+  }
 
   return (
     <>
@@ -47,7 +56,7 @@ const NewJobProfilePage = () => {
         <JobProfileForm
           loading={loading}
           error={error}
-          saveFunc={createJobProfile}
+          saveFunc={createJobProfileWithMessage}
         />
       </div>
     </>

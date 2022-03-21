@@ -20,4 +20,12 @@ export const newJob = async ({ job }) => {
   })
 }
 
-export const profileEdit = ({ jobProfile }) => {}
+export const newJobProfile = async ({ jobProfile }) => {
+  await mailer.sendMail({
+    from: '"RedwoodJS Jobs" <jobs@redwoodjs.com>',
+    to: jobProfile.email,
+    subject: 'Your RedwoodJS job profile is live!',
+    text: `Your job profile is live here: https://redwoodjs.com/job-profiles/${jobProfile.id}\n\nIf you need to edit your post you can do that here: https://redwoodjs.com/job-profiles/${jobProfile.id}/edit?token=${jobProfile.token}`,
+    html: `<p>Your job profile is live here: <a href="https://redwoodjs.com/job-profiles/${jobProfile.id}">https://redwoodjs.com/job-profiles/${jobProfile.id}</a></p><p>If you need to edit your job post you can do so here: <a href="https://redwoodjs.com/job-profiles/${jobProfile.id}/edit?token=${jobProfile.token}">https://redwoodjs.com/job-profiles/${jobProfile.id}/edit?token=${jobProfile.token}</a></p>`,
+  })
+}

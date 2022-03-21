@@ -58,11 +58,17 @@ export const Success = ({
     UPDATE_JOB_PROFILE,
     {
       onCompleted: ({ updateJobProfile }) => {
-        toast.success('Profile saved!')
+        toast.success('Profile saved!', { id: 'saving' })
         navigate(routes.jobProfile({ id: updateJobProfile.id }))
       },
     }
   )
+
+  const updateJobProfileWithMessage = (args) => {
+    toast.loading('Saving profile...', { id: 'saving' })
+    updateJobProfile(args)
+  }
+
   return (
     <>
       <MetaTags
@@ -82,7 +88,7 @@ export const Success = ({
           token={token}
           loading={loading}
           error={error}
-          saveFunc={updateJobProfile}
+          saveFunc={updateJobProfileWithMessage}
         />
       </div>
     </>
