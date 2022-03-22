@@ -2,6 +2,7 @@ export const schema = gql`
   type Tag {
     id: Int!
     label: String!
+    link: String!
     showcases: [Showcase]
   }
 

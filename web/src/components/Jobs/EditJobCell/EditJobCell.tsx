@@ -56,10 +56,15 @@ export const Failure = ({ error }: CellFailureProps) => {
 export const Success = ({ token, job }: CellSuccessProps<FindEditJobQuery>) => {
   const [updateJob, { loading, error }] = useMutation(UPDATE_JOB, {
     onCompleted: ({ updateJob }) => {
-      toast.success('Job saved!')
+      toast.success('Job saved!', { id: 'saving' })
       navigate(routes.job({ id: updateJob.id }))
     },
   })
+
+  const updateJobWithMessage = (args) => {
+    toast.loading('Saving job...', { id: 'saving' })
+    updateJob(args)
+  }
 
   return (
     <>
@@ -80,7 +85,7 @@ export const Success = ({ token, job }: CellSuccessProps<FindEditJobQuery>) => {
           token={token}
           loading={loading}
           error={error}
-          saveFunc={updateJob}
+          saveFunc={updateJobWithMessage}
         />
       </div>
     </>

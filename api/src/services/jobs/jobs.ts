@@ -3,6 +3,8 @@ import type { Prisma } from '@prisma/client'
 import { db } from 'src/lib/db'
 import { AuthenticationError } from '@redwoodjs/graphql-server'
 
+import { newJob as sendNewJobEmail } from '../email'
+
 export const jobs = async ({ limit }) => {
   const options = {
     orderBy: { createdAt: 'desc' },
@@ -43,8 +45,8 @@ interface CreateJobArgs {
   input: Prisma.JobCreateInput
 }
 
-export const createJob = ({ input }: CreateJobArgs) => {
-  return db.job.create({
+export const createJob = async ({ input }: CreateJobArgs) => {
+  const newJob = await db.job.create({
     data: {
       ...input,
       locations: JSON.stringify(input.locations),
@@ -52,6 +54,10 @@ export const createJob = ({ input }: CreateJobArgs) => {
       perks: JSON.stringify(input.perks),
     },
   })
+
+  await sendNewJobEmail({ job: newJob })
+
+  return newJob
 }
 
 interface UpdateJobArgs extends Prisma.JobWhereUniqueInput {

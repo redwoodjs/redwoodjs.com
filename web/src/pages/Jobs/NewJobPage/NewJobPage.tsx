@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import { navigate, routes } from '@redwoodjs/router'
 import { MetaTags, useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
@@ -15,10 +17,21 @@ const CREATE_JOB = gql`
 const NewJobPage = ({ token }) => {
   const [createJob, { loading, error }] = useMutation(CREATE_JOB, {
     onCompleted: ({ createJob }) => {
-      toast.success('Job post created!')
+      toast.success('Job post created!', { id: 'saving' })
       navigate(routes.job({ id: createJob.id }))
     },
   })
+
+  useEffect(() => {
+    if (error) {
+      toast.error(error.message, { id: 'saving' })
+    }
+  }, [error])
+
+  const createJobWithMessage = (args) => {
+    toast.loading('Saving job...', { id: 'saving' })
+    createJob(args)
+  }
 
   if (!token || token !== 'cl0hf47710001iq2f7307b18y') {
     return (
@@ -49,7 +62,11 @@ const NewJobPage = ({ token }) => {
           </div>
         </header>
 
-        <JobForm loading={loading} error={error} saveFunc={createJob} />
+        <JobForm
+          loading={loading}
+          error={error}
+          saveFunc={createJobWithMessage}
+        />
       </div>
     </>
   )
