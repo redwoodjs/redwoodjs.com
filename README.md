@@ -4,9 +4,17 @@ This repo contains the latest iteration of redwoodjs.com, redesiged for our v1.0
 
 ## Development Quick Start
 
+## Dependencies
+
+Install required dependencies:
+
+```bash
+yarn install
+```
+
 ### Database
 
-Setup your local database and seed any required data:
+Setup your local database (`docker-compose up -d` to start two Postgres servers using Docker) and seed any required data:
 
 ```bash
 yarn rw prisma migrate dev

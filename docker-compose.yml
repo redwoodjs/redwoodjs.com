@@ -1,0 +1,34 @@
+version: '2'
+
+networks:
+  redwoodjs-sprout:
+    driver: bridge
+
+services:
+  postgres:
+    container_name: postgres
+    hostname: postgres
+    image: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=yes
+      - POSTGRES_INITDB_ARGS="--data-checksums"
+    ports:
+      - 5432:5432
+    networks:
+      - redwoodjs-sprout
+
+  postgres-test:
+    container_name: postgres-test
+    hostname: postgres-test
+    image: postgres
+    environment:
+      - POSTGRES_USER=postgres-test
+      - POSTGRES_PASSWORD=postgres-test
+      - POSTGRES_DB=yes
+      - POSTGRES_INITDB_ARGS="--data-checksums"
+    ports:
+      - 15432:5432
+    networks:
+      - redwoodjs-sprout
