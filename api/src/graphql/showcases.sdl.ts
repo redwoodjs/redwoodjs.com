@@ -24,7 +24,9 @@ export const schema = gql`
     showcases: [Showcase!]! @skipAuth
     showcase(id: Int!): Showcase @skipAuth
     showcaseJobs(company: String!): [Job!]! @skipAuth
-    examples(input: ExamplesInput, language: String): [Showcase] @skipAuth @translate
+    examples(input: ExamplesInput, language: String): [Showcase]
+      @skipAuth
+      @translate
   }
 
   input CreateShowcaseInput {
