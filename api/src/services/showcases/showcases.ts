@@ -72,8 +72,18 @@ export const deleteShowcase = ({ id }: Prisma.ShowcaseWhereUniqueInput) => {
   })
 }
 
-export const showcaseJobs = ({ company }) => {
-  return db.job.findMany({ orderBy: { createdAt: 'desc' }, where: { company } })
+export const showcaseJobs = async ({ company }) => {
+  return (
+    await db.job.findMany({
+      orderBy: { createdAt: 'desc' },
+      where: { company },
+    })
+  ).map((job) => ({
+    ...job,
+    locations: JSON.parse(job.locations),
+    compensation: JSON.parse(job.compensation),
+    perks: JSON.parse(job.perks),
+  }))
 }
 
 export const Showcase = {
