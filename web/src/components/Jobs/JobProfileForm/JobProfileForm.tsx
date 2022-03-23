@@ -344,7 +344,8 @@ const JobProfileForm = ({ profile = {}, token, loading, error, saveFunc }) => {
           <p className="mt-6 font-light">
             We will email you a link that you can use to edit your profile
             listing. This link will be the only way to edit your profile so
-            don't lose it!
+            don't lose it! Check your spam box if you don't get it within a
+            minute or two.
           </p>
 
           <p className="mt-6 font-light text-center">

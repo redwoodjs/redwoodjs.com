@@ -310,7 +310,7 @@ const HomePage = () => {
 
             <div className="mt-24 flex justify-center">
               <div className="">
-                <img src="/images/graphql_map.svg" alt="GraphQL clients" HMM />
+                <img src="/images/graphql_map.svg" alt="GraphQL clients" />
               </div>
             </div>
           </div>

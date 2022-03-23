@@ -14,7 +14,7 @@ const CREATE_JOB = gql`
   }
 `
 
-const NewJobPage = ({ token }) => {
+export default function ({ token }) {
   const [createJob, { loading, error }] = useMutation(CREATE_JOB, {
     onCompleted: ({ createJob }) => {
       toast.success('Job post created!', { id: 'saving' })
@@ -71,5 +71,3 @@ const NewJobPage = ({ token }) => {
     </>
   )
 }
-
-export default NewJobPage

@@ -2,7 +2,7 @@ import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 import JobProfilesCell from 'src/components/Jobs/JobProfilesCell'
 
-const AllJobProfilesPage = () => {
+export default function () {
   return (
     <>
       <MetaTags title="AllJobProfiles" description="AllJobProfiles page" />
@@ -29,5 +29,3 @@ const AllJobProfilesPage = () => {
     </>
   )
 }
-
-export default AllJobProfilesPage

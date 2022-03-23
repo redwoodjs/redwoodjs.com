@@ -1,7 +1,5 @@
 import EditJobCell from 'src/components/Jobs/EditJobCell'
 
-const EditJobPage = ({ id, token }) => {
+export default function ({ id, token }) {
   return <EditJobCell id={id} token={token} />
 }
-
-export default EditJobPage

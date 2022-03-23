@@ -3,7 +3,7 @@ import { MetaTags } from '@redwoodjs/web'
 import JobsCell from 'src/components/Jobs/JobsCell'
 import JobProfilesCell from 'src/components/Jobs/JobProfilesCell'
 
-const JobsPage = () => {
+export default function () {
   return (
     <>
       <MetaTags
@@ -31,7 +31,7 @@ const JobsPage = () => {
 
       <section className="max-w-screen-lg mx-auto mt-24 mb-24">
         <header className="text-center">
-          <h1 className="mt-12" className="text-orange-800">
+          <h1 className="mt-12 text-orange-800">
             RedwoodJS Developers
           </h1>
           <p className="mt-2 text-stone-500">
@@ -51,5 +51,3 @@ const JobsPage = () => {
     </>
   )
 }
-
-export default JobsPage
