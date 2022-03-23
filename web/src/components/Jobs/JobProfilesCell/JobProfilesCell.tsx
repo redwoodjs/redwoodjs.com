@@ -86,8 +86,8 @@ export const Success = ({
               }`}
             >
               <div className="flex flex-col items-start justify">
-                <ReactMarkdown className="whitespace-nowrap">
-                  {profile.locations}
+                <ReactMarkdown className="text-xs whitespace-nowrap">
+                  {profile.locations.join('\n\n')}
                 </ReactMarkdown>
                 <div className="-ml-1 mt-1">
                   <Status

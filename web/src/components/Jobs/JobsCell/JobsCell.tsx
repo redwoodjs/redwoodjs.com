@@ -74,7 +74,7 @@ export const Success = ({ jobs, showAll }: CellSuccessProps<JobsQuery>) => {
               }`}
             >
               <ReactMarkdown className="whitespace-nowrap">
-                {job.locations}
+                {job.locations.join('\n\n')}
               </ReactMarkdown>
             </td>
           </tr>
