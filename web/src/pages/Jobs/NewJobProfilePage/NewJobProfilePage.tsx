@@ -14,7 +14,7 @@ const CREATE_JOB_PROFILE = gql`
   }
 `
 
-const NewJobProfilePage = () => {
+export default function () => {
   const [createJobProfile, { loading, error }] = useMutation(
     CREATE_JOB_PROFILE,
     {
@@ -62,5 +62,3 @@ const NewJobProfilePage = () => {
     </>
   )
 }
-
-export default NewJobProfilePage
