@@ -43,12 +43,12 @@ const Routes = () => {
         <Route path="/job-profiles/{id:Int}/edit" page={EditJobProfilePage} name="editJobProfile" />
 
         {/* Pre-Rendered Showcase Pages */}
-        {/* <Set prerender> */}
-        <Route path="/showcase" page={ShowcasePage} name="showcase" />
-        <Set wrap={[ShowcaseLayout]}>
-          <Route path="/showcase/snaplet" page={ShowcaseSnapletPage} name="showcaseSnaplet" />
+        <Set prerender>
+          <Route path="/showcase" page={ShowcasePage} name="showcase" />
+          <Set wrap={[ShowcaseLayout]}>
+            <Route path="/showcase/snaplet" page={ShowcaseSnapletPage} name="showcaseSnaplet" />
+          </Set>
         </Set>
-        {/* </Set> */}
 
         <Route path="/" page={HomePage} name="home" />
 

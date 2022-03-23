@@ -1,7 +1,7 @@
 import { MetaTags } from '@redwoodjs/web'
 import JobCell from 'src/components/Jobs/JobCell'
 
-const JobPage = ({ id }) => {
+export default function ({ id }) {
   return (
     <>
       <MetaTags
@@ -13,5 +13,3 @@ const JobPage = ({ id }) => {
     </>
   )
 }
-
-export default JobPage
