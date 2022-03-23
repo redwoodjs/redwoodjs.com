@@ -17,7 +17,10 @@ const CREATE_JOB = gql`
 export default function ({ token }) {
   const [createJob, { loading, error }] = useMutation(CREATE_JOB, {
     onCompleted: ({ createJob }) => {
-      toast.success('Job post created!', { id: 'saving' })
+      toast.success(
+        'Job post created! Check your email for the link to edit your post (check your spam box, too).',
+        { id: 'saving', duration: 10000 }
+      )
       navigate(routes.job({ id: createJob.id }))
     },
   })
