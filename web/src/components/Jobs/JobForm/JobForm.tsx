@@ -402,7 +402,8 @@ const JobForm = ({ job = {}, token, loading, error, saveFunc }) => {
           <p className="mt-6 font-light">
             We will email you a link that you can use to edit your job post
             details. This link will be the only way to edit your post so don't
-            lose it!
+            lose it! Check your spam box if you don't get it within a minute or
+            two.
           </p>
 
           <p className="mt-6 font-light">
