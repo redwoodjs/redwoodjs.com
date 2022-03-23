@@ -23,6 +23,6 @@
   },
   "packageManager": "yarn@3.2.0",
   "scripts": {
-    "postinstall": "yarn rw prisma db seed"
+    "postinstall": "yarn rw prisma generate && yarn rw prisma db seed"
   }
 }
