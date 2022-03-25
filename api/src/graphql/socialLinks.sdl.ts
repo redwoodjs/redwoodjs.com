@@ -1,4 +1,12 @@
 export const schema = gql`
+  enum SocialLinkPlatform {
+    discord
+    github
+    linkedin
+    productHunt
+    twitter
+  }
+
   type SocialLink {
     # Meta
     id: Int!
@@ -12,14 +20,6 @@ export const schema = gql`
     authorId: Int
     showcase: Author
     showcaseId: Int
-  }
-
-  enum SocialLinkPlatform {
-    discord
-    github
-    linkedin
-    productHunt
-    twitter
   }
 
   input CreateSocialLinkInput {
@@ -45,5 +45,10 @@ export const schema = gql`
       id: Int!
       input: [SyncSocialLinkInput!]!
     ): SocialLink! @requireAuth
+    SyncStartupSocialLinks(
+      slug: String!
+      token: String!
+      input: [SyncSocialLinkInput!]!
+    ): SocialLink! @skipAuth
   }
 `

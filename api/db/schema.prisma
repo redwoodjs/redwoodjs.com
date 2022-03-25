@@ -35,12 +35,6 @@ enum Roles {
   candidate
 }
 
-// Steps to add a new platform:
-// - Add the platform to the enum below.
-// - Add the platform to the `SocialLinkPlatform` enum in `api/src/graphql/socialLinks.sdl.ts`
-// - Add the platform's icon to `web/src/components/Icons/...`
-// - Configure the platform and its icons in the constants located at the top of `web/src/components/SocialLink/SocialLinkField`
-// - Add the platform's translations to each `web/src/locales/*.json > SocialLink.platforms`
 enum SocialLinkPlatform {
   discord
   github
@@ -89,45 +83,47 @@ model SocialLink {
   authorId   Int?
   showcase   Showcase?          @relation(fields: [showcaseId], references: [id], onDelete: Cascade)
   showcaseId Int?
+  startup    Startup?           @relation(fields: [startupId], references: [id], onDelete: Cascade)
+  startupId  Int?
 }
 
 model Media {
   // Meta.
-  id        Int       @id @default(autoincrement())
+  id       Int       @id @default(autoincrement())
   // Data.
-  label     String?
-  src       String
-  type      MediaType @default(picture)
+  label    String?
+  src      String
+  type     MediaType @default(picture)
   // Relations.
-  author    Author?
-  showcase  Showcase?
+  author   Author?
+  showcase Showcase?
 }
 
 model Showcase {
   // Meta.
-  id              Int          @id @default(autoincrement())
-  createdAt       DateTime     @default(now())
-  updatedAt       DateTime?
-  isPublished     Boolean      @default(false)
+  id            Int                    @id @default(autoincrement())
+  createdAt     DateTime               @default(now())
+  updatedAt     DateTime?
+  isPublished   Boolean                @default(false)
   // Data.
-  link            String       @unique // Link to the application. If the application can't have a link it shouldn't be listed.
-  label           String?
-  title           String?
-  subtitle        String?
-  description     String
-  media           Media?       @relation(fields: [mediaId], references: [id])
-  mediaId         Int?         @unique
+  link          String                 @unique // Link to the application. If the application can't have a link it shouldn't be listed.
+  label         String?
+  title         String?
+  subtitle      String?
+  description   String
+  media         Media?                 @relation(fields: [mediaId], references: [id])
+  mediaId       Int?                   @unique
   // Relations.
-  socialLinks     SocialLink[]
-  tags            Tag[]
-  localizations   ShowcaseLocalization[]
+  socialLinks   SocialLink[]
+  tags          Tag[]
+  localizations ShowcaseLocalization[]
 }
 
 model ShowcaseLocalization {
   // Meta.
-  id          Int          @id @default(autoincrement())
-  isValid     Boolean      @default(false)
-  language    Language     @default(eng)
+  id          Int      @id @default(autoincrement())
+  isValid     Boolean  @default(false)
+  language    Language @default(eng)
   // Data.
   title       String?
   subtitle    String?
@@ -135,7 +131,31 @@ model ShowcaseLocalization {
   // Relations.
   showcase    Showcase @relation(fields: [showcaseId], references: [id])
   showcaseId  Int
+
   @@unique([language, showcaseId])
+}
+
+model Startup {
+  // Meta.
+  id                Int          @id @default(autoincrement())
+  createdAt         DateTime     @default(now())
+  updatedAt         DateTime     @updatedAt
+  // Data.
+  about             String?
+  achievements      String[]
+  cta               Json
+  images            String[]
+  name              String
+  published         Boolean      @default(false)
+  questionResponses Json[]
+  slug              String       @unique
+  tagline           String
+  technologies      String[]
+  token             String       @default(cuid())
+  thumbnail         String
+  videos            String[]
+  // Relations.
+  socialLinks       SocialLink[]
 }
 
 model Author {
@@ -176,16 +196,16 @@ model Job {
 }
 
 model JobProfile {
-  id             Int      @id @default(autoincrement())
-  token          String   @default(cuid())
-  email          String
-  portfolioUrl   String?
-  name           String
-  photo          String
-  status         String
-  title          String
-  locations      String   @db.Text
-  about          String   @db.Text
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
+  id           Int      @id @default(autoincrement())
+  token        String   @default(cuid())
+  email        String
+  portfolioUrl String?
+  name         String
+  photo        String
+  status       String
+  title        String
+  locations    String   @db.Text
+  about        String   @db.Text
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
 }
