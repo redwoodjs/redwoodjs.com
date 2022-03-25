@@ -14,12 +14,15 @@ const CREATE_JOB_PROFILE = gql`
   }
 `
 
-const NewJobProfilePage = () => {
+export default function () {
   const [createJobProfile, { loading, error }] = useMutation(
     CREATE_JOB_PROFILE,
     {
       onCompleted: ({ createJobProfile }) => {
-        toast.success('Job profile created!', { id: 'saving' })
+        toast.success(
+          'Job profile created! Check your email for the link to edit your profile (check your spam box, too).',
+          { id: 'saving', duration: 10000 }
+        )
         navigate(routes.jobProfile({ id: createJobProfile.id }))
       },
     }
@@ -62,5 +65,3 @@ const NewJobProfilePage = () => {
     </>
   )
 }
-
-export default NewJobProfilePage
