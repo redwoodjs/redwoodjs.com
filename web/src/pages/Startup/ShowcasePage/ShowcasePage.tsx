@@ -26,9 +26,7 @@ const ShowcasePage = ({ slug }: ShowcasePageProps) => {
           </Link>
         </nav>
       </div>
-      <div className="flex flex-col max-w-screen-xl mx-auto px-8 pb-8 space-y-8">
-        <StartupShowcaseCell slug={slug} />
-      </div>
+      <StartupShowcaseCell slug={slug} />
     </>
   )
 }
