@@ -83,7 +83,7 @@ const StartupShowcaseDemo = ({ images, videos }: StartupShowcaseDemoProps) => {
                 onClick={() => setSelected(media)}
               >
                 <StartupDemoMedia
-                  className="min-w-[176px]"
+                  className="max-w-[176px]"
                   src={
                     media.type === 'image' ? media.src : YTThumbnail(media.src)
                   }
