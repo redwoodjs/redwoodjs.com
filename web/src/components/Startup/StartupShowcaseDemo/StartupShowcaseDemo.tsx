@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import { useMemo, useRef, useState } from 'react'
 
 import StartupDemoMedia from 'src/components/Startup/StartupDemoMedia'
@@ -48,7 +49,13 @@ const StartupShowcaseDemo = ({ images, videos }: StartupShowcaseDemoProps) => {
         type={selected.type}
       />
       <div className="relative z-0">
-        <div className="absolute flex items-center justify-between px-3 h-full w-full pointer-events-none">
+        <div
+          className={clsx(
+            'absolute hidden items-center justify-between px-3 h-full w-full pointer-events-none',
+            thumbnailRef.current.scrollWidth >
+              thumbnailRef.current.clientWidth && 'flex'
+          )}
+        >
           <button
             className="button p-1 leading-[0] rounded-full bg-opacity-75 pointer-events-auto"
             onClick={() =>
