@@ -52,8 +52,8 @@ const StartupShowcaseDemo = ({ images, videos }: StartupShowcaseDemoProps) => {
         <div
           className={clsx(
             'absolute hidden items-center justify-between px-3 h-full w-full pointer-events-none',
-            thumbnailRef.current.scrollWidth >
-              thumbnailRef.current.clientWidth && 'flex'
+            thumbnailRef.current?.scrollWidth >
+              thumbnailRef.current?.clientWidth && 'flex'
           )}
         >
           <button
