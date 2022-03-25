@@ -27,7 +27,7 @@ $color_neutral: #1A202C;
 
 @layer components {
   .button {
-    @apply block px-4 py-3 text-center font-semibold rounded bg-teal-600 hover:bg-teal-700 text-white hover:text-white transition duration-200 text-lg no-underline;
+    @apply block px-4 py-3 text-center font-semibold rounded bg-teal-600 hover:bg-teal-700 text-white hover:text-white transition duration-200 text-lg no-underline disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-teal-600;
   }
 
   .button-alt {
@@ -39,11 +39,11 @@ $color_neutral: #1A202C;
   }
 
   .button-invert {
-    @apply button bg-white text-teal-600 hover:bg-teal-100 hover:text-teal-700;
+    @apply button bg-white text-teal-600 hover:bg-teal-100 hover:text-teal-700 disabled:hover:bg-white;
   }
 
   .button-social {
-    @apply button flex flex-row items-center no-underline px-3 py-1.5 space-x-2.5 text-sm;
+    @apply button flex flex-row items-center no-underline p-2 rounded-full space-x-2.5 text-sm;
 
     &.discord {
       @apply bg-[#5865F2] hover:bg-[#4150f1];
@@ -87,6 +87,59 @@ $color_neutral: #1A202C;
       }
     }
 
+  }
+
+  // Reference, styled around the following "test" file
+  // https://raw.githubusercontent.com/mxstbr/markdown-test-file/master/TEST.md
+  .startup-markdown {
+    // Space beteween landmark elements
+    h2, h3, h5, h5, h6, p, blockquote, pre, hr, ol, ul {
+      &:not(:last-child) {
+        @apply mb-6;
+      }
+    }
+
+    // Typography
+    h2 {
+      @apply text-3xl font-bold pb-2.5 mb-4 border-b border-stone-300;
+    }
+    h3 {
+      @apply text-xl font-semibold;
+    }
+    h4 {}
+    h5 {}
+    h6 {}
+    blockquote {
+      @apply pl-4 py-1.5 space-y-2.5 border-l-4 border-stone-300 text-stone-600;
+    }
+
+    //
+    a {
+      @apply no-underline hover:underline hover:text-teal-800;
+    }
+
+    //
+    hr {
+      @apply border-2 border-stone-300 border-opacity-50;
+    }
+
+    // List
+    ol, ul {
+      @apply list-outside ml-4 pl-4;
+    }
+    ul {
+      @apply list-disc;
+
+      ul {
+        @apply list-[circle];
+      }
+    }
+    ol {
+      @apply list-decimal;
+    }
+    li {
+      @apply list-item py-1;
+    }
   }
 
   .card {

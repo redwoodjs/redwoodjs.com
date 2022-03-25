@@ -26,6 +26,9 @@ const AdminLayout = ({children}: AdminLayoutProps) => {
           <li>
             <Link to={routes.medias()}>Medias</Link>
           </li>
+          <li>
+            <Link to={routes.adminStartups()}>Startups</Link>
+          </li>
         </>)}
         {hasRole("admin") && (
           <li>
