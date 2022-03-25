@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { TextField, useFieldArray } from '@redwoodjs/forms'
+import { TextAreaField, TextField, useFieldArray } from '@redwoodjs/forms'
 
 import type { StartupQuestionResponseInput } from 'types/graphql'
 
@@ -61,7 +61,7 @@ const StartupQuestionaireField = ({
                 placeholder="Question"
                 validation={{ required: true }}
               />
-              <TextField
+              <TextAreaField
                 className="rw-input mt-0"
                 name={`${name}.${idx}.response`}
                 defaultValue=""

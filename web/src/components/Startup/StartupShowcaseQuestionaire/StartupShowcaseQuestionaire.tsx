@@ -1,3 +1,5 @@
+import ReactMarkdown from 'react-markdown'
+
 import Spoiler from 'src/components/Spoiler'
 
 import type { StartupShowcaseQuery } from 'types/graphql'
@@ -22,7 +24,9 @@ const StartupShowcaseQuestionaire = ({
       </header>
       {questionResponses.map((qr, idx) => (
         <Spoiler key={idx} title={qr.question}>
-          {qr.response}
+          <ReactMarkdown className="startup-markdown">
+            {qr.response}
+          </ReactMarkdown>
         </Spoiler>
       ))}
     </section>
