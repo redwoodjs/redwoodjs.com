@@ -49,7 +49,7 @@ export const Success = ({
   return (
     <>
       <div className="flex flex-col-reverse lg:flex-row lg:space-x-16 space-y-8 space-y-reverse lg:space-y-0">
-        {startup.images.length !== 0 || startup.videos.length !== 0 && (
+        {(startup.images.length !== 0 || startup.videos.length !== 0) && (
           <StartupShowcaseDemo {...startup} />
         )}
         <StartupShowcaseIntro {...startup} />
