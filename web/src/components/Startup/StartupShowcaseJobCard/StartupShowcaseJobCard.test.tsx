@@ -1,14 +1,14 @@
 import { render } from '@redwoodjs/testing/web'
 
-import ShowcaseJobCard from './ShowcaseJobCard'
+import StartupShowcaseJobCard from './StartupShowcaseJobCard'
 
 //   Improve this test with help from the Redwood Testing Doc:
 //    https://redwoodjs.com/docs/testing#testing-components
 
-describe('ShowcaseJobCard', () => {
+describe('StartupShowcaseJobCard', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<ShowcaseJobCard />)
+      render(<StartupShowcaseJobCard />)
     }).not.toThrow()
   })
 })

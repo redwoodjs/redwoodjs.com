@@ -2,19 +2,20 @@ import { format, formatDistance } from 'date-fns'
 import ReactMarkdown from 'react-markdown'
 import { Link, routes } from '@redwoodjs/router'
 
-import type { ShowcaseJobsQuery } from 'types/graphql'
+import type { StartupShowcaseJobsQuery } from 'types/graphql'
 
-export type ShowcaseJobCardProps = ShowcaseJobsQuery['jobs'][number]
+export type StartupShowcaseJobCardProps =
+  StartupShowcaseJobsQuery['jobs'][number]
 
 const MAX_ABOUT_LEN = 400
 
-const ShowcaseJobCard = ({
+const StartupShowcaseJobCard = ({
   aboutJob,
   createdAt,
   id,
   locations,
   title,
-}: ShowcaseJobCardProps) => {
+}: StartupShowcaseJobCardProps) => {
   return (
     <Link
       className="bg-white border border-orange-200 hover:border-orange-400 no-underline p-6 rounded-md space-y-4"
@@ -41,4 +42,4 @@ const ShowcaseJobCard = ({
   )
 }
 
-export default ShowcaseJobCard
+export default StartupShowcaseJobCard

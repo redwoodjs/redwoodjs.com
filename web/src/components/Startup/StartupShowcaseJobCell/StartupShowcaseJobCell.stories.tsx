@@ -1,5 +1,5 @@
-import { Loading, Empty, Failure, Success } from './ShowcaseJobsCell'
-import { standard } from './ShowcaseJobsCell.mock'
+import { Loading, Empty, Failure, Success } from './StartupShowcaseJobCell'
+import { standard } from './StartupShowcaseJobCell.mock'
 
 export const loading = () => {
   return Loading ? <Loading /> : null
