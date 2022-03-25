@@ -1,7 +1,7 @@
 version: '2'
 
 networks:
-  redwoodjs-sprout:
+  redwoodjs-com:
     driver: bridge
 
 services:
@@ -17,18 +17,4 @@ services:
     ports:
       - 5432:5432
     networks:
-      - redwoodjs-sprout
-
-  postgres-test:
-    container_name: postgres-test
-    hostname: postgres-test
-    image: postgres
-    environment:
-      - POSTGRES_USER=postgres-test
-      - POSTGRES_PASSWORD=postgres-test
-      - POSTGRES_DB=postgres-test
-      - POSTGRES_INITDB_ARGS="--data-checksums"
-    ports:
-      - 15432:5432
-    networks:
-      - redwoodjs-sprout
+      - redwoodjs-com
