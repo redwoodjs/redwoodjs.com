@@ -90,6 +90,136 @@ const JOB_PROFILES = [
   },
 ]
 
+const STARTUPS = [
+  {
+    about: '',
+    achievements: ['10M Raised in Funding'],
+    cta: {
+      title: 'Watch the Demo',
+      href: 'https://www.youtube.com/watch?v=uHKfrz65KSU',
+    },
+    images: [],
+    name: 'Snaplet',
+    published: true,
+    questionResponses: [
+      {
+        question: "Who are you and what's your background?",
+        response: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      },
+      {
+        question:
+          'Is redwood supporting the migration of an existing project/business or is it a brand new project?',
+        response: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      },
+      {
+        question: 'Is this your first Redwood project?',
+        response: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      },
+      {
+        question:
+          'Are you using a vanilla setup or custom? Feel free to elaborate',
+        response: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      },
+      {
+        question: 'How is your project hosted?',
+        response: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      },
+    ],
+    slug: 'snaplet',
+    tagline:
+      'Snaplet copies your Postgres database, transforming personal information, so you can safely code against actual data',
+    technologies: ['Netlify', 'AWS'],
+    thumbnail: '',
+    videos: ['ueUa1LengZk'],
+  },
+  {
+    about: '',
+    achievements: ['Trusted by 20 of the top non-profits'],
+    cta: {
+      title: 'Come Say Hi 👋',
+      href: 'https://everfund.co.uk/',
+    },
+    images: [],
+    name: 'Everfund',
+    published: true,
+    questionResponses: [
+      {
+        question: "Who are you and what's your background?",
+        response: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      },
+      {
+        question:
+          'Is redwood supporting the migration of an existing project/business or is it a brand new project?',
+        response: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      },
+      {
+        question: 'Is this your first Redwood project?',
+        response: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      },
+      {
+        question:
+          'Are you using a vanilla setup or custom? Feel free to elaborate',
+        response: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      },
+      {
+        question: 'How is your project hosted?',
+        response: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      },
+    ],
+    slug: 'everfund',
+    tagline:
+      'From non-profits to platforms, Everfund is evolving giving with the go-to infrastructure for the future of fundraising.',
+    technologies: ['Docker', 'Digital Ocean'],
+    thumbnail: '',
+    videos: ['YvM-pnzRDYE'],
+  },
+  {
+    about:
+      '## Making Palletized\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer elementum, enim id mollis rhoncus, massa quam faucibus orci, quis accumsan odio sem id nibh. Curabitur rutrum mi lacus, eget vulputate sem semper vel.\n\n## Marketing Palletized\n\nCras eu eros lacus. Sed quis purus a elit feugiat vehicula. Nunc vel libero nisi. Praesent faucibus pharetra turpis, a mattis ligula eleifend sed. Curabitur condimentum vel dui non porttitor. Nulla elementum magna ac rutrum varius. Maecenas mattis, dui vehicula tristique tristique, ipsum odio porta neque, sit amet tincidunt dui nibh at ex.\n\nNulla faucibus metus non posuere tincidunt. Cras convallis condimentum ante, eu efficitur nisl porta in. Nulla ac elit tempor, fringilla quam sit amet, condimentum lectus. Morbi luctus, augue vitae sodales ultrices, ante ipsum elementum ante, euismod ultrices massa enim quis justo.',
+    achievements: [
+      'Used by the Big Three automobile manufacturers',
+      'Managing more than 200M in inventory',
+    ],
+    cta: {
+      title: 'Come Say Hi 👋',
+      href: 'https://github.com/locktech',
+    },
+    images: [],
+    name: 'Palletized',
+    published: true,
+    questionResponses: [
+      {
+        question: "Who are you and what's your background?",
+        response: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      },
+      {
+        question:
+          'Is redwood supporting the migration of an existing project/business or is it a brand new project?',
+        response: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      },
+      {
+        question: 'Is this your first Redwood project?',
+        response: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      },
+      {
+        question:
+          'Are you using a vanilla setup or custom? Feel free to elaborate',
+        response: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      },
+      {
+        question: 'How is your project hosted?',
+        response: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      },
+    ],
+    slug: 'palletized',
+    tagline:
+      'Project management application for commercial and industrial material distributors.',
+    technologies: ['Docker', 'Digital Ocean'],
+    thumbnail: 'https://cdn.filestackcontent.com/kdMsPdPvSrmHZhqGbTZZ',
+    videos: ['Qwd25JV-jnU', 'KMxo3T_MTvY'],
+  },
+]
+
 export default async () => {
   try {
     for (const job of JOBS) {
@@ -114,6 +244,11 @@ export default async () => {
           data: profile,
         })
       }
+    }
+
+    for (const s of STARTUPS) {
+      const exists = await db.startup.findUnique({ where: { slug: s.slug } })
+      if (!exists) await db.startup.create({ data: s })
     }
 
     const { rwLogo, jamstackGraph, randomImage } = await SeedMedia()
