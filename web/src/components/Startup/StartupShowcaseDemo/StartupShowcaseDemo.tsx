@@ -43,7 +43,7 @@ const StartupShowcaseDemo = ({ images, videos }: StartupShowcaseDemoProps) => {
   // --
 
   return (
-    <section className="p-4 space-y-4 lg:max-w-[600px] h-fit border border-stone-200 rounded-md">
+    <section className="p-4 space-y-4 lg:max-w-[600px] w-full h-fit border border-stone-200 rounded-md">
       <StartupDemoMedia
         src={selected.type === 'image' ? selected.src : YTVideo(selected.src)}
         type={selected.type}
