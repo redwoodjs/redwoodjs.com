@@ -37,28 +37,26 @@ const StartupShowcaseIntro = ({
 }: StartupShowcaseIntroProps) => {
   return (
     <section className="flex flex-col lg:mt-6 space-y-6">
-      <div className="space-y-3">
-        <header className="space-y-3">
-          <h1 className="text-4xl">{name}</h1>
-          <p className="text-lg text-stone-600">{tagline}</p>
-        </header>
-        {socialLinks.length !== 0 && (
-          <div className="flex flex-row flex-wrap items-center justify-center">
-            {socialLinks.map(({ link, platform }, idx) => {
-              const Icon = PlatformIcons[platform]
-              return (
-                <a
-                  className={clsx('button-social mx-3', platform)}
-                  href={link}
-                  key={idx}
-                >
-                  <Icon className="h-5 w-5" />
-                </a>
-              )
-            })}
-          </div>
-        )}
-      </div>
+      <header className="space-y-3">
+        <h1 className="text-4xl">{name}</h1>
+        <p className="text-lg text-stone-600">{tagline}</p>
+      </header>
+      {socialLinks.length !== 0 && (
+        <div className="flex flex-row flex-wrap items-center justify-center sm:justify-start space-x-0 sm:space-x-6">
+          {socialLinks.map(({ link, platform }, idx) => {
+            const Icon = PlatformIcons[platform]
+            return (
+              <a
+                className={clsx('button-social mx-3 sm:mx-0', platform)}
+                href={link}
+                key={idx}
+              >
+                <Icon className="h-5 w-5" />
+              </a>
+            )
+          })}
+        </div>
+      )}
       {achievements.length > 0 && (
         <div className="space-y-3">
           <p className="font-semibold">Achievements so far:</p>
