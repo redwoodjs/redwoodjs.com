@@ -13,7 +13,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
       <Toaster toastOptions={{ className: 'mt-16' }} />
       <Navbar />
 
-      <main className="w-full flex-1 bg-white">{children}</main>
+      <main className="w-full flex-1">{children}</main>
 
       <footer className="border-t border-orange-200 bg-orange-50 p-6 text-sm text-orange-700">
         Copyright &copy;{new Date().getFullYear()} Tom Preston-Werner

@@ -3,6 +3,8 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
+
+      serif: ['Source Serif Pro', 'serif'],
       mono: [
         'Fira Code',
         'Fira Mono',
