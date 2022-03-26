@@ -1,6 +1,6 @@
 import { Disclosure } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/outline'
-import { Anchor } from '../MainLayoutNavbar'
+import { Anchor } from './Navbar'
 
 const Item = ({ item }) => {
   if (item?.navigation) {

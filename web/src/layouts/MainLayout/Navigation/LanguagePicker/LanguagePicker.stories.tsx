@@ -4,4 +4,4 @@ export const generated = () => {
   return <LanguagePicker />
 }
 
-export default { title: 'Components/LanguagePicker' }
+export default { title: 'Layouts/MainLayout/Navigation/LanguagePicker' }
