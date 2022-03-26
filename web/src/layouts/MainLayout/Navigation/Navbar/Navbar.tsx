@@ -102,7 +102,7 @@ const MainLayoutNavbar = () => {
   ]
 
   return (
-    <Disclosure as="nav" className="bg-gray-900 bg-opacity-90">
+    <Disclosure as="nav" className="bg-stone-900 bg-opacity-90">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
