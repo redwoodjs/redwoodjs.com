@@ -1,7 +1,7 @@
 import { Fragment } from 'react'
 import { Toaster } from '@redwoodjs/web/toast'
 
-import MainLayoutNavbar from 'src/components/MainLayoutNavbar'
+import Navbar from './Navigation/Navbar'
 
 type MainLayoutProps = {
   children?: React.ReactNode
@@ -11,7 +11,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <>
       <Toaster toastOptions={{ className: 'mt-16' }} />
-      <MainLayoutNavbar />
+      <Navbar />
 
       <main className="w-full flex-1 bg-white">{children}</main>
 

@@ -4,10 +4,10 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 import { routes, Link } from '@redwoodjs/router'
 
-import GithubStars from 'src/components/GithubStars'
-import LanguagePicker from '../LanguagePicker/LanguagePicker'
-import NavLinksMobile from '../NavLinksMobile/NavLinksMobile'
-import NavLinksDesktop from '../NavLinksDesktop/NavLinksDesktop'
+import GithubStars from '../GithubStars'
+import LanguagePicker from '../LanguagePicker'
+import NavLinksMobile from './NavLinksMobile'
+import NavLinksDesktop from './NavLinksDesktop'
 
 export const Anchor = ({ children, route, link, ...rest }) => {
   return route ? (

@@ -4,4 +4,4 @@ export const generated = () => {
   return <GithubStars />
 }
 
-export default { title: 'Components/GithubStars' }
+export default { title: 'Layouts/MainLayout/Navigation/GithubStars' }

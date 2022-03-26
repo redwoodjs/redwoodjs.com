@@ -1,7 +1,7 @@
 import { Fragment } from 'react'
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/solid'
 import { Popover, Transition } from '@headlessui/react'
-import { Anchor } from '../MainLayoutNavbar'
+import { Anchor } from './Navbar'
 
 const Item = ({ item }) => {
   if (item?.navigation) {

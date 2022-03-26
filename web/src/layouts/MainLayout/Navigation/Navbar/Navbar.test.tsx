@@ -1,14 +1,14 @@
 import { render } from '@redwoodjs/testing/web'
 
-import MainLayoutNavbar from './MainLayoutNavbar'
+import Navbar from './Navbar'
 
 //   Improve this test with help from the Redwood Testing Doc:
 //    https://redwoodjs.com/docs/testing#testing-components
 
-describe('MainLayoutNavbar', () => {
+describe('Navbar', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<MainLayoutNavbar />)
+      render(<Navbar />)
     }).not.toThrow()
   })
 })
