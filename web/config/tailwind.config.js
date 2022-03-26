@@ -12,6 +12,9 @@ module.exports = {
       ],
     },
     extend: {
+      colors: {
+        'rw-orange': '#BF4722',
+      },
       borderWidth: {
         16: '16px',
       },
