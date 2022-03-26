@@ -51,9 +51,11 @@ const StartupShowcaseDemo = ({ images, videos }: StartupShowcaseDemoProps) => {
       <div className="relative z-0">
         <div
           className={clsx(
-            'absolute hidden items-center justify-between px-3 h-full w-full pointer-events-none',
+            'absolute items-center justify-between px-3 h-full w-full pointer-events-none',
             thumbnailRef.current?.scrollWidth >
-              thumbnailRef.current?.clientWidth && 'flex'
+              thumbnailRef.current?.clientWidth
+              ? 'flex'
+              : 'hidden'
           )}
         >
           <button
@@ -90,7 +92,7 @@ const StartupShowcaseDemo = ({ images, videos }: StartupShowcaseDemoProps) => {
                 onClick={() => setSelected(media)}
               >
                 <StartupDemoMedia
-                  className="max-w-[176px]"
+                  className="max-w-[176px] min-w-[176px]"
                   src={
                     media.type === 'image' ? media.src : YTThumbnail(media.src)
                   }

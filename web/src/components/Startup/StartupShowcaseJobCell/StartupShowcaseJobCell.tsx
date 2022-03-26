@@ -49,7 +49,7 @@ export const Empty = ({ useEmpty = true }) => {
           work_off
         </span>
         <div className="space-y-2">
-          <p>This startup is not hiring.</p>
+          <p className="font-semibold">This startup is not hiring.</p>
           <p className="max-w-xs text-sm text-stone-400 leading-relaxed">
             Be sure to check the startup&apos;s site for positions that may not
             be listed here.
