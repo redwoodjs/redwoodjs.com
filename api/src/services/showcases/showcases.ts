@@ -2,6 +2,7 @@ import type { Prisma } from '@prisma/client'
 import type { ResolverArgs } from '@redwoodjs/graphql-server'
 
 import { db } from 'src/lib/db'
+import { logger } from 'src/lib/logger'
 
 import type { MutationcreateShowcaseArgs } from 'types/graphql'
 
@@ -66,7 +67,11 @@ export const updateShowcase = ({ id, input }: UpdateShowcaseArgs) => {
   })
 }
 
-export const deleteShowcase = ({ id }: Prisma.ShowcaseWhereUniqueInput) => {
+export const deleteShowcase = async ({
+  id,
+}: Prisma.ShowcaseWhereUniqueInput) => {
+  await db.showcaseLocalization.deleteMany({ where: { showcaseId: id } })
+
   return db.showcase.delete({
     where: { id },
   })
