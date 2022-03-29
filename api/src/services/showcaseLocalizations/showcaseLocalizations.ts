@@ -3,7 +3,9 @@ import type { Prisma } from '@prisma/client'
 import { db } from 'src/lib/db'
 
 export const showcaseLocalizations = () => {
-  return db.showcaseLocalization.findMany()
+  return db.showcaseLocalization.findMany({
+    include: { showcase: { select: { id: true, label: true } } },
+  })
 }
 
 export const showcaseLocalization = ({
@@ -11,6 +13,7 @@ export const showcaseLocalization = ({
 }: Prisma.ShowcaseLocalizationWhereUniqueInput) => {
   return db.showcaseLocalization.findUnique({
     where: { id },
+    include: { showcase: { select: { id: true, label: true, title: true } } },
   })
 }
 

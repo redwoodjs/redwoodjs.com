@@ -57,7 +57,7 @@ const Routes = () => {
 
       <Private unauthenticated={'home'}>
         <Set wrap={AdminLayout} roles={['translator', 'editor', 'admin']}>
-          <Route path="/admin/showcase-localizations/new" page={AdminShowcaseLocalizationNewShowcaseLocalizationPage} name="newShowcaseLocalization" />
+          <Route path="/admin/showcase-localizations/new/{showcaseId:Int}" page={AdminShowcaseLocalizationNewShowcaseLocalizationPage} name="newShowcaseLocalization" />
           <Route path="/admin/showcase-localizations/{id:Int}/edit" page={AdminShowcaseLocalizationEditShowcaseLocalizationPage} name="editShowcaseLocalization" />
           <Route path="/admin/showcase-localizations/{id:Int}" page={AdminShowcaseLocalizationShowcaseLocalizationPage} name="showcaseLocalization" />
           <Route path="/admin/showcase-localizations" page={AdminShowcaseLocalizationShowcaseLocalizationsPage} name="showcaseLocalizations" />

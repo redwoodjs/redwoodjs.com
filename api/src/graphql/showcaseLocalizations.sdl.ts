@@ -1,6 +1,8 @@
 export const schema = gql`
   type ShowcaseLocalization {
     id: Int!
+    showcaseId: Int!
+    showcase: Showcase!
     isValid: Boolean!
     language: Language!
     title: String
@@ -19,6 +21,7 @@ export const schema = gql`
   }
 
   input CreateShowcaseLocalizationInput {
+    showcaseId: Int!
     isValid: Boolean!
     language: Language!
     title: String

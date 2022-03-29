@@ -26,7 +26,9 @@ export const Success = ({ tags, showcase, showcaseId }) => {
   return (
     <Form config={{ defaultValues }} className={'ml-4 relative w-1/3'}>
       <div className={'sticky top-2'}>
-        <p className={'text-xl font-semibold'}>Tags</p>
+        <aside className="rw-segment-header mt-0">
+          <h3 className={'rw-heading rw-heading-secondary'}>Tags</h3>
+        </aside>
         <ul>
           {tags.map((tag) => (
             <li key={`Tag - ${tag.label}`} className={'px-2'}>

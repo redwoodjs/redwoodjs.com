@@ -131,23 +131,6 @@ const ShowcaseForm = (props) => {
         <FieldError name="description" className="rw-field-error" />
 
         <Label
-          name="mediaId"
-          className="rw-label"
-          errorClassName="rw-label rw-label-error"
-        >
-          Media id
-        </Label>
-
-        <NumberField
-          name="mediaId"
-          defaultValue={props.showcase?.mediaId}
-          className="rw-input"
-          errorClassName="rw-input rw-input-error"
-        />
-
-        <FieldError name="mediaId" className="rw-field-error" />
-
-        <Label
           name="socialLinks"
           className="rw-label"
           errorClassName="rw-label rw-label-error"

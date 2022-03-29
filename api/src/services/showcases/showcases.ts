@@ -2,7 +2,6 @@ import type { Prisma } from '@prisma/client'
 import type { ResolverArgs } from '@redwoodjs/graphql-server'
 
 import { db } from 'src/lib/db'
-import { logger } from 'src/lib/logger'
 
 import type { MutationcreateShowcaseArgs } from 'types/graphql'
 
@@ -23,7 +22,13 @@ export const connectTagToShowcase = async ({ id, input: { tagId } }) => {
 }
 
 export const showcases = () => {
-  return db.showcase.findMany({ include: { socialLinks: true } })
+  return db.showcase.findMany({
+    orderBy: { id: 'desc' },
+    include: {
+      socialLinks: true,
+      localizations: { select: { id: true, language: true } },
+    },
+  })
 }
 
 export const examples = ({ input }) => {
@@ -44,13 +49,12 @@ export const showcase = ({ id }: Prisma.ShowcaseWhereUniqueInput) => {
 }
 
 export const createShowcase = ({
-  input: { mediaId, socialLinks, ...data },
+  input: { socialLinks, ...data },
 }: MutationcreateShowcaseArgs) => {
   return db.showcase.create({
     data: {
       ...data,
       localizations: undefined, // TODO: Localize
-      media: { connect: { id: mediaId } },
       socialLinks: { createMany: { data: socialLinks } },
     },
   })
@@ -82,6 +86,8 @@ export const showcaseJobs = ({ company }) => {
 }
 
 export const Showcase = {
+  localizations: (_obj, { root }: ResolverArgs<ReturnType<typeof showcase>>) =>
+    db.showcase.findUnique({ where: { id: root.id } }).localizations(),
   media: (_obj, { root }: ResolverArgs<ReturnType<typeof showcase>>) =>
     db.showcase.findUnique({ where: { id: root.id } }).media(),
   tags: (_obj, { root }: ResolverArgs<ReturnType<typeof showcase>>) =>

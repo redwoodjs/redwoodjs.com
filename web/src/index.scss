@@ -66,6 +66,22 @@ $color_neutral: #1A202C;
     }
   }
 
+  .actions {
+    @apply flex flex-row justify-end;
+  }
+
+  ul.navigate li a {
+    text-decoration: none;
+  }
+
+  ul.navigate li:hover a {
+    text-decoration: underline;
+  }
+
+  ul.navigate li {
+    @apply p-2;
+  }
+
   .job .markdown {
     p {
       @apply mt-4 leading-7;
