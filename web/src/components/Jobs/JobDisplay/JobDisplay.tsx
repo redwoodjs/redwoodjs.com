@@ -1,7 +1,7 @@
 import ReactMarkdown from 'react-markdown'
 
 import JobDetailLayout from 'src/components/Jobs/Shared/JobDetailLayout'
-import { resizeFilestackImage } from 'src/lib/utility'
+import { resizeFilestackImage } from 'src/components/Uploader/utility'
 
 const JobDisplay = ({ job, back }) => {
   return (

@@ -4,7 +4,7 @@ import type { JobsQuery } from 'types/graphql'
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
 import { Link, navigate, routes } from '@redwoodjs/router'
 
-import { resizeFilestackImage } from 'src/lib/utility'
+import { resizeFilestackImage } from 'src/components/Uploader/utility'
 
 export const QUERY = gql`
   query JobsQuery($limit: Int) {

@@ -1,4 +1,13 @@
-export const resizeFilestackImage = (imageUrl, { width, height, fit }) => {
+interface ImageProps {
+  width?: number
+  height?: number
+  fit?: string
+}
+
+export const resizeFilestackImage = (
+  imageUrl: string,
+  { width, height, fit }: ImageProps
+): string => {
   const directives = []
   if (width) {
     directives.push(`width:${width}`)

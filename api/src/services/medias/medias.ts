@@ -10,6 +10,7 @@ export const medias = () => {
 export const media = ({ id }: Prisma.MediaWhereUniqueInput) => {
   return db.media.findUnique({
     where: { id },
+    include: { showcase: { select: { id: true, label: true } } },
   })
 }
 

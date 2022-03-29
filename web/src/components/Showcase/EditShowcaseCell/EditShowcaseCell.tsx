@@ -19,7 +19,10 @@ export const QUERY = gql`
       title
       subtitle
       description
-      mediaId
+      media {
+        id
+        src
+      }
       tags {
         id
         label
@@ -53,7 +56,10 @@ const UPDATE_SHOWCASE_MUTATION = gql`
       title
       subtitle
       description
-      mediaId
+      media {
+        id
+        src
+      }
     }
     SyncShowcaseSocialLinks(id: $id, input: $socialLinks) {
       id
@@ -82,8 +88,7 @@ export const Success = ({ showcase }: CellSuccessProps<EditShowcaseById>) => {
   )
 
   const onSave = ({ socialLinks, ...input }, id) => {
-    const castInput = Object.assign(input, { mediaId: parseInt(input.mediaId) })
-    updateShowcase({ variables: { id, input: castInput, socialLinks } })
+    updateShowcase({ variables: { id, input, socialLinks } })
   }
 
   return (

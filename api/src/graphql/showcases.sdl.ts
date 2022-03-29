@@ -36,7 +36,7 @@ export const schema = gql`
     title: String
     subtitle: String
     description: String!
-    mediaId: Int
+    imageUrl: String
     socialLinks: [CreateSocialLinkInput!]!
   }
 
@@ -47,7 +47,7 @@ export const schema = gql`
     title: String
     subtitle: String
     description: String
-    mediaId: Int
+    imageUrl: String
     tags: [Int]
   }
 

@@ -15,7 +15,7 @@ import { toast } from '@redwoodjs/web/toast'
 
 import JobDisplay from 'src/components/Jobs/JobDisplay'
 import FormTaggable from 'src/components/Jobs/Shared/FormTaggable'
-import { resizeFilestackImage } from 'src/lib/utility'
+import { resizeFilestackImage } from 'src/components/Uploader/utility'
 
 const JobForm = ({ job = {}, token, loading, error, saveFunc }) => {
   const [locations, setLocations] = useState(job.locations || [])

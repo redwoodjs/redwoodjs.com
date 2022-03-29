@@ -9,6 +9,10 @@ export const QUERY = gql`
       id
       src
       type
+      showcase {
+        id
+        label
+      }
     }
   }
 `

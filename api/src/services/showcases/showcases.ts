@@ -33,7 +33,11 @@ export const showcases = () => {
 
 export const examples = ({ input }) => {
   return db.showcase.findMany({
-    include: { socialLinks: true, localizations: true },
+    include: {
+      socialLinks: true,
+      localizations: true,
+      media: { select: { id: true, src: true } },
+    },
     where: {
       isPublished: true,
       tags: { some: { label: input.tag } },
@@ -43,17 +47,24 @@ export const examples = ({ input }) => {
 
 export const showcase = ({ id }: Prisma.ShowcaseWhereUniqueInput) => {
   return db.showcase.findUnique({
-    include: { socialLinks: true },
+    include: { socialLinks: true, media: { select: { id: true, src: true } } },
     where: { id },
   })
 }
 
 export const createShowcase = ({
-  input: { socialLinks, ...data },
+  input: { socialLinks, mediaId: _mediaId, ...input },
 }: MutationcreateShowcaseArgs) => {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  const { imageUrl, ...data } = input
+
   return db.showcase.create({
     data: {
       ...data,
+      media: {
+        create: { src: imageUrl, type: 'picture' },
+      },
       localizations: undefined, // TODO: Localize
       socialLinks: { createMany: { data: socialLinks } },
     },
@@ -61,12 +72,22 @@ export const createShowcase = ({
 }
 
 interface UpdateShowcaseArgs extends Prisma.ShowcaseWhereUniqueInput {
-  input: Prisma.ShowcaseUpdateInput
+  input: Prisma.ShowcaseUpdateInput & { imageUrl: string }
 }
 
 export const updateShowcase = ({ id, input }: UpdateShowcaseArgs) => {
+  const { imageUrl, ...data } = input
+
   return db.showcase.update({
-    data: input,
+    data: {
+      ...data,
+      media: {
+        upsert: {
+          create: { src: imageUrl },
+          update: { src: imageUrl },
+        },
+      },
+    },
     where: { id },
   })
 }

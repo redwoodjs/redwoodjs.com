@@ -5,7 +5,7 @@ import { Link, navigate, routes } from '@redwoodjs/router'
 import ReactMarkdown from 'react-markdown'
 
 import Status from 'src/components/Jobs/Shared/Status'
-import { resizeFilestackImage } from 'src/lib/utility'
+import { resizeFilestackImage } from 'src/components/Uploader/utility'
 
 export const QUERY = gql`
   query JobProfilesQuery($limit: Int) {
