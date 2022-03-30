@@ -102,7 +102,7 @@ const MainLayoutNavbar = () => {
   ]
 
   return (
-    <Disclosure as="nav" className="bg-neutral-900 bg-opacity-90">
+    <Disclosure as="nav" className="sticky top-0 z-50 bg-neutral-900">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
