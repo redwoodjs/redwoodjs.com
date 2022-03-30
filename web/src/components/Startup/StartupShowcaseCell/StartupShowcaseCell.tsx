@@ -36,7 +36,14 @@ export const QUERY = gql`
   }
 `
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => (
+  <section className="max-w-screen-xl mx-auto px-8 pb-8">
+    <div className="flex justify-center bg-white border border-stone-200 py-12 rounded-lg text-stone-400">
+      <span className="icon animate-spin mr-2">refresh</span> Loading
+      Showcase...
+    </div>
+  </section>
+)
 
 export const Empty = () => <div>Empty</div>
 
