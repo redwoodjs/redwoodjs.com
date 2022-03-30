@@ -54,9 +54,7 @@ const ListPage = () => {
           </a>
         </div>
       </section>
-      <section className="max-w-screen-xl mt-10 mx-auto px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        <ShowcaseListCell />
-      </section>
+      <ShowcaseListCell />
     </>
   )
 }
