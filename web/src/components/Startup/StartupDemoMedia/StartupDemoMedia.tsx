@@ -10,23 +10,46 @@ export interface MediaState {
 }
 
 export interface StartupDemoMediaProps extends MediaState {
+  aspect?: boolean
   className?: string
+  videoRenderer: 'embed' | 'thumbnail'
 }
 
 // --
 
-const StartupDemoMedia = ({ className, src, type }: StartupDemoMediaProps) => {
-  const classes = clsx('aspect-video h-full w-full', className)
+const RenderEmbed = (str: string) => `https://www.youtube.com/embed/${str}`
+const RenderThumbnail = (str: string) =>
+  `https://img.youtube.com/vi/${str}/mqdefault.jpg`
 
-  if (type === 'video')
+// --
+
+const StartupDemoMedia = ({
+  aspect = true,
+  className,
+  src,
+  type,
+  videoRenderer,
+}: StartupDemoMediaProps) => {
+  const classes = clsx(aspect && 'aspect-video h-full w-full', className)
+
+  if (type === 'video' && videoRenderer === 'embed')
     return (
       <iframe
         title="Startup demonstration video"
         className={classes}
-        src={src}
+        src={RenderEmbed(src)}
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
+      />
+    )
+
+  if (type === 'video' && videoRenderer === 'thumbnail')
+    return (
+      <img
+        alt="Startup demonstration"
+        className={classes}
+        src={RenderThumbnail(src)}
       />
     )
 
