@@ -73,12 +73,17 @@ const StartupShowcaseIntro = ({
         </div>
       )}
       {technologies.length > 0 && (
-        <p className="leading-relaxed">
+        <p className="leading-relaxed max-w-full md:max-w-md">
           <span className="font-semibold">Built with:</span>&nbsp;&nbsp;
-          {'RedwoodJS, ' + technologies.join(', ')}
+          {'RedwoodJS, ' +
+            technologies
+              .map((tech, idx) =>
+                idx === technologies.length - 1 ? `and ${tech}` : tech
+              )
+              .join(', ')}
         </p>
       )}
-      <a className="button button-alt w-fit" href={cta.href}>
+      <a className="button button-alt !mt-8 w-fit" href={cta.href}>
         {cta.title}
       </a>
     </section>
