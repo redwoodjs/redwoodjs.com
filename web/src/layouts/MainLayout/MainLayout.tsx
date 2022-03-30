@@ -2,6 +2,7 @@ import { Fragment } from 'react'
 import { Toaster } from '@redwoodjs/web/toast'
 
 import Navbar from './Navigation/Navbar'
+import Footer from 'src/components/Footer'
 
 type MainLayoutProps = {
   children?: React.ReactNode
@@ -15,9 +16,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
 
       <main className="w-full flex-1">{children}</main>
 
-      <footer className="border-t border-orange-200 bg-orange-50 p-6 text-sm text-orange-700">
-        Copyright &copy;{new Date().getFullYear()} Tom Preston-Werner
-      </footer>
+      <Footer />
     </>
   )
 }

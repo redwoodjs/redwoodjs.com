@@ -40,7 +40,7 @@ const stack = [
 const TechStackSection = () => {
   return (
     <>
-      <p className="mx-auto max-w-3xl text-center font-serif text-base md:text-2xl lg:max-w-4xl lg:text-4xl">
+      <p className="mx-auto max-w-3xl px-4 font-serif text-base sm:text-center md:text-2xl lg:max-w-4xl lg:text-4xl">
         We begin by crafting a more integrated framework, <br />
         beautifully weaving together the best parts of:
       </p>

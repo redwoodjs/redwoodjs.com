@@ -50,12 +50,15 @@ const TestimonialSection = () => {
           ))}
         </ul>
       </section>
-      <section className="flex flex-col items-center justify-center space-y-8 bg-black py-24">
-        <h3 className="text-center font-serif text-xl text-white md:text-4xl">
+      <section className="flex flex-col items-center justify-center space-y-8 bg-neutral-900 py-24">
+        <h3 className="text-center font-serif text-2xl text-white md:text-4xl">
           Ready to start your own <br />
           Redwood adventure?
         </h3>
-        <a href="/docs/tutorial" className="button bg-[#93CA48] text-stone-900">
+        <a
+          href="/docs/tutorial"
+          className="button bg-[#93CA48] text-stone-900 hover:bg-green-900"
+        >
           Start the tutorial
         </a>
       </section>

@@ -51,7 +51,7 @@ const MainLayoutNavbar = () => {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 32 32"
-              className="transition duration-200 fill-current text-orange-600"
+              className="fill-current text-orange-600 transition duration-200"
             >
               <path d="M16.1357143,0 C7.37857143,0 0,7.03571429 0,15.7214286 C0,16 0.00714285714,32 0.00714285714,32 L16.1357143,31.9857143 C24.9,31.9857143 32,24.6785714 32,15.9928571 C32,7.30714286 24.9,0 16.1357143,0 Z M16,25.1428571 C14.6142857,25.1428571 13.2928571,24.8357143 12.1142857,24.2785714 L6.32142857,25.7142857 L7.95714286,20.3571429 C7.25714286,19.0642857 6.85714286,17.5785714 6.85714286,16 C6.85714286,10.95 10.95,6.85714286 16,6.85714286 C21.05,6.85714286 25.1428571,10.95 25.1428571,16 C25.1428571,21.05 21.05,25.1428571 16,25.1428571 Z"></path>
             </svg>
@@ -102,14 +102,14 @@ const MainLayoutNavbar = () => {
   ]
 
   return (
-    <Disclosure as="nav" className="bg-stone-900 bg-opacity-90">
+    <Disclosure as="nav" className="bg-neutral-900 bg-opacity-90">
       {({ open }) => (
         <>
-          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-            <div className="relative flex items-center justify-between h-16">
+          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -118,28 +118,28 @@ const MainLayoutNavbar = () => {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <Link
                   to={routes.home()}
-                  className="flex-shrink-0 flex items-center"
+                  className="flex flex-shrink-0 items-center"
                 >
                   <img
-                    className="block lg:hidden h-8 w-auto"
+                    className="block h-8 w-auto lg:hidden"
                     src="/images/diecut.svg"
                     alt="RedwoodJS"
                   />
                   <img
-                    className="hidden lg:block h-8 w-auto"
+                    className="hidden h-8 w-auto lg:block"
                     src="/images/logo-diecut-mark.svg"
                     alt="RedwoodJS"
                   />
                 </Link>
-                <div className="hidden sm:flex sm:items-center sm:space-x-4 sm:ml-6">
+                <div className="hidden sm:ml-6 sm:flex sm:items-center sm:space-x-4">
                   <NavLinksDesktop navigation={navigation} />
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <ul className="hidden lg:flex items-center">
+                <ul className="hidden items-center lg:flex">
                   <li className="mr-4">
                     <GithubStars />
                   </li>

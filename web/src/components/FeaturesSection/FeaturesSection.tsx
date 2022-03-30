@@ -8,7 +8,7 @@ const Image = ({ name, alt }) => (
 const FeaturesSection = () => {
   return (
     <section className="mx-auto lg:max-w-6xl">
-      <h3 className="space-y-12 text-center font-serif lg:text-6xl">
+      <h3 className="space-y-12 px-4 font-serif text-xl sm:text-center sm:text-2xl md:text-4xl lg:text-6xl ">
         <div>
           Oh, you want to know more about the{' '}
           <span className="font-bold">technology</span> and{' '}
@@ -20,8 +20,8 @@ const FeaturesSection = () => {
           Way.
         </div>
       </h3>
-      <div className="relative overflow-hidden bg-white pt-16 pb-32">
-        <div className="relative mt-24">
+      <div className="relative overflow-hidden bg-white pt-12 pb-32 md:pt-16">
+        <div className="relative lg:mt-24">
           <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
             <div className="mx-auto max-w-xl px-4 sm:px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0">
               <div>

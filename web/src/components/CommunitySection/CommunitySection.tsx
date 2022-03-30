@@ -19,7 +19,7 @@ const communities = [
 const CommunitySection = () => {
   return (
     <section className="mx-auto max-w-6xl space-y-12 p-4">
-      <p className="text-center font-serif text-xl sm:text-2xl md:text-4xl lg:text-6xl">
+      <p className="font-serif text-xl sm:text-center sm:text-2xl md:text-4xl lg:text-6xl">
         On top of the technology,{' '}
         <span className="font-bold">
           we warmly welcome you to join our community,{' '}
