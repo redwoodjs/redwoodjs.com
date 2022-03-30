@@ -1,3 +1,4 @@
+import { MetaTags } from '@redwoodjs/web'
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
 
 import StartupShowcaseAbout from 'src/components/Startup/StartupShowcaseAbout'
@@ -47,16 +48,19 @@ export const Success = ({
   startup,
 }: CellSuccessProps<StartupShowcaseQuery>) => {
   return (
-    <div className="flex flex-col max-w-screen-xl mx-auto px-8 pb-8 space-y-12">
-      <div className="flex flex-col-reverse lg:flex-row lg:space-x-16 space-y-12 space-y-reverse lg:space-y-0">
-        {(startup.images.length !== 0 || startup.videos.length !== 0) && (
-          <StartupShowcaseDemo {...startup} />
-        )}
-        <StartupShowcaseIntro {...startup} />
+    <>
+      <MetaTags title={`${startup.name} Showcase`} />
+      <div className="flex flex-col max-w-screen-xl mx-auto px-8 pb-8 space-y-12">
+        <div className="flex flex-col-reverse lg:flex-row lg:space-x-16 space-y-12 space-y-reverse lg:space-y-0">
+          {(startup.images.length !== 0 || startup.videos.length !== 0) && (
+            <StartupShowcaseDemo {...startup} />
+          )}
+          <StartupShowcaseIntro {...startup} />
+        </div>
+        <StartupShowcaseAbout {...startup} />
+        <StartupShowcaseQuestionaire {...startup} />
+        <StartupShowcaseJobCell company={startup.slug} />
       </div>
-      <StartupShowcaseAbout {...startup} />
-      <StartupShowcaseQuestionaire {...startup} />
-      <StartupShowcaseJobCell company={startup.slug} />
-    </div>
+    </>
   )
 }
