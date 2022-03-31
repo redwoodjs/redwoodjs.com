@@ -5,7 +5,7 @@ const ShowcaseLayout: FC = ({ children }) => {
   return (
     <>
       <div className="bg-gradient-to-r from-teal-600 to-teal-800 mb-8">
-        <nav className="max-w-screen-xl mx-auto pt-24 lg:pt-[5.5rem] pb-7 px-8">
+        <nav className="max-w-screen-xl mx-auto pt-[5.75rem] lg:pt-[5.125rem] pb-5 px-8">
           <Link
             className="group flex flex-row items-center no-underline space-x-2 text-sm"
             to={routes.showcase()}
