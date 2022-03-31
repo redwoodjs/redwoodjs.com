@@ -12,7 +12,7 @@ const ShowcasePage = ({ slug }: ShowcasePageProps) => {
     <>
       <MetaTags title="Showcase" description="Showcase page" />
       <div className="bg-gradient-to-r from-redwood-600 to-redwood-800 mb-8">
-        <nav className="max-w-screen-xl mx-auto pt-[5.75rem] lg:pt-[5.125rem] pb-5 px-8">
+        <nav className="max-w-screen-xl mx-auto py-5 px-8">
           <Link
             className="group flex flex-row items-center no-underline space-x-2 text-sm w-fit"
             to={routes.showcase()}

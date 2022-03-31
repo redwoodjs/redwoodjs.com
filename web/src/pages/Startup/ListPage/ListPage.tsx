@@ -10,7 +10,7 @@ const ListPage = () => {
         description="The landing page for the RedwoodJS startup showcase."
       />
       <section className="bg-gradient-to-r from-redwood-600 to-redwood-800 relative overflow-hidden z-0">
-        <div className="max-w-screen-xl mx-auto pt-28 pb-12 px-8 space-y-6 text-center md:text-right relative z-10">
+        <div className="max-w-screen-xl mx-auto py-12 px-8 space-y-6 text-center md:text-right relative z-10">
           <h1 className="relative text-5xl text-white drop-shadow-md">
             <span className="text-redwood-200">RedwoodJS</span> Showcase
           </h1>
