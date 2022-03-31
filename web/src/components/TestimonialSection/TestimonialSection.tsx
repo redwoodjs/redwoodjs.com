@@ -17,7 +17,13 @@ const TestimonialSection = () => {
   ]
   return (
     <div style={{ marginTop: 0 }}>
-      <section className="bg-blue-200 py-24 px-4">
+      <section
+        className="px-4 py-32 md:py-60"
+        style={{
+          backgroundImage:
+            'url(/images/tree-pattern.svg), linear-gradient(to bottom right, #A4DBE1, #5398B0)',
+        }}
+      >
         <ul className="mx-auto grid gap-3 sm:grid-cols-2 lg:max-w-6xl">
           {testimonials.map((testimonial) => (
             <li
