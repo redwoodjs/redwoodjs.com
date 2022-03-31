@@ -51,7 +51,7 @@ const TestimonialSection = () => {
         </ul>
       </section>
       <section className="flex flex-col items-center justify-center space-y-8 bg-neutral-900 py-24">
-        <h3 className="text-center font-serif text-2xl text-white md:text-4xl">
+        <h3 className="space-y-12 px-4 text-center font-serif text-xl text-white sm:text-2xl md:text-4xl lg:text-6xl">
           Ready to start your own <br />
           Redwood adventure?
         </h3>
