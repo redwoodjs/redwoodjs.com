@@ -18,6 +18,7 @@
     "@redwoodjs/forms": "^0.50.0",
     "@redwoodjs/router": "^0.50.0",
     "@redwoodjs/web": "^0.50.0",
+    "classnames": "^2.3.1",
     "date-fns": "^2.28.0",
     "filestack-js": "^3.25.0",
     "i18n": "^0.14.1",

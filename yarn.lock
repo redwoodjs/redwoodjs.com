@@ -8583,6 +8583,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"classnames@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "classnames@npm:2.3.1"
+  checksum: e3b832219042802464e648c41c2e8be96c2c64d2522cfa22fbb5ec088418406c61ab351a682c077c07f691c8b00c9f0ee7939b20fabc6c23da69063252a4ab89
+  languageName: node
+  linkType: hard
+
 "clean-css@npm:^4.2.3":
   version: 4.2.4
   resolution: "clean-css@npm:4.2.4"
@@ -24047,6 +24054,7 @@ __metadata:
     "@redwoodjs/router": ^0.50.0
     "@redwoodjs/web": ^0.50.0
     autoprefixer: ^10.4.2
+    classnames: ^2.3.1
     date-fns: ^2.28.0
     filestack-js: ^3.25.0
     i18n: ^0.14.1
