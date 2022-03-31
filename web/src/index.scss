@@ -27,7 +27,7 @@ $color_neutral: #1A202C;
 
 @layer components {
   .button {
-    @apply block px-4 py-3 text-center font-semibold rounded bg-forest-600 hover:bg-forest-700 text-white hover:text-white transition duration-200 text-lg no-underline;
+    @apply block px-4 py-3 text-center font-semibold rounded bg-forest-400 hover:bg-forest-500 text-neutral-900 hover:text-white transition duration-200 text-lg no-underline;
   }
 
   .button-alt {
