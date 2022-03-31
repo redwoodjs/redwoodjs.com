@@ -30,7 +30,7 @@ const SocialIcons: Record<SocialLinkPlatform, ReactNode> = {
 }
 
 interface SocialLinkFieldType {
-  id: string
+  id: number
   link: string
   platform: SocialLinkPlatform
 }
@@ -92,7 +92,7 @@ const SocialLinkField = ({ defaultValue, name }: SocialLinkFieldProps) => {
         </select>
       </div>
       <ul>
-        {fields.map((field: SocialLinkFieldType, idx) => (
+        {fields.map((field, idx) => (
           <li
             className="flex flex-row items-center mt-4 space-x-3"
             key={field.id}
@@ -111,17 +111,17 @@ const SocialLinkField = ({ defaultValue, name }: SocialLinkFieldProps) => {
                 //                                                    35px = the height of the TextField below
                 className="bg-stone-700 inline-flex items-center h-[35px] px-2 rounded-l text-stone-100"
               >
-                {SocialIcons[field.platform]}
+                {SocialIcons[field['platform']]}
               </span>
               <TextField
                 className="rw-input mt-0 px-2 py-1.5 rounded-l-none"
                 name={`${name}.${idx}.link`}
                 defaultValue=""
                 placeholder={t(
-                  `SocialLink.Field.placeholder.${field.platform}`
+                  `SocialLink.Field.placeholder.${field['platform']}`
                 )}
                 title={t('SocialLink.Field.field', {
-                  platform: field.platform,
+                  platform: field['platform'],
                 })}
                 validation={{ required: true }}
               />

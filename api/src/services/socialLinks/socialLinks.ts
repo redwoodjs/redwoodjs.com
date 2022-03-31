@@ -1,14 +1,17 @@
 import { db } from 'src/lib/db'
 
+import { validateStartupToken } from 'src/services/startups'
+
 import type {
   MutationSyncAuthorSocialLinksArgs,
   MutationSyncShowcaseSocialLinksArgs,
+  MutationSyncStartupSocialLinksArgs,
   SyncSocialLinkInput,
 } from 'types/graphql'
 
 // --
 
-type SortSocialLinksType = 'author' | 'showcase'
+type SortSocialLinksType = 'author' | 'showcase' | 'startup'
 
 const syncLinks = async (
   id: number,
@@ -56,5 +59,23 @@ export const SyncShowcaseSocialLinks = async ({
   return db.showcase.update({
     data: { socialLinks: await syncLinks(id, input, 'showcase') },
     where: { id },
+  })
+}
+
+// --
+
+export const SyncStartupSocialLinks = async ({
+  input,
+  slug,
+  token,
+}: MutationSyncStartupSocialLinksArgs) => {
+  //
+  const startup = await validateStartupToken(slug, token)
+
+  // --
+
+  return db.startup.update({
+    data: { socialLinks: await syncLinks(startup.id, input, 'startup') },
+    where: { id: startup.id },
   })
 }

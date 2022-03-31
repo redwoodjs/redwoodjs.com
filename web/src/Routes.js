@@ -11,7 +11,6 @@ import { Private, Route, Router, Set } from '@redwoodjs/router'
 
 import AdminLayout from 'src/layouts/AdminLayout/AdminLayout'
 import MainLayout from 'src/layouts/MainLayout/MainLayout'
-import ShowcaseLayout from 'src/layouts/ShowcaseLayout'
 
 import JobsPage from 'src/pages/Jobs/JobsPage'
 import JobPage from 'src/pages/Jobs/JobPage'
@@ -41,14 +40,8 @@ const Routes = () => {
         <Route path="/job-profiles/all" page={AllJobProfilesPage} name="allJobProfiles" />
         <Route path="/job-profiles/{id:Int}" page={JobProfilePage} name="jobProfile" />
         <Route path="/job-profiles/{id:Int}/edit" page={EditJobProfilePage} name="editJobProfile" />
-
-        {/* Pre-Rendered Showcase Pages */}
-        {/* <Set prerender> */}
-        <Route path="/showcase" page={ShowcasePage} name="showcase" />
-        <Set wrap={[ShowcaseLayout]}>
-          <Route path="/showcase/snaplet" page={ShowcaseSnapletPage} name="showcaseSnaplet" />
-        </Set>
-        {/* </Set> */}
+        <Route path="/showcase" page={StartupListPage} name="showcase" />
+        <Route path="/showcase/{slug}" page={StartupShowcasePage} name="startup" />
 
         <Route path="/" page={HomePage} name="home" />
 
@@ -86,6 +79,10 @@ const Routes = () => {
           <Route path="/admin/medias/{id:Int}/edit" page={AdminMediaEditMediaPage} name="editMedia" />
           <Route path="/admin/medias/{id:Int}" page={AdminMediaMediaPage} name="media" />
           <Route path="/admin/medias" page={AdminMediaMediasPage} name="medias" />
+          <Route path="/admin/startups" page={AdminStartupStartupsPage} name="adminStartups" />
+          <Route path="/admin/startups/new" page={AdminStartupNewStartupPage} name="adminNewStartup" />
+          <Route path="/admin/startups/{slug}" page={AdminStartupStartupPage} name="adminStartup" />
+          <Route path="/admin/startups/{slug}/edit" page={AdminStartupEditStartupPage} name="adminEditStartup" />
         </Set>
       </Private>
     </Router>
