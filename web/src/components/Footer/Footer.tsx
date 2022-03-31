@@ -1,5 +1,38 @@
 const navigation = {
+  about: [
+    { name: 'README', href: 'https://github.com/redwoodjs/redwood' },
+    { name: 'Roadmap', href: 'https://github.com/redwoodjs/redwood' },
+    { name: 'Releases', href: 'https://github.com/redwoodjs/redwood' },
+    { name: 'Core Team', href: 'https://github.com/redwoodjs/redwood' },
+    { name: 'Security Stuffs', href: 'https://github.com/redwoodjs/redwood' },
+  ],
+  community: [
+    {
+      name: 'Join the Community',
+      href: 'https://github.com/redwoodjs/redwood',
+    },
+    {
+      name: 'Contributors Meetup',
+      href: 'https://github.com/redwoodjs/redwood',
+    },
+    { name: 'Makers Hours', href: 'https://github.com/redwoodjs/redwood' },
+    { name: 'Startup Club', href: 'https://github.com/redwoodjs/redwood' },
+    { name: 'Code of Conduct', href: 'https://github.com/redwoodjs/redwood' },
+  ],
+  misc: [
+    { name: 'Brand collateral', href: 'https://github.com/redwoodjs/redwood' },
+    { name: 'Stickers', href: 'https://github.com/redwoodjs/redwood' },
+  ],
   social: [
+    { name: 'Events Feed', href: '' },
+    { name: 'Announcements Feed', href: '' },
+    { name: 'Twitter', href: '' },
+    { name: 'Discord', href: '' },
+    { name: 'Discourse', href: '' },
+    { name: 'GitHub', href: '' },
+    { name: 'Youtube', href: '' },
+  ],
+  icons: [
     {
       name: 'GitHub',
       href: 'https://github.com/redwoodjs/redwood',
@@ -60,9 +93,10 @@ const Footer = () => {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
+
       <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-        {/* <div className="border-t border-neutral-700 pt-8 lg:flex lg:items-center lg:justify-between xl:mt-0"> */}
-        <div className="lg:flex lg:items-center lg:justify-between xl:mt-0">
+        {/* <div className=" pt-8 lg:flex lg:items-center lg:justify-between xl:mt-0"> */}
+        <div className="pb-12 lg:flex lg:items-center lg:justify-between xl:mt-0">
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-neutral-400">
               Subscribe to our newsletter
@@ -103,9 +137,87 @@ const Footer = () => {
             </div>
           </form>
         </div>
+        <div className=":px-8 mx-auto max-w-7xl border-t border-neutral-700 py-12">
+          <div className="xl:grid xl:grid-cols-5 xl:gap-8">
+            <div className="grid grid-cols-2 gap-8 xl:col-span-4">
+              <div className="md:grid md:grid-cols-2 md:gap-8">
+                <div>
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400">
+                    About
+                  </h3>
+                  <ul className="mt-4 space-y-4">
+                    {navigation.about.map((item) => (
+                      <li key={item.name}>
+                        <a
+                          href={item.href}
+                          className="text-base text-gray-300 hover:text-white"
+                        >
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="mt-12 md:mt-0">
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400">
+                    Community
+                  </h3>
+                  <ul className="mt-4 space-y-4">
+                    {navigation.community.map((item) => (
+                      <li key={item.name}>
+                        <a
+                          href={item.href}
+                          className="text-base text-gray-300 hover:text-white"
+                        >
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div className="md:grid md:grid-cols-2 md:gap-8">
+                <div>
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400">
+                    Social
+                  </h3>
+                  <ul className="mt-4 space-y-4">
+                    {navigation.social.map((item) => (
+                      <li key={item.name}>
+                        <a
+                          href={item.href}
+                          className="text-base text-gray-300 hover:text-white"
+                        >
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="mt-12 md:mt-0">
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400">
+                    Misc
+                  </h3>
+                  <ul className="mt-4 space-y-4">
+                    {navigation.misc.map((item) => (
+                      <li key={item.name}>
+                        <a
+                          href={item.href}
+                          className="text-base text-gray-300 hover:text-white"
+                        >
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="mt-8 border-t border-neutral-700 pt-8 md:flex md:items-center md:justify-between">
           <div className="flex items-center space-x-6 md:order-2">
-            {navigation.social.map((item) => (
+            {navigation.icons.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
