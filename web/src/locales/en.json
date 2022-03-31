@@ -1,7 +1,7 @@
 {
   "ExamplesPage": {
     "canon": {
-      "description": "Those community driven examples will let you see how creative you\n            can be with Redwood and get the most out of many situations",
+      "description": "Those community driven examples will let you see how <italic>creative</italic> you <br />can be with <bold>Redwood</bold> and get the most out of many situations",
       "title": "Community's Standouts!"
     },
     "community": {
@@ -9,11 +9,12 @@
     },
     "contact": {
       "action": "Reach Out",
+      "guidelines": "Be nice, read some <rel>guidelines</rel> !",
       "subtitle": "Please consider taking the time to introduce yourself and your work on the <b>Show and Tell</b> section of the forums.<br />We strive for a relaxed and welcoming environment - so feel free to share whatever feels relevant and don't be afraid to ask for help.",
       "title": "Are you the author of an awesome Redwood example?"
     },
     "filters": {
-      "browseBy": "Browse more awesomeness by",
+      "browseBy": "Browse more <straight>awesomeness</straight> by",
       "clear": "Clear",
       "text": "You are looking for:"
     },

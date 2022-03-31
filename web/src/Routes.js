@@ -49,19 +49,19 @@ const Routes = () => {
       </Set>
 
       <Private unauthenticated={'home'}>
-        <Set wrap={AdminLayout} role={['translator', 'editor', 'admin']}>
-          <Route path="/admin/showcase-localizations/new" page={AdminShowcaseLocalizationNewShowcaseLocalizationPage} name="newShowcaseLocalization" />
+        <Set wrap={AdminLayout} roles={['translator', 'editor', 'admin']}>
+          <Route path="/admin/showcase-localizations/new/{showcaseId:Int}" page={AdminShowcaseLocalizationNewShowcaseLocalizationPage} name="newShowcaseLocalization" />
           <Route path="/admin/showcase-localizations/{id:Int}/edit" page={AdminShowcaseLocalizationEditShowcaseLocalizationPage} name="editShowcaseLocalization" />
           <Route path="/admin/showcase-localizations/{id:Int}" page={AdminShowcaseLocalizationShowcaseLocalizationPage} name="showcaseLocalization" />
           <Route path="/admin/showcase-localizations" page={AdminShowcaseLocalizationShowcaseLocalizationsPage} name="showcaseLocalizations" />
         </Set>
-        <Set wrap={[AdminLayout]} role={'admin'}>
+        <Set wrap={[AdminLayout]} roles={'admin'}>
           <Route path="/admin/users/new" page={AdminUserNewUserPage} name="newUser" />
           <Route path="/admin/users/{id:Int}/edit" page={AdminUserEditUserPage} name="editUser" />
           <Route path="/admin/users/{id:Int}" page={AdminUserUserPage} name="user" />
           <Route path="/admin/users" page={AdminUserUsersPage} name="users" />
         </Set>
-        <Set wrap={[AdminLayout]} role={['editor', 'admin']} private unauthenticated={'home'}>
+        <Set wrap={[AdminLayout]} roles={['editor', 'admin']} private unauthenticated={'home'}>
           <Route path="/admin" page={AdminIndexPage} name="adminIndex" />
           <Route path="/admin/tags/new" page={AdminTagNewTagPage} name="newTag" />
           <Route path="/admin/tags/{id:Int}/edit" page={AdminTagEditTagPage} name="editTag" />

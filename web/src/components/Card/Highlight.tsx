@@ -18,7 +18,7 @@ const Highlight: React.FC<HighlightProps> = ({
 }) => (
   <article className="card highlight">
     <picture>
-      <img className={'w-full lg:w-1/2 h-full m-auto'} {...media} />
+      <img className={'w-full lg:w-2/3 h-full m-auto object-cover'} {...media} />
     </picture>
     <div className="content">
       <div className={'lg:w-2/3'}>

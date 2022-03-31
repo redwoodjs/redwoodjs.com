@@ -54,22 +54,29 @@ const checkboxInputTag = (checked) => {
 }
 
 const ShowcaseLocalizationsList = ({ showcaseLocalizations }) => {
-  const [deleteShowcaseLocalization] = useMutation(DELETE_SHOWCASE_LOCALIZATION_MUTATION, {
-    onCompleted: () => {
-      toast.success('ShowcaseLocalization deleted')
-    },
-    onError: (error) => {
-      toast.error(error.message)
-    },
-    // This refetches the query on the list page. Read more about other ways to
-    // update the cache over here:
-    // https://www.apollographql.com/docs/react/data/mutations/#making-all-other-cache-updates
-    refetchQueries: [{ query: QUERY }],
-    awaitRefetchQueries: true,
-  })
+  const [deleteShowcaseLocalization] = useMutation(
+    DELETE_SHOWCASE_LOCALIZATION_MUTATION,
+    {
+      onCompleted: () => {
+        toast.success('ShowcaseLocalization deleted')
+      },
+      onError: (error) => {
+        toast.error(error.message)
+      },
+      // This refetches the query on the list page. Read more about other ways to
+      // update the cache over here:
+      // https://www.apollographql.com/docs/react/data/mutations/#making-all-other-cache-updates
+      refetchQueries: [{ query: QUERY }],
+      awaitRefetchQueries: true,
+    }
+  )
 
   const onDeleteClick = (id) => {
-    if (confirm('Are you sure you want to delete showcaseLocalization ' + id + '?')) {
+    if (
+      confirm(
+        'Are you sure you want to delete showcaseLocalization ' + id + '?'
+      )
+    ) {
       deleteShowcaseLocalization({ variables: { id } })
     }
   }
@@ -81,6 +88,7 @@ const ShowcaseLocalizationsList = ({ showcaseLocalizations }) => {
           <tr>
             <th>Id</th>
             <th>Is valid</th>
+            <th>Showcase</th>
             <th>Language</th>
             <th>Title</th>
             <th>Subtitle</th>
@@ -93,6 +101,23 @@ const ShowcaseLocalizationsList = ({ showcaseLocalizations }) => {
             <tr key={showcaseLocalization.id}>
               <td>{truncate(showcaseLocalization.id)}</td>
               <td>{checkboxInputTag(showcaseLocalization.isValid)}</td>
+              <td>
+                {showcaseLocalization.showcase?.label && (
+                  <Link
+                    to="#"
+                    onClick={() =>
+                      window.open(
+                        routes.editShowcase({
+                          id: showcaseLocalization.showcase.id,
+                        }),
+                        '_blank'
+                      )
+                    }
+                  >
+                    {showcaseLocalization.showcase.label}
+                  </Link>
+                )}
+              </td>
               <td>{formatEnum(showcaseLocalization.language)}</td>
               <td>{truncate(showcaseLocalization.title)}</td>
               <td>{truncate(showcaseLocalization.subtitle)}</td>
@@ -100,22 +125,34 @@ const ShowcaseLocalizationsList = ({ showcaseLocalizations }) => {
               <td>
                 <nav className="rw-table-actions">
                   <Link
-                    to={routes.showcaseLocalization({ id: showcaseLocalization.id })}
-                    title={'Show showcaseLocalization ' + showcaseLocalization.id + ' detail'}
+                    to={routes.showcaseLocalization({
+                      id: showcaseLocalization.id,
+                    })}
+                    title={
+                      'Show showcaseLocalization ' +
+                      showcaseLocalization.id +
+                      ' detail'
+                    }
                     className="rw-button rw-button-small"
                   >
                     Show
                   </Link>
                   <Link
-                    to={routes.editShowcaseLocalization({ id: showcaseLocalization.id })}
-                    title={'Edit showcaseLocalization ' + showcaseLocalization.id}
+                    to={routes.editShowcaseLocalization({
+                      id: showcaseLocalization.id,
+                    })}
+                    title={
+                      'Edit showcaseLocalization ' + showcaseLocalization.id
+                    }
                     className="rw-button rw-button-small rw-button-blue"
                   >
                     Edit
                   </Link>
                   <button
                     type="button"
-                    title={'Delete showcaseLocalization ' + showcaseLocalization.id}
+                    title={
+                      'Delete showcaseLocalization ' + showcaseLocalization.id
+                    }
                     className="rw-button rw-button-small rw-button-red"
                     onClick={() => onDeleteClick(showcaseLocalization.id)}
                   >

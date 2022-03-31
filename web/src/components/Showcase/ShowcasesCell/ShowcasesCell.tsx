@@ -17,6 +17,10 @@ export const QUERY = gql`
       subtitle
       description
       mediaId
+      localizations {
+        id
+        language
+      }
     }
   }
 `

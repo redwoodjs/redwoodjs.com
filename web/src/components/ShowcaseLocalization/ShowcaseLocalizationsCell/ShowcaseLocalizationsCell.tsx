@@ -9,6 +9,10 @@ export const QUERY = gql`
   query FindShowcaseLocalizations {
     showcaseLocalizations {
       id
+      showcase {
+        id
+        label
+      }
       isValid
       language
       title
@@ -24,10 +28,7 @@ export const Empty = () => {
   return (
     <div className="rw-text-center">
       {'No showcaseLocalizations yet. '}
-      <Link
-        to={routes.newShowcaseLocalization()}
-        className="rw-link"
-      >
+      <Link to={routes.newShowcaseLocalization()} className="rw-link">
         {'Create one?'}
       </Link>
     </div>
@@ -38,6 +39,8 @@ export const Failure = ({ error }: CellFailureProps) => (
   <div className="rw-cell-error">{error.message}</div>
 )
 
-export const Success = ({ showcaseLocalizations }: CellSuccessProps<FindShowcaseLocalizations>) => {
+export const Success = ({
+  showcaseLocalizations,
+}: CellSuccessProps<FindShowcaseLocalizations>) => {
   return <ShowcaseLocalizations showcaseLocalizations={showcaseLocalizations} />
 }

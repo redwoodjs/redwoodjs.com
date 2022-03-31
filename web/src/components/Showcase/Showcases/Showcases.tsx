@@ -1,4 +1,4 @@
-import { Link, routes } from '@redwoodjs/router'
+import { Link, navigate, routes } from '@redwoodjs/router'
 
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
@@ -76,16 +76,22 @@ const ShowcasesList = ({ showcases }) => {
 
   return (
     <div className="rw-segment rw-table-wrapper-responsive">
-      <table className="rw-table">
+      <div className="actions">
+        <button
+          className="rw-button rw-button-green"
+          onClick={() => navigate(routes.newShowcase())}
+        >
+          New
+        </button>
+      </div>
+      <table className="rw-table mt-4">
         <thead>
           <tr>
             <th>Id</th>
             <th>Link</th>
             <th>Label</th>
+            <th>Loc.</th>
             <th>Title</th>
-            <th>Subtitle</th>
-            <th>Description</th>
-            <th>Media id</th>
             <th>&nbsp;</th>
           </tr>
         </thead>
@@ -95,22 +101,43 @@ const ShowcasesList = ({ showcases }) => {
               <td>
                 <span
                   className={`p-2 font-bold text-white ${
-                    showcase.isPublished ? 'bg-green-500' : 'bg-amber-500'
+                    showcase.isPublished ? 'bg-teal-600' : 'bg-orange-400'
                   }`}
                 >
                   {truncate(showcase.id)}
                 </span>
               </td>
               <td>
-                <Link to={showcase.link} target={'_blank'}>
+                <Link
+                  to={showcase.link}
+                  onClick={() => window.open(showcase.link, '_blank')}
+                >
                   link
                 </Link>
               </td>
               <td>{truncate(showcase.label)}</td>
+              <td>
+                {truncate(
+                  showcase.localizations?.map((localization) => (
+                    <Link
+                      key={`Showcase - ${showcase.id} - ${localization.language}`}
+                      onClick={() =>
+                        window.open(
+                          routes.editShowcaseLocalization({
+                            id: localization.id,
+                          }),
+                          '_blank'
+                        )
+                      }
+                      to={'#'}
+                      className={'mr-2'}
+                    >
+                      {localization.language}
+                    </Link>
+                  ))
+                )}
+              </td>
               <td>{truncate(showcase.title)}</td>
-              <td>{truncate(showcase.subtitle)}</td>
-              <td>{truncate(showcase.description)}</td>
-              <td>{truncate(showcase.mediaId)}</td>
               <td>
                 <nav className="rw-table-actions">
                   <Link

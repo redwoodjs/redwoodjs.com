@@ -2,7 +2,7 @@ import ReactMarkdown from 'react-markdown'
 
 import JobDetailLayout from 'src/components/Jobs/Shared/JobDetailLayout'
 import Status from 'src/components/Jobs/Shared/Status'
-import { resizeFilestackImage } from 'src/lib/utility'
+import { resizeFilestackImage } from 'src/components/Uploader/utility'
 
 const JobProfileDisplay = ({ profile }) => {
   if (!profile) {

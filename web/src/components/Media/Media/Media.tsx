@@ -84,6 +84,18 @@ const Media = ({ media }) => {
               <th>Type</th>
               <td>{formatEnum(media.type)}</td>
             </tr>
+            {media?.showcase &&
+              'id' in media.showcase &&
+              'label' in media.showcase && (
+                <tr>
+                  <th>Content</th>
+                  <td>
+                    <Link to={routes.editShowcase({ id: media.showcase.id })}>
+                      {media.showcase.label}
+                    </Link>
+                  </td>
+                </tr>
+              )}
           </tbody>
         </table>
       </div>

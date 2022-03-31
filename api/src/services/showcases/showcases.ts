@@ -22,12 +22,22 @@ export const connectTagToShowcase = async ({ id, input: { tagId } }) => {
 }
 
 export const showcases = () => {
-  return db.showcase.findMany({ include: { socialLinks: true } })
+  return db.showcase.findMany({
+    orderBy: { id: 'desc' },
+    include: {
+      socialLinks: true,
+      localizations: { select: { id: true, language: true } },
+    },
+  })
 }
 
 export const examples = ({ input }) => {
   return db.showcase.findMany({
-    include: { socialLinks: true, localizations: true },
+    include: {
+      socialLinks: true,
+      localizations: true,
+      media: { select: { id: true, src: true } },
+    },
     where: {
       isPublished: true,
       tags: { some: { label: input.tag } },
@@ -37,36 +47,56 @@ export const examples = ({ input }) => {
 
 export const showcase = ({ id }: Prisma.ShowcaseWhereUniqueInput) => {
   return db.showcase.findUnique({
-    include: { socialLinks: true },
+    include: { socialLinks: true, media: { select: { id: true, src: true } } },
     where: { id },
   })
 }
 
 export const createShowcase = ({
-  input: { mediaId, socialLinks, ...data },
+  input: { socialLinks, mediaId: _mediaId, ...input },
 }: MutationcreateShowcaseArgs) => {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  const { imageUrl, ...data } = input
+
   return db.showcase.create({
     data: {
       ...data,
+      media: {
+        create: { src: imageUrl, type: 'picture' },
+      },
       localizations: undefined, // TODO: Localize
-      media: { connect: { id: mediaId } },
       socialLinks: { createMany: { data: socialLinks } },
     },
   })
 }
 
 interface UpdateShowcaseArgs extends Prisma.ShowcaseWhereUniqueInput {
-  input: Prisma.ShowcaseUpdateInput
+  input: Prisma.ShowcaseUpdateInput & { imageUrl: string }
 }
 
 export const updateShowcase = ({ id, input }: UpdateShowcaseArgs) => {
+  const { imageUrl, ...data } = input
+
   return db.showcase.update({
-    data: input,
+    data: {
+      ...data,
+      media: {
+        upsert: {
+          create: { src: imageUrl },
+          update: { src: imageUrl },
+        },
+      },
+    },
     where: { id },
   })
 }
 
-export const deleteShowcase = ({ id }: Prisma.ShowcaseWhereUniqueInput) => {
+export const deleteShowcase = async ({
+  id,
+}: Prisma.ShowcaseWhereUniqueInput) => {
+  await db.showcaseLocalization.deleteMany({ where: { showcaseId: id } })
+
   return db.showcase.delete({
     where: { id },
   })
@@ -87,6 +117,8 @@ export const showcaseJobs = async ({ company }) => {
 }
 
 export const Showcase = {
+  localizations: (_obj, { root }: ResolverArgs<ReturnType<typeof showcase>>) =>
+    db.showcase.findUnique({ where: { id: root.id } }).localizations(),
   media: (_obj, { root }: ResolverArgs<ReturnType<typeof showcase>>) =>
     db.showcase.findUnique({ where: { id: root.id } }).media(),
   tags: (_obj, { root }: ResolverArgs<ReturnType<typeof showcase>>) =>

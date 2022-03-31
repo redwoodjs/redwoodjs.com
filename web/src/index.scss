@@ -13,7 +13,7 @@ $color_neutral: #1A202C;
   }
 
   a {
-    @apply text-teal-600 hover:text-red-700 underline hover:no-underline transition duration-100;
+    @apply text-forest-600 hover:text-red-700 underline hover:no-underline transition duration-100;
   }
 
   code {
@@ -27,11 +27,11 @@ $color_neutral: #1A202C;
 
 @layer components {
   .button {
-    @apply block px-4 py-3 text-center font-semibold rounded bg-teal-600 hover:bg-teal-700 text-white hover:text-white transition duration-200 text-lg no-underline disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-teal-600;
+    @apply block px-4 py-3 text-center font-semibold rounded bg-forest-400 hover:bg-forest-500 text-neutral-900 hover:text-white transition duration-200 text-lg no-underline disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-forest-600;
   }
 
   .button-alt {
-    @apply bg-orange-400 hover:bg-orange-500 text-orange-100 hover:text-white font-semibold rounded px-6 py-3 uppercase transition duration-150;
+    @apply bg-redwood-400 hover:bg-redwood-500 text-redwood-100 hover:text-white font-semibold rounded px-6 py-3 uppercase transition duration-150;
   }
 
   .button-sm {
@@ -39,7 +39,7 @@ $color_neutral: #1A202C;
   }
 
   .button-invert {
-    @apply button bg-white text-teal-600 hover:bg-teal-100 hover:text-teal-700 disabled:hover:bg-white;
+    @apply button bg-white text-forest-600 hover:bg-forest-100 hover:text-forest-700 disabled:hover:bg-white;
   }
 
   .button-social {
@@ -66,6 +66,22 @@ $color_neutral: #1A202C;
     }
   }
 
+  .actions {
+    @apply flex flex-row justify-end;
+  }
+
+  ul.navigate li a {
+    text-decoration: none;
+  }
+
+  ul.navigate li:hover a {
+    text-decoration: underline;
+  }
+
+  ul.navigate li {
+    @apply p-2;
+  }
+
   .job .markdown {
     p {
       @apply mt-4 leading-7;
@@ -77,7 +93,7 @@ $color_neutral: #1A202C;
   }
 
   .showcase--jobs--locations {
-    @apply text-sm text-stone-600;
+    @apply text-sm text-neutral-600;
 
     ul {
       @apply flex flex-row flex-wrap space-x-2;
@@ -180,11 +196,11 @@ $color_neutral: #1A202C;
   }
 
   .title {
-    @apply text-xl text-teal-600 font-semibold tracking-tight;
+    @apply text-xl text-forest-600 font-semibold tracking-tight;
   }
 
   .page_examples .filters {
-    @apply sticky top-0 z-10 w-full shadow-teal-50 shadow-xl;
+    @apply sticky top-0 z-10 w-full shadow-forest-50 shadow-xl;
 
 
     .bar {
@@ -216,7 +232,7 @@ $color_neutral: #1A202C;
 
       @apply grid grid-cols-1 grid-rows-2 w-full m-auto mt-4;
       @apply md:w-2/3 md:grid-cols-2 md:grid-rows-1;
-      @apply bg-gradient-to-r from-teal-600 to-teal-800;
+      @apply bg-gradient-to-r from-forest-600 to-forest-800;
 
       .content div {
         @apply relative float-right;
@@ -250,17 +266,17 @@ $color_neutral: #1A202C;
 
 
     .help {
-      @apply mt-8 text-sm text-stone-500 leading-6;
+      @apply mt-8 text-sm text-neutral-500 leading-6;
     }
 
     .tags {
       @apply flex flex-wrap items-center mt-1;
 
       li {
-        @apply mt-1 mr-2 px-2 py-1 flex items-center text-sm bg-orange-200 text-orange-700 rounded whitespace-nowrap;
+        @apply mt-1 mr-2 px-2 py-1 flex items-center text-sm bg-redwood-200 text-redwood-700 rounded whitespace-nowrap;
 
         .icon {
-          @apply ml-2 text-orange-400 transition duration-150;
+          @apply ml-2 text-redwood-400 transition duration-150;
 
           &:hover {
             @apply font-semibold text-red-700;
@@ -270,7 +286,7 @@ $color_neutral: #1A202C;
     }
 
     label {
-      @apply block text-lg text-teal-600 font-semibold;
+      @apply block text-lg text-forest-600 font-semibold;
 
       &.error {
         @apply text-red-600;
@@ -278,7 +294,7 @@ $color_neutral: #1A202C;
     }
 
     input, textarea {
-      @apply block w-full mt-2 py-3 px-4 bg-white border border-orange-200 rounded;
+      @apply block w-full mt-2 py-3 px-4 bg-white border border-redwood-200 rounded;
 
       &.error {
         @apply outline outline-2 outline-red-600;
@@ -290,7 +306,7 @@ $color_neutral: #1A202C;
     }
 
     input:focus, textarea:focus {
-      @apply outline-teal-600;
+      @apply outline-forest-600;
     }
 
     .button-attach {
@@ -299,10 +315,10 @@ $color_neutral: #1A202C;
       }
 
       button {
-        @apply mt-2 py-3 px-8 button-alt border border-orange-400 rounded-l-none;
+        @apply mt-2 py-3 px-8 button-alt border border-redwood-400 rounded-l-none;
 
         &:hover {
-          @apply border-orange-500;
+          @apply border-redwood-500;
         }
       }
     }

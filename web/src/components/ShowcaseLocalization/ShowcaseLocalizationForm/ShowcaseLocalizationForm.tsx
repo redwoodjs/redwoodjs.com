@@ -9,27 +9,8 @@ import {
   Submit,
 } from '@redwoodjs/forms'
 
-
-
 const ShowcaseLocalizationForm = (props) => {
   const onSubmit = (data) => {
-
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
     props.onSave(data, props?.showcaseLocalization?.id)
   }
 
@@ -42,7 +23,7 @@ const ShowcaseLocalizationForm = (props) => {
           titleClassName="rw-form-error-title"
           listClassName="rw-form-error-list"
         />
-      
+
         <Label
           name="isValid"
           className="rw-label"
@@ -50,14 +31,13 @@ const ShowcaseLocalizationForm = (props) => {
         >
           Is valid
         </Label>
-        
-          <CheckboxField
-            name="isValid"
-            defaultChecked={props.showcaseLocalization?.isValid}
-            className="rw-input"
-            errorClassName="rw-input rw-input-error"
-          />
-        
+
+        <CheckboxField
+          name="isValid"
+          defaultChecked={props.showcaseLocalization?.isValid}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+        />
 
         <FieldError name="isValid" className="rw-field-error" />
 
@@ -68,38 +48,34 @@ const ShowcaseLocalizationForm = (props) => {
         >
           Language
         </Label>
-        
-          
-          
+
         <div className="rw-check-radio-items">
           <RadioField
             id="showcaseLocalization-language-0"
             name="language"
             defaultValue="eng"
-            defaultChecked={props.showcaseLocalization?.language?.includes('eng')}
+            defaultChecked={props.showcaseLocalization?.language?.includes(
+              'eng'
+            )}
             className="rw-input"
             errorClassName="rw-input rw-input-error"
           />
-          <div>
-            Eng
-          </div>
+          <div>Eng</div>
         </div>
-          
+
         <div className="rw-check-radio-items">
           <RadioField
             id="showcaseLocalization-language-1"
             name="language"
             defaultValue="fra"
-            defaultChecked={props.showcaseLocalization?.language?.includes('fra')}
+            defaultChecked={props.showcaseLocalization?.language?.includes(
+              'fra'
+            )}
             className="rw-input"
             errorClassName="rw-input rw-input-error"
           />
-          <div>
-            Fra
-          </div>
+          <div>Fra</div>
         </div>
-          
-        
 
         <FieldError name="language" className="rw-field-error" />
 
@@ -110,14 +86,13 @@ const ShowcaseLocalizationForm = (props) => {
         >
           Title
         </Label>
-        
-          <TextField
-            name="title"
-            defaultValue={props.showcaseLocalization?.title}
-            className="rw-input"
-            errorClassName="rw-input rw-input-error"
-          />
-        
+
+        <TextField
+          name="title"
+          defaultValue={props.showcaseLocalization?.title}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+        />
 
         <FieldError name="title" className="rw-field-error" />
 
@@ -128,14 +103,13 @@ const ShowcaseLocalizationForm = (props) => {
         >
           Subtitle
         </Label>
-        
-          <TextField
-            name="subtitle"
-            defaultValue={props.showcaseLocalization?.subtitle}
-            className="rw-input"
-            errorClassName="rw-input rw-input-error"
-          />
-        
+
+        <TextField
+          name="subtitle"
+          defaultValue={props.showcaseLocalization?.subtitle}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+        />
 
         <FieldError name="subtitle" className="rw-field-error" />
 
@@ -146,23 +120,19 @@ const ShowcaseLocalizationForm = (props) => {
         >
           Description
         </Label>
-        
-          <TextField
-            name="description"
-            defaultValue={props.showcaseLocalization?.description}
-            className="rw-input"
-            errorClassName="rw-input rw-input-error"
-            validation={{ required: true }}
-          />
-        
+
+        <TextField
+          name="description"
+          defaultValue={props.showcaseLocalization?.description}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+          validation={{ required: true }}
+        />
 
         <FieldError name="description" className="rw-field-error" />
 
         <div className="rw-button-group">
-          <Submit
-            disabled={props.loading}
-            className="rw-button rw-button-blue"
-          >
+          <Submit disabled={props.loading} className="rw-button rw-button-blue">
             Save
           </Submit>
         </div>

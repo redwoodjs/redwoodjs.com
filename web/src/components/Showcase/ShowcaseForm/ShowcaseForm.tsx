@@ -4,17 +4,23 @@ import {
   Form,
   FormError,
   Label,
-  NumberField,
   Submit,
   TextField,
 } from '@redwoodjs/forms'
+import { useState } from 'react'
+import Uploader from 'src/components/Uploader/Uploader'
 
 import SocialLinkField from 'src/components/SocialLink/SocialLinkField'
 
 const ShowcaseForm = (props) => {
-  const onSubmit = (data) => {
-    props.onSave(data, props?.showcase?.id)
-  }
+  const [imageUrl, setImageUrl] = useState(props?.showcase?.media?.src)
+
+  const onSubmit = React.useCallback(
+    (data) => {
+      props.onSave({ ...data, imageUrl }, props?.showcase?.id)
+    },
+    [imageUrl, props]
+  )
 
   return (
     <div className="rw-form-wrapper">
@@ -130,22 +136,7 @@ const ShowcaseForm = (props) => {
 
         <FieldError name="description" className="rw-field-error" />
 
-        <Label
-          name="mediaId"
-          className="rw-label"
-          errorClassName="rw-label rw-label-error"
-        >
-          Media id
-        </Label>
-
-        <NumberField
-          name="mediaId"
-          defaultValue={props.showcase?.mediaId}
-          className="rw-input"
-          errorClassName="rw-input rw-input-error"
-        />
-
-        <FieldError name="mediaId" className="rw-field-error" />
+        <Uploader imageUrl={imageUrl} setImageUrl={setImageUrl} />
 
         <Label
           name="socialLinks"

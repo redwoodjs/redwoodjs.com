@@ -56,6 +56,22 @@ const Body = () => {
                 t={t}
               />
             </p>
+            <p className={'text-sm text-white'}>
+              <Trans
+                i18nKey={'ExamplesPage.contact.guidelines'}
+                components={{
+                  rel: (
+                    // eslint-disable-next-line jsx-a11y/anchor-has-content
+                    <a
+                      className="italic text-white capitalize"
+                      href="https://community.redwoodjs.com/t/guidelines-to-contribute-example-apps/2939"
+                      target="_blank"
+                      rel="noreferrer"
+                    />
+                  ),
+                }}
+              />
+            </p>
           </div>
           <a
             className="button-invert text-teal-600 hover:bg-teal-100 hover:text-teal-700 px-3 py-2 flex items-center space-x-3 whitespace-nowrap"
@@ -85,20 +101,31 @@ const Body = () => {
       </section>
       <section className={'canon p-4 mt-24'}>
         <header>
-          <h2 className={'w-full text-2xl'}>{t('ExamplesPage.canon.title')}</h2>
-          <p>{t('ExamplesPage.canon.description')}</p>
+          <h3 className="space-y-12 px-4 font-serif text-xl sm:text-center sm:text-2xl md:text-4xl lg:text-6xl">
+            {t('ExamplesPage.canon.title')}
+          </h3>
+          <p className="mx-auto mt-10 max-w-3xl px-4 font-serif text-base sm:text-center md:text-2xl lg:max-w-4xl lg:text-4xl">
+            <Trans
+              i18nKey={'ExamplesPage.canon.description'}
+              components={{
+                bold: <span className="font-bold" />,
+                italic: <span className="italic text-6xl" />,
+                br: <br />,
+              }}
+            />
+          </p>
         </header>
         <div
           className={
-            'flex flex-wrap flex-col items-stretch md:flex-row md:items-start'
+            'flex flex-wrap mt-24 flex-col items-stretch md:flex-row md:items-start'
           }
         >
           <ExamplesCell type={'sample'} tag={'canon'} onTagClick={onTagClick} />
         </div>
       </section>
-      <section className={'community p-4 mt-4'}>
+      <section className={'community p-4 mt-24'}>
         <TagsCell />
-        <Filters />
+        {false && <Filters />}
         <div className="flex flex-wrap flex-col items-stretch md:flex-row md:items-start">
           <ExamplesCell
             type="sample"
