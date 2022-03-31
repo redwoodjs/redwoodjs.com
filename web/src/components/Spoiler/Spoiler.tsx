@@ -4,11 +4,12 @@ import { Disclosure, Transition } from '@headlessui/react'
 
 export interface SpoilerProps {
   title: string
+  open?: boolean
 }
 
-const Spoiler: FC<SpoilerProps> = ({ children, title }) => {
+const Spoiler: FC<SpoilerProps> = ({ children, open = false, title }) => {
   return (
-    <Disclosure as="div" className="flex flex-col space-y-2">
+    <Disclosure as="div" className="flex flex-col space-y-2" defaultOpen={open}>
       <Disclosure.Button className="flex flex-row items-center justify-between bg-redwood-100 bg-opacity-20 hover:bg-opacity-50 active:bg-opacity-70 border border-redwood-100 active:border-redwood-200 px-6 py-4 rounded-md font-semibold text-left text-sm transition duration-150 ease-out">
         {({ open }) => (
           <>

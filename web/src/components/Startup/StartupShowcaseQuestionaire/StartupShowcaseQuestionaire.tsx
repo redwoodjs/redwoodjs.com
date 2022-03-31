@@ -23,7 +23,7 @@ const StartupShowcaseQuestionaire = ({
         <h2 className="text-3xl font-bold">Interview</h2>
       </header>
       {questionResponses.map((qr, idx) => (
-        <Spoiler key={idx} title={qr.question}>
+        <Spoiler open={idx === 0} key={idx} title={qr.question}>
           <ReactMarkdown className="startup-markdown">
             {qr.response}
           </ReactMarkdown>
