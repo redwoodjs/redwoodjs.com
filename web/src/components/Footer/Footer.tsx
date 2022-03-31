@@ -107,7 +107,7 @@ const Footer = () => {
           </div>
 
           <form
-            className="mt-4 sm:flex sm:max-w-md lg:mt-0"
+            className="mt-4 sm:flex sm:max-w-2xl sm:flex-1 lg:mt-0 lg:justify-end"
             action="https://redwoodjs.us19.list-manage.com/subscribe/post?u=0c27354a06a7fdf4d83ce07fc&amp;id=09f634eea4"
             method="post"
             name="mc-embedded-subscribe-form"
@@ -123,7 +123,7 @@ const Footer = () => {
               autoComplete="email"
               placeholder="me@email.com"
               required
-              className="w-full min-w-0 appearance-none rounded-md border border-transparent bg-white py-2 px-4 text-base text-neutral-900 placeholder-neutral-500 focus:border-white focus:placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-neutral-800 sm:max-w-xs"
+              className="w-full min-w-0 appearance-none rounded-md border border-transparent bg-white py-2 px-4 text-base text-neutral-900 placeholder-neutral-500 focus:border-white focus:placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-neutral-800 sm:max-w-xs sm:flex-1"
             />
             <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
               <button
@@ -137,8 +137,8 @@ const Footer = () => {
             </div>
           </form>
         </div>
-        <div className=":px-8 mx-auto max-w-7xl border-t border-neutral-700 py-12">
-          <div className="xl:grid xl:grid-cols-5 xl:gap-8">
+        <div className="mx-auto max-w-7xl border-t border-neutral-700 py-12">
+          <div className="xl:grid xl:grid-cols-4 xl:gap-8">
             <div className="grid grid-cols-2 gap-8 xl:col-span-4">
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
