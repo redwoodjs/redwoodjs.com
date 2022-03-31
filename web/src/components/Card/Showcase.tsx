@@ -29,7 +29,7 @@ const ShowcaseCard: FC<ShowcaseCardProps> = ({ src, subtitle, title, to }) => {
     <Link
       aria-label={`${title} Showcase Link`}
       aria-details={subtitle}
-      className="group flex flex-col border border-stone-200 focus:border-orange-400 hover:border-orange-400 cursor-pointer w-full no-underline rounded-md transition duration-300"
+      className="group flex flex-col border border-stone-200 focus:border-stone-300 hover:border-stone-300 cursor-pointer w-full no-underline rounded-md transition duration-300"
       to={to}
     >
       <img
@@ -38,7 +38,7 @@ const ShowcaseCard: FC<ShowcaseCardProps> = ({ src, subtitle, title, to }) => {
         src={src}
       />
       <span className="bg-white flex flex-col flex-grow p-8 pt-6 rounded-b-md space-y-2">
-        <h3 className="title">{title}</h3>
+        <p className="text-forest-600 text-xl font-semibold">{title}</p>
         <p className="leading-relaxed text-sm text-stone-900">
           {truncate(subtitle)}
         </p>

@@ -63,7 +63,7 @@ const StartupShowcaseIntro = ({
           <ul className="list-inside space-y-3">
             {achievements.map((a) => (
               <li
-                className="before:content-['\2713'] before:text-teal-800 before:font-semibold"
+                className="before:content-['\2713'] before:text-forest-600 before:font-semibold"
                 key={a}
               >
                 <span className="relative left-3">{a}</span>
@@ -78,12 +78,19 @@ const StartupShowcaseIntro = ({
           {'RedwoodJS, ' +
             technologies
               .map((tech, idx) =>
-                idx === technologies.length - 1 ? `and ${tech}` : tech
+                idx === technologies.length - 1 && technologies.length !== 1
+                  ? `and ${tech}`
+                  : tech
               )
               .join(', ')}
         </p>
       )}
-      <a className="button button-alt !mt-8 w-fit" href={cta.href}>
+      <a
+        className="button bg-forest-500 hover:bg-forest-600 text-white !mt-8 w-fit"
+        href={cta.href}
+        rel="noreferrer"
+        target="_blank"
+      >
         {cta.title}
       </a>
     </section>

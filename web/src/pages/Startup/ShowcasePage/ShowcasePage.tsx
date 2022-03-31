@@ -11,16 +11,16 @@ const ShowcasePage = ({ slug }: ShowcasePageProps) => {
   return (
     <>
       <MetaTags title="Showcase" description="Showcase page" />
-      <div className="bg-gradient-to-r from-teal-600 to-teal-800 mb-8">
+      <div className="bg-gradient-to-r from-redwood-600 to-redwood-800 mb-8">
         <nav className="max-w-screen-xl mx-auto pt-[5.75rem] lg:pt-[5.125rem] pb-5 px-8">
           <Link
-            className="group flex flex-row items-center no-underline space-x-2 text-sm"
+            className="group flex flex-row items-center no-underline space-x-2 text-sm w-fit"
             to={routes.showcase()}
           >
-            <span aria-hidden="true" className="icon md-14 text-teal-100">
+            <span aria-hidden="true" className="icon md-14 text-redwood-50">
               arrow_back_ios
             </span>
-            <span className="group-hover:underline text-teal-100">
+            <span className="group-hover:underline text-redwood-50">
               Back to the Showcase
             </span>
           </Link>

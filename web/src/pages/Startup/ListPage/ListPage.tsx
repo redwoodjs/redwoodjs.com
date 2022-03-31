@@ -9,18 +9,18 @@ const ListPage = () => {
         title="Startup Showcase"
         description="The landing page for the RedwoodJS startup showcase."
       />
-      <section className="bg-gradient-to-r from-teal-600 to-teal-800 relative overflow-hidden z-0">
+      <section className="bg-gradient-to-r from-redwood-600 to-redwood-800 relative overflow-hidden z-0">
         <div className="max-w-screen-xl mx-auto pt-28 pb-12 px-8 space-y-6 text-center md:text-right relative z-10">
           <h1 className="relative text-5xl text-white drop-shadow-md">
-            <span className="text-teal-200">RedwoodJS</span> Showcase
+            <span className="text-redwood-200">RedwoodJS</span> Showcase
           </h1>
-          <h2 className="text-lg text-teal-50 drop-shadow">
+          <h2 className="text-lg text-redwood-50 drop-shadow">
             Curated case-studies on the startups RedwoodJS empowers across the
             globe.
           </h2>
         </div>
         <svg
-          className="absolute -left-28 -top-6 rotate-12 w-1/3 min-w-[26rem] max-w-md text-teal-500 text-opacity-30 z-0"
+          className="absolute -left-28 -top-6 rotate-12 w-1/3 min-w-[26rem] max-w-md text-redwood-500 text-opacity-50 z-0"
           fill="currentColor"
           viewBox="0 0 917 1000"
         >
@@ -32,17 +32,17 @@ const ListPage = () => {
         </svg>
       </section>
       <section className="max-w-screen-xl mt-10 mx-auto px-8">
-        <div className="bg-gradient-to-r from-orange-700 to-orange-600 flex flex-col sm:flex-row items-center px-7 py-5 rounded-md space-x-0 sm:space-x-20 space-y-6 sm:space-y-0">
-          <div className="flex-grow space-y-3">
-            <h3 className="font-semibold text-xl text-white">
+        <div className="bg-gradient-to-r from-forest-200 to-forest-400 flex flex-col sm:flex-row items-center px-7 py-5 rounded-md space-x-0 sm:space-x-20 space-y-6 sm:space-y-0">
+          <div className="flex-grow space-y-2.5">
+            <h3 className="font-semibold text-xl text-forest-900">
               Founder of an upcoming startup?
             </h3>
-            <p className="text-sm text-orange-50 leading-relaxed">
+            <p className="text-sm text-forest-800 leading-relaxed">
               Consider introducing yourself and your project on our forum.
             </p>
           </div>
           <a
-            className="button-invert text-orange-600 hover:bg-orange-100 hover:text-orange-700 px-3 py-2 flex items-center space-x-3 whitespace-nowrap"
+            className="button-invert text-forest-600 hover:bg-forest-50 hover:text-forest-700 px-3 py-2 flex items-center space-x-3 whitespace-nowrap"
             href="https://community.redwoodjs.com/c/show-tell/7"
             rel="noreferrer"
             target="_blank"

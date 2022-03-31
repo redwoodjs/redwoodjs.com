@@ -18,14 +18,20 @@ const StartupShowcaseJobCard = ({
 }: StartupShowcaseJobCardProps) => {
   return (
     <Link
-      className="bg-white border border-orange-200 hover:border-orange-400 no-underline p-6 rounded-md space-y-4"
+      className="flex flex-col p-6 rounded-md space-y-4 no-underline bg-white border border-stone-200 focus:border-stone-300 hover:border-stone-300"
       to={routes.job({ id })}
     >
-      <div className="flex flex-col space-y-1.5">
+      <div className="flex flex-col space-y-3">
         <h3 className="title">{title}</h3>
-        <ReactMarkdown className="showcase--jobs--locations">
-          {locations}
-        </ReactMarkdown>
+        <p className="text-stone-600">
+          {locations
+            .map((loc, idx) =>
+              idx === locations.length - 1 && locations.length !== 1
+                ? `and ${loc}`
+                : loc
+            )
+            .join('; ')}
+        </p>
       </div>
       <ReactMarkdown className="leading-relaxed text-stone-900">
         {aboutJob.substring(0, MAX_ABOUT_LEN) + '...'}

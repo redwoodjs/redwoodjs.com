@@ -26,7 +26,7 @@ export const Loading = () => {
       <header className="pb-2.5 mb-4 border-b border-stone-300">
         <h2 className="text-3xl font-bold">Open Positions</h2>
       </header>
-      <div className="flex justify-center bg-white border border-orange-200 py-12 rounded-lg text-stone-400">
+      <div className="flex justify-center bg-white border border-stone-200 py-12 rounded-lg text-stone-400">
         <span aria-hidden="true" className="icon animate-spin mr-2">
           refresh
         </span>{' '}
@@ -44,8 +44,8 @@ export const Empty = ({ useEmpty = true }) => {
       <header className="pb-2.5 mb-4 border-b border-stone-300">
         <h2 className="text-3xl font-bold">Open Positions</h2>
       </header>
-      <div className="flex flex-col items-center justify-center bg-white border border-orange-200 px-6 py-12 rounded-lg space-y-5 text-center">
-        <span className="icon text-teal-600" style={{ fontSize: '32px' }}>
+      <div className="flex flex-col items-center justify-center bg-white border border-stone-200 px-6 py-12 rounded-lg space-y-5 text-center">
+        <span className="icon text-redwood-600" style={{ fontSize: '32px' }}>
           work_off
         </span>
         <div className="space-y-2">

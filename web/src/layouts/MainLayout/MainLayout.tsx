@@ -43,7 +43,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
     <>
       <Toaster toastOptions={{ className: 'mt-16' }} />
       <section
-        className="fixed w-full z-10 bg-orange-50 text-orange-900 border-b border-orange-200"
+        className="fixed w-full z-10 bg-stone-900 bg-opacity-90"
         data-target="application.header"
       >
         <div className="max-w-screen-xl mx-auto px-4 lg:px-8">
@@ -328,7 +328,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
         </div>
       </section>
 
-      <main className="flex-1 w-full bg-orange-50">{children}</main>
+      <main className="flex-1 w-full bg-white">{children}</main>
 
       <footer className="p-6 bg-orange-50 text-orange-700 text-sm border-t border-orange-200">
         Copyright &copy;{new Date().getFullYear()} Tom Preston-Werner

@@ -66,7 +66,7 @@ export const Success = ({
         </div>
         <StartupShowcaseAbout {...startup} />
         <StartupShowcaseQuestionaire {...startup} />
-        <StartupShowcaseJobCell company={startup.slug} />
+        <StartupShowcaseJobCell company={startup.name} />
       </div>
     </>
   )
