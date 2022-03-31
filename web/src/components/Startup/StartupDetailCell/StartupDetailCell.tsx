@@ -3,7 +3,7 @@ import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
 
 import SocialLinkExternal from 'src/components/SocialLink/SocialLinkExternal'
 
-import { resizeFilestackImage } from 'src/lib/utility'
+import { resizeFilestackImage } from 'src/components/Uploader/utility'
 
 import type { StartupDetailQuery } from 'types/graphql'
 

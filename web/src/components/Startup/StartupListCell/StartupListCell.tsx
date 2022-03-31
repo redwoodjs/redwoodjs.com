@@ -2,7 +2,7 @@ import { routes } from '@redwoodjs/router'
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
 
 import ShowcaseCard from 'src/components/Card/Showcase'
-import { resizeFilestackImage } from 'src/lib/utility'
+import { resizeFilestackImage } from 'src/components/Uploader/utility'
 
 import type { StartupListQuery } from 'types/graphql'
 
