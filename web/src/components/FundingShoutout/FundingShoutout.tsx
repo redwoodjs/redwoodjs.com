@@ -1,6 +1,6 @@
-import SnapletLogoWhite from 'web/public/images/snaplet_logo_white.svg'
-import EverfundLogo from 'web/public/images/everfund_logo.svg'
-import NousLogo from 'web/public/images/nous_logo.svg'
+import SnapletLogoWhite from 'web/public/images//startup-logos/snaplet_logo_white.svg'
+import EverfundLogo from 'web/public/images/startup-logos/everfund_logo.svg'
+import NousLogo from 'web/public/images//startup-logos/nous_logo.svg'
 
 const FundingShoutout = () => {
   return (

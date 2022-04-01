@@ -5,14 +5,14 @@ const TestimonialSection = () => {
       subtext: 'Founder, CourseLift',
       quote:
         'Redwood has been a game changer for me. I use it for CourseLift and its the standard for new projects for my agency.”',
-      image: '/images/RyanChenkie.jpg',
+      image: '/images/portraits/RyanChenkie.jpg',
     },
     {
       name: 'Kris Coulson',
       subtext: 'Founder, Teamstream',
       quote:
         'Not just ‘made with RedwoodJS’. Made with a lot of love for RedwoodJS. 💕',
-      image: '/images/KrisCoulson.jpg',
+      image: '/images/portraits/KrisCoulson.jpg',
     },
   ]
   return (

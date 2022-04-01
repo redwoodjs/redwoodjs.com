@@ -4,14 +4,14 @@ const FinalCtaSection = () => {
       name: 'Amanda Gianelli',
       subtext: 'Engineer, Auth0',
       quote: 'RedwoodJS makes me feel like a superhero ‍♀️ 🚀',
-      image: '/images/AmandaGianelli.jpg',
+      image: '/images/portraits/AmandaGianelli.jpg',
     },
     {
       name: 'Kris Coulson',
       subtext: 'Founder, Teamstream',
       quote:
         'Not just ‘made with RedwoodJS’. Made with a lot of love for RedwoodJS. 💕',
-      image: '/images/KrisCoulson.jpg',
+      image: '/images/portraits/KrisCoulson.jpg',
     },
   ]
   return (
