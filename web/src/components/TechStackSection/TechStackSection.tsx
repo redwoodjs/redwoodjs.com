@@ -6,7 +6,7 @@ const stack = [
     logo: '/images/3p-logos/react.svg',
   },
   {
-    name: 'Graphql',
+    name: 'GraphQL',
     description:
       'As your project grows, so will the number of client apps that need to talk to your backend. With a GraphQL API as your foundation, you can live in a multi-client world with ease.',
     logo: '/images/3p-logos/graphql.svg',
@@ -14,25 +14,25 @@ const stack = [
   {
     name: 'Prisma',
     description:
-      'Interacting with your database has never been easier. Prisma’s ORM Interacting with your database has never been easier. Prisma’s ORM ',
+      'Interacting with your database has never been easier. Prisma’s extremely popular ORM allows you to focus more on your business logic and less on the intricacies of SQL.',
     logo: '/images/3p-logos/prisma.svg',
   },
   {
-    name: 'Typescript',
+    name: 'TypeScript',
     description:
-      "Selfies actually succulents pork belly shabby chic trust fund small batch, wolf ramps brooklyn post-ironic. Copper mug aestheticbanh mi cliche heirloom iceland 90's skateboard",
+      'Optional TypeScript support gives you the best of JavaScript AND the best of a type system. Even if you build your app in JS, you’ll still get killer autocomplete because Redwood itself is written in TypeScript.',
     logo: '/images/3p-logos/typescript.svg',
   },
   {
     name: 'Jest',
     description:
-      "Selfies actually succulents pork belly shabby chic trust fund small batch, wolf ramps brooklyn post-ironic. Copper mug aestheticbanh mi cliche heirloom iceland 90's skateboard",
+      'Sleep well at night knowing that your critical code paths are well tested. Redwood augments Jest with “scenarios” making it easy to setup your database for a given scenario, plus GraphQL mocking to easily test data flow.',
     logo: '/images/3p-logos/jest.svg',
   },
   {
     name: 'Storybook',
     description:
-      "Selfies actually succulents pork belly shabby chic trust fund small batch, wolf ramps brooklyn post-ironic. Copper mug aestheticbanh mi cliche heirloom iceland 90's skateboard",
+      'If you design your components in isolation with Storybook, not only will you never have to fight with your framework to see it in a specific state, but you’ll also build up a comprehensive design reference for free!',
     logo: '/images/3p-logos/storybook.svg',
   },
 ]
