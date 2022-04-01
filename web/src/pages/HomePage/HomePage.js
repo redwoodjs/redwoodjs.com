@@ -9,6 +9,7 @@ import FundingShoutout from 'src/components/FundingShoutout'
 import TestimonialSection from 'src/components/TestimonialSection'
 import FeaturesSection from 'src/components/FeaturesSection'
 import GraphqlSection from 'src/components/GraphqlSection'
+import VideoTutorialSection from 'src/components/VideoTutorialSection'
 
 const HomePage = () => {
   const { t } = useTranslation()
@@ -20,7 +21,7 @@ const HomePage = () => {
         description="Grow from side project to startup with RedwoodJS. Combines React, GraphQL and Prisma for a full-stack app framework."
       />
 
-      <div className="mb-32 space-y-10 md:space-y-36">
+      <div className="space-y-10 md:space-y-36">
         <HeroSection />
         <MissionSection />
         <TechStackSection />
@@ -29,6 +30,7 @@ const HomePage = () => {
         <TestimonialSection />
         <FeaturesSection />
         <GraphqlSection />
+        <VideoTutorialSection />
       </div>
     </>
   )
