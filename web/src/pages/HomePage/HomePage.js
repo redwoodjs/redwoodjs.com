@@ -10,6 +10,7 @@ import TestimonialSection from 'src/components/TestimonialSection'
 import FeaturesSection from 'src/components/FeaturesSection'
 import GraphqlSection from 'src/components/GraphqlSection'
 import VideoTutorialSection from 'src/components/VideoTutorialSection'
+import FinalCTASection from 'src/components/FinalCTASection'
 
 const HomePage = () => {
   const { t } = useTranslation()
@@ -31,6 +32,7 @@ const HomePage = () => {
         <FeaturesSection />
         <GraphqlSection />
         <VideoTutorialSection />
+        <FinalCTASection />
       </div>
     </>
   )
