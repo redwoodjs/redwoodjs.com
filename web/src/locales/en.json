@@ -59,5 +59,9 @@
   },
   "Welcome to RedwoodJS": "Welcome to RedwoodJS",
   "info": "This is your English translation file",
+  "loading": {
+    "normal": "Loading...",
+    "content": "Loading {{placeholder}}..."
+  },
   "see": "https://www.i18next.com/translation-function/essentials"
 }
