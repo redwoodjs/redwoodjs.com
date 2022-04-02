@@ -5,6 +5,7 @@ import Context, {
   defaultState,
 } from 'src/pages/ExamplesPage/components/Filters/Context'
 import useFilters from 'src/pages/ExamplesPage/components/Filters/useFilters'
+import StandoutSection from 'src/pages/ExamplesPage/components/StandoutSection/StandoutSection'
 import TagsCell from 'src/pages/ExamplesPage/components/TagsCell'
 import ApplicationCallout from './components/ApplicationCallout/ApplicationCallout'
 import ExamplesCell from './components/ExamplesCell'
@@ -16,7 +17,7 @@ const Body = () => {
 
   return (
     <div className={'page_examples'}>
-      <section className="bg-gradient-to-r from-orange-700 to-orange-600 relative overflow-hidden z-0">
+      <section className="bg-gradient-to-r from-redwood-700 to-redwood-600 relative overflow-hidden z-0">
         <div className="max-w-screen-xl mx-auto pt-28 pb-12 px-8 space-y-6 text-center md:text-right relative z-10">
           <h1 className="relative text-5xl text-white drop-shadow-md">
             <Trans
@@ -55,30 +56,7 @@ const Body = () => {
         </div>
       </section>
       <ApplicationCallout />
-      <section className={'canon p-4 mt-24'}>
-        <header>
-          <h3 className="space-y-12 px-4 font-serif text-xl sm:text-center sm:text-2xl md:text-4xl lg:text-6xl">
-            {t('ExamplesPage.canon.title')}
-          </h3>
-          <p className="mx-auto mt-10 max-w-3xl px-4 font-serif text-base sm:text-center md:text-2xl lg:max-w-4xl lg:text-4xl">
-            <Trans
-              i18nKey={'ExamplesPage.canon.description'}
-              components={{
-                bold: <span className="font-bold" />,
-                italic: <span className="italic text-6xl" />,
-                br: <br />,
-              }}
-            />
-          </p>
-        </header>
-        <div
-          className={
-            'flex flex-wrap mt-24 flex-col items-stretch md:flex-row md:items-start'
-          }
-        >
-          <ExamplesCell type={'sample'} tag={'canon'} onTagClick={onTagClick} />
-        </div>
-      </section>
+      <StandoutSection onTagClick={onTagClick} />
       <section className={'community p-4 mt-24'}>
         <TagsCell />
         {false && <Filters />}
