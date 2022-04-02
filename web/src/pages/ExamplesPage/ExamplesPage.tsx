@@ -6,6 +6,7 @@ import Context, {
 } from 'src/pages/ExamplesPage/components/Filters/Context'
 import useFilters from 'src/pages/ExamplesPage/components/Filters/useFilters'
 import TagsCell from 'src/pages/ExamplesPage/components/TagsCell'
+import ApplicationCallout from './components/ApplicationCallout/ApplicationCallout'
 import ExamplesCell from './components/ExamplesCell'
 
 const Body = () => {
@@ -40,52 +41,6 @@ const Body = () => {
           />
         </svg>
       </section>
-      <section className="max-w-screen-xl my-10 mx-auto px-8">
-        <div className="bg-gradient-to-r from-teal-600 to-teal-800 flex flex-col sm:flex-row items-center px-7 py-5 rounded-md space-x-0 sm:space-x-20 space-y-6 sm:space-y-0">
-          <div className="flex-grow space-y-3">
-            <h3 className="font-semibold text-xl text-white">
-              {t('ExamplesPage.contact.title')}
-            </h3>
-            <p className="text-sm text-orange-50 leading-relaxed">
-              <Trans
-                i18nKey="ExamplesPage.contact.subtitle"
-                components={{
-                  b: <b className="font-semibold" />,
-                  br: <span className="block mt-1.5" />,
-                }}
-                t={t}
-              />
-            </p>
-            <p className={'text-sm text-white'}>
-              <Trans
-                i18nKey={'ExamplesPage.contact.guidelines'}
-                components={{
-                  rel: (
-                    // eslint-disable-next-line jsx-a11y/anchor-has-content
-                    <a
-                      className="italic text-white capitalize"
-                      href="https://community.redwoodjs.com/t/guidelines-to-contribute-example-apps/2939"
-                      target="_blank"
-                      rel="noreferrer"
-                    />
-                  ),
-                }}
-              />
-            </p>
-          </div>
-          <a
-            className="button-invert text-teal-600 hover:bg-teal-100 hover:text-teal-700 px-3 py-2 flex items-center space-x-3 whitespace-nowrap"
-            href="https://community.redwoodjs.com/c/show-tell/7"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <span>{t('ExamplesPage.contact.action')}</span>
-            <span aria-hidden="true" className="icon md-18">
-              launch
-            </span>
-          </a>
-        </div>
-      </section>
       <section className={'highlights p-4'}>
         <div
           className={
@@ -99,6 +54,7 @@ const Body = () => {
           />
         </div>
       </section>
+      <ApplicationCallout />
       <section className={'canon p-4 mt-24'}>
         <header>
           <h3 className="space-y-12 px-4 font-serif text-xl sm:text-center sm:text-2xl md:text-4xl lg:text-6xl">
