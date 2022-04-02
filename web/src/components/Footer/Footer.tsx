@@ -22,6 +22,7 @@ const navigation = {
   misc: [
     { name: 'Brand collateral', href: 'https://github.com/redwoodjs/redwood' },
     { name: 'Stickers', href: 'https://github.com/redwoodjs/redwood' },
+    { name: 'Shop', href: 'https://shop.redwoodjs.com' },
   ],
   social: [
     { name: 'Events Feed', href: '' },
