@@ -131,7 +131,7 @@ const Footer = () => {
                 type="submit"
                 value="Subscribe"
                 name="subscribe"
-                className="button flex w-full items-center justify-center rounded-md border border-transparent bg-[#93CA48] py-2 px-4 text-base font-medium text-stone-900 hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-[#93CA48] focus:ring-offset-2 focus:ring-offset-neutral-800"
+                className="button flex w-full items-center justify-center rounded-md border border-transparent py-2 px-4 text-base focus:outline-none focus:ring-2 focus:ring-[#93CA48] focus:ring-offset-2 focus:ring-offset-neutral-800"
               >
                 Subscribe
               </button>

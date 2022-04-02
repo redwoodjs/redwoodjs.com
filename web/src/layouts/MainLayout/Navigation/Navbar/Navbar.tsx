@@ -1,5 +1,5 @@
-import { Fragment } from 'react'
-import { Disclosure } from '@headlessui/react'
+import { Fragment, useEffect, useState } from 'react'
+import { Disclosure, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 import { routes, Link } from '@redwoodjs/router'
@@ -101,6 +101,29 @@ const MainLayoutNavbar = () => {
     { name: 'Jobs', route: routes.jobs() },
   ]
 
+  const [isVisible, setIsVisible] = useState(false)
+  const [scrollPosition, setScrollPosition] = useState(0)
+
+  const handleScroll = () => {
+    const position = window.pageYOffset
+    setScrollPosition(position)
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (scrollPosition > window.screen.height - 64) {
+      setIsVisible(true)
+    } else {
+      setIsVisible(false)
+    }
+  }, [scrollPosition])
   return (
     <Disclosure as="nav" className="sticky top-0 z-50 bg-neutral-900">
       {({ open }) => (
@@ -138,14 +161,23 @@ const MainLayoutNavbar = () => {
                   <NavLinksDesktop navigation={navigation} />
                 </div>
               </div>
+
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <ul className="hidden items-center lg:flex">
-                  <li className="mr-4">
-                    <GithubStars />
-                  </li>
-                  {/* <li>
-                    <LanguagePicker />
-                  </li> */}
+                <ul className=" hidden items-center md:flex">
+                  {isVisible ? (
+                    <li>
+                      <a
+                        href="/docs/tutorial"
+                        className="button text-sm transition duration-150 ease-in-out"
+                      >
+                        Start the Tutorial
+                      </a>
+                    </li>
+                  ) : (
+                    <li>
+                      <GithubStars />
+                    </li>
+                  )}
                 </ul>
               </div>
             </div>
