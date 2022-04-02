@@ -19,7 +19,7 @@ const Highlight: React.FC<HighlightProps> = ({
   socialLinks,
 }) => {
   const source = React.useMemo(
-    () => socialLinks?.filter((link) => link.platform === 'github')?.pop(),
+    () => socialLinks?.find((link) => link.platform === 'github')?.link,
     [socialLinks]
   )
 
