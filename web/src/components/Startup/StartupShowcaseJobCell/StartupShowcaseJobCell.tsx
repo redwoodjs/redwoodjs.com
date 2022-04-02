@@ -45,7 +45,7 @@ export const Empty = ({ useEmpty = true }) => {
         <h2 className="text-3xl font-bold">Open Positions</h2>
       </header>
       <div className="flex flex-col items-center justify-center bg-white border border-stone-200 px-6 py-12 rounded-lg space-y-5 text-center">
-        <span className="icon text-redwood-600" style={{ fontSize: '32px' }}>
+        <span className="icon text-rw-600" style={{ fontSize: '32px' }}>
           work_off
         </span>
         <div className="space-y-2">

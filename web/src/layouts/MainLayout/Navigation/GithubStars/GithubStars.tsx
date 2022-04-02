@@ -8,12 +8,12 @@ const GithubStars = () => {
       title="Go to Redwood's GitHub repo"
     >
       <div className="item-center flex">
-        <div className="bg-rw-orange flex h-[23px] items-center rounded-l px-2 text-[13px] font-semibold	leading-3 text-orange-100">
+        <div className="bg-rw-500 flex h-[23px] items-center rounded-l px-2 text-[13px] font-semibold	leading-3 text-orange-100">
           <StarIcon className="mr-1 block h-4 w-4" />
           11,432
         </div>
         <div className="mr-1 inline-block w-3 overflow-hidden">
-          <div className="bg-rw-orange h-[23px] w-[17px] origin-top-left rotate-45 transform"></div>
+          <div className="bg-rw-500 h-[23px] w-[17px] origin-top-left rotate-45 transform"></div>
         </div>
       </div>
       <div className="h-6 w-6">

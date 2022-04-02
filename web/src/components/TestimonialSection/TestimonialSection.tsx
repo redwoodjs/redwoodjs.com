@@ -61,10 +61,7 @@ const TestimonialSection = () => {
           Ready to start your own <br />
           Redwood adventure?
         </h3>
-        <a
-          href="/docs/tutorial"
-          className="button bg-[#93CA48] text-stone-900 hover:bg-green-900"
-        >
+        <a href="/docs/tutorial" className="button">
           Start the tutorial
         </a>
       </section>

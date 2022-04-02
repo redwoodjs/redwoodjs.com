@@ -14,9 +14,6 @@ module.exports = {
       ],
     },
     extend: {
-      colors: {
-        'rw-orange': '#BF4722',
-      },
       borderWidth: {
         16: '16px',
       },
@@ -33,7 +30,7 @@ module.exports = {
           800: '#2E4A0E',
           900: '#1B3408',
         },
-        redwood: {
+        rw: {
           50: '#FDF0EB',
           100: '#F0BEB1',
           200: '#E2947C',

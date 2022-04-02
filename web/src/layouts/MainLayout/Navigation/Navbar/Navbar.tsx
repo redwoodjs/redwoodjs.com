@@ -143,9 +143,9 @@ const MainLayoutNavbar = () => {
                   <li className="mr-4">
                     <GithubStars />
                   </li>
-                  <li>
+                  {/* <li>
                     <LanguagePicker />
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>

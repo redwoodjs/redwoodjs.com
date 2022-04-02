@@ -61,7 +61,7 @@ const FinalCtaSection = () => {
           </h3>
           <a
             href="/docs/tutorial"
-            className="button bg-rw-orange px-9 text-white hover:bg-green-900"
+            className="button bg-rw-500 hover:bg-rw-700 px-9 text-white"
           >
             Start the tutorial
           </a>
