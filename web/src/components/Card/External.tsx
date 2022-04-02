@@ -18,9 +18,11 @@ const External: React.FC<ExternalProps> = ({
     rel="noreferrer"
   >
     <span className={'font-bold'}>{label}</span>
-    <div className={'divide-solid divide-y divide-red-200'}>
-      <div className={'text-sm pb-2'}>{description}</div>
-      <div className={'pt-2'}>
+    <div className={'flex flex-col grow divide-solid divide-y divide-red-200'}>
+      <div className={'text-sm pb-2 flex grow h-6'}>
+        <p className="truncate">{description}</p>
+      </div>
+      <div className={'align-bottom pt-2'}>
         <List
           rootKey={label}
           tags={tags}

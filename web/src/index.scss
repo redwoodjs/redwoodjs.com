@@ -184,7 +184,7 @@ $color_neutral: #1A202C;
   }
 
   .card .content > div {
-    @apply flex flex-col text-sm py-8 px-4;
+    @apply flex flex-col text-sm py-4 px-4;
 
 
     a:not([target="_blank"]) {

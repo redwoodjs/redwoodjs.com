@@ -49,7 +49,7 @@ const Body = () => {
       <section className={'community p-4 mt-24'}>
         <TagsCell />
         {false && <Filters />}
-        <div className="flex flex-wrap flex-col items-stretch md:flex-row md:items-start">
+        <div className="flex flex-wrap flex-col items-stretch md:flex-row">
           <ExamplesCell
             type="sample"
             tag={'community'}

@@ -63,9 +63,9 @@ const Highlight: React.FC<HighlightProps> = ({
 }
 
 const Links = ({ source, link }) => (
-  <div className="align-bottom flex flex-row justify-end items-center my-4">
+  <div className="align-bottom flex flex-row justify-end items-center my-4 mr-4">
     <a
-      className="w-auto flex flex-row align-middle mr-8"
+      className="w-auto flex flex-row align-middle mr-2"
       href={link}
       target={'_blank'}
       rel="noreferrer"
@@ -75,7 +75,7 @@ const Links = ({ source, link }) => (
     </a>
     {source && (
       <a
-        className="button px-2 py-1 font-bold text-xs border-white border-[1px] bg-transparent"
+        className="button px-2 py-1 text-xs  border-[1px] bg-transparent"
         href={source}
         target={'_blank'}
         rel="noreferrer"
