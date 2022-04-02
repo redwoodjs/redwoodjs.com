@@ -22,7 +22,7 @@ const StandoutSection = ({ onTagClick }) => (
         </header>
         <div
           className={
-            'flex flex-wrap mt-24 flex-col items-stretch md:flex-row md:items-start'
+            'flex flex-wrap mt-24 flex-col items-stretch md:flex-row '
           }
         >
           <ExamplesCell type={'sample'} tag={'canon'} onTagClick={onTagClick} />

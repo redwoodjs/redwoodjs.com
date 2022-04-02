@@ -14,12 +14,12 @@ const Standard: React.FC<StandardProps> = ({
   onTagClick,
   excludeTag,
 }) => (
-  <article className="card standard flex flex-col mt-4">
+  <article className="card flex flex-col mt-4 bg-white border-[1px] border-forest-800 rounded-t">
     <div className={'content'}>
-      <header>
+      <header className="bg-forest-800">
         <h1
           className={
-            'w-full p-2 text-lg font-extrabold text-center capitalize text-white'
+            'w-full p-2 text-lg font-extrabold text-center text-white capitalize'
           }
         >
           {title}
@@ -27,7 +27,7 @@ const Standard: React.FC<StandardProps> = ({
         {media && <img alt={'Example app'} {...media} />}
       </header>
       <div className="content">
-        <p className={'text-white'}>{description}</p>
+        <p className={'text-black'}>{description}</p>
         {link && (
           <a
             href={link}
@@ -36,7 +36,7 @@ const Standard: React.FC<StandardProps> = ({
             className={'flex flex-row align-middle no-underline mt-2'}
           >
             <span>Source</span>
-            <span className="text-white icon md-18 ml-2">launch</span>
+            <span className="text-black icon md-18 ml-2">launch</span>
           </a>
         )}
       </div>

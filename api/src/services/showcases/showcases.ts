@@ -78,14 +78,26 @@ interface UpdateShowcaseArgs extends Prisma.ShowcaseWhereUniqueInput {
 export const updateShowcase = ({ id, input }: UpdateShowcaseArgs) => {
   const { imageUrl, ...data } = input
 
+  let media = {}
+
+  if (imageUrl) {
+    media = {
+      upsert: {
+        create: { src: imageUrl },
+        update: { src: imageUrl },
+      },
+    }
+  }
+
   return db.showcase.update({
     data: {
       ...data,
-      media: {
-        upsert: {
-          create: { src: imageUrl },
-          update: { src: imageUrl },
-        },
+      media,
+      socialLinks: {
+        upsert: data?.socialLinks?.map((link) => ({
+          create: { platform: link?.platform, link: link?.link },
+          update: { link: link?.link },
+        })),
       },
     },
     where: { id },

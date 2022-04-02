@@ -1,9 +1,10 @@
-import GitHubIcon from 'src/components/Icons/GitHubIcon'
 import List from 'src/components/Tag/List/List'
+import { SocialLink } from 'types/graphql'
 import { CardProps } from 'web/src/components/Card/Card'
 
 interface HighlightProps extends CardProps {
   subtitle?: string
+  socialLinks?: SocialLink[]
 }
 
 const Highlight: React.FC<HighlightProps> = ({
@@ -15,46 +16,74 @@ const Highlight: React.FC<HighlightProps> = ({
   title,
   onTagClick,
   excludeTag,
-}) => (
-  <article className="card highlight">
-    <picture>
-      <img className={'w-full lg:w-2/3 h-full m-auto object-cover'} {...media} />
-    </picture>
-    <div className="content">
-      <div className={'lg:w-2/3'}>
-        <header>
-          {subtitle && (
-            <h2 className={'w-full text-center text-white'}>{subtitle}</h2>
-          )}
-          <h1
-            className={
-              'w-full p-2 text-lg font-extrabold text-center capitalize text-white'
-            }
-          >
-            {title}
-          </h1>
-        </header>
-        <p className={'text-white'}>{description}</p>
-        <a
-          className="w-auto flex flex-row align-middle mt-8"
-          href={link}
-          target={'_blank'}
-          rel="noreferrer"
-        >
-          <span className="text-white">Source</span>
-          <span className="text-white icon md-18 ml-2">launch</span>
-        </a>
-        <footer className={'p-0 mt-4'}>
-          <List
-            tags={tags}
-            rootKey={title}
-            onClick={onTagClick}
-            excludeTag={excludeTag}
-          />
-        </footer>
+  socialLinks,
+}) => {
+  const source = React.useMemo(
+    () => socialLinks?.filter((link) => link.platform === 'github')?.pop(),
+    [socialLinks]
+  )
+
+  return (
+    <article className="card highlight w-96 flex flex-col m-auto mt-4 border-[1px] border-gray-500">
+      <picture className="h-[130px] w-full rounded-t overflow-hidden">
+        <img
+          alt={`${title} - ${subtitle} - ${description}`}
+          className={'object-cover object-bottom'}
+          {...media}
+        />
+      </picture>
+      <div className="content">
+        <div className={'m-auto'}>
+          <header>
+            {subtitle && (
+              <h2 className={'w-full text-center text-black'}>{subtitle}</h2>
+            )}
+            <h1
+              className={
+                'w-full p-2 text-lg font-extrabold text-center capitalize text-black'
+              }
+            >
+              {title}
+            </h1>
+            <aside className={'p-0 mt-4'}>
+              <List
+                tags={tags}
+                rootKey={title}
+                onClick={onTagClick}
+                excludeTag={excludeTag}
+              />
+            </aside>
+          </header>
+          <p className={'text-black'}>{description}</p>
+          <Links source={source} link={link} />
+        </div>
       </div>
-    </div>
-  </article>
+    </article>
+  )
+}
+
+const Links = ({ source, link }) => (
+  <div className="flex flex-row justify-end items-center mt-4">
+    <a
+      className="w-auto flex flex-row align-middle mr-8"
+      href={link}
+      target={'_blank'}
+      rel="noreferrer"
+    >
+      <span className="text-black">View Demo</span>
+      <span className="text-black icon md-18 ml-2">launch</span>
+    </a>
+    {source && (
+      <a
+        className="button px-2 py-1 font-bold text-xs border-white border-[1px] bg-transparent"
+        href={source}
+        target={'_blank'}
+        rel="noreferrer"
+      >
+        <span className="text-black">Source</span>
+      </a>
+    )}
+  </div>
 )
 
 export default Highlight
