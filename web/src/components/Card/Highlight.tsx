@@ -24,7 +24,7 @@ const Highlight: React.FC<HighlightProps> = ({
   )
 
   return (
-    <article className="card highlight w-96 flex flex-col m-auto mt-4 border-[1px] border-gray-500">
+    <article className="card highlight w-96 flex flex-col border-[1px] border-gray-500">
       <picture className="h-[130px] w-full rounded-t overflow-hidden">
         <img
           alt={`${title} - ${subtitle} - ${description}`}
@@ -32,8 +32,8 @@ const Highlight: React.FC<HighlightProps> = ({
           {...media}
         />
       </picture>
-      <div className="content">
-        <div className={'m-auto'}>
+      <div className="content flex grow">
+        <div>
           <header>
             {subtitle && (
               <h2 className={'w-full text-center text-black'}>{subtitle}</h2>
@@ -54,16 +54,16 @@ const Highlight: React.FC<HighlightProps> = ({
               />
             </aside>
           </header>
-          <p className={'text-black'}>{description}</p>
-          <Links source={source} link={link} />
+          <p className={'mt-4 text-black'}>{description}</p>
         </div>
       </div>
+      <Links source={source} link={link} />
     </article>
   )
 }
 
 const Links = ({ source, link }) => (
-  <div className="flex flex-row justify-end items-center mt-4">
+  <div className="align-bottom flex flex-row justify-end items-center my-4">
     <a
       className="w-auto flex flex-row align-middle mr-8"
       href={link}

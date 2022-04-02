@@ -21,9 +21,7 @@ const StandoutSection = ({ onTagClick }) => (
           </p>
         </header>
         <div
-          className={
-            'flex flex-wrap mt-24 flex-col items-stretch md:flex-row '
-          }
+          className={'flex flex-wrap mt-24 flex-col items-stretch md:flex-row'}
         >
           <ExamplesCell type={'sample'} tag={'canon'} onTagClick={onTagClick} />
         </div>

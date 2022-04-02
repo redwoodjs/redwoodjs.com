@@ -9,6 +9,7 @@ import StandoutSection from 'src/pages/ExamplesPage/components/StandoutSection/S
 import TagsCell from 'src/pages/ExamplesPage/components/TagsCell'
 import ApplicationCallout from './components/ApplicationCallout/ApplicationCallout'
 import ExamplesCell from './components/ExamplesCell'
+import HighlightSection from './components/HighlightSection/HighlightSection'
 
 const Body = () => {
   const { t } = useTranslation()
@@ -42,19 +43,7 @@ const Body = () => {
           />
         </svg>
       </section>
-      <section className={'highlights p-4'}>
-        <div
-          className={
-            'flex flex-wrap flex-col items-stretch md:flex-row md:items-start'
-          }
-        >
-          <ExamplesCell
-            tag={'highlight'}
-            variant={CardVariant.highlight}
-            onTagClick={onTagClick}
-          />
-        </div>
-      </section>
+      <HighlightSection onTagClick={onTagClick} />
       <ApplicationCallout />
       <StandoutSection onTagClick={onTagClick} />
       <section className={'community p-4 mt-24'}>
