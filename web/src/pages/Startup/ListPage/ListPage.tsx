@@ -9,18 +9,18 @@ const ListPage = () => {
         title="Startup Showcase"
         description="The landing page for the RedwoodJS startup showcase."
       />
-      <section className="bg-gradient-to-r from-redwood-600 to-redwood-800 relative overflow-hidden z-0">
+      <section className="bg-gradient-to-r from-rw-600 to-rw-800 relative overflow-hidden z-0">
         <div className="max-w-screen-xl mx-auto py-12 px-8 space-y-6 text-center md:text-right relative z-10">
           <h1 className="relative text-5xl text-white drop-shadow-md">
-            <span className="text-redwood-200">RedwoodJS</span> Showcase
+            <span className="text-rw-200">RedwoodJS</span> Showcase
           </h1>
-          <h2 className="text-lg text-redwood-50 drop-shadow">
+          <h2 className="text-lg text-rw-50 drop-shadow">
             Curated case-studies on the startups RedwoodJS empowers across the
             globe.
           </h2>
         </div>
         <svg
-          className="absolute -left-28 -top-6 rotate-12 w-1/3 min-w-[26rem] max-w-md text-redwood-500 text-opacity-50 z-0"
+          className="absolute -left-28 -top-6 rotate-12 w-1/3 min-w-[26rem] max-w-md text-rw-500 text-opacity-50 z-0"
           fill="currentColor"
           viewBox="0 0 917 1000"
         >

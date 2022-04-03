@@ -48,11 +48,11 @@ const StartupDemoMediaModal = ({
         </Transition.Child>
         <div className="flex items-start justify-center relative z-20 h-full w-full p-6 pointer-events-none sm:mx-auto">
           <div className="flex flex-col pointer-events-auto w-full max-w-5xl">
-            <div className="flex flex-row justify-between mb-2 p-1 rounded w-full bg-redwood-600">
+            <div className="flex flex-row justify-between mb-2 p-1 rounded w-full bg-rw-600">
               <div className="flex flex-row space-x-6">
                 <button
                   aria-label="Previous Demo"
-                  className="hover:bg-redwood-700 p-1 leading-[1] rounded text-redwood-200 hover:text-redwood-50 hover:text-opacity-90"
+                  className="hover:bg-rw-700 p-1 leading-[1] rounded text-rw-200 hover:text-rw-50 hover:text-opacity-90"
                   onClick={() => selected !== 0 && setSelected(selected - 1)}
                 >
                   <span aria-hidden="true" className="icon md-22">
@@ -61,7 +61,7 @@ const StartupDemoMediaModal = ({
                 </button>
                 <button
                   aria-label="Next Demo"
-                  className="hover:bg-redwood-700 p-1 leading-[1] rounded text-redwood-200 hover:text-redwood-50 hover:text-opacity-90"
+                  className="hover:bg-rw-700 p-1 leading-[1] rounded text-rw-200 hover:text-rw-50 hover:text-opacity-90"
                   onClick={() =>
                     selected !== media.length - 1 && setSelected(selected + 1)
                   }
@@ -73,7 +73,7 @@ const StartupDemoMediaModal = ({
               </div>
               <button
                 aria-label="Close Preview"
-                className="hover:bg-redwood-700 p-1 leading-[1] rounded text-redwood-200 hover:text-redwood-50 hover:text-opacity-90"
+                className="hover:bg-rw-700 p-1 leading-[1] rounded text-rw-200 hover:text-rw-50 hover:text-opacity-90"
                 onClick={() => onClose()}
               >
                 <span aria-hidden="true" className="icon md-22">
