@@ -1,8 +1,7 @@
 import i18n from 'i18next'
-import { initReactI18next } from 'react-i18next'
+import HttpApi from 'i18next-http-backend'
 import LanguageDetector from 'i18next-browser-languagedetector'
-import fr from './locales/fr.json'
-import en from './locales/en.json'
+import { initReactI18next } from 'react-i18next'
 
 export enum Languages {
   en = 'en',
@@ -39,20 +38,60 @@ export default HomePage
 */
 
 i18n
+  .use(HttpApi)
   .use(initReactI18next)
   // detect user language
   // learn more: https://github.com/i18next/i18next-browser-languageDetector
   .use(LanguageDetector)
   .init({
+    backend: {
+      loadPath: '/locales/{{lng}}.json',
+      addPath: '/locales/{{lng}}.json',
+    },
+    load: 'all',
     interpolation: { escapeValue: false }, // React already does escaping
-    fallbackLng: 'en',
-    resources: {
-      en: {
-        translation: en,
-      },
-      fr: {
-        translation: fr,
-      },
+    fallbackLng: Languages.en,
+    preload: [Languages.en],
+    lng: Languages.en,
+    lowerCaseLng: true,
+    initImmediate: true,
+    keySeparator: '.',
+    detection: {
+      // order and from where user language should be detected
+      order: [
+        'querystring',
+        'cookie',
+        'localStorage',
+        'sessionStorage',
+        'navigator',
+        'htmlTag',
+        'path',
+        'subdomain',
+      ],
+
+      // keys or params to lookup language from
+      lookupQuerystring: 'lng',
+      lookupCookie: 'i18next',
+      lookupLocalStorage: 'i18nextLng',
+      lookupSessionStorage: 'i18nextLng',
+      lookupFromPathIndex: 0,
+      lookupFromSubdomainIndex: 0,
+
+      // cache user language on
+      caches: ['localStorage', 'cookie'],
+      excludeCacheFor: ['cimode'], // languages to not persist (cookie, localStorage)
+
+      // optional htmlTag with lang attribute, the default is:
+      htmlTag: document.documentElement,
+    },
+    react: {
+      /**
+       * @warning `wait` will throw a @deprecation warning: do not be intimidated by it and take your time to replace it.
+       */
+      // wait: false,
+      useSuspense: true,
+      transSupportBasicHtmlNodes: true,
     },
   })
+
 export default i18n

@@ -1,4 +1,8 @@
+import { Trans, useTranslation } from 'react-i18next'
+
 const FinalCtaSection = () => {
+  const { t } = useTranslation()
+
   const testimonials = [
     {
       name: 'Amanda Gianelli',
@@ -14,6 +18,7 @@ const FinalCtaSection = () => {
       image: '/images/portraits/KrisCoulson.jpg',
     },
   ]
+
   return (
     <div style={{ marginTop: 0 }}>
       <section
@@ -56,14 +61,19 @@ const FinalCtaSection = () => {
         </ul>
         <section className="flex flex-col items-center justify-center py-32">
           <h3 className="mb-12 space-y-12 px-4 text-center font-serif text-2xl font-bold sm:text-2xl md:mb-24 md:text-4xl lg:text-6xl">
-            Ready to start your own <br />
-            Redwood adventure?
+            <Trans
+              i18nKey="HomePage.FinalCTASection.text"
+              components={{ br: <br /> }}
+            >
+              Ready to start your own <br />
+              Redwood adventure?
+            </Trans>
           </h3>
           <a
             href="/docs/tutorial"
-            className="button bg-rw-500 hover:bg-rw-700 px-9 text-white"
+            className="button bg-rw-500 px-9 text-white hover:bg-rw-700"
           >
-            Start the Tutorial
+            {t('HomePage.FinalCTASection.link')}
           </a>
         </section>
       </section>

@@ -1,20 +1,25 @@
+import { Trans, useTranslation } from 'react-i18next'
+
+const testimonials = [
+  {
+    name: 'Ryan Chenkie',
+    subtext: 'Founder, CourseLift',
+    quote:
+      'Redwood has been a game changer for me. I use it for CourseLift and its the standard for new projects for my agency.”',
+    image: '/images/portraits/RyanChenkie.jpg',
+  },
+  {
+    name: 'Kris Coulson',
+    subtext: 'Founder, Teamstream',
+    quote:
+      'Not just ‘made with RedwoodJS’. Made with a lot of love for RedwoodJS. 💕',
+    image: '/images/portraits/KrisCoulson.jpg',
+  },
+]
+
 const TestimonialSection = () => {
-  const testimonials = [
-    {
-      name: 'Ryan Chenkie',
-      subtext: 'Founder, CourseLift',
-      quote:
-        'Redwood has been a game changer for me. I use it for CourseLift and its the standard for new projects for my agency.”',
-      image: '/images/portraits/RyanChenkie.jpg',
-    },
-    {
-      name: 'Kris Coulson',
-      subtext: 'Founder, Teamstream',
-      quote:
-        'Not just ‘made with RedwoodJS’. Made with a lot of love for RedwoodJS. 💕',
-      image: '/images/portraits/KrisCoulson.jpg',
-    },
-  ]
+  const { t } = useTranslation()
+
   return (
     <div style={{ marginTop: 0 }}>
       <section
@@ -58,11 +63,16 @@ const TestimonialSection = () => {
       </section>
       <section className="flex flex-col items-center justify-center space-y-8 bg-neutral-900 py-24">
         <h3 className="space-y-12 px-4 text-center font-serif text-xl text-white sm:text-2xl md:text-4xl lg:text-6xl">
-          Ready to start your own <br />
-          Redwood adventure?
+          <Trans
+            components={{ br: <br /> }}
+            i18nKey={'HomePage.TestimonialSection.title'}
+          >
+            Ready to start your own <br />
+            Redwood adventure?
+          </Trans>
         </h3>
         <a href="/docs/tutorial" className="button">
-          Start the tutorial
+          {t('HomePage.TestimonialSection.link')}
         </a>
       </section>
     </div>
