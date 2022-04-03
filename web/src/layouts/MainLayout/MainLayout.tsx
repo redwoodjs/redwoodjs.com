@@ -26,10 +26,10 @@ const MainLayout = ({ children }: MainLayoutProps) => {
               </span>
               <p className="ml-3 truncate font-medium text-white">
                 <span className="md:hidden">
-                  Redwood v1 Launch Week is here!!!.
+                  Redwood v1 Launch Week is here!!!
                 </span>
                 <span className="hidden md:inline">
-                  Redwood v1 Launch Week is here!!!.
+                  Redwood v1 Launch Week is here!!!
                 </span>
               </p>
             </div>
