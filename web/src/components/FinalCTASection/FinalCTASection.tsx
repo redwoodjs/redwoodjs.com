@@ -63,7 +63,7 @@ const FinalCtaSection = () => {
             href="/docs/tutorial"
             className="button bg-rw-500 hover:bg-rw-700 px-9 text-white"
           >
-            Start the tutorial
+            Start the Tutorial
           </a>
         </section>
       </section>
