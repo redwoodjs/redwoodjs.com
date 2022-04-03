@@ -15,6 +15,60 @@
     "title": "Examples <teal>RedwoodJS</teal>"
   },
   "HomePage": {
+    "CommunitySection": {
+      "text": "En plus de la technologie, <bold>nous vous invitons chaleureusement à rejoindre notre communauté, </bold> parce que passer d'un projet du dimanche à une startup c'est dur, et que <bold>personne ne devrait le faire seul.</bold>"
+    },
+    "FeaturesSection": {},
+    "FinalCTASection": {
+      "link": "Commencer le tutoriel",
+      "text": "Prêt-e pour démarrer votre propre <br />adventure Redwood ?"
+    },
+    "FundingShoutout": {
+      "amount": "<label>Les Startups utilisant Redwood <br />ont levé plus de</label> <amount>$19m</div>",
+      "text": "Si vous nous rejoignez, vous serez en bonne compagnie."
+    },
+    "GraphqlSection": {
+      "text": "<div> Lorsque vous <bold>démarrez</bold> avec un serveur GraphQL, vous n'avez <bold>plus</bold> besoin <bold>de chercher ailleurs.</bold></div><div>Nous appelons ça : <bold>Une API pour les gouverner toutes.</bold></div>"
+    },
+    "HeroSection": {
+      "link": "Commencez le tutoriel",
+      "subtitle": "Redwood est un framework web full-stack conçu pour vous aider à transformer votre projet du dimanche en projet de startup.",
+      "title": "<span>Construisez votre startup,</span> <span>arrêtez de lutter contre votre framework.</span>"
+    },
+    "MissionSection": {
+      "text": "Notre mission est d'aider <bold>davantage de startups</bold><br /> à explorer <bold>davantage de terrain, plus vite.</bold>"
+    },
+    "TechStackSection": {
+      "stack": {
+        "GraphQL": {
+          "description": "Au fur et à mesure que votre projet grandit, le nombre d'applications clientes qui doivent communiquer avec votre backend augmentera également. Avec une API GraphQL comme base, vous pouvez facilement vivre dans un monde multi-clients."
+        },
+        "Jest": {
+          "description": "Dormez bien la nuit en sachant que vos chemins de code critiques sont bien testés. Redwood ajoute à Jest des \"scénarios\" facilitant la configuration de votre base de données pour un scénario donné, ainsi que la simulation de GraphQL pour tester facilement le flux de données."
+        },
+        "Prisma": {
+          "description": "Interagir avec votre base de données n'a jamais été aussi facile. L'ORM extrêmement populaire de Prisma vous permet de vous concentrer davantage sur votre logique métier et moins sur les subtilités de SQL."
+        },
+        "React": {
+          "description": "Nous avons choisi le moteur de rendu le plus populaire au monde pour alimenter l'interface Web de Redwood. Avec React, vous aurez le choix du matériel d'apprentissage, des design systems et d'une main d'oeuvre qualifiée."
+        },
+        "Storybook": {
+          "description": "Si vous concevez vos composants de manière isolée avec Storybook, non seulement vous n'aurez jamais à vous battre avec votre framework pour le voir dans un état spécifique, mais vous créerez également une référence de conception complète gratuitement !"
+        },
+        "TypeScript": {
+          "description": "La prise en charge facultative de TypeScript vous offre le meilleur de JavaScript ET le meilleur d'un système de type. Même si vous créez votre application en JS, vous obtiendrez toujours une saisie semi-automatique tueuse car Redwood lui-même est écrit en TypeScript."
+        }
+      },
+      "text": "Nous créons d'abord un framework plus intégré, <br />capturant les meilleurs aspects de :"
+    },
+    "TestimonialSection": {
+      "link": "Commencer le tutoriel",
+      "title": "Prêt-e pour démarrer votre propre <br /> adventure Redwood ?"
+    },
+    "VideoTutorialSection": {
+      "answer": "Alors commencez votre exploration de Redwood avec un tour guidé de notre tutoriel !",
+      "question": "<div>Assez de bavardage.<bold>Vous préférez les videos?</bold></div>"
+    },
     "hero": {
       "links": {
         "docs": "Lire la Doc",
@@ -29,6 +83,61 @@
     "title": "Page d'accueil"
   },
   "Welcome to RedwoodJS": "Bienvenue sur RedwoodJS",
+  "footer": {
+    "about": {
+      "security": "Sécurité",
+      "title": "A propos"
+    },
+    "community": {
+      "code": "Code de conduite",
+      "contributors": "Rendez-vous des Contributeurs",
+      "join": "Rejoignez la communauté",
+      "makers": "Rendez-vous des Bricoleurs",
+      "title": "Communauté"
+    },
+    "misc": {
+      "shop": "Boutique",
+      "title": "Misc"
+    },
+    "newsletter": {
+      "button": "S'inscrire",
+      "subtitle": "Restez informé-e de ce qu'il se passe avec RedwoodJS !",
+      "title": "Inscrivez-vous à notre newsletter"
+    },
+    "social": {
+      "events": "Fil des Evènements",
+      "news": "Fil des Annonces",
+      "title": "Social"
+    }
+  },
   "info": "Ceci est votre fichier de traduction",
+  "navbar": {
+    "community": {
+      "discord": {
+        "description": "Pause café, relationnel, discussions et aides rapides"
+      },
+      "discourse": {
+        "description": "Discussions élaborées à propos de Redwood, debug collaboratif, mise en avant"
+      },
+      "title": "Communauté",
+      "twitter": {
+        "description": "Suivez @redwoodjs pour des mises à jour, de nouvelles releases et des annonces de meetup communautaires"
+      }
+    },
+    "jobs": {
+      "title": "Emplois"
+    },
+    "showcase": {
+      "examples": {
+        "description": "Découvrez toutes les fonctionnalités de Redwood avec des examples d'application et de code",
+        "title": "Applications d'exemple"
+      },
+      "showcase": {
+        "description": "Etudes de cas d'applications réelles et d'entreprises construites avec Redwood",
+        "title": "Etudes de cas"
+      },
+      "title": "Vitrine"
+    }
+  },
   "see": "https://www.i18next.com/translation-function/essentials"
 }
