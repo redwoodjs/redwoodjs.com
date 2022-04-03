@@ -178,19 +178,13 @@ const MainLayoutNavbar = () => {
                       <GithubStars />
                     </li>
                   )}
+                  <li>
+                    <LanguagePicker />
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
-          <button
-            className="text-white"
-            type={'button'}
-            onClick={() => {
-              i18n.changeLanguage('fr')
-            }}
-          >
-            FR
-          </button>
 
           <NavLinksMobile navigation={navigation} />
         </>
