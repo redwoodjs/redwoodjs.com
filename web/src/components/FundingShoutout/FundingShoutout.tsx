@@ -7,18 +7,37 @@ import PullflowLogo from 'web/public/images/startup-logos/pullflow.svg'
 import TeamstreamLogo from 'web/public/images/startup-logos/teamstream.svg'
 import UserVitalsLogo from 'web/public/images/startup-logos/uservitals.svg'
 import CourseliftLogo from 'web/public/images/startup-logos/courselift-white.svg'
+import TapeLogo from 'web/public/images/startup-logos/tape.svg'
 
 const FundingShoutout = () => {
   const companies = [
-    { name: 'Snaplet', logo: SnapletLogoWhite },
-    { name: 'Everfund', logo: EverfundLogo },
-    { name: 'Nous', logo: NousLogo },
-    { name: 'BuildPass', logo: BuildPassLogo },
-    { name: 'LeftLane', logo: LeftLaneLogo },
-    { name: 'Pullflow', logo: PullflowLogo },
-    { name: 'Teamstream', logo: TeamstreamLogo },
-    { name: 'UserVitals', logo: UserVitalsLogo },
-    { name: 'Courselift', logo: CourseliftLogo },
+    { name: 'Snaplet', logo: SnapletLogoWhite, link: 'https://snaplet.dev' },
+    { name: 'Everfund', logo: EverfundLogo, link: 'https://everfund.co.uk' },
+    { name: 'Nous', logo: NousLogo, link: 'https://nous.co' },
+    {
+      name: 'BuildPass',
+      logo: BuildPassLogo,
+      link: 'https://buildpass.com.au',
+    },
+    {
+      name: 'LeftLane',
+      logo: LeftLaneLogo,
+      link: 'https://www.leftlanesoftware.com',
+    },
+    { name: 'Pullflow', logo: PullflowLogo, link: 'http://pullflow.com' },
+    { name: 'Teamstream', logo: TeamstreamLogo, link: 'https://teamstream.gg' },
+    {
+      name: 'UserVitals',
+      logo: UserVitalsLogo,
+      link: 'https://uservitalshq.com',
+    },
+    {
+      name: 'Courselift',
+      logo: CourseliftLogo,
+      link: 'https://courselift.com',
+    },
+    { name: 'Tape', logo: TapeLogo, link: 'http://tape.sh' },
+    // { name: 'SportOffice', logo: CourseliftLogo, link: 'http://courselift.com' },
   ]
   return (
     <>
@@ -38,12 +57,16 @@ const FundingShoutout = () => {
         "
         >
           {companies.map((company) => (
-            <div
+            <a
+              href={company.link}
+              target="_blank"
+              rel="noopener noreferrer"
               key={company.name}
-              className="col-span-1 flex justify-center bg-neutral-800 py-4 px-8"
             >
-              <company.logo className="h-12 w-48 fill-white" />
-            </div>
+              <div className="col-span-1 flex justify-center bg-neutral-800 py-4 px-8">
+                <company.logo className="h-12 w-48 fill-white" />
+              </div>
+            </a>
           ))}
         </div>
       </section>
@@ -52,3 +75,14 @@ const FundingShoutout = () => {
 }
 
 export default FundingShoutout
+// Snaplet https://snaplet.dev
+// Tape.sh http://tape.sh
+// Teamstream http://teamstream.gg
+// Everfund https://everfund.co.uk
+// SportOffice https://sportoffice.fr
+// Pullflow http://pullflow.com
+// Courselift http://courselift.com
+// Buildpass http://buildpass.com.au
+// Nous http://nous.co
+// Leftlane https://www.leftlanesoftware.com
+// UserVitals http://uservitalshq.com
