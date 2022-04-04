@@ -11,25 +11,7 @@ export default function () {
         description="Want to get paid to write RedwoodJS?"
       />
 
-      <section className="max-w-screen-lg mx-auto mt-36">
-        <header className="text-center">
-          <h1 className="font-serif font-bold">RedwoodJS Jobs</h1>
-          <p className="mt-2 text-lg text-gray-500">
-            Companies looking for RedwoodJS devs
-          </p>
-        </header>
-
-        <div className="flex justify-center mt-4">
-          <Link to={routes.newJob()} className="button-sm">
-            Post a Job
-          </Link>
-        </div>
-        <div className="mt-8">
-          <JobsCell limit={5} showAll={true} />
-        </div>
-      </section>
-
-      <section className="max-w-screen-lg mx-auto mt-24 mb-24">
+      <section className="mx-auto mt-24 mb-24 max-w-screen-lg">
         <header className="text-center">
           <h1 className="mt-12 font-serif">RedwoodJS Developers</h1>
           <p className="mt-2 text-lg text-gray-500">
@@ -37,13 +19,31 @@ export default function () {
           </p>
         </header>
 
-        <div className="flex justify-center mt-4">
+        <div className="mt-4 flex justify-center">
           <Link to={routes.newJobProfile()} className="button-sm">
             Create Profile
           </Link>
         </div>
         <div className="mt-8">
           <JobProfilesCell limit={5} showAll={true} />
+        </div>
+      </section>
+
+      <section className="mx-auto mt-36 max-w-screen-lg">
+        <header className="text-center">
+          <h1 className="font-serif font-bold">RedwoodJS Jobs</h1>
+          <p className="mt-2 text-lg text-gray-500">
+            Companies looking for RedwoodJS devs
+          </p>
+        </header>
+
+        <div className="mt-4 flex justify-center">
+          <Link to={routes.newJob()} className="button-sm">
+            Post a Job
+          </Link>
+        </div>
+        <div className="mt-8">
+          <JobsCell limit={5} showAll={true} />
         </div>
       </section>
     </>
