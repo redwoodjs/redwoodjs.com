@@ -54,27 +54,21 @@ const FundingShoutout = () => {
           </div>
           <div className="text-6xl font-bold md:text-8xl">$19M</div>
         </div>
-        <div
-          className="mx-auto mt-6 grid grid-cols-1 gap-0.5  overflow-hidden rounded-xl md:grid-cols-3 lg:mt-8 lg:max-w-6xl
-        "
-        >
+        <div className="mx-auto mt-6 grid grid-cols-1 gap-0.5 overflow-hidden rounded-xl md:grid-cols-3 lg:mt-8 lg:max-w-6xl">
           {companies.map((company, i) => (
-            <>
-              {/* This code will need to change if we add 2 more logos! */}
-              {i === companies.length - 1 && i % 2 !== 0 && (
-                <span className="hidden sm:block"></span>
-              )}
-              <a
-                href={company.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                key={company.name}
-              >
-                <div className="col-span-1 flex justify-center bg-neutral-800 py-4 px-8">
-                  <company.logo className="h-12 w-48 fill-white" />
-                </div>
-              </a>
-            </>
+            <a
+              href={company.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              key={company.name}
+              className={
+                i === companies.length - 1 && i % 2 !== 0 && 'md:col-start-2'
+              }
+            >
+              <div className="col-span-1 flex justify-center bg-neutral-800 py-4 px-8">
+                <company.logo className="h-12 w-48 fill-white" />
+              </div>
+            </a>
           ))}
         </div>
       </section>

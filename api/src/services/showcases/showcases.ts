@@ -53,22 +53,29 @@ export const showcase = ({ id }: Prisma.ShowcaseWhereUniqueInput) => {
 }
 
 export const createShowcase = ({
-  input: { socialLinks, mediaId: _mediaId, ...input },
+  input: { socialLinks, ...input },
 }: MutationcreateShowcaseArgs) => {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
   const { imageUrl, ...data } = input
 
-  return db.showcase.create({
-    data: {
-      ...data,
-      media: {
-        create: { src: imageUrl, type: 'picture' },
+  return db.showcase
+    .create({
+      data: {
+        ...data,
+        localizations: undefined, // TODO: Localize
+        socialLinks: { createMany: { data: socialLinks } },
       },
-      localizations: undefined, // TODO: Localize
-      socialLinks: { createMany: { data: socialLinks } },
-    },
-  })
+    })
+    .then(async (showcase) => {
+      imageUrl &&
+        (await db.media.create({
+          data: {
+            src: imageUrl,
+            type: 'picture',
+            showcase: { connect: { id: showcase.id } },
+          },
+        }))
+      return showcase
+    })
 }
 
 interface UpdateShowcaseArgs extends Prisma.ShowcaseWhereUniqueInput {
