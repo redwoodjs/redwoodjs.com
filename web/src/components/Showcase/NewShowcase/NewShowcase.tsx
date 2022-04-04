@@ -27,8 +27,7 @@ const NewShowcase = () => {
   )
 
   const onSave = (input) => {
-    const castInput = Object.assign(input, { mediaId: parseInt(input.mediaId) })
-    createShowcase({ variables: { input: castInput } })
+    createShowcase({ variables: { input } })
   }
 
   return (
