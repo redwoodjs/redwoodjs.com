@@ -12,36 +12,28 @@ import { Private, Route, Router, Set } from '@redwoodjs/router'
 import AdminLayout from 'src/layouts/AdminLayout/AdminLayout'
 import MainLayout from 'src/layouts/MainLayout/MainLayout'
 
-import JobsPage from 'src/pages/Jobs/JobsPage'
-import JobPage from 'src/pages/Jobs/JobPage'
-import NewJobPage from 'src/pages/Jobs/NewJobPage'
-import EditJobPage from 'src/pages/Jobs/EditJobPage'
-import JobProfilePage from 'src/pages/Jobs/JobProfilePage'
-import NewJobProfilePage from 'src/pages/Jobs/NewJobProfilePage'
-import EditJobProfilePage from 'src/pages/Jobs/EditJobProfilePage'
-import AllJobsPage from 'src/pages/Jobs/AllJobsPage'
-import AllJobProfilesPage from 'src/pages/Jobs/AllJobProfilesPage'
-
 const Routes = () => {
   return (
     <Router>
       <Set wrap={MainLayout}>
         <Route path="/login" page={LoginPage} name="login" />
-        <Route path="/signup" page={SignupPage} name="signup" />
+        {/* <Route path="/signup" page={SignupPage} name="signup" /> */}
+
         <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
         <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
         <Route path="/examples" page={ExamplesPage} name="examples" />
-        <Route path="/jobs/new" page={NewJobPage} name="newJob" />
-        <Route path="/jobs/all" page={AllJobsPage} name="allJobs" />
-        <Route path="/jobs/{id:Int}" page={JobPage} name="job" />
-        <Route path="/jobs/{id:Int}/edit" page={EditJobPage} name="editJob" />
-        <Route path="/jobs" page={JobsPage} name="jobs" />
-        <Route path="/job-profiles/new" page={NewJobProfilePage} name="newJobProfile" />
-        <Route path="/job-profiles/all" page={AllJobProfilesPage} name="allJobProfiles" />
-        <Route path="/job-profiles/{id:Int}" page={JobProfilePage} name="jobProfile" />
-        <Route path="/job-profiles/{id:Int}/edit" page={EditJobProfilePage} name="editJobProfile" />
+        <Route path="/jobs/new" page={JobsNewJobPage} name="newJob" />
+        <Route path="/jobs/all" page={JobsAllJobsPage} name="allJobs" />
+        <Route path="/jobs/{id:Int}" page={JobsJobPage} name="job" />
+        <Route path="/jobs/{id:Int}/edit" page={JobsEditJobPage} name="editJob" />
+        <Route path="/jobs" page={JobsJobsPage} name="jobs" />
+        <Route path="/job-profiles/new" page={JobsNewJobProfilePage} name="newJobProfile" />
+        <Route path="/job-profiles/all" page={JobsAllJobProfilesPage} name="allJobProfiles" />
+        <Route path="/job-profiles/{id:Int}" page={JobsJobProfilePage} name="jobProfile" />
+        <Route path="/job-profiles/{id:Int}/edit" page={JobsEditJobProfilePage} name="editJobProfile" />
         <Route path="/showcase" page={StartupListPage} name="showcase" />
         <Route path="/showcase/{slug}" page={StartupShowcasePage} name="startup" />
+        <Route path="/logos" page={LogosPage} name="logos" />
 
         <Route path="/" page={HomePage} name="home" />
 

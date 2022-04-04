@@ -3,6 +3,8 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
+
+      serif: ['Source Serif Pro', 'serif'],
       mono: [
         'Fira Code',
         'Fira Mono',
@@ -28,7 +30,7 @@ module.exports = {
           800: '#2E4A0E',
           900: '#1B3408',
         },
-        redwood: {
+        rw: {
           50: '#FDF0EB',
           100: '#F0BEB1',
           200: '#E2947C',
@@ -42,6 +44,7 @@ module.exports = {
         },
       },
       lineHeight: {
+        1.25: '1.25',
         11: '2.75rem',
         12: '3rem',
       },

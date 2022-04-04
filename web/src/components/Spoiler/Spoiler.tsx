@@ -10,14 +10,14 @@ export interface SpoilerProps {
 const Spoiler: FC<SpoilerProps> = ({ children, open = false, title }) => {
   return (
     <Disclosure as="div" className="flex flex-col space-y-2" defaultOpen={open}>
-      <Disclosure.Button className="flex flex-row items-center justify-between bg-redwood-100 bg-opacity-20 hover:bg-opacity-50 active:bg-opacity-70 border border-redwood-100 active:border-redwood-200 px-6 py-4 rounded-md font-semibold text-left text-sm transition duration-150 ease-out">
+      <Disclosure.Button className="flex flex-row items-center justify-between bg-rw-100 bg-opacity-20 hover:bg-opacity-50 active:bg-opacity-70 border border-rw-100 active:border-rw-200 px-6 py-4 rounded-md font-semibold text-left text-sm transition duration-150 ease-out">
         {({ open }) => (
           <>
             <span className="text-stone-900">{title}</span>
             <span
               aria-hidden="true"
               className={clsx(
-                'icon md-20 text-redwood-700 transition-transform duration-200 ease-out',
+                'icon md-20 text-rw-700 transition-transform duration-200 ease-out',
                 open && 'rotate-90'
               )}
             >

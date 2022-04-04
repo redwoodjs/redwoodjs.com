@@ -13,7 +13,7 @@ $color_neutral: #1A202C;
   }
 
   a {
-    @apply text-forest-600 hover:text-red-700 underline hover:no-underline transition duration-100;
+    @apply text-rw-500 hover:text-rw-700 underline hover:no-underline transition duration-100;
   }
 
   code {
@@ -31,7 +31,7 @@ $color_neutral: #1A202C;
   }
 
   .button-alt {
-    @apply bg-redwood-400 hover:bg-redwood-500 text-redwood-100 hover:text-white font-semibold rounded px-6 py-3 uppercase transition duration-150;
+    @apply bg-rw-400 hover:bg-rw-500 text-white hover:text-white font-semibold rounded px-6 py-3 uppercase transition duration-150;
   }
 
   .button-sm {
@@ -46,23 +46,23 @@ $color_neutral: #1A202C;
     @apply button flex flex-row items-center no-underline p-2 rounded-full space-x-2.5 text-sm;
 
     &.discord {
-      @apply bg-[#5865F2] hover:bg-[#4150f1];
+      @apply text-white bg-[#5865F2] hover:bg-[#4150f1];
     }
 
     &.github {
-      @apply bg-[#333] hover:bg-[#262626];
+      @apply text-white bg-[#333] hover:bg-[#262626];
     }
 
     &.linkedin {
-      @apply bg-[#0077b5] hover:bg-[#006399];
+      @apply text-white bg-[#0077b5] hover:bg-[#006399];
     }
 
     &.productHunt {
-      @apply bg-[#da552f] hover:bg-[#cc4824];
+      @apply text-white bg-[#da552f] hover:bg-[#cc4824];
     }
 
     &.twitter {
-      @apply bg-[#1da1f2] hover:bg-[#0d94e7];
+      @apply text-white bg-[#1da1f2] hover:bg-[#0d94e7];
     }
   }
 
@@ -82,13 +82,17 @@ $color_neutral: #1A202C;
     @apply p-2;
   }
 
-  .job .markdown {
-    p {
-      @apply mt-4 leading-7;
-    }
+  .job {
+    @apply pb-24;
 
-    ul {
-      @apply list-disc;
+    .markdown {
+      p {
+        @apply mt-4 leading-7;
+      }
+
+      ul {
+        @apply list-disc;
+      }
     }
   }
 
@@ -203,7 +207,7 @@ $color_neutral: #1A202C;
   }
 
   .title {
-    @apply text-xl text-forest-600 font-semibold tracking-tight;
+    @apply text-xl text-stone-900 font-semibold tracking-tight;
   }
 
   .page_examples .filters {
@@ -231,34 +235,34 @@ $color_neutral: #1A202C;
   .jobForm {
 
     .input {
-      @apply flex items-start mt-12;
+      @apply sm:flex items-start mt-12;
     }
 
     .column {
       @apply px-4;
 
       &:first-child {
-        @apply w-2/3 px-4;
+        @apply sm:w-2/3 px-4;
       }
 
       &:last-child {
-        @apply w-1/3;
+        @apply sm:w-1/3;
       }
     }
 
 
     .help {
-      @apply mt-8 text-sm text-neutral-500 leading-6;
+      @apply mt-2 sm:mt-8 text-sm text-gray-500 leading-6;
     }
 
     .tags {
       @apply flex flex-wrap items-center mt-1;
 
       li {
-        @apply mt-1 mr-2 px-2 py-1 flex items-center text-sm bg-redwood-200 text-redwood-700 rounded whitespace-nowrap;
+        @apply mt-1 mr-2 px-2 py-1 flex items-center text-sm bg-rw-200 text-rw-700 rounded whitespace-nowrap;
 
         .icon {
-          @apply ml-2 text-redwood-400 transition duration-150;
+          @apply ml-2 text-rw-400 transition duration-150;
 
           &:hover {
             @apply font-semibold text-red-700;
@@ -276,7 +280,7 @@ $color_neutral: #1A202C;
     }
 
     input, textarea {
-      @apply block w-full mt-2 py-3 px-4 bg-white border border-redwood-200 rounded;
+      @apply block w-full mt-2 py-3 px-4 bg-white border border-rw-200 rounded;
 
       &.error {
         @apply outline outline-2 outline-red-600;
@@ -297,10 +301,10 @@ $color_neutral: #1A202C;
       }
 
       button {
-        @apply mt-2 py-3 px-8 button-alt border border-redwood-400 rounded-l-none;
+        @apply mt-2 py-3 px-8 button-alt border border-rw-400 rounded-l-none;
 
         &:hover {
-          @apply border-redwood-500;
+          @apply border-rw-500;
         }
       }
     }
@@ -308,6 +312,10 @@ $color_neutral: #1A202C;
     .fieldError {
       @apply block mt-2 text-sm text-red-600;
     }
+  }
+
+  .line-height {
+    line-height: 1.25;
   }
 }
 
