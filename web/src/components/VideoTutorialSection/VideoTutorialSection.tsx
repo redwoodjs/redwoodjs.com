@@ -35,7 +35,7 @@ const VideoTutorialSection = () => {
                 <img
                   src={videoThumbnail}
                   alt="Play Tutorial Video"
-                  className="h-[620px] w-auto object-cover object-center"
+                  className="h-full w-auto object-cover object-center md:h-[480px] lg:h-[620px]"
                 />
               </button>
             </div>
