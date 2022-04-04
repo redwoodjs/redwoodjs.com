@@ -1,6 +1,5 @@
 import type { APIGatewayEvent, Context } from 'aws-lambda'
 import { logger } from 'src/lib/logger'
-import fetch from 'node-fetch'
 
 /**
  * This function takes every sticker request and adds it to an AirTable
