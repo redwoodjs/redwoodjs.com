@@ -11,6 +11,7 @@ import { Private, Route, Router, Set } from '@redwoodjs/router'
 
 import AdminLayout from 'src/layouts/AdminLayout/AdminLayout'
 import MainLayout from 'src/layouts/MainLayout/MainLayout'
+import HomePage from 'src/pages/HomePage'
 
 const Routes = () => {
   return (
