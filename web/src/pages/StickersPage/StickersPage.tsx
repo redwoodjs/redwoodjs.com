@@ -18,7 +18,7 @@ const StickersPage = () => {
         <form
           name="stickers"
           className="mx-auto mt-8 max-w-lg space-y-4"
-          data-netlify="true"
+          netlify
           action="/stickers-thanks"
         >
           <input
