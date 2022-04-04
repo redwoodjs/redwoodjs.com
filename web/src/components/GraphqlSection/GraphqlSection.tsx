@@ -1,7 +1,7 @@
 const GraphqlSection = () => {
   return (
     <section className="mx-auto lg:max-w-6xl">
-      <h3 className="space-y-12 px-4 font-serif text-xl sm:text-center sm:text-2xl md:text-4xl lg:text-6xl">
+      <h3 className="space-y-12 px-4 font-serif text-xl sm:text-center sm:text-2xl md:text-4xl lg:text-6xl lg:leading-tight">
         <div>
           When you <span className="font-bold">start</span> with a GraphQL
           backend server, you&apos;ll <span className="font-bold">end</span> up

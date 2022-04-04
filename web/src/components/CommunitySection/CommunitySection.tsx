@@ -7,7 +7,7 @@ const communities = [
   {
     name: 'Discord',
     logo: '/images/3p-logos/community/discord.svg',
-    link: 'https://discord.gg/jjSYEQd',
+    link: 'https://discord.gg/redwoodjs',
   },
   {
     name: 'Discourse',
@@ -19,7 +19,7 @@ const communities = [
 const CommunitySection = () => {
   return (
     <section className="mx-auto max-w-6xl space-y-12 p-4">
-      <p className="font-serif text-xl sm:text-center sm:text-2xl md:text-4xl lg:text-6xl">
+      <p className="font-serif text-xl sm:text-center sm:text-2xl md:text-4xl lg:text-6xl lg:leading-tight">
         On top of the technology,{' '}
         <span className="font-bold">
           we warmly welcome you to join our community,{' '}
