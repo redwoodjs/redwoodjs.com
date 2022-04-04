@@ -1,37 +1,56 @@
 const navigation = {
   about: [
-    { name: 'README', href: 'https://github.com/redwoodjs/redwood' },
-    { name: 'Roadmap', href: 'https://github.com/redwoodjs/redwood' },
-    { name: 'Releases', href: 'https://github.com/redwoodjs/redwood' },
-    { name: 'Core Team', href: 'https://github.com/redwoodjs/redwood' },
-    { name: 'Security Stuffs', href: 'https://github.com/redwoodjs/redwood' },
+    {
+      name: 'README',
+      href: 'https://github.com/redwoodjs/redwood/blob/main/README.md',
+    },
+    {
+      name: 'Core Team',
+      href: 'https://github.com/redwoodjs/redwood#core-team',
+    },
+    {
+      name: 'All Contributors',
+      href: 'https://github.com/redwoodjs/redwood#all-contributors',
+    },
+    // { name: 'Stickers', href: 'https://github.com/redwoodjs/redwood' },
+    { name: 'Shop', href: 'https://shop.redwoodjs.com' },
+    { name: 'Brand and Logos', href: '/logos' },
+    { name: 'Security', href: '/security' },
+    // { name: 'Roadmap', href: 'https://github.com/redwoodjs/redwood' },
+    // { name: 'Releases', href: 'https://github.com/redwoodjs/redwood' },
   ],
   community: [
     {
       name: 'Join the Community',
-      href: 'https://github.com/redwoodjs/redwood',
+      href: 'https:/redwoodjs.com/community',
     },
     {
       name: 'Contributors Meetup',
-      href: 'https://github.com/redwoodjs/redwood',
+      href: 'https://community.redwoodjs.com/t/contributors-meetups-a-next-step-for-redwoodjs-participation/2470',
     },
-    { name: 'Makers Hours', href: 'https://github.com/redwoodjs/redwood' },
-    { name: 'Startup Club', href: 'https://github.com/redwoodjs/redwood' },
-    { name: 'Code of Conduct', href: 'https://github.com/redwoodjs/redwood' },
+    {
+      name: 'Makers Hours',
+      href: 'https://community.redwoodjs.com/t/redwood-makers-hour-stand-up/1971',
+    },
+    {
+      name: 'Code of Conduct',
+      href: 'https://github.com/redwoodjs/redwood/blob/main/CODE_OF_CONDUCT.md',
+    },
+    // { name: 'Startup Club', href: 'https://github.com/redwoodjs/redwood' },
   ],
-  misc: [
-    { name: 'Brand collateral', href: 'https://github.com/redwoodjs/redwood' },
-    { name: 'Stickers', href: 'https://github.com/redwoodjs/redwood' },
-    { name: 'Shop', href: 'https://shop.redwoodjs.com' },
-  ],
-  social: [
-    { name: 'Events Feed', href: '' },
-    { name: 'Announcements Feed', href: '' },
-    { name: 'Twitter', href: '' },
-    { name: 'Discord', href: '' },
-    { name: 'Discourse', href: '' },
-    { name: 'GitHub', href: '' },
-    { name: 'Youtube', href: '' },
+  announcements: [
+    {
+      name: 'Events',
+      href: 'https://community.redwoodjs.com/c/announcements/events/19',
+    },
+    {
+      name: 'Releases',
+      href: 'https://community.redwoodjs.com/c/announcements/releases-and-upgrade-guides/18',
+    },
+    {
+      name: 'General',
+      href: 'https://community.redwoodjs.com/c/announcements/5',
+    },
   ],
   icons: [
     {
@@ -54,7 +73,7 @@ const navigation = {
         <svg
           fill="currentColor"
           viewBox="0 0 36 36"
-          className="h-6 w-6"
+          // className="h-6 w-6"
           xmlns="http://www.w3.org/2000/svg"
           {...props}
         >
@@ -71,7 +90,7 @@ const navigation = {
           viewBox="0 0 32 32"
           fill="currentColor"
           {...props}
-          className="h-5 w-5"
+          // className="h-5 w-5"
         >
           <path d="M16.1357143,0 C7.37857143,0 0,7.03571429 0,15.7214286 C0,16 0.00714285714,32 0.00714285714,32 L16.1357143,31.9857143 C24.9,31.9857143 32,24.6785714 32,15.9928571 C32,7.30714286 24.9,0 16.1357143,0 Z M16,25.1428571 C14.6142857,25.1428571 13.2928571,24.8357143 12.1142857,24.2785714 L6.32142857,25.7142857 L7.95714286,20.3571429 C7.25714286,19.0642857 6.85714286,17.5785714 6.85714286,16 C6.85714286,10.95 10.95,6.85714286 16,6.85714286 C21.05,6.85714286 25.1428571,10.95 25.1428571,16 C25.1428571,21.05 21.05,25.1428571 16,25.1428571 Z"></path>
         </svg>
@@ -86,8 +105,27 @@ const navigation = {
         </svg>
       ),
     },
+    {
+      name: 'Youtube',
+      href: 'https://youtube.com/redwoodjs',
+      icon: (props) => (
+        <svg
+          viewBox="0 0 157 110"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+          {...props}
+        >
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M139.5 3.7C146.2 5.5 151.5 10.8 153.3 17.5C156.6 29.7 156.7 55 156.7 55C156.7 55 156.7 80.4 153.4 92.5C151.6 99.2 146.3 104.5 139.6 106.3C127.5 109.6 78.8 109.6 78.8 109.6C78.8 109.6 30.1 109.6 18 106.3C11.3 104.5 6.00002 99.2 4.20002 92.5C0.900024 80.3 0.900024 55 0.900024 55C0.900024 55 0.900024 29.7 4.10002 17.6C5.90002 10.9 11.2 5.6 17.9 3.8C30 0.500001 78.7 0.400002 78.7 0.400002C78.7 0.400002 127.4 0.400002 139.5 3.7ZM103.6 55L63.2001 78.4V31.6L103.6 55Z"
+          />
+        </svg>
+      ),
+    },
   ],
 }
+
 const Footer = () => {
   return (
     <footer className="bg-neutral-900" aria-labelledby="footer-heading">
@@ -99,7 +137,7 @@ const Footer = () => {
         {/* <div className=" pt-8 lg:flex lg:items-center lg:justify-between xl:mt-0"> */}
         <div className="pb-12 lg:flex lg:items-center lg:justify-between xl:mt-0">
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-neutral-400">
+            <h3 className="text-lg font-semibold uppercase tracking-wider text-neutral-400">
               Subscribe to our newsletter
             </h3>
             <p className="mt-2 text-base text-neutral-300">
@@ -180,10 +218,10 @@ const Footer = () => {
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
                   <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400">
-                    Social
+                    Announcements
                   </h3>
                   <ul className="mt-4 space-y-4">
-                    {navigation.social.map((item) => (
+                    {navigation.announcements.map((item) => (
                       <li key={item.name}>
                         <a
                           href={item.href}
@@ -196,19 +234,20 @@ const Footer = () => {
                   </ul>
                 </div>
                 <div className="mt-12 md:mt-0">
-                  <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400">
-                    Misc
-                  </h3>
                   <ul className="mt-4 space-y-4">
-                    <div className="flex items-center space-x-6 md:order-2">
+                    <div className="flex flex-col space-y-6 md:order-2">
                       {navigation.icons.map((item) => (
                         <a
                           key={item.name}
                           href={item.href}
-                          className="text-neutral-400 hover:text-neutral-300"
+                          className="flex items-center text-neutral-400 hover:text-neutral-300"
                         >
                           <span className="sr-only">{item.name}</span>
-                          <item.icon className="h-6 w-6" aria-hidden="true" />
+                          <item.icon
+                            className="mr-2 h-8 w-8"
+                            aria-hidden="true"
+                          />
+                          <span>{item.name}</span>
                         </a>
                       ))}
                     </div>
@@ -219,7 +258,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 border-t border-neutral-700 pt-8 md:flex md:items-center md:justify-between">
-          <div className="flex items-center space-x-6 md:order-2">
+          {/* <div className="flex items-center space-x-6 md:order-2">
             {navigation.icons.map((item) => (
               <a
                 key={item.name}
@@ -230,7 +269,7 @@ const Footer = () => {
                 <item.icon className="h-6 w-6" aria-hidden="true" />
               </a>
             ))}
-          </div>
+          </div> */}
           <p className="mt-8 text-base text-neutral-400 md:order-1 md:mt-0">
             Copyright &copy;{new Date().getFullYear()} Tom Preston-Werner
           </p>
