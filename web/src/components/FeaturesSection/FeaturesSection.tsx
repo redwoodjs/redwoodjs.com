@@ -162,7 +162,7 @@ const Feature = ({ feature, imgSide = 'right' }) => {
           <div className="mt-6">
             <a
               href={feature.learnMore}
-              className="text-rw-500 inline-flex rounded-md text-base font-medium"
+              className="text-rw-500 inline-flex rounded-md text-lg"
             >
               Learn more
             </a>
