@@ -31,7 +31,7 @@ const VideoTutorialSection = () => {
           ) : (
             <div className="background-green-300 flex justify-center">
               <button className="group" onClick={() => setShowVideo(true)}>
-                <PlayIcon className="absolute top-1/2 left-1/2 w-20 -translate-x-1/2 -translate-y-1/2 transform text-forest-500 text-opacity-95 transition-transform group-hover:scale-125" />
+                <PlayIcon className="absolute top-1/2 left-1/2 w-32 -translate-x-1/2 -translate-y-1/2 transform text-rw-500 text-opacity-95 transition-transform group-hover:scale-125" />
                 <img
                   src={videoThumbnail}
                   alt="Play Tutorial Video"
