@@ -1,20 +1,5 @@
+import { testimonials } from 'src/data/testimonials'
 const TestimonialSection = () => {
-  const testimonials = [
-    {
-      name: 'Ryan Chenkie',
-      subtext: 'Founder, CourseLift',
-      quote:
-        'Redwood has been a game changer for me. I use it for CourseLift and its the standard for new projects for my agency.”',
-      image: '/images/portraits/RyanChenkie.jpg',
-    },
-    {
-      name: 'Kris Coulson',
-      subtext: 'Founder, Teamstream',
-      quote:
-        'Not just ‘made with RedwoodJS’. Made with a lot of love for RedwoodJS. 💕',
-      image: '/images/portraits/KrisCoulson.jpg',
-    },
-  ]
   return (
     <div style={{ marginTop: 0 }}>
       <section
