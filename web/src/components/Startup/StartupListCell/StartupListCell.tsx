@@ -41,7 +41,7 @@ export const Success = ({ startups }: CellSuccessProps<StartupListQuery>) => {
           title={s.name}
           subtitle={s.tagline}
           src={resizeFilestackImage(s.thumbnail, {
-            fit: true,
+            fit: false,
             height: 220,
             width: 500,
           })}
