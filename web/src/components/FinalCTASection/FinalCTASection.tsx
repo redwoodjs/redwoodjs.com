@@ -11,7 +11,7 @@ const FinalCtaSection = () => {
         }}
       >
         <ul className="mx-auto mb-12 grid gap-3 sm:grid-cols-2 md:mb-32 lg:max-w-5xl">
-          {testimonials.map((testimonial) => (
+          {testimonials.slice(2, 4).map((testimonial) => (
             <li
               key={testimonial.name}
               className="col-span-1 space-y-4 rounded-xl bg-white p-4"

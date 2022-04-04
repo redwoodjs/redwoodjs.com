@@ -3,15 +3,8 @@ export const testimonials = [
     name: 'Ryan Chenkie',
     subtext: 'Founder, CourseLift',
     quote:
-      'Redwood has been a game changer for me. I use it for CourseLift and its the standard for new projects for my agency.”',
+      'Redwood has been a game changer for me. I use it for CourseLift and its the standard for new projects for my agency.',
     image: '/images/portraits/RyanChenkie.jpg',
-  },
-  {
-    name: 'Kris Coulson',
-    subtext: 'Founder, Teamstream',
-    quote:
-      'Not just ‘made with RedwoodJS’. Made with a lot of love for RedwoodJS. 💕',
-    image: '/images/portraits/KrisCoulson.jpg',
   },
   {
     name: 'Zak Mandhro',
@@ -30,8 +23,15 @@ export const testimonials = [
   {
     name: 'Amanda Gianelli',
     subtext: 'Engineer, Auth0',
-    quote: 'RedwoodJS makes me feel like a superhero ‍♀️ 🚀',
+    quote: 'RedwoodJS makes me feel like a superhero 🚀',
     image: '/images/portraits/AmandaGianelli.jpg',
+  },
+  {
+    name: 'Kris Coulson',
+    subtext: 'Founder, Teamstream',
+    quote:
+      'Not just ‘made with RedwoodJS’. Made with a lot of love for RedwoodJS. 💕',
+    image: '/images/portraits/KrisCoulson.jpg',
   },
   // {
   //   name: 'Patrick Gallagher',

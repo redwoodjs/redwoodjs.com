@@ -10,7 +10,7 @@ const TestimonialSection = () => {
         }}
       >
         <ul className="mx-auto grid gap-3 sm:grid-cols-2 lg:max-w-6xl">
-          {testimonials.map((testimonial) => (
+          {testimonials.slice(0, 2).map((testimonial) => (
             <li
               key={testimonial.name}
               className="col-span-1 space-y-4 rounded-xl bg-white p-4"
