@@ -82,13 +82,17 @@ $color_neutral: #1A202C;
     @apply p-2;
   }
 
-  .job .markdown {
-    p {
-      @apply mt-4 leading-7;
-    }
+  .job {
+    @apply pb-24;
 
-    ul {
-      @apply list-disc;
+    .markdown {
+      p {
+        @apply mt-4 leading-7;
+      }
+
+      ul {
+        @apply list-disc;
+      }
     }
   }
 
@@ -249,24 +253,24 @@ $color_neutral: #1A202C;
   .jobForm {
 
     .input {
-      @apply flex items-start mt-12;
+      @apply sm:flex items-start mt-12;
     }
 
     .column {
       @apply px-4;
 
       &:first-child {
-        @apply w-2/3 px-4;
+        @apply sm:w-2/3 px-4;
       }
 
       &:last-child {
-        @apply w-1/3;
+        @apply sm:w-1/3;
       }
     }
 
 
     .help {
-      @apply mt-8 text-sm text-neutral-500 leading-6;
+      @apply mt-2 sm:mt-8 text-sm text-gray-500 leading-6;
     }
 
     .tags {

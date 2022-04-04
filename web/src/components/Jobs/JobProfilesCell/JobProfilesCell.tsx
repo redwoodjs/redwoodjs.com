@@ -50,7 +50,7 @@ export const Success = ({
           <tr
             key={`job_profiles-${profile.id}`}
             onClick={() => navigate(routes.jobProfile({ id: profile.id }))}
-            className={`duration-250 flex cursor-pointer flex-col flex-nowrap border-gray-200 transition hover:bg-teal-50 sm:table-row`}
+            className={`duration-250 flex cursor-pointer flex-col flex-nowrap border-gray-200 transition hover:bg-forest-50 sm:table-row`}
           >
             <td
               className={`flex w-full items-center justify-center pt-16 pb-4 sm:w-48 sm:py-8`}

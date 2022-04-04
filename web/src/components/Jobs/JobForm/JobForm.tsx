@@ -4,7 +4,6 @@ import * as filestack from 'filestack-js'
 import {
   FieldError,
   Form,
-  FormError,
   Label,
   Submit,
   TextField,

@@ -56,12 +56,12 @@ export default function ({ token }) {
       />
 
       <div className="max-w-screen-lg mx-auto job">
-        <header className="mt-36">
-          <h1 className="relative text-6xl px-16 font-serif font-bold tracking-normal text-center">
+        <header className="mt-12 sm:mt-36">
+          <h1 className="relative text-5xl sm:text-6xl px-16 font-serif font-bold tracking-normal text-center">
             Post a Job
           </h1>
-          <div className="mt-2 text-center text-gray-500">
-            Get your job in front of the best RedwoodJS devs
+          <div className="mt-2 px-4 text-center text-gray-500">
+            Get your job in front of the best RedwoodJS developers
           </div>
         </header>
 
