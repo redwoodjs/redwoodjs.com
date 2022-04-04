@@ -200,16 +200,18 @@ const Footer = () => {
                     Misc
                   </h3>
                   <ul className="mt-4 space-y-4">
-                    {navigation.misc.map((item) => (
-                      <li key={item.name}>
+                    <div className="flex items-center space-x-6 md:order-2">
+                      {navigation.icons.map((item) => (
                         <a
+                          key={item.name}
                           href={item.href}
-                          className="text-base text-gray-300 hover:text-white"
+                          className="text-neutral-400 hover:text-neutral-300"
                         >
-                          {item.name}
+                          <span className="sr-only">{item.name}</span>
+                          <item.icon className="h-6 w-6" aria-hidden="true" />
                         </a>
-                      </li>
-                    ))}
+                      ))}
+                    </div>
                   </ul>
                 </div>
               </div>
