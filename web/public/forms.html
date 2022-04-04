@@ -1,0 +1,14 @@
+<!-- Workaround for using Netlify forms with React apps, https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/ -->
+
+<form name="stickers" netlify netlify-honeypot="bot-field" hidden>
+  <input type="email" name="email" />
+  <input type="text" name="username" />
+  <input type="text" name="name" />
+  <input type="text" name="address1" />
+  <input type="text" name="address2" />
+  <input type="text" name="city" />
+  <input type="text" name="state" />
+  <input type="text" name="postal_code" />
+  <input type="text" name="country" />
+  <textarea name="comment"></textarea>
+</form>

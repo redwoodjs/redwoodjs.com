@@ -15,14 +15,10 @@ const StickersPage = () => {
           to get stickers, shipped anywhere in the world, free!
         </p>
 
-        <form
-          name="stickers"
-          className="mx-auto mt-8 max-w-lg space-y-4"
-          netlify
-          action="/stickers-thanks"
-        >
+        <form name="stickers" className="mx-auto mt-8 max-w-lg space-y-4">
+          <input type="hidden" name="form-name" value="stickers" />
           <input
-            type="text"
+            type="email"
             name="email"
             placeholder="Email (optional)"
             className="block w-full rounded border border-gray-300 px-3 py-2"
