@@ -12,7 +12,7 @@ import TapeLogo from 'web/public/images/startup-logos/tape.svg'
 const FundingShoutout = () => {
   const companies = [
     { name: 'Snaplet', logo: SnapletLogoWhite, link: 'https://snaplet.dev' },
-    { name: 'Everfund', logo: EverfundLogo, link: 'https://everfund.io' },
+    { name: 'Everfund', logo: EverfundLogo, link: 'https://everfund.io?utm_source=redwoodjs&utm_medium=logo+area' },
     { name: 'Nous', logo: NousLogo, link: 'https://nous.co' },
     {
       name: 'BuildPass',
@@ -57,7 +57,7 @@ const FundingShoutout = () => {
         <div className="mx-auto mt-6 grid grid-cols-1 gap-0.5 overflow-hidden rounded-xl md:grid-cols-3 lg:mt-8 lg:max-w-6xl">
           {companies.map((company, i) => (
             <a
-              href={`${company.link}?utm_source=redwoodjs&utm_medium=logo+area}
+              href={company.link}
               target="_blank"
               rel="noopener noreferrer"
               key={company.name}
