@@ -12,7 +12,7 @@ import TapeLogo from 'web/public/images/startup-logos/tape.svg'
 const FundingShoutout = () => {
   const companies = [
     { name: 'Snaplet', logo: SnapletLogoWhite, link: 'https://snaplet.dev' },
-    { name: 'Everfund', logo: EverfundLogo, link: 'https://everfund.co.uk' },
+    { name: 'Everfund', logo: EverfundLogo, link: 'https://everfund.io?utm_source=redwoodjs&utm_medium=logo+area' },
     { name: 'Nous', logo: NousLogo, link: 'https://nous.co' },
     {
       name: 'BuildPass',
