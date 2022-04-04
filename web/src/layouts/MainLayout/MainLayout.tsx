@@ -34,8 +34,10 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                 </div>
                 <span className="ml-2 block">
                   <a
+                    target={'_blank'}
                     href="https://v1launchweek.redwoodjs.com"
-                    className="font-bold text-white underline"
+                    className="font-bold text-white underline hover:text-teal-900 hover:underline"
+                    rel="noreferrer"
                   >
                     Schedule and Events <span aria-hidden="true">&rarr;</span>
                   </a>
