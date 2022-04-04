@@ -13,6 +13,8 @@ import { logger } from 'src/lib/logger'
 export const handler = async (event: APIGatewayEvent, _context: Context) => {
   logger.info('Invoked stickers function')
 
+  const fetch = require('node-fetch')
+
   const fields = JSON.parse(event.body).data
   delete fields.ip
   delete fields.user_agent
