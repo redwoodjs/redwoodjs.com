@@ -32,6 +32,7 @@ const Routes = () => {
         <Route path="/job-profiles/{id:Int}/edit" page={JobsEditJobProfilePage} name="editJobProfile" />
         <Route path="/showcase" page={StartupListPage} name="showcase" />
         <Route path="/showcase/{slug}" page={StartupShowcasePage} name="startup" />
+        <Route path="/security" page={SecurityPage} name="security" />
 
         <Route path="/" page={HomePage} name="home" />
 
