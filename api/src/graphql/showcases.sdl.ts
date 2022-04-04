@@ -11,7 +11,7 @@ export const schema = gql`
     description: String!
     media: Media
     mediaId: Int
-    socialLinks: [SocialLink!]!
+    socialLinks: [SocialLink]
     tags: [Tag]!
     localizations: [ShowcaseLocalization]
   }
