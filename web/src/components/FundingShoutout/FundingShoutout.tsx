@@ -38,6 +38,8 @@ const FundingShoutout = () => {
     },
     { name: 'Tape', logo: TapeLogo, link: 'https://tape.sh' },
     // { name: 'SportOffice', logo: CourseliftLogo, link: 'http://courselift.com' },
+    // Checkout the special layout hook below that centers the last logo if it
+    // would display all by itself! If we add 2 more logos it will need to change
   ]
   return (
     <>
@@ -58,7 +60,10 @@ const FundingShoutout = () => {
         >
           {companies.map((company, i) => (
             <>
-              {i === companies.length - 1 && i % 2 !== 0 && <span></span>}
+              {/* This code will need to change if we add 2 more logos! */}
+              {i === companies.length - 1 && i % 2 !== 0 && (
+                <span className="hidden sm:block"></span>
+              )}
               <a
                 href={company.link}
                 target="_blank"
