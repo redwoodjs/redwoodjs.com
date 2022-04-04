@@ -46,11 +46,11 @@ const FundingShoutout = () => {
       </p>
       <section className="bg-neutral-900 py-12 px-4 text-white">
         <div className="space-y-4 text-center md:flex md:items-center md:justify-center md:space-y-0">
-          <div className="mr-4 text-xl font-bold md:text-right md:text-3xl lg:text-5xl">
+          <div className="mr-4 text-xl font-bold md:text-right md:text-3xl lg:text-5xl lg:leading-tight">
             Startups using Redwood <br />
             have raised over
           </div>
-          <div className="text-6xl font-bold md:text-8xl">$19m</div>
+          <div className="text-6xl font-bold md:text-8xl">$19M</div>
         </div>
         <div
           className="mx-auto mt-6 grid grid-cols-1 gap-0.5  overflow-hidden rounded-xl md:grid-cols-3 lg:mt-8 lg:max-w-6xl

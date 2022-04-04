@@ -50,7 +50,7 @@ const Item = ({ item }) => {
     <Anchor
       route={item.route}
       link={item.link}
-      className="text-white no-underline"
+      className="text-white no-underline hover:text-white hover:underline"
     >
       {item.name}
     </Anchor>

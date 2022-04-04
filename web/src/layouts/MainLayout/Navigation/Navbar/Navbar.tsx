@@ -34,6 +34,8 @@ const MainLayoutNavbar = () => {
           link: 'https://discord.gg/jjSYEQd',
           icon: () => (
             <svg
+              width={36}
+              height={36}
               viewBox="0 0 36 36"
               className="fill-current text-orange-600"
               xmlns="http://www.w3.org/2000/svg"
@@ -49,6 +51,8 @@ const MainLayoutNavbar = () => {
           link: 'https://community.redwoodjs.com',
           icon: () => (
             <svg
+              width={36}
+              height={36}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 32 32"
               className="fill-current text-orange-600 transition duration-200"
@@ -64,6 +68,8 @@ const MainLayoutNavbar = () => {
           link: 'https://twitter.com/redwoodjs',
           icon: () => (
             <svg
+              width={36}
+              height={36}
               viewBox="0 0 34 34"
               className="fill-current text-orange-600"
               xmlns="http://www.w3.org/2000/svg"
@@ -74,29 +80,29 @@ const MainLayoutNavbar = () => {
         },
       ],
     },
-    {
-      name: 'Showcase',
-      navigation: [
-        {
-          name: 'Example Apps',
-          description:
-            'Learn all the features of Redwood with example apps and code',
-          route: routes.examples(),
-          icon: () => (
-            <span className="icon md-36 text-orange-600">construction</span>
-          ),
-        },
-        {
-          name: 'Showcase',
-          description:
-            'Case studies of real-world apps and companies built with Redwood',
-          route: routes.showcase(),
-          icon: () => (
-            <span className="icon md-36 text-orange-600">emoji_events</span>
-          ),
-        },
-      ],
-    },
+    // {
+    //   name: 'Showcase',
+    //   navigation: [
+    //     {
+    //       name: 'Example Apps',
+    //       description:
+    //         'Learn all the features of Redwood with example apps and code',
+    //       route: routes.examples(),
+    //       icon: () => (
+    //         <span className="icon md-36 text-orange-600">construction</span>
+    //       ),
+    //     },
+    //     {
+    //       name: 'Showcase',
+    //       description:
+    //         'Case studies of real-world apps and companies built with Redwood',
+    //       route: routes.showcase(),
+    //       icon: () => (
+    //         <span className="icon md-36 text-orange-600">emoji_events</span>
+    //       ),
+    //     },
+    //   ],
+    // },
 
     { name: 'Jobs', route: routes.jobs() },
   ]
