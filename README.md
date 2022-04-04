@@ -4,17 +4,50 @@ This repo contains the latest iteration of redwoodjs.com, redesiged for our v1.0
 
 ## Development Quick Start
 
+### Dependencies
+
+Install required dependencies:
+
+```bash
+yarn install
+```
+
+### Environment
+
+Create an `.env` file from `.env.example`:
+
+```bash
+cp .env.example .env
+```
+
 ### Database
 
-Setup your local database and seed any required data:
+Setup your local database manually or using Docker:
+
+**Option A: Manually**
+
+1. Setup database
+2. Enable and update `DATABASE_URL` and `TEST_DATABASE_URL` in `.env` with an appropriate connection string
+
+**Option B: Docker**
+
+Start Postgres server using docker-compose:
+
+```bash
+docker-compose up -d
+```
+
+### Seeding
+
+Seed the database:
 
 ```bash
 yarn rw prisma migrate dev
 ```
 
-### .env
+### Secret
 
-You'll need to create a `.env` file containing at least a `SESSION_SECRET` var for dbAuth. To generate this secret:
+Update your `.env` file to contain at least a `SESSION_SECRET` var for dbAuth. To generate this secret:
 
 ```bash
 yarn rw g secret

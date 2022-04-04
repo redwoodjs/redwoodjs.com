@@ -1,0 +1,20 @@
+version: '2'
+
+networks:
+  redwoodjs-com:
+    driver: bridge
+
+services:
+  postgres:
+    container_name: postgres
+    hostname: postgres
+    image: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+      - POSTGRES_INITDB_ARGS="--data-checksums"
+    ports:
+      - 5432:5432
+    networks:
+      - redwoodjs-com
