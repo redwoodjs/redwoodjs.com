@@ -21,7 +21,7 @@ const StickersThanksPage = () => {
           <p className="mt-2">And that day is today: star us on GitHub!</p>
           <a
             href="https://github.com/redwoodjs/redwood"
-            className="mt-8 inline-block rounded bg-red-700 px-5 py-2 font-semibold text-white"
+            className="mt-8 inline-block rounded bg-red-700 px-5 py-2 font-semibold text-white no-underline hover:text-white hover:underline"
           >
             Star on GitHub
           </a>
