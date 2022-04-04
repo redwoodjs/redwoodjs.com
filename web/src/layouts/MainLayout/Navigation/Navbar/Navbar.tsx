@@ -167,7 +167,7 @@ const MainLayoutNavbar = () => {
                   {isVisible ? (
                     <li>
                       <a
-                        href="/docs/tutorial"
+                        href="https://redwoodjs.com/docs/tutorial"
                         className="button text-sm transition duration-150 ease-in-out"
                       >
                         Start the Tutorial

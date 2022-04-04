@@ -12,8 +12,9 @@ const features = {
     title: 'Design',
     body: () => (
       <p className="mt-4 text-lg text-gray-500">
-        Mockup, build and verify components in <a href="#">Storybook</a>, even
-        in complete isolation from the backend. Work on design without worrying
+        Mockup, build and verify components in{' '}
+        <a href="https://redwoodjs.com/docs/storybook">Storybook</a>, even in
+        complete isolation from the backend. Work on design without worrying
         about data.
       </p>
     ),
@@ -43,13 +44,18 @@ const features = {
         >
           DDT
         </span>
-        , Redwood uses <a href="#">Jest</a> along with <a href="#">mocks</a> and{' '}
-        <a href="#">scenarios</a> to verify functionality on the frontend and
-        the backend.
+        , Redwood uses{' '}
+        <a href="https://redwoodjs.com/docs/testing#redwood-and-testing">
+          Jest
+        </a>{' '}
+        along with{' '}
+        <a href="https://redwoodjs.com/docs/testing#testing-cells">mocks</a> and{' '}
+        <a href="https://redwoodjs.com/docs/testing#scenarios">scenarios</a> to
+        verify functionality on the frontend and the backend.
       </p>
     ),
     img: { src: '/images/testing.png', alt: 'Testing' },
-    learnMore: 'https://redwoodjs.com/docs/testing#redwood-and-testing',
+    learnMore: 'https://redwoodjs.com/docs/testing',
   },
   auth: {
     tools: [
@@ -67,9 +73,22 @@ const features = {
     body: () => (
       <p className="mt-4 text-lg text-gray-500">
         Lock down your front and backends with your own{' '}
-        <a href="#">hosted auth</a> or integrate with nearly a dozen{' '}
-        <a href="#">third party auth providers</a>. Verify access with{' '}
-        <a href="#">RBAC</a> and <a href="#">Validators</a>.
+        <a href="https://redwoodjs.com/docs/authentication#self-hosted-auth-installation-and-setup">
+          self-hosted auth
+        </a>{' '}
+        or integrate with nearly a dozen{' '}
+        <a href="https://redwoodjs.com/docs/authentication">
+          third party auth providers
+        </a>
+        . Verify access with{' '}
+        <a href="https://redwoodjs.com/docs/how-to/role-based-access-control-rbac">
+          RBAC
+        </a>{' '}
+        and{' '}
+        <a href="https://redwoodjs.com/docs/services#service-validations">
+          Validations
+        </a>
+        .
       </p>
     ),
     img: { src: '/images/auth.png', alt: 'Auth and Security' },
@@ -80,10 +99,13 @@ const features = {
     title: 'Data & Transport',
     body: () => (
       <p className="mt-4 text-lg text-gray-500">
-        When your API is <a href="#">GraphQL</a> you're ready for any client,
-        from the browser to native mobile apps and more. Transform your data
-        with <a href="#">Directives</a> and keep your business logic organized
-        and reusable within <a href="#">Services</a>.
+        When your API is{' '}
+        <a href="https://redwoodjs.com/docs/graphql">GraphQL</a> you're ready
+        for any client, from the browser to native mobile apps and more.
+        Transform your data with{' '}
+        <a href="https://redwoodjs.com/docs/directives">Directives</a> and keep
+        your business logic organized and reusable within{' '}
+        <a href="https://redwoodjs.com/docs/services">Services</a>.
       </p>
     ),
     img: { src: '/images/datafetching.png', alt: 'Data & Transport' },
@@ -100,9 +122,11 @@ const features = {
     title: 'Deploy',
     body: () => (
       <p className="mt-4 text-lg text-gray-500">
-        Deploy your app to serverless hosts divke <a href="#">Netlify</a> and{' '}
-        <a href="#">Vercel</a>, build for <a href="#">containers</a>, or deploy
-        to <a href="#">bare metal</a>.
+        Deploy your app to serverless hosts like{' '}
+        <a href="https://redwoodjs.com/docs/deploy/netlify">Netlify</a> and{' '}
+        <a href="https://redwoodjs.com/docs/deploy/vercel">Vercel</a>, build for{' '}
+        <a href="https://github.com/redwoodjs/docker">containers</a>, or deploy
+        to <a href="https://redwoodjs.com/docs/deploy/baremetal">bare metal</a>.
       </p>
     ),
     img: { src: '/images/deploy.png', alt: 'Deploy' },

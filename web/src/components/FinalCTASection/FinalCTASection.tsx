@@ -60,7 +60,7 @@ const FinalCtaSection = () => {
             Redwood adventure?
           </h3>
           <a
-            href="/docs/tutorial"
+            href="https://redwoodjs.com/docs/tutorial"
             className="button bg-rw-500 hover:bg-rw-700 px-9 text-white"
           >
             Start the Tutorial

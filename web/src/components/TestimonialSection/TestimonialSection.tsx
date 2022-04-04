@@ -61,7 +61,7 @@ const TestimonialSection = () => {
           Ready to start your own <br />
           Redwood adventure?
         </h3>
-        <a href="/docs/tutorial" className="button">
+        <a href="https://redwoodjs.com/docs/tutorial" className="button">
           Start the tutorial
         </a>
       </section>

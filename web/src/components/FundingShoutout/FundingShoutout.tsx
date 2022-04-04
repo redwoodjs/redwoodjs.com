@@ -24,7 +24,7 @@ const FundingShoutout = () => {
       logo: LeftLaneLogo,
       link: 'https://www.leftlanesoftware.com',
     },
-    { name: 'Pullflow', logo: PullflowLogo, link: 'http://pullflow.com' },
+    { name: 'Pullflow', logo: PullflowLogo, link: 'https://pullflow.com' },
     { name: 'Teamstream', logo: TeamstreamLogo, link: 'https://teamstream.gg' },
     {
       name: 'UserVitals',
@@ -36,7 +36,7 @@ const FundingShoutout = () => {
       logo: CourseliftLogo,
       link: 'https://courselift.com',
     },
-    { name: 'Tape', logo: TapeLogo, link: 'http://tape.sh' },
+    { name: 'Tape', logo: TapeLogo, link: 'https://tape.sh' },
     // { name: 'SportOffice', logo: CourseliftLogo, link: 'http://courselift.com' },
   ]
   return (
@@ -56,17 +56,20 @@ const FundingShoutout = () => {
           className="mx-auto mt-6 grid grid-cols-1 gap-0.5  overflow-hidden rounded-xl md:grid-cols-3 lg:mt-8 lg:max-w-6xl
         "
         >
-          {companies.map((company) => (
-            <a
-              href={company.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              key={company.name}
-            >
-              <div className="col-span-1 flex justify-center bg-neutral-800 py-4 px-8">
-                <company.logo className="h-12 w-48 fill-white" />
-              </div>
-            </a>
+          {companies.map((company, i) => (
+            <>
+              {i === companies.length - 1 && i % 2 !== 0 && <span></span>}
+              <a
+                href={company.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={company.name}
+              >
+                <div className="col-span-1 flex justify-center bg-neutral-800 py-4 px-8">
+                  <company.logo className="h-12 w-48 fill-white" />
+                </div>
+              </a>
+            </>
           ))}
         </div>
       </section>

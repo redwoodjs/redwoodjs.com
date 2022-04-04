@@ -13,7 +13,10 @@ const HeroSection = () => {
               Redwood is the full-stack web framework designed to help you grow
               from side project to startup.
             </h2>
-            <a href="/docs/tutorial" className="button max-w-[200px]">
+            <a
+              href="https://redwoodjs.com/docs/tutorial"
+              className="button max-w-[200px]"
+            >
               Start the Tutorial
             </a>
           </div>
