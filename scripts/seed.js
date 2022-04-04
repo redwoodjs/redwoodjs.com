@@ -222,27 +222,29 @@ const STARTUPS = [
 
 export default async () => {
   try {
-    for (const job of JOBS) {
-      const existingJob = await db.job.findFirst({
-        where: { email: job.email },
-      })
-
-      if (!existingJob) {
-        await db.job.create({
-          data: job,
+    if (process.env.NODE_ENV === 'development') {
+      for (const job of JOBS) {
+        const existingJob = await db.job.findFirst({
+          where: { email: job.email },
         })
+
+        if (!existingJob) {
+          await db.job.create({
+            data: job,
+          })
+        }
       }
-    }
 
-    for (const profile of JOB_PROFILES) {
-      const existingProfile = await db.jobProfile.findFirst({
-        where: { email: profile.email },
-      })
-
-      if (!existingProfile) {
-        await db.jobProfile.create({
-          data: profile,
+      for (const profile of JOB_PROFILES) {
+        const existingProfile = await db.jobProfile.findFirst({
+          where: { email: profile.email },
         })
+
+        if (!existingProfile) {
+          await db.jobProfile.create({
+            data: profile,
+          })
+        }
       }
     }
 
