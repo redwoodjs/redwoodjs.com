@@ -22,7 +22,7 @@ const navigation = {
   community: [
     {
       name: 'Join the Community',
-      href: 'https:/redwoodjs.com/community',
+      href: '/community',
     },
     {
       name: 'Contributors Meetup',
