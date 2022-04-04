@@ -31,7 +31,7 @@ const MainLayoutNavbar = () => {
           name: 'Discord',
           description:
             'Watercooler, relationship building, quick discussion and help',
-          link: 'https://discord.gg/jjSYEQd',
+          link: 'https://discord.gg/redwoodjs',
           icon: () => (
             <svg
               width={36}

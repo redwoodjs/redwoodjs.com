@@ -7,7 +7,7 @@ const communities = [
   {
     name: 'Discord',
     logo: '/images/3p-logos/community/discord.svg',
-    link: 'https://discord.gg/jjSYEQd',
+    link: 'https://discord.gg/redwoodjs',
   },
   {
     name: 'Discourse',
