@@ -35,7 +35,7 @@ const VideoTutorialSection = () => {
                 <img
                   src={videoThumbnail}
                   alt="Play Tutorial Video"
-                  className="w-full object-fill backdrop-brightness-75"
+                  className="h-[620px] w-auto object-cover object-center"
                 />
               </button>
             </div>
