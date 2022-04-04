@@ -1,19 +1,6 @@
+import { testimonials } from 'src/data/testimonials'
+
 const FinalCtaSection = () => {
-  const testimonials = [
-    {
-      name: 'Amanda Gianelli',
-      subtext: 'Engineer, Auth0',
-      quote: 'RedwoodJS makes me feel like a superhero ‍♀️ 🚀',
-      image: '/images/portraits/AmandaGianelli.jpg',
-    },
-    {
-      name: 'Kris Coulson',
-      subtext: 'Founder, Teamstream',
-      quote:
-        'Not just ‘made with RedwoodJS’. Made with a lot of love for RedwoodJS. 💕',
-      image: '/images/portraits/KrisCoulson.jpg',
-    },
-  ]
   return (
     <div style={{ marginTop: 0 }}>
       <section
@@ -24,7 +11,7 @@ const FinalCtaSection = () => {
         }}
       >
         <ul className="mx-auto mb-12 grid gap-3 sm:grid-cols-2 md:mb-32 lg:max-w-5xl">
-          {testimonials.map((testimonial) => (
+          {testimonials.slice(2, 4).map((testimonial) => (
             <li
               key={testimonial.name}
               className="col-span-1 space-y-4 rounded-xl bg-white p-4"
@@ -61,7 +48,7 @@ const FinalCtaSection = () => {
           </h3>
           <a
             href="https://redwoodjs.com/docs/tutorial"
-            className="button bg-rw-500 hover:bg-rw-700 px-9 text-white"
+            className="button bg-rw-500 px-9 text-white hover:bg-rw-700"
           >
             Start the Tutorial
           </a>

@@ -4,20 +4,37 @@ This repo contains the latest iteration of redwoodjs.com, redesiged for our v1.0
 
 ## Development Quick Start
 
-### Database
-
-Setup your local database and seed any required data:
+Start by installing dependencies.
 
 ```bash
-yarn rw prisma migrate dev
+yarn
 ```
 
 ### .env
 
-You'll need to create a `.env` file containing at least a `SESSION_SECRET` var for dbAuth. To generate this secret:
+You'll need to create a `.env` file. Start with this in the file:
+
+```
+DATABASE_URL=
+SESSION_SECRET=
+```
+
+Go to https://railway.app and provision a new Postgres database. Switch to "Connect" tab and copy "Postgres Connection URL". Paste that as the `DATABASE_URL`. If you don't want to use Railway, you can use a local Postgres.
+
+The `SESSION_SECRET` var is required for dbAuth. To generate this secret:
 
 ```bash
 yarn rw g secret
+```
+
+Paste that as the `SESSION_SECRET`.
+
+### Database
+
+Setup the database and seed any required data:
+
+```bash
+yarn rw prisma migrate dev
 ```
 
 ### Account Creation
