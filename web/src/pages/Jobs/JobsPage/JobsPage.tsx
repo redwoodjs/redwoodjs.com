@@ -11,7 +11,7 @@ export default function () {
         description="Want to get paid to write RedwoodJS?"
       />
 
-      <section className="mx-auto mt-24 mb-24 max-w-screen-lg">
+      <section className="mx-auto mt-12 sm:mt-36 max-w-screen-lg">
         <header className="text-center">
           <h1 className="mt-12 font-serif">RedwoodJS Developers</h1>
           <p className="mt-2 text-lg text-gray-500">
@@ -29,7 +29,7 @@ export default function () {
         </div>
       </section>
 
-      <section className="mx-auto mt-36 max-w-screen-lg">
+      <section className="mx-auto mt-24 mb-24 max-w-screen-lg">
         <header className="text-center">
           <h1 className="font-serif font-bold">RedwoodJS Jobs</h1>
           <p className="mt-2 text-lg text-gray-500">

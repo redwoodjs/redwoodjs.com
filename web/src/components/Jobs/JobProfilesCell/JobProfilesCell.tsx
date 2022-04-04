@@ -100,9 +100,9 @@ export const Success = ({
             >
               <Link
                 to={routes.allJobProfiles()}
-                className="block w-full p-4 text-rw-500 no-underline"
+                className="block w-full p-8 text-rw-500 no-underline"
               >
-                See All &rarr;
+                See All Profiles &rarr;
               </Link>
             </td>
           </tr>

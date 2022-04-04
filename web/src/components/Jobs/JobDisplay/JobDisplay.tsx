@@ -8,8 +8,8 @@ const JobDisplay = ({ job, back }) => {
     <JobDetailLayout
       title={
         <>
-          <span className="text-teal-800">{job.company}</span> is hiring a{' '}
-          <span className="text-teal-800">{job.title}</span>
+          <span className="font-bold">{job.company}</span> is hiring a{' '}
+          <span className="font-bold">{job.title}</span>
         </>
       }
       postedDateTime={job.createdAt}
@@ -20,7 +20,7 @@ const JobDisplay = ({ job, back }) => {
     >
       <section className="md:flex items-stretch">
         <div className="md:w-1/3 py-8 px-12">
-          <h3 className="text-xl text-teal-600 font-semibold tracking-tight text-center">
+          <h3 className="text-xl text-rw-500 font-semibold tracking-tight text-center">
             Location(s)
           </h3>
           <ul className="mt-2 text-stone-600 text-sm leading-6 text-center">
@@ -29,8 +29,8 @@ const JobDisplay = ({ job, back }) => {
             ))}
           </ul>
         </div>
-        <div className="md:w-1/3 py-8 px-12 border-t md:border-t-0 md:border-l border-red-200">
-          <h3 className="text-xl text-teal-600 font-semibold tracking-tight text-center">
+        <div className="md:w-1/3 py-8 px-12">
+          <h3 className="text-xl text-rw-500 font-semibold tracking-tight text-center">
             Compensation
           </h3>
           <ul className="mt-2 text-stone-600 text-sm leading-6 text-center">
@@ -39,8 +39,8 @@ const JobDisplay = ({ job, back }) => {
             ))}
           </ul>
         </div>
-        <div className="md:w-1/3 py-8 px-12 border-t md:border-t-0 md:border-l border-red-200">
-          <h3 className="text-xl text-teal-600 font-semibold tracking-tight text-center">
+        <div className="md:w-1/3 py-8 px-12">
+          <h3 className="text-xl text-rw-500 font-semibold tracking-tight text-center">
             Perks
           </h3>
           <ul className="mt-2 text-stone-600 text-sm leading-6 text-center">
@@ -50,15 +50,15 @@ const JobDisplay = ({ job, back }) => {
           </ul>
         </div>
       </section>
-      <section className="border-t border-red-200 p-12">
+      <section className="p-12">
         <h2 className="title">About the Job</h2>
         <ReactMarkdown className="markdown">{job.aboutJob}</ReactMarkdown>
       </section>
-      <section className="border-t border-red-200 p-12">
+      <section className="p-12">
         <h2 className="title">About You</h2>
         <ReactMarkdown className="markdown">{job.aboutApplicant}</ReactMarkdown>
       </section>
-      <section className="border-t border-red-200 p-12">
+      <section className="p-12">
         <h2 className="title">About Snaplet</h2>
         <ReactMarkdown className="markdown">{job.aboutCompany}</ReactMarkdown>
         <div className="mt-8 flex justify-center">

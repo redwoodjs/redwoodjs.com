@@ -27,7 +27,7 @@ export const Loading = () => (
 )
 
 export const Empty = () => (
-  <div className="flex justify-center bg-white py-12 rounded-lg text-gray-400">
+  <div className="flex justify-center bg-white py-24 rounded-lg text-gray-400">
     No job postings yet!
   </div>
 )
@@ -83,9 +83,9 @@ export const Success = ({ jobs, showAll }: CellSuccessProps<JobsQuery>) => {
             >
               <Link
                 to={routes.allJobs()}
-                className="block w-full p-4 text-rw-500 no-underline"
+                className="block w-full p-8 text-rw-500 no-underline"
               >
-                See All &rarr;
+                See All Jobs &rarr;
               </Link>
             </td>
           </tr>
