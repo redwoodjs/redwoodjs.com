@@ -75,11 +75,7 @@ functions = "api/dist/functions"
   from ="/v1-launch-week"
   to ="https://v1launchweek.redwoodjs.com/"
 
-
-
-
 [[redirects]]
   from = "/*"
   to = "/200.html"
   status = 200
-
