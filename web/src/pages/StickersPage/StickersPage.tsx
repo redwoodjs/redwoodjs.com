@@ -19,7 +19,7 @@ const StickersPage = () => {
           name="stickers"
           className="mx-auto mt-8 max-w-lg space-y-4"
           data-netlify="true"
-          action="/stickers-thanks.html"
+          action="/stickers-thanks"
         >
           <input
             type="text"

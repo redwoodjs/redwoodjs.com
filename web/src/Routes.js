@@ -37,6 +37,7 @@ const Routes = () => {
         <Route path="/logos" page={LogosPage} name="logos" />
         <Route path="/security" page={SecurityPage} name="security" />
         <Route path="/stickers" page={StickersPage} name="stickers" />
+        <Route path="/stickers-thanks" page={StickersThanksPage} name="stickersThanks" />
 
         <Route path="/" page={HomePage} name="home" prerender />
 
