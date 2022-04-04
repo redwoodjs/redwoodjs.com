@@ -23,7 +23,7 @@ export default function () {
           </Link>
         </div>
         <div className="border border-orange-200 rounded-lg mt-2">
-          <JobProfilesCell limit={5} />
+          <JobProfilesCell />
         </div>
       </section>
     </>
