@@ -62,7 +62,9 @@ const FundingShoutout = () => {
               rel="noopener noreferrer"
               key={company.name}
               className={
-                i === companies.length - 1 && i % 2 !== 0 && 'md:col-start-2'
+                i === companies.length - 1 && i % 2 !== 0
+                  ? 'md:col-start-2'
+                  : ''
               }
             >
               <div className="col-span-1 flex justify-center bg-neutral-800 py-4 px-8">
