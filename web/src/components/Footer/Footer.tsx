@@ -12,7 +12,7 @@ const navigation = {
       name: 'All Contributors',
       href: 'https://github.com/redwoodjs/redwood#all-contributors',
     },
-    // { name: 'Stickers', href: 'https://github.com/redwoodjs/redwood' },
+    { name: 'Stickers', href: '/stickers' },
     { name: 'Shop', href: 'https://shop.redwoodjs.com' },
     { name: 'Brand and Logos', href: '/logos' },
     { name: 'Security', href: '/security' },
