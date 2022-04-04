@@ -49,7 +49,7 @@ const navigation = {
     },
     {
       name: 'Discord',
-      href: 'https://discord.gg/jjSYEQd',
+      href: 'https://discord.gg/redwoodjs',
       icon: (props) => (
         <svg
           fill="currentColor"

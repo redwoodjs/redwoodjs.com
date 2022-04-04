@@ -40,8 +40,9 @@ const stack = [
 const TechStackSection = () => {
   return (
     <>
-      <p className="mx-auto max-w-3xl px-4 font-serif text-base sm:text-center md:text-2xl lg:max-w-4xl lg:text-4xl">
-        We begin by crafting a more integrated framework, <br />
+      <p className="mx-auto max-w-3xl px-4 font-serif text-base sm:text-center md:text-2xl lg:max-w-4xl lg:text-4xl lg:leading-tight">
+        We begin by crafting a more integrated framework,{' '}
+        <br className="hidden sm:block" />
         beautifully weaving together the best parts of:
       </p>
       <section className="mx-auto max-w-4xl">

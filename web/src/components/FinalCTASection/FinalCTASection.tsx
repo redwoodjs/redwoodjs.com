@@ -42,7 +42,7 @@ const FinalCtaSection = () => {
           ))}
         </ul>
         <section className="flex flex-col items-center justify-center py-32">
-          <h3 className="mb-12 space-y-12 px-4 text-center font-serif text-2xl font-bold sm:text-2xl md:mb-24 md:text-4xl lg:text-6xl">
+          <h3 className="mb-12 space-y-12 px-4 text-center font-serif text-2xl font-bold sm:text-2xl md:mb-24 md:text-4xl lg:text-6xl lg:leading-tight">
             Ready to start your own <br />
             Redwood adventure?
           </h3>

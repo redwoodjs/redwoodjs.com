@@ -184,7 +184,7 @@ const Feature = ({ feature, imgSide = 'right' }) => {
 const FeaturesSection = () => {
   return (
     <section className="mx-auto lg:max-w-6xl">
-      <h3 className="space-y-12 px-4 font-serif text-xl sm:text-center sm:text-2xl md:text-4xl lg:text-6xl ">
+      <h3 className="space-y-12 px-4 font-serif text-xl sm:text-center sm:text-2xl md:text-4xl lg:text-6xl lg:leading-tight">
         <div>
           Oh, you want to know more about the{' '}
           <span className="font-bold">technology</span> and{' '}
