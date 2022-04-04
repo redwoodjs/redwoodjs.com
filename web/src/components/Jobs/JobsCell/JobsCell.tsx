@@ -21,13 +21,13 @@ export const QUERY = gql`
 `
 
 export const Loading = () => (
-  <div className="flex justify-center bg-white py-12 rounded-lg text-stone-400">
+  <div className="flex justify-center bg-white py-12 rounded-lg text-gray-400">
     <span className="icon animate-spin mr-2">refresh</span> Loading...
   </div>
 )
 
 export const Empty = () => (
-  <div className="flex justify-center bg-white py-12 rounded-lg text-stone-400">
+  <div className="flex justify-center bg-white py-12 rounded-lg text-gray-400">
     No job postings yet!
   </div>
 )
@@ -38,20 +38,16 @@ export const Failure = ({ error }: CellFailureProps) => (
 
 export const Success = ({ jobs, showAll }: CellSuccessProps<JobsQuery>) => {
   return (
-    <table className="w-full bg-white rounded-lg">
+    <table className="w-full rounded-lg bg-white">
       <tbody>
         {jobs.map((job, i) => (
           <tr
             key={`job-${job.id}`}
             onClick={() => navigate(routes.job({ id: job.id }))}
-            className={`${
-              i !== 0 && 'border-t'
-            } border-orange-200 hover:bg-orange-50 cursor-pointer transition duration-250`}
+            className={`duration-250 flex cursor-pointer flex-col flex-nowrap border-gray-200 transition hover:bg-teal-50 sm:table-row`}
           >
             <td
-              className={`flex items-center py-4 w-48 ${
-                i === 0 && 'rounded-tl-lg'
-              }`}
+              className={`flex w-full items-center pt-16 pb-4 sm:w-48 sm:py-8`}
             >
               <img
                 src={resizeFilestackImage(job.logo, {
@@ -59,19 +55,19 @@ export const Success = ({ jobs, showAll }: CellSuccessProps<JobsQuery>) => {
                   height: 128,
                 })}
                 alt={`${job.company} logo`}
-                className="w-36 h-16 mx-auto object-contain"
+                className="mx-auto h-16 w-36 object-contain"
               />
             </td>
-            <td className="py-4 text-sm">
-              <strong className="font-semibold text-teal-600">
+            <td className="px-4 text-center sm:py-8 sm:px-0 sm:text-left">
+              <strong className="text-lg font-semibold text-rw-500 underline">
                 {job.title}
               </strong>
-              <p>{job.aboutJob.split(' ').slice(0, 25).join(' ')}...</p>
+              <p className="mt-2">
+                {job.aboutJob.split(' ').slice(0, 25).join(' ')}...
+              </p>
             </td>
             <td
-              className={`py-4 px-8 text-sm text-stone-500 ${
-                i === 0 && 'rounded-tr-lg'
-              }`}
+              className={`py-4 text-center text-gray-500 sm:py-8 sm:px-4 sm:text-left`}
             >
               <ReactMarkdown className="whitespace-nowrap">
                 {job.locations.join('\n\n')}
@@ -83,13 +79,13 @@ export const Success = ({ jobs, showAll }: CellSuccessProps<JobsQuery>) => {
           <tr>
             <td
               colSpan={3}
-              className="text-center text-sm text-stone-500 hover:text-orange-700 border-t border-t-orange-200 hover:bg-orange-50 cursor-pointer rounded-b-lg transition duration-250"
+              className="mt-8 sm:mt-0 duration-250 cursor-pointer rounded-b-lg text-center font-serif font-semibold text-2xl transition"
             >
               <Link
                 to={routes.allJobs()}
-                className="block p-4 w-full text-stone-500 no-underline"
+                className="block w-full p-4 text-rw-500 no-underline"
               >
-                See all...
+                See All &rarr;
               </Link>
             </td>
           </tr>

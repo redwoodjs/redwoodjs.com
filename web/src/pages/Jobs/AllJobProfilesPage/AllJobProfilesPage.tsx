@@ -9,20 +9,18 @@ export default function () {
 
       <section className="max-w-screen-lg mx-auto mt-36 mb-24">
         <header className="text-center">
-          <h1 className="mt-12" className="text-orange-800">
-            RedwoodJS Developers
-          </h1>
-          <p className="mt-2 text-stone-500">
+          <h1 className="mt-12 font-serif">RedwoodJS Developers</h1>
+          <p className="mt-2 text-lg text-stone-500">
             Experienced RedwoodJS devs looking for their next role
           </p>
         </header>
 
-        <div className="flex justify-end mt-4">
+        <div className="flex justify-center mt-4">
           <Link to={routes.newJobProfile()} className="button-sm">
-            + Create Profile
+            Create Profile
           </Link>
         </div>
-        <div className="border border-orange-200 rounded-lg mt-2">
+        <div className="mt-8">
           <JobProfilesCell />
         </div>
       </section>

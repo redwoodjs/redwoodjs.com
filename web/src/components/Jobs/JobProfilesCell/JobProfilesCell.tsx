@@ -24,13 +24,13 @@ export const QUERY = gql`
 `
 
 export const Loading = () => (
-  <div className="flex justify-center bg-white py-12 rounded-lg text-stone-400">
+  <div className="flex justify-center bg-white py-12 rounded-lg text-gray-400">
     <span className="icon animate-spin mr-2">refresh</span> Loading...
   </div>
 )
 
 export const Empty = () => (
-  <div className="flex justify-center bg-white py-12 rounded-lg text-stone-400">
+  <div className="flex justify-center bg-white py-12 rounded-lg text-gray-400">
     No job postings yet!
   </div>
 )
@@ -44,55 +44,47 @@ export const Success = ({
   showAll,
 }: CellSuccessProps<JobProfilesQuery>) => {
   return (
-    <table className="w-full bg-white rounded-lg">
+    <table className="w-full rounded-lg bg-white">
       <tbody>
         {jobProfiles.map((profile, i) => (
           <tr
             key={`job_profiles-${profile.id}`}
             onClick={() => navigate(routes.jobProfile({ id: profile.id }))}
-            className={`${
-              i !== 0 && 'border-t'
-            } border-orange-200 hover:bg-orange-50 cursor-pointer transition duration-250`}
+            className={`duration-250 flex cursor-pointer flex-col flex-nowrap border-gray-200 transition hover:bg-teal-50 sm:table-row`}
           >
             <td
-              className={`flex flex-col items-center py-4 w-36 ${
-                i === 0 && 'rounded-tl-lg'
-              }`}
+              className={`flex w-full items-center justify-center pt-16 pb-4 sm:w-48 sm:py-8`}
             >
               <img
                 src={resizeFilestackImage(profile.photo, {
-                  width: 192,
-                  height: 192,
+                  width: 256,
+                  height: 256,
                   fit: 'crop',
                 })}
                 alt={`${profile.name}`}
-                className="w-24 rounded-full"
+                className="w-32 rounded-full sm:w-24"
               />
             </td>
-            <td className="py-4 text-sm">
-              <strong className="font-semibold text-teal-600">
+            <td className="px-4 text-center sm:py-8 sm:px-0 sm:text-left">
+              <strong className="text-lg font-semibold text-rw-500 underline">
                 {profile.name}
               </strong>
-              <div className="text-xs font-semibold text-stone-400">
-                {profile.title}
-              </div>
+              <div className="text-gray-400">{profile.title}</div>
               <p className="mt-1">
                 {profile.about.split(' ').slice(0, 35).join(' ')}...
               </p>
             </td>
             <td
-              className={`py-4 px-8 text-sm text-stone-500 ${
-                i === 0 && 'rounded-tr-lg'
-              }`}
+              className={`py-4 text-center text-gray-500 sm:py-8 sm:px-4 sm:text-left`}
             >
-              <div className="flex flex-col items-start justify">
-                <ReactMarkdown className="text-xs whitespace-nowrap">
+              <div className="justify flex flex-col items-start">
+                <ReactMarkdown className="whitespace-nowrap w-full">
                   {profile.locations.join('\n\n')}
                 </ReactMarkdown>
-                <div className="-ml-1 mt-1">
+                <div className="-ml-1 mt-1 sm:text-center w-full sm:w-auto px-12 sm:px-0">
                   <Status
                     status={profile.status}
-                    textClassName="text-xs"
+                    textClassName=""
                     iconClassName="md-16"
                   />
                 </div>
@@ -104,13 +96,13 @@ export const Success = ({
           <tr className="">
             <td
               colSpan={3}
-              className="text-center text-sm text-stone-500 hover:text-orange-700 border-t border-t-orange-200 hover:bg-orange-50 cursor-pointer rounded-b-lg transition duration-250"
+              className="duration-250 cursor-pointer rounded-b-lg text-center font-serif font-semibold text-2xl transition"
             >
               <Link
                 to={routes.allJobProfiles()}
-                className="block p-4 w-full text-stone-500 no-underline"
+                className="block w-full p-4 text-rw-500 no-underline"
               >
-                See all...
+                See All &rarr;
               </Link>
             </td>
           </tr>

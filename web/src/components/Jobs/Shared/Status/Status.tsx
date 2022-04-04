@@ -19,7 +19,7 @@ const Status = ({ status, textClassName, iconClassName }) => {
 
   return (
     <div
-      className={`mt-1 flex items-center justify-center px-2 py-1 rounded-full font-semibold uppercase ${bgColor} ${textColor} ${textClassName}`}
+      className={`mt-1 flex items-center justify-center px-3 py-1 rounded-full font-semibold uppercase ${bgColor} ${textColor} ${textClassName}`}
     >
       <span className={`icon mr-1 ${iconClassName}`}>{icon}</span> {label}
     </div>
