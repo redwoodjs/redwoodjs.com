@@ -48,10 +48,10 @@ export default function () {
 
       <div className="max-w-screen-lg mx-auto job">
         <header className="mt-36">
-          <h1 className="relative text-6xl px-16 text-teal-800 tracking-normal text-center">
+          <h1 className="relative font-serif font-bold text-6xl px-16 tracking-normal text-center">
             Post Your Profile
           </h1>
-          <div className="mt-2 text-center text-stone-500">
+          <div className="mt-2 text-center text-gray-500">
             Get in front of hirers and land your next RedwoodJS role
           </div>
         </header>

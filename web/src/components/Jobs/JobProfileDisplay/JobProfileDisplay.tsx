@@ -25,9 +25,9 @@ const JobProfileDisplay = ({ profile }) => {
       buttonLabel="Send a Message"
       back="true"
     >
-      <section className="md:flex items-stretch">
-        <div className="md:w-1/3 flex flex-col items-center py-8 px-12">
-          <h3 className="text-xl text-rw-500 font-semibold tracking-tight text-center">
+      <section className="items-stretch md:flex">
+        <div className="flex flex-col items-center py-8 px-12 md:w-1/3">
+          <h3 className="text-center font-serif text-2xl font-normal">
             Status
           </h3>
           <div className="mt-1">
@@ -38,21 +38,21 @@ const JobProfileDisplay = ({ profile }) => {
             />
           </div>
         </div>
-        <div className="md:w-1/3 py-8 px-12">
-          <h3 className="text-xl text-rw-500 font-semibold tracking-tight text-center">
+        <div className="py-8 px-12 md:w-1/3">
+          <h3 className="text-center font-serif text-2xl font-normal">
             Portfolio/Profile
           </h3>
           <div className="mt-2 text-center">
-            <a href={profile.portfolioUrl} className="text-gray-600">
+            <a href={profile.portfolioUrl} className="">
               {profile.portfolioUrl}
             </a>
           </div>
         </div>
-        <div className="md:w-1/3 py-8 px-12">
-          <h3 className="text-xl text-rw-500 font-semibold tracking-tight text-center">
+        <div className="py-8 px-12 md:w-1/3">
+          <h3 className="text-center font-serif text-2xl font-normal">
             Where I'll Work
           </h3>
-          <ul className="mt-2 text-gray-600 text-sm leading-6 text-center">
+          <ul className="mt-2 text-center leading-6 text-gray-500">
             {profile.locations.map((location, i) => (
               <li key={`locations-${i}`}>{location}</li>
             ))}
@@ -69,7 +69,7 @@ const JobProfileDisplay = ({ profile }) => {
               fit: 'crop',
             })}
             alt={`${profile.name}`}
-            className="w-64 h-64 rounded-full object-contain"
+            className="h-64 w-64 rounded-full object-contain"
           />
         </div>
       </section>

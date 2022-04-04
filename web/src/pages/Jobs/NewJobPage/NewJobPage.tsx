@@ -38,7 +38,7 @@ export default function ({ token }) {
 
   if (!token || token !== 'cl0hf47710001iq2f7307b18y') {
     return (
-      <div className="mt-36 text-center text-lg">
+      <div className="my-36 text-center text-lg min-h-screen">
         To list your job, email{' '}
         <a href="mailto:jobs@redwoodjs.com?subject=New%20job%20post">
           jobs@redwoodjs.com
@@ -57,10 +57,10 @@ export default function ({ token }) {
 
       <div className="max-w-screen-lg mx-auto job">
         <header className="mt-36">
-          <h1 className="relative text-6xl px-16 text-teal-800 tracking-normal text-center">
+          <h1 className="relative text-6xl px-16 font-serif font-bold tracking-normal text-center">
             Post a Job
           </h1>
-          <div className="mt-2 text-center text-stone-500">
+          <div className="mt-2 text-center text-gray-500">
             Get your job in front of the best RedwoodJS devs
           </div>
         </header>

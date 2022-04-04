@@ -18,32 +18,30 @@ const JobDisplay = ({ job, back }) => {
       buttonLabel="Apply for this job"
       back={back}
     >
-      <section className="md:flex items-stretch">
-        <div className="md:w-1/3 py-8 px-12">
-          <h3 className="text-xl text-rw-500 font-semibold tracking-tight text-center">
+      <section className="items-stretch md:flex">
+        <div className="py-8 px-12 md:w-1/3">
+          <h3 className="text-center font-serif text-2xl font-normal">
             Location(s)
           </h3>
-          <ul className="mt-2 text-stone-600 text-sm leading-6 text-center">
+          <ul className="mt-2 text-center text-sm leading-6 text-gray-500">
             {job.locations.map((location, i) => (
               <li key={`locations-${i}`}>{location}</li>
             ))}
           </ul>
         </div>
-        <div className="md:w-1/3 py-8 px-12">
-          <h3 className="text-xl text-rw-500 font-semibold tracking-tight text-center">
+        <div className="py-8 px-12 md:w-1/3">
+          <h3 className="text-center font-serif text-2xl font-normal">
             Compensation
           </h3>
-          <ul className="mt-2 text-stone-600 text-sm leading-6 text-center">
+          <ul className="mt-2 text-center text-sm leading-6 text-gray-500">
             {job.compensation.map((comp, i) => (
               <li key={`compensation-${i}`}>{comp}</li>
             ))}
           </ul>
         </div>
-        <div className="md:w-1/3 py-8 px-12">
-          <h3 className="text-xl text-rw-500 font-semibold tracking-tight text-center">
-            Perks
-          </h3>
-          <ul className="mt-2 text-stone-600 text-sm leading-6 text-center">
+        <div className="py-8 px-12 md:w-1/3">
+          <h3 className="text-center font-serif text-2xl font-normal">Perks</h3>
+          <ul className="mt-2 text-center text-sm leading-6 text-gray-500">
             {job.perks.map((perk, i) => (
               <li key={`perks-${i}`}>{perk}</li>
             ))}
@@ -65,7 +63,7 @@ const JobDisplay = ({ job, back }) => {
           <img
             src={resizeFilestackImage(job.logo, { width: 512, height: 256 })}
             alt={`${job.company} logo`}
-            className="w-64 h-32 object-contain"
+            className="h-32 w-64 object-contain"
           />
         </div>
       </section>
