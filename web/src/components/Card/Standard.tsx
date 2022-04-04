@@ -23,11 +23,11 @@ const Standard: React.FC<StandardProps> = ({
   )
 
   return (
-    <article className="card highlight w-64 flex flex-col border-[1px] border-gray-500 mb-4">
+    <article className="card flex w-full flex-col border-[1px] border-gray-500">
       <header className="bg-forest-800">
         <h1
           className={
-            'w-full p-2 text-lg font-extrabold text-center text-white capitalize'
+            'w-full p-2 text-center text-lg font-extrabold capitalize text-white'
           }
         >
           {title}
@@ -51,10 +51,10 @@ const Standard: React.FC<StandardProps> = ({
           href={link ?? source}
           target={'_blank'}
           rel="noreferrer"
-          className="flex flex-row align-middle m-4"
+          className="m-4 flex flex-row align-middle"
         >
           <span>Source</span>
-          <span className="text-black icon md-18 ml-2">launch</span>
+          <span className="icon md-18 ml-2 text-black">launch</span>
         </a>
       )}
     </article>
@@ -70,12 +70,12 @@ const SStandard: React.FC<StandardProps> = ({
   onTagClick,
   excludeTag,
 }) => (
-  <article className="card flex flex-col mt-4 bg-white border-[1px] border-forest-800 rounded-t">
+  <article className="card mt-4 flex flex-col rounded-t border-[1px] border-forest-800 bg-white">
     <div className={'content'}>
       <header className="bg-forest-800">
         <h1
           className={
-            'w-full p-2 text-lg font-extrabold text-center text-white capitalize'
+            'w-full p-2 text-center text-lg font-extrabold capitalize text-white'
           }
         >
           {title}
@@ -90,15 +90,15 @@ const SStandard: React.FC<StandardProps> = ({
               href={link}
               target={'_blank'}
               rel="noreferrer"
-              className={'flex flex-row align-middle no-underline mt-2'}
+              className={'mt-2 flex flex-row align-middle no-underline'}
             >
               <span>Source</span>
-              <span className="text-black icon md-18 ml-2">launch</span>
+              <span className="icon md-18 ml-2 text-black">launch</span>
             </a>
           )}
         </div>
       </div>
-      <footer className={'flex flex-row align-bottom p-4'}>
+      <footer className={'flex flex-row p-4 align-bottom'}>
         <List
           tags={tags}
           rootKey={title}

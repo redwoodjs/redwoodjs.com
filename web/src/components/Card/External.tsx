@@ -12,22 +12,22 @@ const External: React.FC<ExternalProps> = ({
   tags,
 }) => (
   <a
-    className="card external flex flex-col p-4 bg-white hover:shadow-xl mt-4 transition-all duration-500"
+    className="external flex flex-col bg-white p-4 transition-all duration-500 hover:shadow-xl"
     href={link}
     target={'_blank'}
     rel="noreferrer"
   >
     <span className={'font-bold'}>{label}</span>
-    <div className={'flex flex-col grow divide-solid divide-y divide-red-200'}>
-      <div className={'text-sm pb-2 flex grow h-6'}>
+    <div className={'flex grow flex-col divide-y divide-solid divide-red-200'}>
+      <div className={'flex h-6 grow pb-2 text-sm'}>
         <p className="truncate">{description}</p>
       </div>
-      <div className={'align-bottom pt-2'}>
+      <div className={'pt-2 align-bottom'}>
         <List
           rootKey={label}
           tags={tags}
           Component={({ label }) => (
-            <div className={'text-xs mr-2 italic'}>{label}</div>
+            <div className={'mr-2 text-xs italic'}>{label}</div>
           )}
         />
       </div>

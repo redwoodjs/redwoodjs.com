@@ -24,8 +24,8 @@ const Highlight: React.FC<HighlightProps> = ({
   )
 
   return (
-    <article className="card highlight w-96 flex flex-col border-[1px] border-gray-500">
-      <picture className="h-[130px] w-full rounded-t overflow-hidden">
+    <article className="card highlight flex w-full flex-col border-[1px] border-gray-500">
+      <picture className="h-[130px] w-full overflow-hidden rounded-t">
         <img
           alt={`${title} - ${subtitle} - ${description}`}
           className={'object-cover object-bottom'}
@@ -40,12 +40,12 @@ const Highlight: React.FC<HighlightProps> = ({
             )}
             <h1
               className={
-                'w-full p-2 text-lg font-extrabold text-center capitalize text-black'
+                'w-full p-2 text-center text-lg font-extrabold capitalize text-black'
               }
             >
               {title}
             </h1>
-            <aside className={'p-0 mt-4'}>
+            <aside className={'mt-4 p-0'}>
               <List
                 tags={tags}
                 rootKey={title}
@@ -63,19 +63,19 @@ const Highlight: React.FC<HighlightProps> = ({
 }
 
 const Links = ({ source, link }) => (
-  <div className="align-bottom flex flex-row justify-end items-center my-4 mr-4">
+  <div className="my-4 mr-4 flex flex-row items-center justify-end align-bottom">
     <a
-      className="w-auto flex flex-row align-middle mr-2"
+      className="mr-2 flex w-auto flex-row align-middle"
       href={link}
       target={'_blank'}
       rel="noreferrer"
     >
       <span className="text-black">View Demo</span>
-      <span className="text-black icon md-18 ml-2">launch</span>
+      <span className="icon md-18 ml-2 text-black">launch</span>
     </a>
     {source && (
       <a
-        className="button px-2 py-1 text-xs  border-[1px] bg-transparent"
+        className="button border-[1px] bg-transparent px-2  py-1 text-xs"
         href={source}
         target={'_blank'}
         rel="noreferrer"

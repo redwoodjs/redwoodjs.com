@@ -19,10 +19,10 @@ const Body = () => {
       <HighlightSection onTagClick={onTagClick} />
       <ApplicationCallout />
       <StandoutSection onTagClick={onTagClick} />
-      <section className={'community mt-24 p-4'}>
+      <section className={'community mx-auto mt-24 max-w-screen-xl p-4'}>
         <TagsCell />
         {false && <Filters />}
-        <div className="flex flex-col flex-wrap items-stretch md:flex-row">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 lg:grid-cols-5">
           <ExamplesCell
             type="sample"
             tag={'community'}

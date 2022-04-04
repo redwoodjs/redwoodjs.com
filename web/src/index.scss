@@ -174,7 +174,7 @@ $color_neutral: #1A202C;
   }
 
   .card {
-    @apply flex rounded md:w-64 md:ml-4;
+    @apply flex rounded md:w-64;
   }
 
   .card.external header {
@@ -196,8 +196,8 @@ $color_neutral: #1A202C;
     }
   }
 
-  .card.external {
-    min-width: 90px;
+  .external {
+    @apply flex rounded;
     border: 1px solid $color_accent2;
   }
 
