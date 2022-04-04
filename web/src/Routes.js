@@ -34,6 +34,7 @@ const Routes = () => {
         <Route path="/showcase" page={StartupListPage} name="showcase" />
         <Route path="/showcase/{slug}" page={StartupShowcasePage} name="startup" />
         <Route path="/logos" page={LogosPage} name="logos" />
+        <Route path="/security" page={SecurityPage} name="security" />
 
         <Route path="/" page={HomePage} name="home" />
 
