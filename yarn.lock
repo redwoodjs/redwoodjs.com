@@ -6736,6 +6736,7 @@ __metadata:
     "@redwoodjs/api": ^0.50.0
     "@redwoodjs/graphql-server": ^0.50.0
     accept-language-parser: ^1.5.0
+    node-fetch: ^3.2.3
     nodemailer: ^6.7.3
     slugify: ^1.6.5
   languageName: unknown
@@ -9785,6 +9786,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"data-uri-to-buffer@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "data-uri-to-buffer@npm:4.0.0"
+  checksum: 940461017d78a15a01c9a3f7ba964c634c7b4d6db5cbb2547dc3c743395abe3e6ba582f05b3c259b150bf3715558641255f89afb704d94859a8505871d07618f
+  languageName: node
+  linkType: hard
+
 "data-urls@npm:^2.0.0":
   version: 2.0.0
   resolution: "data-urls@npm:2.0.0"
@@ -12170,6 +12178,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fetch-blob@npm:^3.1.2, fetch-blob@npm:^3.1.4":
+  version: 3.1.5
+  resolution: "fetch-blob@npm:3.1.5"
+  dependencies:
+    node-domexception: ^1.0.0
+    web-streams-polyfill: ^3.0.3
+  checksum: fb98d84498ed24d87def56c0151159ffa8131b37db24dddbbbb1a2a679b9198a03d2d43003f3a9c156a301dd882a7b4943dccc9c899d58e3dd5747d002099623
+  languageName: node
+  linkType: hard
+
 "figgy-pudding@npm:^3.5.1":
   version: 3.5.2
   resolution: "figgy-pudding@npm:3.5.2"
@@ -12560,6 +12578,15 @@ __metadata:
     node-domexception: 1.0.0
     web-streams-polyfill: 4.0.0-beta.1
   checksum: c3f8d5dca00dc4e1902fbacf61c1e0653746e16e973346c8cdab48e60f07c1363bc7c440947c078c082b034b97733e2ff07f68375a8600cec4990a5ec434233f
+  languageName: node
+  linkType: hard
+
+"formdata-polyfill@npm:^4.0.10":
+  version: 4.0.10
+  resolution: "formdata-polyfill@npm:4.0.10"
+  dependencies:
+    fetch-blob: ^3.1.2
+  checksum: 5392ec484f9ce0d5e0d52fb5a78e7486637d516179b0eb84d81389d7eccf9ca2f663079da56f761355c0a65792810e3b345dc24db9a8bbbcf24ef3c8c88570c6
   languageName: node
   linkType: hard
 
@@ -17578,7 +17605,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-domexception@npm:1.0.0":
+"node-domexception@npm:1.0.0, node-domexception@npm:^1.0.0":
   version: 1.0.0
   resolution: "node-domexception@npm:1.0.0"
   checksum: 5e5d63cda29856402df9472335af4bb13875e1927ad3be861dc5ebde38917aecbf9ae337923777af52a48c426b70148815e890a5d72760f1b4d758cc671b1a2b
@@ -17606,6 +17633,17 @@ __metadata:
     encoding:
       optional: true
   checksum: fcae80f5ac52fbf5012f5e19df2bd3915e67d3b3ad51cb5942943df2238d32ba15890fecabd0e166876a9f98a581ab50f3f10eb942b09405c49ef8da36b826c7
+  languageName: node
+  linkType: hard
+
+"node-fetch@npm:^3.2.3":
+  version: 3.2.3
+  resolution: "node-fetch@npm:3.2.3"
+  dependencies:
+    data-uri-to-buffer: ^4.0.0
+    fetch-blob: ^3.1.4
+    formdata-polyfill: ^4.0.10
+  checksum: ee39de722bab67076716ce51554aec5f108c51301ab3497b78a58ca5caa6b8f4a2d15f34c28fb24e86dcbada908c54b224cb708231f0dbdd4c2ac1869292d6fd
   languageName: node
   linkType: hard
 
@@ -24066,7 +24104,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"web-streams-polyfill@npm:^3.2.0":
+"web-streams-polyfill@npm:^3.0.3, web-streams-polyfill@npm:^3.2.0":
   version: 3.2.0
   resolution: "web-streams-polyfill@npm:3.2.0"
   checksum: 0bb9b4f37c4fac161cfcc64abb102bb05cd7153c3a137d1d078dff2883d026f355803a2bf00366d860e6ab20a74506e714db80263844be035ddf4bf3e275145d
