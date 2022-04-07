@@ -1,21 +1,61 @@
 import { StarIcon } from '@heroicons/react/solid'
+import { useEffect, useState } from 'react'
+
+const numberWithDelimiter = (num, options = {}) => {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  const { delimiter = ',', round = 2, prefix = '', fixed = false } = options
+  let output = num
+
+  if (round) {
+    output = Math.round(num * Math.pow(10, round)) / Math.pow(10, round)
+  }
+
+  if (fixed) {
+    output = output.toFixed(round)
+  }
+
+  const parts = output.toString().split('.')
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, delimiter)
+
+  if (prefix && output < 0) {
+    return `-${prefix}${parts.join('.').replace('-', '')}`
+  }
+  return prefix + parts.join('.')
+}
 
 const GithubStars = () => {
+  const [starCount, setStarCount] = useState(null)
+
+  useEffect(() => {
+    const getStars = async () => {
+      const response = await fetch(
+        'https://api.github.com/repos/redwoodjs/redwood'
+      )
+      const body = await response.json()
+      setStarCount(body.stargazers_count)
+    }
+    getStars()
+  }, [])
+
   return (
     <a
       className="flex items-center no-underline"
       href="https://github.com/redwoodjs/redwood"
       title="Go to Redwood's GitHub repo"
     >
-      <div className="item-center flex">
-        <div className="bg-rw-500 flex h-[23px] items-center rounded-l px-2 text-[13px] font-semibold	leading-3 text-orange-100">
-          <StarIcon className="mr-1 block h-4 w-4" />
-          11,432
+      {starCount && (
+        <div className="item-center flex">
+          <div className="flex h-[23px] items-center rounded-l bg-rw-500 px-2 text-[13px] font-semibold	leading-3 text-orange-100">
+            <StarIcon className="mr-1 block h-4 w-4" />
+            {numberWithDelimiter(starCount)}
+          </div>
+
+          <div className="mr-1 inline-block w-3 overflow-hidden">
+            <div className="h-[23px] w-[17px] origin-top-left rotate-45 transform bg-rw-500"></div>
+          </div>
         </div>
-        <div className="mr-1 inline-block w-3 overflow-hidden">
-          <div className="bg-rw-500 h-[23px] w-[17px] origin-top-left rotate-45 transform"></div>
-        </div>
-      </div>
+      )}
       <div className="h-6 w-6">
         <svg
           viewBox="0 0 32 32"
