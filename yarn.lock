@@ -20048,6 +20048,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-lite-youtube-embed@npm:^2.2.1-a":
+  version: 2.2.1
+  resolution: "react-lite-youtube-embed@npm:2.2.1"
+  peerDependencies:
+    react: ">=16.0.8"
+    react-dom: ">=16.0.8"
+  checksum: 54fb7aa19842c429ac20d528815515b443ab92d4c78cddeab1053a579a4f348c3b27518dc0e4e16ef4a1c8c4abdc8189d4368a4aa75845e164cf94380a0f8d52
+  languageName: node
+  linkType: hard
+
 "react-markdown@npm:^8.0.0":
   version: 8.0.2
   resolution: "react-markdown@npm:8.0.2"
@@ -24106,6 +24116,7 @@ __metadata:
     react-dom: 17.0.2
     react-highlight: ^0.14.0
     react-i18next: ^11.15.4
+    react-lite-youtube-embed: ^2.2.1-a
     react-markdown: ^8.0.0
     sass: ^1.49.7
     sass-loader: ^12.6.0
