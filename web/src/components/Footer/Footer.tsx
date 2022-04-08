@@ -33,6 +33,10 @@ const navigation = {
       href: 'https://community.redwoodjs.com/t/redwood-makers-hour-stand-up/1971',
     },
     {
+      name: 'Redwood Startup Club',
+      href: 'http://redwoodjs.com/startup-club',
+    },    
+    {
       name: 'Code of Conduct',
       href: 'https://github.com/redwoodjs/redwood/blob/main/CODE_OF_CONDUCT.md',
     },
@@ -51,6 +55,10 @@ const navigation = {
       name: 'General',
       href: 'https://community.redwoodjs.com/c/announcements/5',
     },
+    {
+      name: 'Redwood Startup Fund',
+      href: 'http://redwoodstartupfund.com/',
+    },    
   ],
   icons: [
     {
