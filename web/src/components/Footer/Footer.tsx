@@ -16,7 +16,10 @@ const navigation = {
     { name: 'Shop', href: 'https://shop.redwoodjs.com' },
     { name: 'Brand and Logos', href: '/logos' },
     { name: 'Security', href: '/security' },
-    // { name: 'Roadmap', href: 'https://github.com/redwoodjs/redwood' },
+    {
+      name: 'Roadmap',
+      href: 'https://community.redwoodjs.com/t/post-v1-roadmap-feedback-wanted/3013',
+    },
     // { name: 'Releases', href: 'https://github.com/redwoodjs/redwood' },
   ],
   community: [
@@ -35,7 +38,7 @@ const navigation = {
     {
       name: 'Redwood Startup Club',
       href: 'http://redwoodjs.com/startup-club',
-    },    
+    },
     {
       name: 'Code of Conduct',
       href: 'https://github.com/redwoodjs/redwood/blob/main/CODE_OF_CONDUCT.md',
@@ -58,7 +61,7 @@ const navigation = {
     {
       name: 'Redwood Startup Fund',
       href: 'http://redwoodstartupfund.com/',
-    },    
+    },
   ],
   icons: [
     {

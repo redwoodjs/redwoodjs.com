@@ -74,10 +74,14 @@ functions = "api/dist/functions"
 [[redirects]]
   from ="/v1-launch-week"
   to ="https://v1launchweek.redwoodjs.com/"
-  
+
 [[redirects]]
   from ="/startup-club"
   to ="https://forms.gle/fYsacoY4uKQmP24o8"
+
+[[redirects]]
+  from = "/roadmap"
+  to = "https://community.redwoodjs.com/t/post-v1-roadmap-feedback-wanted/3013"
 
 [[redirects]]
   from = "/*"
