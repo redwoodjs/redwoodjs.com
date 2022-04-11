@@ -83,6 +83,12 @@ functions = "api/dist/functions"
   from = "/roadmap"
   to = "https://community.redwoodjs.com/t/post-v1-roadmap-feedback-wanted/3013"
 
+
+[[redirects]]
+  from = "/good-first-issue"
+  to = "https://github.com/redwoodjs/redwood/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+sort%3Aupdated-desc"
+
+
 [[redirects]]
   from = "/*"
   to = "/200.html"
