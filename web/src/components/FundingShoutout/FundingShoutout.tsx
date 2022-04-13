@@ -1,42 +1,55 @@
-import SnapletLogoWhite from 'web/public/images/startup-logos/snaplet_logo_white.svg'
-import EverfundLogo from 'web/public/images/startup-logos/everfund_logo.svg'
-import NousLogo from 'web/public/images/startup-logos/nous_logo.svg'
-import BuildPassLogo from 'web/public/images/startup-logos/buildpass_white.svg'
-import LeftLaneLogo from 'web/public/images/startup-logos/left-lane.svg'
-import PullflowLogo from 'web/public/images/startup-logos/pullflow.svg'
-import TeamstreamLogo from 'web/public/images/startup-logos/teamstream.svg'
-import UserVitalsLogo from 'web/public/images/startup-logos/uservitals.svg'
-import CourseliftLogo from 'web/public/images/startup-logos/courselift-white.svg'
-import TapeLogo from 'web/public/images/startup-logos/tape.svg'
-
 const FundingShoutout = () => {
   const companies = [
-    { name: 'Snaplet', logo: SnapletLogoWhite, link: 'https://snaplet.dev' },
-    { name: 'Everfund', logo: EverfundLogo, link: 'https://everfund.io?utm_source=redwoodjs&utm_medium=logo+area' },
-    { name: 'Nous', logo: NousLogo, link: 'https://nous.co' },
+    {
+      name: 'Snaplet',
+      logo: 'snaplet_logo_white.svg',
+      link: 'https://snaplet.dev',
+    },
+    {
+      name: 'Everfund',
+      logo: 'everfund_logo.svg',
+      link: 'https://everfund.io?utm_source=redwoodjs&utm_medium=logo+area',
+    },
+    {
+      name: 'Nous',
+      logo: 'nous_logo.svg',
+      link: 'https://nous.co',
+    },
     {
       name: 'BuildPass',
-      logo: BuildPassLogo,
+      logo: 'buildpass_white.svg',
       link: 'https://buildpass.com.au',
     },
     {
       name: 'LeftLane',
-      logo: LeftLaneLogo,
+      logo: 'left-lane.svg',
       link: 'https://www.leftlanesoftware.com',
     },
-    { name: 'Pullflow', logo: PullflowLogo, link: 'https://pullflow.com' },
-    { name: 'Teamstream', logo: TeamstreamLogo, link: 'https://teamstream.gg' },
+    {
+      name: 'Pullflow',
+      logo: 'pullflow.svg',
+      link: 'https://pullflow.com',
+    },
+    {
+      name: 'Teamstream',
+      logo: 'teamstream.svg',
+      link: 'https://teamstream.gg',
+    },
     {
       name: 'UserVitals',
-      logo: UserVitalsLogo,
+      logo: 'uservitals.svg',
       link: 'https://uservitalshq.com',
     },
     {
       name: 'Courselift',
-      logo: CourseliftLogo,
+      logo: 'courselift-white.svg',
       link: 'https://courselift.com',
     },
-    { name: 'Tape', logo: TapeLogo, link: 'https://tape.sh' },
+    {
+      name: 'Tape',
+      logo: 'tape.svg',
+      link: 'https://tape.sh',
+    },
     // { name: 'SportOffice', logo: CourseliftLogo, link: 'http://courselift.com' },
     // Checkout the special layout hook below that centers the last logo if it
     // would display all by itself! If we add 2 more logos it will need to change
@@ -68,7 +81,11 @@ const FundingShoutout = () => {
               }
             >
               <div className="col-span-1 flex justify-center bg-neutral-800 py-4 px-8">
-                <company.logo className="h-12 w-48 fill-white" />
+                <img
+                  src={`/images/startup-logos/${company.logo}`}
+                  className="h-12 w-48 fill-white"
+                  alt={`${company.name} logo`}
+                />
               </div>
             </a>
           ))}
