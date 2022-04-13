@@ -25,12 +25,8 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                       aria-hidden="true"
                     />
                   </span>
-                  <span className="md:hidden">
-                    Redwood 1.0 Launch Week is here!
-                  </span>
-                  <span className="hidden md:inline">
-                    Redwood 1.0 Launch Week is happening now!
-                  </span>
+                  <span className="md:hidden">Redwood is 1.0!</span>
+                  <span className="hidden md:inline">Redwood is 1.0!</span>
                 </div>
                 <span className="ml-2 block">
                   <a
@@ -39,7 +35,8 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                     className="font-bold text-white underline hover:text-teal-900 hover:underline"
                     rel="noreferrer"
                   >
-                    Schedule and Events <span aria-hidden="true">&rarr;</span>
+                    Watch recordings from launch week{' '}
+                    <span aria-hidden="true">&rarr;</span>
                   </a>
                 </span>
               </div>
