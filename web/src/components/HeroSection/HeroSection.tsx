@@ -10,8 +10,8 @@ const HeroSection = () => {
               <span>not fighting your framework.</span>
             </h1>
             <h2 className="text-xl md:text-3xl lg:max-w-3xl lg:text-2xl lg:leading-relaxed">
-              Redwood is the full-stack web framework designed to help you grow
-              from side project to startup.
+              Redwood is the open source, full-stack web framework designed to
+              help you grow from side project to startup.
             </h2>
             <a
               href="https://redwoodjs.com/docs/tutorial"
