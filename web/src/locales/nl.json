@@ -1,0 +1,172 @@
+{
+  "ExamplesPage": {
+    "canon": {
+      "description": "Deze voorbeelden uit de gemeenschap zullen je laten zien hoe <italic>creatief</italic> je kunt zijn met <bold>Redwood</bold> en het meeste uit vele situaties kunt halen",
+      "title": "Uitblinkers!"
+    },
+    "community": {
+      "title": "Maar wacht! Er is nog veel meer..."
+    },
+    "contact": {
+      "action": "Neem contact op",
+      "guidelines": "Wees aardig, lees de <rel>richtlijnen</rel> !",
+      "subtitle": "Neem de tijd om jezelf en je werk voor te stellen in het </b>Show and tell</b> gedeelte van de forums.<br />We streven naar een ontspannen en gastvrije omgeving - dus voel je vrij om te delen wat je relevant vindt en wees niet bang om hulp te vragen.",
+      "title": "Bent je de auteur van een geweldig Redwood voorbeeld?"
+    },
+    "filters": {
+      "browseBy": "Blader door meer <straight>geweldigheid</straight> door",
+      "clear": "Verwijder",
+      "text": "Ik ben op zoek naar:"
+    },
+    "subtitle": "Voorbeelden van wat de RedwoodJS gemeenschap kan bereiken met het framework",
+    "title": "<teal>RedwoodJS</teal> Voorbeelden"
+  },
+  "HomePage": {
+    "CommunitySection": {
+      "text": "Bovenop de technologie, <bold>heten wij je van harte welkom in onze gemeenschap, </bold> omdat van side project naar startup gaan moeilijk is, en <bold>niemand er alleen voor zou moeten staan.</bold>"
+    },
+    "FeaturesSection": {},
+    "FinalCTASection": {
+      "link": "Start De Tutorial",
+      "text": "Klaar om te starten met je eigen <br />Redwood avontuur?"
+    },
+    "FundingShoutout": {
+      "amount": "<label>Startups die Redwood gebruiken <br />hebben meer dan</label> <amount>$19m opgebracht</div>",
+      "text": "Als je je bij ons aansluit, dan ben je in goede handen."
+    },
+    "GraphqlSection": {
+      "text": "Als je <bold>begint</bold> met een GraphQL backend server, <bold>eindig</bold> je met de <bold>enige backend die je ooit nodig zult hebben.</bold></div><div>Wij noemen het: <bold>één API voor alles.</bold>"
+    },
+    "HeroSection": {
+      "link": "Start de tutorial",
+      "subtitle": "Redwood is het full-stack web framework ontworpen om je te helpen groeien van side project naar startup.",
+      "title": "<span>Focus je op het bouwen van je startup,</span> <span>niet op het bevechten van je framework.</span>"
+    },
+    "MissionSection": {
+      "text": "Onze missie is om <bold>meer startups</bold><br /> te helpen <bold>sneller, meerdere gebieden te verkennen.</bold>"
+    },
+    "TechStackSection": {
+      "stack": {
+        "GraphQL": {
+          "description": "Naarmate uw project groeit, groeit ook het aantal client apps dat met uw backend moet praten. Met een GraphQL API als basis, kan je met gemak in een multi-client wereld leven."
+        },
+        "Jest": {
+          "description": "Slaap met een gerust hart wetende dat je belangrijkste code goed getest is. Redwood vergroot Jest met 'scenario's' die het eenvoudig maken om uw database op te zetten voor een bepaald scenario, plus GraphQL mocking om eenvoudig de data flow te testen."
+        },
+        "Prisma": {
+          "description": "Interactie met uw database is nog nooit zo eenvoudig geweest. Prisma's uiterst populaire ORM stelt u in staat u meer op uw bedrijfslogica te concentreren en minder op de fijne kneepjes van SQL."
+        },
+        "React": {
+          "description": "We hebben 's werelds meest populaire rendering engine gekozen om Redwoods web frontend aan te drijven. Met React heb je de keuze uit leermateriaal, ontwerpsystemen en opgeleide medewerkers."
+        },
+        "Storybook": {
+          "description": "Als je je componenten geïsoleerd ontwerpt met Storybook, hoef je niet alleen niet te vechten met je framework om het in een bepaalde staat te zien, maar je bouwt ook gratis een uitgebreide ontwerpreferentie op!"
+        },
+        "TypeScript": {
+          "description": "Optionele TypeScript-ondersteuning geeft u het beste van JavaScript EN het beste van een typesysteem. Zelfs als u uw app in JS bouwt, krijgt u nog steeds een fantastische autocomplete, omdat Redwood zelf in TypeScript is geschreven."
+        }
+      },
+      "text": "We beginnen met het opzetten van een meer geïntegreerd framework, <br />waarin we de beste onderdelen combineren van:"
+    },
+    "TestimonialSection": {
+      "link": "Start de tutorial",
+      "title": "Klaar om te starten met je eigen <br />Redwood avontuur?"
+    },
+    "VideoTutorialSection": {
+      "answer": "Begin dan uw Redwood-reis met een rondleiding door onze uitgebreide handleiding!",
+      "question": "<div>Genoeg gekletst.<bold>Heb je liever video's?</bold></div>"
+    },
+    "hero": {
+      "links": {
+        "docs": "Lees de documentatie",
+        "tutorial": "Start De Tutorial"
+      },
+      "text": "<strong></strong> RedwoodJS includes deploy support for Netlify, Vercel, Render.com, AWS and more. Deploy serverless or serverfull and scale from zero servers to a thousand. Built on <strong>React</strong>, <strong>GraphQL</strong>, and <strong>Prisma</strong>, with full <strong>TypeScript</strong> support, and <strong>Webpack/Babel</strong> ready to go with zero config. Redwood gives you the workflow you love, but with simple conventions and helpers to make your experience even better.",
+      "title": "The JS App Framework<break />for Startups"
+    },
+    "info": "Zoek me in",
+    "link": "Link naar me met",
+    "route": "Mijn default route heet",
+    "title": "Home Pagina"
+  },
+  "SocialLink": {
+    "Field": {
+      "addLink": "Voeg $t(SocialLink.platforms.{{ platform }})  's sociale lin toe",
+      "field": "$t(SocialLink.platforms.{{ platform }}) 's sociale link",
+      "placeholder": {
+        "discord": "Link naar een Discord profiel or server",
+        "github": "Link naar een GitHub organization, profiel, or repository",
+        "linkedin": "Link naar een LinkedIn job of profiel",
+        "productHunt": "Link naar een Product Hunt post of profiel",
+        "twitter": "Link naar een Twitter profiel"
+      },
+      "removeLink": "Verwijder $t(SocialLink.platforms.{{ platform }}) 's sociale link",
+      "select": "Selecteer sociale link"
+    },
+    "platforms": {
+      "discord": "Discord",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "productHunt": "Product Hunt",
+      "twitter": "Twitter"
+    }
+  },
+  "Welcome to RedwoodJS": "Welkom bij RedwoodJS",
+  "footer": {
+    "about": {
+      "security": "Security Zaken",
+      "title": "About"
+    },
+    "community": {
+      "code": "Code of Conduct",
+      "contributors": "Contributors Meetup",
+      "join": "Word lid van de community",
+      "makers": "Makers Hours",
+      "title": "Community"
+    },
+    "misc": {
+      "shop": "Shop",
+      "title": "Andere"
+    },
+    "newsletter": {
+      "button": "Subscribe",
+      "subtitle": "Blijf op de hoogte van wat er gebeurt met RedwoodJS!",
+      "title": "Abonneer op onze nieuwsbrief"
+    },
+    "social": {
+      "events": "Evenementen",
+      "news": "Aankondigingen",
+      "title": "Social"
+    }
+  },
+  "info": "Dit is het bestand met de Nederlandse vertaling",
+  "navbar": {
+    "community": {
+      "discord": {
+        "description": "Watercooler, relationship building, quick discussion and help"
+      },
+      "discourse": {
+        "description": "Long-form discussions about Redwood, troubleshooting, show & tell"
+      },
+      "title": "Community",
+      "twitter": {
+        "description": "Volg @redwoodjs voor updates, nieuwe releases and community meetup aankondigingen"
+      }
+    },
+    "jobs": {
+      "title": "Jobs"
+    },
+    "showcase": {
+      "examples": {
+        "description": "Leer alle features van Redwood kennen door middel van voorbeeld applicaties en code",
+        "title": "voorbeeld Applicaties"
+      },
+      "showcase": {
+        "description": "Case studies van real-world applicaties en bedrijven gebouwd met Redwood",
+        "title": "Uitgelicht"
+      },
+      "title": "Uitgelicht"
+    }
+  },
+  "see": "https://www.i18next.com/translation-function/essentials"
+}
