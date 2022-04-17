@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next'
 const Footer = () => {
   const { t } = useTranslation()
 
-
   const navigation = {
     about: [
       {
@@ -23,7 +22,8 @@ const Footer = () => {
       { name: 'Brand and Logos', href: '/logos' },
       {
         name: t('footer.about.security'),
-        href: '/security' },
+        href: '/security',
+      },
       {
         name: 'Roadmap',
         href: 'https://community.redwoodjs.com/t/post-v1-roadmap-feedback-wanted/3013',
@@ -109,7 +109,7 @@ const Footer = () => {
             viewBox="0 0 32 32"
             fill="currentColor"
             {...props}
-            className="h-5 w-5"
+            className="mr-2 h-8 w-8"
           >
             <path d="M16.1357143,0 C7.37857143,0 0,7.03571429 0,15.7214286 C0,16 0.00714285714,32 0.00714285714,32 L16.1357143,31.9857143 C24.9,31.9857143 32,24.6785714 32,15.9928571 C32,7.30714286 24.9,0 16.1357143,0 Z M16,25.1428571 C14.6142857,25.1428571 13.2928571,24.8357143 12.1142857,24.2785714 L6.32142857,25.7142857 L7.95714286,20.3571429 C7.25714286,19.0642857 6.85714286,17.5785714 6.85714286,16 C6.85714286,10.95 10.95,6.85714286 16,6.85714286 C21.05,6.85714286 25.1428571,10.95 25.1428571,16 C25.1428571,21.05 21.05,25.1428571 16,25.1428571 Z"></path>
           </svg>
