@@ -82,7 +82,7 @@ i18n
       excludeCacheFor: ['cimode'], // languages to not persist (cookie, localStorage)
 
       // optional htmlTag with lang attribute, the default is:
-      htmlTag: document.documentElement,
+      htmlTag: document ? document.documentElement : undefined,
     },
     react: {
       /**
