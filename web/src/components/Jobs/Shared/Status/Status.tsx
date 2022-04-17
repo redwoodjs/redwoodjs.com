@@ -3,14 +3,14 @@ const Status = ({ status, textClassName, iconClassName }) => {
 
   switch (status) {
     case 'available':
-      bgColor = 'bg-green-100'
-      textColor = 'text-green-600'
+      bgColor = 'bg-forest-100'
+      textColor = 'text-forest-600'
       icon = 'check_circle'
       label = 'Available'
       break
     case 'booked':
-      bgColor = 'bg-yellow-100'
-      textColor = 'text-yellow-600'
+      bgColor = 'bg-rw-100'
+      textColor = 'text-rw-600'
       icon = 'cancel'
       label = 'Booked'
 
@@ -19,9 +19,9 @@ const Status = ({ status, textClassName, iconClassName }) => {
 
   return (
     <div
-      className={`mt-1 flex items-center justify-center px-2 py-1 rounded-full font-semibold uppercase ${bgColor} ${textColor} ${textClassName}`}
+      className={`mt-1 flex items-center justify-center px-3 py-2 rounded-full font-semibold uppercase ${bgColor} ${textColor} ${textClassName}`}
     >
-      <span className={`icon mr-1 ${iconClassName}`}>{icon}</span> {label}
+      <span className={`icon md-20 mr-1 ${iconClassName}`}>{icon}</span> {label}
     </div>
   )
 }

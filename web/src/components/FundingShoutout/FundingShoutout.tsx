@@ -10,38 +10,44 @@ import UserVitalsLogo from 'web/public/images/startup-logos/uservitals.svg'
 import CourseliftLogo from 'web/public/images/startup-logos/courselift-white.svg'
 import TapeLogo from 'web/public/images/startup-logos/tape.svg'
 
-const companies = [
-  { name: 'Snaplet', logo: SnapletLogoWhite, link: 'https://snaplet.dev' },
-  { name: 'Everfund', logo: EverfundLogo, link: 'https://everfund.co.uk' },
-  { name: 'Nous', logo: NousLogo, link: 'https://nous.co' },
-  {
-    name: 'BuildPass',
-    logo: BuildPassLogo,
-    link: 'https://buildpass.com.au',
-  },
-  {
-    name: 'LeftLane',
-    logo: LeftLaneLogo,
-    link: 'https://www.leftlanesoftware.com',
-  },
-  { name: 'Pullflow', logo: PullflowLogo, link: 'http://pullflow.com' },
-  { name: 'Teamstream', logo: TeamstreamLogo, link: 'https://teamstream.gg' },
-  {
-    name: 'UserVitals',
-    logo: UserVitalsLogo,
-    link: 'https://uservitalshq.com',
-  },
-  {
-    name: 'Courselift',
-    logo: CourseliftLogo,
-    link: 'https://courselift.com',
-  },
-  { name: 'Tape', logo: TapeLogo, link: 'http://tape.sh' },
-  // { name: 'SportOffice', logo: CourseliftLogo, link: 'http://courselift.com' },
-]
-
 const FundingShoutout = () => {
   const { t } = useTranslation()
+
+  const companies = [
+    { name: 'Snaplet', logo: SnapletLogoWhite, link: 'https://snaplet.dev' },
+    {
+      name: 'Everfund',
+      logo: EverfundLogo,
+      link: 'https://everfund.io?utm_source=redwoodjs&utm_medium=logo+area',
+    },
+    { name: 'Nous', logo: NousLogo, link: 'https://nous.co' },
+    {
+      name: 'BuildPass',
+      logo: BuildPassLogo,
+      link: 'https://buildpass.com.au',
+    },
+    {
+      name: 'LeftLane',
+      logo: LeftLaneLogo,
+      link: 'https://www.leftlanesoftware.com',
+    },
+    { name: 'Pullflow', logo: PullflowLogo, link: 'https://pullflow.com' },
+    { name: 'Teamstream', logo: TeamstreamLogo, link: 'https://teamstream.gg' },
+    {
+      name: 'UserVitals',
+      logo: UserVitalsLogo,
+      link: 'https://uservitalshq.com',
+    },
+    {
+      name: 'Courselift',
+      logo: CourseliftLogo,
+      link: 'https://courselift.com',
+    },
+    { name: 'Tape', logo: TapeLogo, link: 'https://tape.sh' },
+    // { name: 'SportOffice', logo: CourseliftLogo, link: 'http://courselift.com' },
+    // Checkout the special layout hook below that centers the last logo if it
+    // would display all by itself! If we add 2 more logos it will need to change
+  ]
 
   return (
     <>
@@ -56,7 +62,7 @@ const FundingShoutout = () => {
               amount: <div className="text-6xl font-bold md:text-8xl" />,
               br: <br />,
               label: (
-                <div className="mr-4 text-xl font-bold md:text-right md:text-3xl lg:text-5xl" />
+                <div className="mr-4 text-xl font-bold md:text-right md:text-3xl lg:text-5xl lg:leading-tight" />
               ),
             }}
           >
@@ -67,16 +73,18 @@ const FundingShoutout = () => {
             <div className="text-6xl font-bold md:text-8xl">$19m</div>
           </Trans>
         </div>
-        <div
-          className="mx-auto mt-6 grid grid-cols-1 gap-0.5  overflow-hidden rounded-xl md:grid-cols-3 lg:mt-8 lg:max-w-6xl
-        "
-        >
-          {companies.map((company) => (
+        <div className="mx-auto mt-6 grid grid-cols-1 gap-0.5 overflow-hidden rounded-xl md:grid-cols-3 lg:mt-8 lg:max-w-6xl">
+          {companies.map((company, i) => (
             <a
               href={company.link}
               target="_blank"
               rel="noopener noreferrer"
               key={company.name}
+              className={
+                i === companies.length - 1 && i % 2 !== 0
+                  ? 'md:col-start-2'
+                  : ''
+              }
             >
               <div className="col-span-1 flex justify-center bg-neutral-800 py-4 px-8">
                 <company.logo className="h-12 w-48 fill-white" />

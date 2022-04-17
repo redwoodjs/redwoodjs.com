@@ -5,7 +5,7 @@ const MissionSection = () => {
 
   return (
     <section className="px-4 sm:text-center">
-      <p className="font-serif text-xl sm:text-2xl md:text-4xl xl:text-6xl">
+      <p className="leading-1.25 font-serif text-xl sm:text-2xl md:text-4xl xl:text-6xl xl:leading-tight">
         <Trans
           t={t}
           i18nKey="HomePage.MissionSection.text"

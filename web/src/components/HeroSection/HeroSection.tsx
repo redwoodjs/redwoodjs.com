@@ -9,7 +9,7 @@ const HeroSection = () => {
       <div className="flex flex-1 bg-gradient-to-t from-black">
         <div className="mb-10 flex flex-1 items-center p-4 md:p-12 lg:p-32">
           <div className="flex flex-1 flex-col space-y-12 rounded-2xl p-8 text-left text-white lg:items-center lg:justify-center lg:px-12 lg:py-24 lg:text-center">
-            <h1 className="flex flex-col font-serif text-4xl font-bold md:text-6xl  2xl:text-7xl">
+            <h1 className="flex flex-col font-serif text-4xl font-bold md:text-6xl  2xl:text-7xl 2xl:leading-[100px]">
               <Trans
                 i18nKey={'HomePage.HeroSection.title'}
                 components={{ span: <span />, br: <br /> }}
@@ -18,10 +18,13 @@ const HeroSection = () => {
                 <span>not fighting your framework.</span>
               </Trans>
             </h1>
-            <h2 className="text-xl md:text-3xl lg:max-w-3xl lg:text-2xl">
+            <h2 className="text-xl md:text-3xl lg:max-w-3xl lg:text-2xl lg:leading-relaxed">
               {t('HomePage.HeroSection.subtitle')}
             </h2>
-            <a href="/docs/tutorial" className="button max-w-[200px]">
+            <a
+              href="https://redwoodjs.com/docs/tutorial"
+              className="button max-w-[200px]"
+            >
               {t('HomePage.HeroSection.link')}
             </a>
           </div>

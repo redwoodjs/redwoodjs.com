@@ -249,7 +249,7 @@ const JobProfileForm = ({ profile = {}, token, loading, error, saveFunc }) => {
                   setStatus(status === 'booked' ? 'available' : 'booked')
                 }
                 className={`${
-                  status === 'booked' ? 'bg-yellow-500' : 'bg-green-600'
+                  status === 'booked' ? 'bg-rw-500' : 'bg-forest-500'
                 }
           relative inline-flex flex-shrink-0 mt-1 h-8 w-14 mx-2 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
               >
@@ -331,8 +331,8 @@ const JobProfileForm = ({ profile = {}, token, loading, error, saveFunc }) => {
           </div>
         </div>
 
-        <div className="mt-24 text-left max-w-screen-md mx-auto bg-gradient-to-b from-teal-600 to-teal-700 text-white border-16 border-teal-500 px-16 py-8">
-          <h2 className="text-2xl text-center text-teal-200 font-semibold">
+        <div className="mt-24 text-left max-w-screen-md mx-auto bg-gradient-to-b from-forest-600 to-forest-700 text-white border-16 border-forest-500 px-16 py-8">
+          <h2 className="text-2xl text-center text-forest-200 font-semibold">
             Important Text You Should Read
           </h2>
           <p className="mt-6 font-light">
@@ -352,7 +352,7 @@ const JobProfileForm = ({ profile = {}, token, loading, error, saveFunc }) => {
             Questions?{' '}
             <a
               href="mailto:jobs@redwoodjs.com?subject=Question%20about%20job%20posting"
-              className="text-white hover:text-teal-200"
+              className="text-white hover:text-forest-200"
             >
               jobs@redwoodjs.com
             </a>
@@ -366,7 +366,7 @@ const JobProfileForm = ({ profile = {}, token, loading, error, saveFunc }) => {
           <button
             type="button"
             disabled={loading}
-            className="button-invert border border-teal-500"
+            className="button-invert border border-forest-500"
             onClick={formMethods.handleSubmit(onPreview)}
           >
             Preview
@@ -378,10 +378,10 @@ const JobProfileForm = ({ profile = {}, token, loading, error, saveFunc }) => {
         <>
           <div className="fixed inset-0 z-10">
             <div className="absolute inset-0 bg-black opacity-80"></div>
-            <div className="absolute inset-0 bg-orange-50 m-8 p-8 rounded-xl overflow-y-scroll">
+            <div className="absolute inset-0 bg-rw-50 m-8 p-8 rounded-xl overflow-y-scroll">
               <button
                 type="button"
-                className="fixed top-0 right-0 mt-12 mr-12 text-orange-400 hover:text-orange-700 transition duration-150"
+                className="fixed top-0 right-0 mt-12 mr-12 text-rw-400 hover:text-rw-700 transition duration-150"
                 onClick={() => setPreviewProfile({})}
               >
                 <span className="icon md-48">close</span>
