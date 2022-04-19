@@ -81,9 +81,6 @@ i18n
       // cache user language on
       caches: ['localStorage', 'cookie'],
       excludeCacheFor: ['cimode'], // languages to not persist (cookie, localStorage)
-
-      // optional htmlTag with lang attribute, the default is:
-      htmlTag: document.documentElement,
     },
     react: {
       /**

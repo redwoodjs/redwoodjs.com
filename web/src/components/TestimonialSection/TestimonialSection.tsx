@@ -1,21 +1,5 @@
 import { Trans, useTranslation } from 'react-i18next'
-
-const testimonials = [
-  {
-    name: 'Ryan Chenkie',
-    subtext: 'Founder, CourseLift',
-    quote:
-      'Redwood has been a game changer for me. I use it for CourseLift and its the standard for new projects for my agency.”',
-    image: '/images/portraits/RyanChenkie.jpg',
-  },
-  {
-    name: 'Kris Coulson',
-    subtext: 'Founder, Teamstream',
-    quote:
-      'Not just ‘made with RedwoodJS’. Made with a lot of love for RedwoodJS. 💕',
-    image: '/images/portraits/KrisCoulson.jpg',
-  },
-]
+import { testimonials } from 'src/data/testimonials'
 
 const TestimonialSection = () => {
   const { t } = useTranslation()
@@ -30,7 +14,7 @@ const TestimonialSection = () => {
         }}
       >
         <ul className="mx-auto grid gap-3 sm:grid-cols-2 lg:max-w-6xl">
-          {testimonials.map((testimonial) => (
+          {testimonials.slice(0, 2).map((testimonial) => (
             <li
               key={testimonial.name}
               className="col-span-1 space-y-4 rounded-xl bg-white p-4"
@@ -62,7 +46,7 @@ const TestimonialSection = () => {
         </ul>
       </section>
       <section className="flex flex-col items-center justify-center space-y-8 bg-neutral-900 py-24">
-        <h3 className="space-y-12 px-4 text-center font-serif text-xl text-white sm:text-2xl md:text-4xl lg:text-6xl">
+        <h3 className="space-y-12 px-4 text-center font-serif text-xl text-white sm:text-2xl md:text-4xl lg:text-6xl lg:leading-tight">
           <Trans
             components={{ br: <br /> }}
             i18nKey={'HomePage.TestimonialSection.title'}
@@ -71,7 +55,7 @@ const TestimonialSection = () => {
             Redwood adventure?
           </Trans>
         </h3>
-        <a href="/docs/tutorial" className="button">
+        <a href="https://redwoodjs.com/docs/tutorial" className="button">
           {t('HomePage.TestimonialSection.link')}
         </a>
       </section>

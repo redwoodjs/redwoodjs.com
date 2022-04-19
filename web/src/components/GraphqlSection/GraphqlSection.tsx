@@ -3,7 +3,7 @@ import { Trans } from 'react-i18next'
 const GraphqlSection = () => {
   return (
     <section className="mx-auto lg:max-w-6xl">
-      <h3 className="space-y-12 px-4 font-serif text-xl sm:text-center sm:text-2xl md:text-4xl lg:text-6xl">
+      <h3 className="space-y-12 px-4 font-serif text-xl sm:text-center sm:text-2xl md:text-4xl lg:text-6xl lg:leading-tight">
         <Trans
           i18nKey={'HomePage.GraphqlSection.text'}
           components={{ div: <div />, bold: <span className="font-bold" /> }}

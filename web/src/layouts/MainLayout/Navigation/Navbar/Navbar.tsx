@@ -27,17 +27,18 @@ const MainLayoutNavbar = () => {
   const { t } = useTranslation()
 
   const navigation = [
-    { name: 'Docs', link: '/docs' },
+    { name: 'Docs', link: '/docs/introduction' },
     {
       name: t('navbar.community.title'),
       navigation: [
         {
           name: 'Discord',
-
           description: t('navbar.community.discord.description'),
-          link: 'https://discord.gg/jjSYEQd',
+          link: 'https://discord.gg/redwoodjs',
           icon: () => (
             <svg
+              width={36}
+              height={36}
               viewBox="0 0 36 36"
               className="fill-current text-orange-600"
               xmlns="http://www.w3.org/2000/svg"
@@ -52,6 +53,8 @@ const MainLayoutNavbar = () => {
           link: 'https://community.redwoodjs.com',
           icon: () => (
             <svg
+              width={36}
+              height={36}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 32 32"
               className="fill-current text-orange-600 transition duration-200"
@@ -66,6 +69,8 @@ const MainLayoutNavbar = () => {
           link: 'https://twitter.com/redwoodjs',
           icon: () => (
             <svg
+              width={36}
+              height={36}
               viewBox="0 0 34 34"
               className="fill-current text-orange-600"
               xmlns="http://www.w3.org/2000/svg"
@@ -99,6 +104,7 @@ const MainLayoutNavbar = () => {
     },
 
     { name: t('navbar.jobs.title'), route: routes.jobs() },
+    { name: 'Shop', link: 'https://shop.redwoodjs.com' },
   ]
 
   const [isVisible, setIsVisible] = useState(false)
@@ -167,7 +173,7 @@ const MainLayoutNavbar = () => {
                   {isVisible ? (
                     <li>
                       <a
-                        href="/docs/tutorial"
+                        href="https://redwoodjs.com/docs/tutorial"
                         className="button text-sm transition duration-150 ease-in-out"
                       >
                         Start the Tutorial

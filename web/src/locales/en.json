@@ -39,7 +39,7 @@
     },
     "HeroSection": {
       "link": "Start the tutorial",
-      "subtitle": "Redwood is the full-stack web framework designed to help you grow from side project to startup.",
+      "subtitle": "Redwood is the open source, full-stack web framework designed to help you grow from side project to startup.",
       "title": "<span>Focus on building your startup,</span> <span>not fighting your framework.</span>"
     },
     "MissionSection": {
@@ -117,6 +117,9 @@
       "security": "Security Stuffs",
       "title": "About"
     },
+    "announcements": {
+      "title": "Announcements"
+    },
     "community": {
       "code": "Code of Conduct",
       "contributors": "Contributors Meetup",
@@ -124,19 +127,10 @@
       "makers": "Makers Hours",
       "title": "Community"
     },
-    "misc": {
-      "shop": "Shop",
-      "title": "Misc"
-    },
     "newsletter": {
       "button": "Subscribe",
       "subtitle": "Keep up on what&apos;s happening with RedwoodJS!",
       "title": "Subscribe to our newsletter"
-    },
-    "social": {
-      "events": "Events Feed",
-      "news": "Announcement Feed",
-      "title": "Social"
     }
   },
   "info": "This is your English translation file",

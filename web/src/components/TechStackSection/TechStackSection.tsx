@@ -32,12 +32,13 @@ const TechStackSection = () => {
 
   return (
     <>
-      <p className="mx-auto max-w-3xl px-4 font-serif text-base sm:text-center md:text-2xl lg:max-w-4xl lg:text-4xl">
+      <p className="mx-auto max-w-3xl px-4 font-serif text-base sm:text-center md:text-2xl lg:max-w-4xl lg:text-4xl lg:leading-tight">
         <Trans
           i18nKey="HomePage.TechStackSection.text"
-          components={{ br: <br /> }}
+          components={{ br: <br className="hidden sm:block" /> }}
         >
-          We begin by crafting a more integrated framework, <br />
+          We begin by crafting a more integrated framework,{' '}
+          <br className="hidden sm:block" />
           beautifully weaving together the best parts of:
         </Trans>
       </p>

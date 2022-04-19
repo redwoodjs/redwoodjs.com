@@ -45,30 +45,40 @@ export const examples = ({ input }) => {
   })
 }
 
-export const showcase = ({ id }: Prisma.ShowcaseWhereUniqueInput) => {
+export const showcase = async ({ id }: Prisma.ShowcaseWhereUniqueInput) => {
   return db.showcase.findUnique({
-    include: { socialLinks: true, media: { select: { id: true, src: true } } },
+    include: {
+      socialLinks: { select: { id: true, link: true, platform: true } },
+      media: { select: { id: true, src: true } },
+    },
     where: { id },
   })
 }
 
 export const createShowcase = ({
-  input: { socialLinks, mediaId: _mediaId, ...input },
+  input: { socialLinks, ...input },
 }: MutationcreateShowcaseArgs) => {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
   const { imageUrl, ...data } = input
 
-  return db.showcase.create({
-    data: {
-      ...data,
-      media: {
-        create: { src: imageUrl, type: 'picture' },
+  return db.showcase
+    .create({
+      data: {
+        ...data,
+        localizations: undefined, // TODO: Localize
+        socialLinks: { createMany: { data: socialLinks } },
       },
-      localizations: undefined, // TODO: Localize
-      socialLinks: { createMany: { data: socialLinks } },
-    },
-  })
+    })
+    .then(async (showcase) => {
+      imageUrl &&
+        (await db.media.create({
+          data: {
+            src: imageUrl,
+            type: 'picture',
+            showcase: { connect: { id: showcase.id } },
+          },
+        }))
+      return showcase
+    })
 }
 
 interface UpdateShowcaseArgs extends Prisma.ShowcaseWhereUniqueInput {
@@ -78,14 +88,26 @@ interface UpdateShowcaseArgs extends Prisma.ShowcaseWhereUniqueInput {
 export const updateShowcase = ({ id, input }: UpdateShowcaseArgs) => {
   const { imageUrl, ...data } = input
 
+  let media = {}
+
+  if (imageUrl) {
+    media = {
+      upsert: {
+        create: { src: imageUrl },
+        update: { src: imageUrl },
+      },
+    }
+  }
+
   return db.showcase.update({
     data: {
       ...data,
-      media: {
-        upsert: {
-          create: { src: imageUrl },
-          update: { src: imageUrl },
-        },
+      media,
+      socialLinks: {
+        upsert: data?.socialLinks?.map((link) => ({
+          create: { platform: link?.platform, link: link?.link },
+          update: { link: link?.link },
+        })),
       },
     },
     where: { id },
@@ -117,6 +139,8 @@ export const showcaseJobs = async ({ company }) => {
 }
 
 export const Showcase = {
+  socialLinks: (_obj, { root }: ResolverArgs<ReturnType<typeof showcase>>) =>
+    db.showcase.findUnique({ where: { id: root.id } }).socialLinks(),
   localizations: (_obj, { root }: ResolverArgs<ReturnType<typeof showcase>>) =>
     db.showcase.findUnique({ where: { id: root.id } }).localizations(),
   media: (_obj, { root }: ResolverArgs<ReturnType<typeof showcase>>) =>

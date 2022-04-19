@@ -32,7 +32,7 @@
     },
     "HeroSection": {
       "link": "Commencez le tutoriel",
-      "subtitle": "Redwood est un framework web full-stack conçu pour vous aider à transformer votre projet du dimanche en projet de startup.",
+      "subtitle": "Redwood est le framework web libre, full-stack conçu pour vous aider à transformer votre projet du dimanche en projet de startup.",
       "title": "<span>Construisez votre startup,</span> <span>arrêtez de lutter contre votre framework.</span>"
     },
     "MissionSection": {
@@ -88,6 +88,9 @@
       "security": "Sécurité",
       "title": "A propos"
     },
+    "announcements": {
+      "title": "Annonces"
+    },
     "community": {
       "code": "Code de conduite",
       "contributors": "Rendez-vous des Contributeurs",
@@ -95,19 +98,10 @@
       "makers": "Rendez-vous des Bricoleurs",
       "title": "Communauté"
     },
-    "misc": {
-      "shop": "Boutique",
-      "title": "Misc"
-    },
     "newsletter": {
       "button": "S'inscrire",
       "subtitle": "Restez informé-e de ce qu'il se passe avec RedwoodJS !",
       "title": "Inscrivez-vous à notre newsletter"
-    },
-    "social": {
-      "events": "Fil des Evènements",
-      "news": "Fil des Annonces",
-      "title": "Social"
     }
   },
   "info": "Ceci est votre fichier de traduction",

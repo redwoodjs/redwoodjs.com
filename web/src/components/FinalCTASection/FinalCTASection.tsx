@@ -1,23 +1,9 @@
 import { Trans, useTranslation } from 'react-i18next'
 
+import { testimonials } from 'src/data/testimonials'
+
 const FinalCtaSection = () => {
   const { t } = useTranslation()
-
-  const testimonials = [
-    {
-      name: 'Amanda Gianelli',
-      subtext: 'Engineer, Auth0',
-      quote: 'RedwoodJS makes me feel like a superhero ‍♀️ 🚀',
-      image: '/images/portraits/AmandaGianelli.jpg',
-    },
-    {
-      name: 'Kris Coulson',
-      subtext: 'Founder, Teamstream',
-      quote:
-        'Not just ‘made with RedwoodJS’. Made with a lot of love for RedwoodJS. 💕',
-      image: '/images/portraits/KrisCoulson.jpg',
-    },
-  ]
 
   return (
     <div style={{ marginTop: 0 }}>
@@ -29,7 +15,7 @@ const FinalCtaSection = () => {
         }}
       >
         <ul className="mx-auto mb-12 grid gap-3 sm:grid-cols-2 md:mb-32 lg:max-w-5xl">
-          {testimonials.map((testimonial) => (
+          {testimonials.slice(2, 4).map((testimonial) => (
             <li
               key={testimonial.name}
               className="col-span-1 space-y-4 rounded-xl bg-white p-4"
@@ -60,7 +46,7 @@ const FinalCtaSection = () => {
           ))}
         </ul>
         <section className="flex flex-col items-center justify-center py-32">
-          <h3 className="mb-12 space-y-12 px-4 text-center font-serif text-2xl font-bold sm:text-2xl md:mb-24 md:text-4xl lg:text-6xl">
+          <h3 className="mb-12 space-y-12 px-4 text-center font-serif text-2xl font-bold sm:text-2xl md:mb-24 md:text-4xl lg:text-6xl lg:leading-tight">
             <Trans
               i18nKey="HomePage.FinalCTASection.text"
               components={{ br: <br /> }}
@@ -70,7 +56,7 @@ const FinalCtaSection = () => {
             </Trans>
           </h3>
           <a
-            href="/docs/tutorial"
+            href="https://redwoodjs.com/docs/tutorial"
             className="button bg-rw-500 px-9 text-white hover:bg-rw-700"
           >
             {t('HomePage.FinalCTASection.link')}

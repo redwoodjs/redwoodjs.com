@@ -1,6 +1,6 @@
 import { MetaTags } from '@redwoodjs/web'
 
-import ShowcaseListCell from 'src/components/Startup/StartupListCell'
+import StartupListCell from 'src/components/Startup/StartupListCell'
 
 const ListPage = () => {
   return (
@@ -9,8 +9,8 @@ const ListPage = () => {
         title="Startup Showcase"
         description="The landing page for the RedwoodJS startup showcase."
       />
-      <section className="bg-gradient-to-r from-rw-600 to-rw-800 relative overflow-hidden z-0">
-        <div className="max-w-screen-xl mx-auto py-12 px-8 space-y-6 text-center md:text-right relative z-10">
+      <section className="relative z-0 overflow-hidden bg-gradient-to-r from-rw-600 to-rw-800">
+        <div className="relative z-10 mx-auto max-w-screen-xl space-y-6 py-12 px-8 text-center md:text-right">
           <h1 className="relative text-5xl text-white drop-shadow-md">
             <span className="text-rw-200">RedwoodJS</span> Showcase
           </h1>
@@ -20,7 +20,7 @@ const ListPage = () => {
           </h2>
         </div>
         <svg
-          className="absolute -left-28 -top-6 rotate-12 w-1/3 min-w-[26rem] max-w-md text-rw-500 text-opacity-50 z-0"
+          className="absolute -left-28 -top-6 z-0 w-1/3 min-w-[26rem] max-w-md rotate-12 text-rw-500 text-opacity-50"
           fill="currentColor"
           viewBox="0 0 917 1000"
         >
@@ -31,18 +31,18 @@ const ListPage = () => {
           />
         </svg>
       </section>
-      <section className="max-w-screen-xl mt-10 mx-auto px-8">
-        <div className="bg-gradient-to-r from-forest-200 to-forest-400 flex flex-col sm:flex-row items-center px-7 py-5 rounded-md space-x-0 sm:space-x-20 space-y-6 sm:space-y-0">
+      <section className="mx-auto my-10 max-w-screen-xl px-8">
+        <div className="flex flex-col items-center space-x-0 space-y-6 rounded-md bg-gradient-to-r from-forest-200 to-forest-400 px-7 py-5 sm:flex-row sm:space-x-20 sm:space-y-0">
           <div className="flex-grow space-y-2.5">
-            <h3 className="font-semibold text-xl text-forest-900">
+            <h3 className="text-xl font-semibold text-forest-900">
               Founder of an upcoming startup?
             </h3>
-            <p className="text-sm text-forest-800 leading-relaxed">
+            <p className="text-sm leading-relaxed text-forest-800">
               Consider introducing yourself and your project on our forum.
             </p>
           </div>
           <a
-            className="button-invert text-forest-600 hover:bg-forest-50 hover:text-forest-700 px-3 py-2 flex items-center space-x-3 whitespace-nowrap"
+            className="button-invert flex items-center space-x-3 whitespace-nowrap px-3 py-2 text-forest-600 hover:bg-forest-50 hover:text-forest-700"
             href="https://community.redwoodjs.com/c/show-tell/7"
             rel="noreferrer"
             target="_blank"
@@ -54,7 +54,7 @@ const ListPage = () => {
           </a>
         </div>
       </section>
-      <ShowcaseListCell />
+      <StartupListCell />
     </>
   )
 }

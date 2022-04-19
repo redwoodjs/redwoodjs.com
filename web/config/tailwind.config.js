@@ -44,6 +44,7 @@ module.exports = {
         },
       },
       lineHeight: {
+        1.25: '1.25',
         11: '2.75rem',
         12: '3rem',
       },
