@@ -64,7 +64,7 @@ const navigation = {
     },
     {
       name: 'Newsletter',
-      href: '//newsletter.redwoodjs.com',
+      href: 'http://newsletter.redwoodjs.com',
     },    
   ],
   icons: [
