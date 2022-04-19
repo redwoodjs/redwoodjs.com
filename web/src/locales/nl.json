@@ -115,7 +115,7 @@
   "footer": {
     "about": {
       "security": "Security Zaken",
-      "title": "About"
+      "title": "Over"
     },
     "community": {
       "code": "Code of Conduct",
@@ -124,19 +124,13 @@
       "makers": "Makers Hours",
       "title": "Community"
     },
-    "misc": {
-      "shop": "Shop",
-      "title": "Andere"
+    "announcements": {
+      "title": "Aankondigingen"
     },
     "newsletter": {
       "button": "Subscribe",
       "subtitle": "Blijf op de hoogte van wat er gebeurt met RedwoodJS!",
       "title": "Abonneer op onze nieuwsbrief"
-    },
-    "social": {
-      "events": "Evenementen",
-      "news": "Aankondigingen",
-      "title": "Social"
     }
   },
   "info": "Dit is het bestand met de Nederlandse vertaling",
