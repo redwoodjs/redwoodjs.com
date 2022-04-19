@@ -62,6 +62,10 @@ const navigation = {
       name: 'Redwood Startup Fund',
       href: 'http://redwoodstartupfund.com/',
     },
+    {
+      name: 'Newsletter',
+      href: '//newsletter.redwoodjs.com',
+    },    
   ],
   icons: [
     {
