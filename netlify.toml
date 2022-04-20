@@ -20,7 +20,7 @@ functions = "api/dist/functions"
   to = "https://redwoodjs-docs.netlify.app/docs/:splat"
   status = 200
   force = true
-
+  
 [[redirects]]
   from = "/cookbook"
   to = "/docs/how-to/index"
@@ -85,6 +85,12 @@ functions = "api/dist/functions"
 [[redirects]]
   from = "/good-first-issue"
   to = "https://github.com/redwoodjs/redwood/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+sort%3Aupdated-desc"
+
+[[redirects]]
+  from = "/reference/command-line-interface"
+  to = "https://redwoodjs-docs.netlify.app/docs/cli-commands"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/*"
