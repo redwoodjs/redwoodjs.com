@@ -57,7 +57,7 @@ const JobDisplay = ({ job, back }) => {
         <ReactMarkdown className="markdown">{job.aboutApplicant}</ReactMarkdown>
       </section>
       <section className="p-12">
-        <h2 className="title">About Snaplet</h2>
+        <h2 className="title">About {job.company}</h2>
         <ReactMarkdown className="markdown">{job.aboutCompany}</ReactMarkdown>
         <div className="mt-8 flex justify-center">
           <img
