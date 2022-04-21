@@ -83,7 +83,7 @@ const FundingShoutout = () => {
               <div className="col-span-1 flex justify-center bg-neutral-800 py-4 px-8">
                 <img
                   src={`/images/startup-logos/${company.logo}`}
-                  className="h-12 w-48 fill-white"
+                  className="h-12 max-w-48 fill-white"
                   alt={`${company.name} logo`}
                 />
               </div>
