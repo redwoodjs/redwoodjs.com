@@ -12,17 +12,20 @@ const navigation = {
       name: 'All Contributors',
       href: 'https://github.com/redwoodjs/redwood#all-contributors',
     },
-    // { name: 'Stickers', href: 'https://github.com/redwoodjs/redwood' },
+    { name: 'Stickers', href: '/stickers' },
     { name: 'Shop', href: 'https://shop.redwoodjs.com' },
     { name: 'Brand and Logos', href: '/logos' },
     { name: 'Security', href: '/security' },
-    // { name: 'Roadmap', href: 'https://github.com/redwoodjs/redwood' },
+    {
+      name: 'Roadmap',
+      href: 'https://community.redwoodjs.com/t/post-v1-roadmap-feedback-wanted/3013',
+    },
     // { name: 'Releases', href: 'https://github.com/redwoodjs/redwood' },
   ],
   community: [
     {
       name: 'Join the Community',
-      href: 'https:/redwoodjs.com/community',
+      href: '/community',
     },
     {
       name: 'Contributors Meetup',
@@ -31,6 +34,10 @@ const navigation = {
     {
       name: 'Makers Hours',
       href: 'https://community.redwoodjs.com/t/redwood-makers-hour-stand-up/1971',
+    },
+    {
+      name: 'Redwood Startup Club',
+      href: 'http://redwoodjs.com/startup-club',
     },
     {
       name: 'Code of Conduct',
@@ -51,6 +58,14 @@ const navigation = {
       name: 'General',
       href: 'https://community.redwoodjs.com/c/announcements/5',
     },
+    {
+      name: 'Redwood Startup Fund',
+      href: 'http://redwoodstartupfund.com/',
+    },
+    {
+      name: 'Newsletter',
+      href: 'http://newsletter.redwoodjs.com',
+    },    
   ],
   icons: [
     {

@@ -23,7 +23,7 @@ export const Anchor = ({ children, route, link, ...rest }) => {
 
 const MainLayoutNavbar = () => {
   const navigation = [
-    { name: 'Docs', link: '/docs' },
+    { name: 'Docs', link: '/docs/introduction' },
     {
       name: 'Community',
       navigation: [

@@ -11,6 +11,7 @@ import { Private, Route, Router, Set } from '@redwoodjs/router'
 
 import AdminLayout from 'src/layouts/AdminLayout/AdminLayout'
 import MainLayout from 'src/layouts/MainLayout/MainLayout'
+import HomePage from 'src/pages/HomePage'
 
 const Routes = () => {
   return (
@@ -35,6 +36,8 @@ const Routes = () => {
         <Route path="/showcase/{slug}" page={StartupShowcasePage} name="startup" />
         <Route path="/logos" page={LogosPage} name="logos" />
         <Route path="/security" page={SecurityPage} name="security" />
+        <Route path="/stickers" page={StickersPage} name="stickers" />
+        <Route path="/stickers-thanks" page={StickersThanksPage} name="stickersThanks" />
 
         <Route path="/" page={HomePage} name="home" prerender />
 

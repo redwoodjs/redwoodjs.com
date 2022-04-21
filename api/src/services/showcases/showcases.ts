@@ -45,9 +45,12 @@ export const examples = ({ input }) => {
   })
 }
 
-export const showcase = ({ id }: Prisma.ShowcaseWhereUniqueInput) => {
+export const showcase = async ({ id }: Prisma.ShowcaseWhereUniqueInput) => {
   return db.showcase.findUnique({
-    include: { socialLinks: true, media: { select: { id: true, src: true } } },
+    include: {
+      socialLinks: { select: { id: true, link: true, platform: true } },
+      media: { select: { id: true, src: true } },
+    },
     where: { id },
   })
 }
@@ -136,6 +139,8 @@ export const showcaseJobs = async ({ company }) => {
 }
 
 export const Showcase = {
+  socialLinks: (_obj, { root }: ResolverArgs<ReturnType<typeof showcase>>) =>
+    db.showcase.findUnique({ where: { id: root.id } }).socialLinks(),
   localizations: (_obj, { root }: ResolverArgs<ReturnType<typeof showcase>>) =>
     db.showcase.findUnique({ where: { id: root.id } }).localizations(),
   media: (_obj, { root }: ResolverArgs<ReturnType<typeof showcase>>) =>
