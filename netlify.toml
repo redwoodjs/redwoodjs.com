@@ -15,13 +15,12 @@ functions = "api/dist/functions"
   # Point your browser to this port to access your RedwoodJS app
   port = 8888
 
-
 [[redirects]]
   from = "/docs/*"
   to = "https://redwoodjs-docs.netlify.app/docs/:splat"
   status = 200
   force = true
-
+  
 [[redirects]]
   from = "/cookbook"
   to = "/docs/how-to/index"
@@ -40,7 +39,7 @@ functions = "api/dist/functions"
   status = 301
   force = true
 
-  [[redirects]]
+[[redirects]]
   from = "/tutorial/*"
   to = "/docs/tutorial/:splat"
   status = 301
@@ -83,11 +82,15 @@ functions = "api/dist/functions"
   from = "/roadmap"
   to = "https://community.redwoodjs.com/t/post-v1-roadmap-feedback-wanted/3013"
 
-
 [[redirects]]
   from = "/good-first-issue"
   to = "https://github.com/redwoodjs/redwood/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+sort%3Aupdated-desc"
 
+[[redirects]]
+  from = "/reference/command-line-interface"
+  to = "https://redwoodjs-docs.netlify.app/docs/cli-commands"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/*"
