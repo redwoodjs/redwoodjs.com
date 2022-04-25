@@ -3,6 +3,14 @@ import ReactMarkdown from 'react-markdown'
 import JobDetailLayout from 'src/components/Jobs/Shared/JobDetailLayout'
 import { resizeFilestackImage } from 'src/components/Uploader/utility'
 
+const applicationUrl = (job) => {
+  if (job.applyUrl.match(/@/)) {
+    return `mailto:${job.applyUrl}?subject=${job.title}`
+  } else {
+    return job.applyUrl
+  }
+}
+
 const JobDisplay = ({ job, back }) => {
   return (
     <JobDetailLayout
@@ -14,7 +22,7 @@ const JobDisplay = ({ job, back }) => {
       }
       postedDateTime={job.createdAt}
       postedLabel="Posted"
-      buttonLink={job.applyUrl}
+      buttonLink={applicationUrl(job)}
       buttonLabel="Apply for this job"
       back={back}
     >
