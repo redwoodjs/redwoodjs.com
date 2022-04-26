@@ -2,6 +2,12 @@ import { AuthProvider } from '@redwoodjs/auth'
 import { FatalErrorBoundary, RedwoodProvider } from '@redwoodjs/web'
 import { RedwoodApolloProvider } from '@redwoodjs/web/apollo'
 
+import(/* webpackChunkName: "plausible" */ 'plausible-tracker').then(
+  ({ default: Plausible }) => {
+    Plausible({ domain: 'redwoodjs.com' })
+  }
+)
+
 import FatalErrorPage from 'src/pages/FatalErrorPage'
 import Routes from 'src/Routes'
 
