@@ -4,7 +4,8 @@ import { RedwoodApolloProvider } from '@redwoodjs/web/apollo'
 
 import(/* webpackChunkName: "plausible" */ 'plausible-tracker').then(
   ({ default: Plausible }) => {
-    Plausible({ domain: 'redwoodjs.com' })
+    const plausible = Plausible({ domain: 'redwoodjs.com' })
+    plausible.trackPageview()
   }
 )
 
