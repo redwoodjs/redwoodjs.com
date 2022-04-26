@@ -1,13 +1,16 @@
 import { AuthProvider } from '@redwoodjs/auth'
 import { FatalErrorBoundary, RedwoodProvider } from '@redwoodjs/web'
 import { RedwoodApolloProvider } from '@redwoodjs/web/apollo'
+import { isBrowser } from '@redwoodjs/prerender/browserUtils'
 
-import(/* webpackChunkName: "plausible" */ 'plausible-tracker').then(
-  ({ default: Plausible }) => {
-    const plausible = Plausible({ domain: 'redwoodjs.com' })
-    plausible.trackPageview()
-  }
-)
+if (isBrowser) {
+  import(/* webpackChunkName: "plausible" */ 'plausible-tracker').then(
+    ({ default: Plausible }) => {
+      const { trackPageview } = Plausible({ domain: 'redwoodjs.com' })
+      trackPageview()
+    }
+  )
+}
 
 import FatalErrorPage from 'src/pages/FatalErrorPage'
 import Routes from 'src/Routes'
