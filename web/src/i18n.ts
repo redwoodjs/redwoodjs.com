@@ -1,5 +1,7 @@
+import fr from 'src/locales/fr.json'
+import en from 'src/locales/en.json'
+// import nl from 'src/locales/nl.json'
 import i18n from 'i18next'
-import HttpApi from 'i18next-http-backend'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import { initReactI18next } from 'react-i18next'
 
@@ -38,23 +40,24 @@ export default HomePage
 */
 
 i18n
-  .use(HttpApi)
   .use(initReactI18next)
   // detect user language
   // learn more: https://github.com/i18next/i18next-browser-languageDetector
   .use(LanguageDetector)
   .init({
-    backend: {
-      loadPath: '/locales/{{lng}}.json',
-      addPath: '/locales/{{lng}}.json',
+    resources: {
+      fr: { translation: fr },
+      en: { translation: en } /*nl:{translation:nl}*/,
     },
     load: 'all',
+    cleanCode: true,
     interpolation: { escapeValue: false }, // React already does escaping
     fallbackLng: Languages.en,
     preload: [Languages.en],
     lng: Languages.en,
     lowerCaseLng: true,
     initImmediate: true,
+    supportedLngs: [Languages.en, Languages.fr],
     keySeparator: '.',
     detection: {
       // order and from where user language should be detected
@@ -86,7 +89,6 @@ i18n
        * @warning `wait` will throw a @deprecation warning: do not be intimidated by it and take your time to replace it.
        */
       // wait: false,
-      useSuspense: true,
       transSupportBasicHtmlNodes: true,
     },
   })
