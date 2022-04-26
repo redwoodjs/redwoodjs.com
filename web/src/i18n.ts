@@ -8,6 +8,7 @@ import { initReactI18next } from 'react-i18next'
 export enum Languages {
   en = 'en',
   fr = 'fr',
+  nl = 'nl',
 }
 
 // This is a simple i18n configuration with English and French translations.
