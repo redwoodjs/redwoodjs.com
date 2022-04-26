@@ -1,5 +1,4 @@
 import { MetaTags } from '@redwoodjs/web'
-import { useTranslation } from 'react-i18next'
 
 import HeroSection from 'src/components/HeroSection'
 import MissionSection from 'src/components/MissionSection'
@@ -13,8 +12,6 @@ import VideoTutorialSection from 'src/components/VideoTutorialSection'
 import FinalCTASection from 'src/components/FinalCTASection'
 
 const HomePage = () => {
-  const { t } = useTranslation()
-
   return (
     <>
       <MetaTags
