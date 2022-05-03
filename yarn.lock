@@ -20055,9 +20055,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-markdown@npm:^8.0.0":
-  version: 8.0.2
-  resolution: "react-markdown@npm:8.0.2"
+"react-markdown@npm:8.0.3":
+  version: 8.0.3
+  resolution: "react-markdown@npm:8.0.3"
   dependencies:
     "@types/hast": ^2.0.0
     "@types/prop-types": ^15.0.0
@@ -20077,7 +20077,7 @@ __metadata:
   peerDependencies:
     "@types/react": ">=16"
     react: ">=16"
-  checksum: a0e9504dd0d177af4b01aab96df85629b70ba0e47d26e3e6bba14af704b41091108039a3e9b82ba19471a425f104c0ff14373a0a5f9f89d4bd384826d4a03e56
+  checksum: aedec51cbc173121574515d0df434073a6248a5554f108a802db8efebd2ff2e5b1fab79818e9fcd2aca045705b73ae5c12737b17bdf15426ae834780d6f7dd34
   languageName: node
   linkType: hard
 
@@ -24114,7 +24114,7 @@ __metadata:
     react-dom: 17.0.2
     react-highlight: ^0.14.0
     react-i18next: ^11.15.4
-    react-markdown: ^8.0.0
+    react-markdown: 8.0.3
     sass: ^1.49.7
     sass-loader: ^12.6.0
     tailwindcss: ^3.0.23
