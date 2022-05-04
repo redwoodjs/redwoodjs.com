@@ -1,15 +1,14 @@
-import { Fragment, useEffect, useState } from 'react'
-import { Disclosure, Transition } from '@headlessui/react'
+import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
-import { routes, Link } from '@redwoodjs/router'
+import { Link, routes } from '@redwoodjs/router'
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import i18n from 'src/i18n'
 
 import GithubStars from '../GithubStars'
 import LanguagePicker from '../LanguagePicker'
-import NavLinksMobile from './NavLinksMobile'
 import NavLinksDesktop from './NavLinksDesktop'
+import NavLinksMobile from './NavLinksMobile'
 
 export const Anchor = ({ children, route, link, ...rest }) => {
   return route ? (
@@ -81,7 +80,8 @@ const MainLayoutNavbar = () => {
         },
       ],
     },
-    {
+    /* @todo Remove undefined when those pages are ready. */
+    undefined && {
       name: t('navbar.showcase.title'),
       navigation: [
         {
@@ -105,7 +105,7 @@ const MainLayoutNavbar = () => {
 
     { name: t('navbar.jobs.title'), route: routes.jobs() },
     { name: 'Shop', link: 'https://shop.redwoodjs.com' },
-  ]
+  ].filter(Boolean)
 
   const [isVisible, setIsVisible] = useState(false)
   const [scrollPosition, setScrollPosition] = useState(0)

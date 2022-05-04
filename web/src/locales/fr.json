@@ -18,7 +18,34 @@
     "CommunitySection": {
       "text": "En plus de la technologie, <bold>nous vous invitons chaleureusement à rejoindre notre communauté, </bold> parce que passer d'un projet du dimanche à une startup c'est dur, et que <bold>personne ne devrait le faire seul.</bold>"
     },
-    "FeaturesSection": {},
+    "FeaturesSection": {
+      "text": {
+        "line1": "Oh, vous voulez en apprendre sur <bold>la technologie</bold> et <bold>les fonctionnalités</bold>? Accrochez-vous.",
+        "line2": "Voilà comment on fait du <bold>développement end-to-end,</bold> par la méthode Redwood"
+      },
+      "features": {
+        "design": {
+          "title": "Conception",
+          "description": "<container>Concevez, construisez et contrôlez vos composants dans <br/><storybook>Storybook</storybook>, même en totale isolation du backend. Travaillez sur le design, sans vous soucier de la donnée.</container>"
+        },
+        "test": {
+          "title": "Tests",
+          "description": "<container>Que ce soit en <tdd>TDD</tdd> ou <ddt>DDT</ddt>, Redwood utilise <jest>Jest</jest> avec des <mocks>mocks</mocks> et des <scenarios>scenarios</scenarios> pour contrôler vos fonctionalités backend et frontend.</container>"
+        },
+        "auth": {
+          "title": "Authentification & Sécurité",
+          "description": "<container>Cloisonnez vos front et backends avec votre propre <selfAuth>authentification</selfAuth> ou intégrez près d'une douzaine de <providers>fournisseurs tiers</providers>. Contrôlez les accès grâce au <rbac>RBAC</rbac> et aux <validations>Validations</validations>.</container>"
+        },
+        "data": {
+          "title": "Data & Transport",
+          "description": "<container>Quand votre API est servie par <graphql>GraphQL</graphql> vous êtes prêts pour tout client, du navigateur aux applications mobiles et plus. Transformez vos données avec les <directives>Directives</directives> et conservez votre logique métier organisée et réutilisable dans vos <services>Services</services>.</container>"
+        },
+        "deploy": {
+          "title": "Déploiement",
+          "description": "<container>Déployez votre application vers des hébergeurs serverless tels <netlify>Netlify</netlify> et <vercel>Vercel</vercel>, montez vos <docker>containers</docker>, ou déployez en serveur <bare>bare metal</bare>.</container>"
+        }
+      }
+    },
     "FinalCTASection": {
       "link": "Commencer le tutoriel",
       "text": "Prêt-e pour démarrer votre propre <br />adventure Redwood ?"

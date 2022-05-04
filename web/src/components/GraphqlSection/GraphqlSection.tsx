@@ -1,10 +1,13 @@
-import { Trans } from 'react-i18next'
+import { Trans, useTranslation } from 'react-i18next'
 
 const GraphqlSection = () => {
+  const { t } = useTranslation()
+
   return (
     <section className="mx-auto lg:max-w-6xl">
       <h3 className="space-y-12 px-4 font-serif text-xl sm:text-center sm:text-2xl md:text-4xl lg:text-6xl lg:leading-tight">
         <Trans
+          t={t}
           i18nKey={'HomePage.GraphqlSection.text'}
           components={{ div: <div />, bold: <span className="font-bold" /> }}
         >

@@ -25,7 +25,34 @@
     "CommunitySection": {
       "text": "On top of the technology, <bold>we warmly welcome you to join our community, </bold> because going from side project to startup is hard, and <bold>nobody should have to do it alone.</bold>"
     },
-    "FeaturesSection": {},
+    "FeaturesSection": {
+      "text": {
+        "line1": "Oh, you want to know more about the <bold>technology</bold> and <bold>features</bold>? Strap in.",
+        "line2": "Here's how you do <bold>end-to-end development,</bold> the Redwood Way"
+      },
+      "features": {
+        "design": {
+          "title": "Design",
+          "description": "<container>Mockup, build and verify components in <br/><storybook>Storybook</storybook>, even in complete isolation from the backend. Work on design without worrying about data.</container>"
+        },
+        "test": {
+          "title": "Tests",
+          "description": "<container>Whether it's <tdd>TDD</tdd> or <ddt>DDT</ddt>, Redwood uses <jest>Jest</jest> along with <mocks>mocks</mocks> and <scenarios>scenarios</scenarios> to verify functionality on the frontend and the backend.</container>"
+        },
+        "auth": {
+          "title": "Auth & Security",
+          "description": "<container>Lock down your front and backends with your own <selfAuth>self-hosted auth</selfAuth> or integrate with nearly a dozen <providers>third party auth providers</providers>. Verify access with <rbac>RBAC</rbac> and <validations>Validations</validations>.</container>"
+        },
+        "data": {
+          "title": "Data & Transport",
+          "description": "<container>When your API is <graphql>GraphQL</graphql> you're ready for any client, from the browser to native mobile apps and more. Transform your data with <directives>Directives</directives> and keep your business logic organized and reusable within <services>Services</services>.</container>"
+        },
+        "deploy": {
+          "title": "Deploy",
+          "description": "<container>Deploy your app to serverless hosts like <netlify>Netlify</netlify> and <vercel>Vercel</vercel>, build for <docker>containers</docker>, or deploy to <bare>bare metal</bare>.</container>"
+        }
+      }
+    },
     "FinalCTASection": {
       "link": "Start the Tutorial",
       "text": "Ready to start your own <br />Redwood adventure?"
