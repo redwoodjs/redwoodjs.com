@@ -1,13 +1,14 @@
-import { Fragment, useEffect, useState } from 'react'
-import { Disclosure, Transition } from '@headlessui/react'
+import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
-import { routes, Link } from '@redwoodjs/router'
+import { Link, routes } from '@redwoodjs/router'
+import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import GithubStars from '../GithubStars'
 import LanguagePicker from '../LanguagePicker'
-import NavLinksMobile from './NavLinksMobile'
 import NavLinksDesktop from './NavLinksDesktop'
+import NavLinksMobile from './NavLinksMobile'
 
 export const Anchor = ({ children, route, link, ...rest }) => {
   return route ? (
@@ -22,15 +23,16 @@ export const Anchor = ({ children, route, link, ...rest }) => {
 }
 
 const MainLayoutNavbar = () => {
+  const { t } = useTranslation()
+
   const navigation = [
     { name: 'Docs', link: '/docs/introduction' },
     {
-      name: 'Community',
+      name: t('navbar.community.title'),
       navigation: [
         {
           name: 'Discord',
-          description:
-            'Watercooler, relationship building, quick discussion and help',
+          description: t('navbar.community.discord.description'),
           link: 'https://discord.gg/redwoodjs',
           icon: () => (
             <svg
@@ -46,8 +48,7 @@ const MainLayoutNavbar = () => {
         },
         {
           name: 'Discourse',
-          description:
-            'Long-form discussions about Redwood, troubleshooting, show & tell',
+          description: t('navbar.community.discourse.description'),
           link: 'https://community.redwoodjs.com',
           icon: () => (
             <svg
@@ -63,8 +64,7 @@ const MainLayoutNavbar = () => {
         },
         {
           name: 'Twitter',
-          description:
-            'Follow @redwoodjs for updates, new releases and community meetup annoucements',
+          description: t('navbar.community.twitter.description'),
           link: 'https://twitter.com/redwoodjs',
           icon: () => (
             <svg
@@ -80,33 +80,32 @@ const MainLayoutNavbar = () => {
         },
       ],
     },
-    // {
-    //   name: 'Showcase',
-    //   navigation: [
-    //     {
-    //       name: 'Example Apps',
-    //       description:
-    //         'Learn all the features of Redwood with example apps and code',
-    //       route: routes.examples(),
-    //       icon: () => (
-    //         <span className="icon md-36 text-orange-600">construction</span>
-    //       ),
-    //     },
-    //     {
-    //       name: 'Showcase',
-    //       description:
-    //         'Case studies of real-world apps and companies built with Redwood',
-    //       route: routes.showcase(),
-    //       icon: () => (
-    //         <span className="icon md-36 text-orange-600">emoji_events</span>
-    //       ),
-    //     },
-    //   ],
-    // },
+    /* @todo Remove undefined when those pages are ready. */
+    undefined && {
+      name: t('navbar.showcase.title'),
+      navigation: [
+        {
+          name: t('navbar.showcase.examples.title'),
+          description: t('navbar.showcase.examples.description'),
+          route: routes.examples(),
+          icon: () => (
+            <span className="icon md-36 text-orange-600">construction</span>
+          ),
+        },
+        {
+          name: t('navbar.showcase.showcase.title'),
+          description: t('navbar.showcase.showcase.description'),
+          route: routes.showcase(),
+          icon: () => (
+            <span className="icon md-36 text-orange-600">emoji_events</span>
+          ),
+        },
+      ],
+    },
 
-    { name: 'Jobs', route: routes.jobs() },
+    { name: t('navbar.jobs.title'), route: routes.jobs() },
     { name: 'Shop', link: 'https://shop.redwoodjs.com' },
-  ]
+  ].filter(Boolean)
 
   const [isVisible, setIsVisible] = useState(false)
   const [scrollPosition, setScrollPosition] = useState(0)
@@ -185,6 +184,9 @@ const MainLayoutNavbar = () => {
                       <GithubStars />
                     </li>
                   )}
+                  <li>
+                    <LanguagePicker />
+                  </li>
                 </ul>
               </div>
             </div>

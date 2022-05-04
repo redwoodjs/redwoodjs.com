@@ -6,6 +6,7 @@
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "baseUrl": "./",
     "rootDirs": [
       "./src",
@@ -21,7 +22,7 @@
     },
     "typeRoots": ["../node_modules/@types", "./node_modules/@types"],
     "types": ["jest", "@testing-library/jest-dom"],
-    "jsx": "preserve",
+    "jsx": "preserve"
   },
   "include": [
     "src",

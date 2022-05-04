@@ -11,6 +11,8 @@ import(/* webpackChunkName: "plausible" */ 'plausible-tracker').then(
 import FatalErrorPage from 'src/pages/FatalErrorPage'
 import Routes from 'src/Routes'
 
+import './i18n'
+
 import './scaffold.css'
 import './index.scss'
 
