@@ -65,7 +65,7 @@ const navigation = {
     {
       name: 'Newsletter',
       href: 'http://newsletter.redwoodjs.com',
-    },    
+    },
   ],
   icons: [
     {
@@ -249,11 +249,10 @@ const Footer = () => {
                   </ul>
                 </div>
                 <div className="mt-12 md:mt-0">
-                  <ul className="mt-4 space-y-4">
-                    <div className="flex flex-col space-y-6 md:order-2">
-                      {navigation.icons.map((item) => (
+                  <ul className="mt-4 flex flex-col space-y-6">
+                    {navigation.icons.map((item) => (
+                      <li key={item.name}>
                         <a
-                          key={item.name}
                           href={item.href}
                           className="flex items-center text-neutral-400 hover:text-neutral-300"
                         >
@@ -264,8 +263,8 @@ const Footer = () => {
                           />
                           <span>{item.name}</span>
                         </a>
-                      ))}
-                    </div>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
