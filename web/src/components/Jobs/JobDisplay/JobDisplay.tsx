@@ -74,6 +74,9 @@ const JobDisplay = ({ job, back }) => {
             className="h-32 w-64 object-contain"
           />
         </div>
+        <div className="mt-2 text-center">
+          Views in last 24 hours: {job.views}{' '}
+        </div>
       </section>
     </JobDetailLayout>
   )

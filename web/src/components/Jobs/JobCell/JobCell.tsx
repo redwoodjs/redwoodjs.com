@@ -19,6 +19,7 @@ export const QUERY = gql`
       aboutJob
       aboutApplicant
       aboutCompany
+      views
       createdAt
     }
   }
@@ -27,7 +28,7 @@ export const QUERY = gql`
 export const Loading = () => <div></div>
 
 export const Empty = () => (
-  <div className="max-w-screen-lg mx-auto job">
+  <div className="job mx-auto max-w-screen-lg">
     <header className="mt-36">
       <h1 className="text-center">Job not found</h1>
     </header>

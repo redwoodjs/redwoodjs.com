@@ -12,6 +12,7 @@ export const schema = gql`
     aboutJob: String!
     aboutApplicant: String!
     aboutCompany: String!
+    views: Int
     createdAt: DateTime!
     updatedAt: DateTime!
   }
