@@ -79,6 +79,7 @@ const Routes = () => {
           <Route path="/admin/startups/new" page={AdminStartupNewStartupPage} name="adminNewStartup" />
           <Route path="/admin/startups/{slug}" page={AdminStartupStartupPage} name="adminStartup" />
           <Route path="/admin/startups/{slug}/edit" page={AdminStartupEditStartupPage} name="adminEditStartup" />
+          <Route path="/admin/urlViews" page={AdminUrlViewsPage} name="urlViews" />
         </Set>
       </Private>
     </Router>

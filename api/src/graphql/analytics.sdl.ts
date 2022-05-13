@@ -1,5 +1,5 @@
 export const schema = gql`
-  type UrlAnalytics {
+  type UrlViews {
     count: Int!
     status_code: Int!
     url: String!
@@ -10,8 +10,8 @@ export const schema = gql`
   }
 
   type Query {
-    urlAnalytics: [UrlAnalytics!]! @skipAuth
-    jobViewAnalytics(id: Int!): JobViews! @skipAuth
+    urlViews: [UrlViews!]! @skipAuth
+    jobViews(id: Int!): JobViews! @skipAuth
   }
 `
 

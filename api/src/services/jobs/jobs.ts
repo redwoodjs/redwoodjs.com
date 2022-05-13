@@ -3,7 +3,7 @@ import type { Prisma } from '@prisma/client'
 import { db } from 'src/lib/db'
 import { AuthenticationError } from '@redwoodjs/graphql-server'
 
-import { jobViewAnalytics } from 'src/services/analytics'
+import { jobViews } from 'src/services/analytics'
 
 import { newJob as sendNewJobEmail } from '../email'
 import { logger } from 'src/lib/logger'
@@ -36,7 +36,7 @@ export const job = async ({ id, token }) => {
     throw new AuthenticationError('Job not found')
   }
 
-  const views = await jobViewAnalytics({ id: job.id })
+  const views = await jobViews({ id: job.id })
 
   logger.debug({ custom: { count: views['count'], job: id } }, 'Job Views')
 

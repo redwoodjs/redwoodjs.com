@@ -12,7 +12,7 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
   return (
     <div className={'flex flex-row'}>
       <Toaster />
-      <ul className={'navigate w-44 p-4 bg-white h-screen fixed'}>
+      <ul className={'navigate fixed h-screen w-44 bg-white p-4'}>
         {hasRole(['editor', 'admin']) && (
           <>
             <li>
@@ -29,6 +29,9 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
             </li>
             <li>
               <Link to={routes.adminStartups()}>Startups</Link>
+            </li>
+            <li>
+              <Link to={routes.urlViews()}>Url Views</Link>
             </li>
           </>
         )}
@@ -53,7 +56,7 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
           </button>
         </li>
       </ul>
-      <main className={'flex flex-row ml-44 w-full p-8'}>{children}</main>
+      <main className={'ml-44 flex w-full flex-row p-8'}>{children}</main>
     </div>
   )
 }

@@ -17,8 +17,6 @@ export const getAnalyticsEndpoint = async ({ url }) => {
 
     const data = await response.json()
 
-    logger.debug({ custom: data }, 'response dat liba')
-
     return data['result'] || []
   } catch (error) {
     logger.error({ url }, 'Failed to fetch')
