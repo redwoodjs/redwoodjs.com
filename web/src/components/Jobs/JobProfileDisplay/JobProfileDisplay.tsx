@@ -9,6 +9,16 @@ const JobProfileDisplay = ({ profile }) => {
     return null
   }
 
+  const hostname = (url) => {
+    // try to get the hostname from the url
+    // if it's not a valid url, return url as is
+    try {
+      return new URL(profile.portfolioUrl).hostname
+    } catch (e) {
+      return url
+    }
+  }
+
   return (
     <JobDetailLayout
       title={
@@ -43,9 +53,7 @@ const JobProfileDisplay = ({ profile }) => {
             Portfolio/Profile
           </h3>
           <div className="mt-2 text-center">
-            <a href={profile.portfolioUrl} className="">
-              {profile.portfolioUrl}
-            </a>
+            <a href={profile.portfolioUrl}>{hostname(profile.portfolioUrl)}</a>
           </div>
         </div>
         <div className="py-8 px-12 md:w-1/3">

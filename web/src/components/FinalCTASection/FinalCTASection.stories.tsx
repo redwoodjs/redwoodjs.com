@@ -1,7 +1,7 @@
-import FinalCtaSection from './FinalCtaSection'
+import FinalCTASection from './FinalCTASection'
 
 export const generated = () => {
-  return <FinalCtaSection />
+  return <FinalCTASection />
 }
 
-export default { title: 'Components/FinalCtaSection' }
+export default { title: 'Components/FinalCTASection' }
