@@ -1,4 +1,4 @@
-import FinalCtaSection from './FinalCtaSection'
+import FinalCtaSection from './FinalCTASection'
 
 export const generated = () => {
   return <FinalCtaSection />
