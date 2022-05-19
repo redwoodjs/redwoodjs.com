@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 import { Toaster } from '@redwoodjs/web/toast'
-import { XIcon, SpeakerphoneIcon } from '@heroicons/react/solid'
+// import { XIcon, SpeakerphoneIcon } from '@heroicons/react/solid'
 
 import Navbar from './Navigation/Navbar'
 import Footer from 'src/components/Footer'
@@ -13,7 +13,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <>
       <Toaster toastOptions={{ className: 'mt-16' }} />
-      <div className="relative bg-gradient-to-l from-teal-700 to-teal-500">
+      {/* <div className="relative bg-gradient-to-l from-teal-700 to-teal-500">
         <div className="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">
           <div className="sm:px-16 sm:text-center">
             <p className="font-medium text-white">
@@ -42,17 +42,17 @@ const MainLayout = ({ children }: MainLayoutProps) => {
               </div>
             </p>
           </div>
-          {/* <div className="absolute inset-y-0 right-0 flex items-start pt-1 pr-1 sm:items-start sm:pt-1 sm:pr-2">
+          <div className="absolute inset-y-0 right-0 flex items-start pt-1 pr-1 sm:items-start sm:pt-1 sm:pr-2">
             <button
               type="button"
-              className="hover:bg-rw-500 flex rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-white"
+              className="flex rounded-md p-2 hover:bg-rw-500 focus:outline-none focus:ring-2 focus:ring-white"
             >
               <span className="sr-only">Dismiss</span>
               <XIcon className="h-6 w-6 text-white" aria-hidden="true" />
             </button>
-          </div> */}
+          </div>
         </div>
-      </div>
+      </div> */}
       {/*
       <div className="bg-rw-500">
         <div className="mx-auto max-w-7xl py-2 px-1 sm:px-6 lg:px-8">
