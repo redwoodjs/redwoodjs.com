@@ -8,7 +8,7 @@ import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
 import JobForm from 'src/components/Jobs/JobForm'
 
 export const QUERY = gql`
-  query FindEditJobQuery($id: Int!, $token: String) {
+  query FindEditJobQuery($id: Int!, $token: String!) {
     job(id: $id, token: $token) {
       id
       email
