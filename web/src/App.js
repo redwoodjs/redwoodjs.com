@@ -1,4 +1,3 @@
-import { Suspense } from 'react'
 import { AuthProvider } from '@redwoodjs/auth'
 import { FatalErrorBoundary, RedwoodProvider } from '@redwoodjs/web'
 import { RedwoodApolloProvider } from '@redwoodjs/web/apollo'
@@ -12,8 +11,6 @@ import(/* webpackChunkName: "plausible" */ 'plausible-tracker').then(
 import FatalErrorPage from 'src/pages/FatalErrorPage'
 import Routes from 'src/Routes'
 
-import './i18n'
-
 import './scaffold.css'
 import './index.scss'
 
@@ -22,9 +19,7 @@ const App = () => (
     <RedwoodProvider titleTemplate="%PageTitle | %AppTitle">
       <AuthProvider type="dbAuth">
         <RedwoodApolloProvider>
-          <Suspense fallback={'Loading'}>
-            <Routes />
-          </Suspense>
+          <Routes />
         </RedwoodApolloProvider>
       </AuthProvider>
     </RedwoodProvider>
