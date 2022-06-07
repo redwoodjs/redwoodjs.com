@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@redwoodjs/api": "^0.50.0",
-    "@redwoodjs/graphql-server": "^0.50.0",
+    "@redwoodjs/api": "^1.5.1",
+    "@redwoodjs/graphql-server": "^1.5.1",
     "accept-language-parser": "^1.5.0",
     "node-fetch": "2.6.1",
     "nodemailer": "^6.7.3",

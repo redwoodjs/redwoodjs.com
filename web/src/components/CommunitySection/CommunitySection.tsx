@@ -39,7 +39,7 @@ const CommunitySection = () => {
           <li key={item.name} className="">
             <a href={item.link}>
               <img
-                className="h-10 w-10 md:h-16 md:w-16"
+                className="object-contain h-10 w-10 md:h-16 md:w-16"
                 src={item.logo}
                 alt={item.name}
               />
