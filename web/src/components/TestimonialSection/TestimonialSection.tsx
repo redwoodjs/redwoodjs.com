@@ -1,9 +1,5 @@
-import { Trans, useTranslation } from 'react-i18next'
 import { testimonials } from 'src/data/testimonials'
-
 const TestimonialSection = () => {
-  const { t } = useTranslation()
-
   return (
     <div style={{ marginTop: 0 }}>
       <section
@@ -47,16 +43,11 @@ const TestimonialSection = () => {
       </section>
       <section className="flex flex-col items-center justify-center space-y-8 bg-neutral-900 py-24">
         <h3 className="space-y-12 px-4 text-center font-serif text-xl text-white sm:text-2xl md:text-4xl lg:text-6xl lg:leading-tight">
-          <Trans
-            components={{ br: <br /> }}
-            i18nKey={'HomePage.TestimonialSection.title'}
-          >
-            Ready to start your own <br />
-            Redwood adventure?
-          </Trans>
+          Ready to start your own <br />
+          Redwood adventure?
         </h3>
         <a href="https://redwoodjs.com/docs/tutorial" className="button">
-          {t('HomePage.TestimonialSection.link')}
+          Start the Tutorial
         </a>
       </section>
     </div>

@@ -1,10 +1,6 @@
-import { Trans, useTranslation } from 'react-i18next'
-
 import { testimonials } from 'src/data/testimonials'
 
 const FinalCtaSection = () => {
-  const { t } = useTranslation()
-
   return (
     <div style={{ marginTop: 0 }}>
       <section
@@ -47,19 +43,14 @@ const FinalCtaSection = () => {
         </ul>
         <section className="flex flex-col items-center justify-center py-32">
           <h3 className="mb-12 space-y-12 px-4 text-center font-serif text-2xl font-bold sm:text-2xl md:mb-24 md:text-4xl lg:text-6xl lg:leading-tight">
-            <Trans
-              i18nKey="HomePage.FinalCTASection.text"
-              components={{ br: <br /> }}
-            >
-              Ready to start your own <br />
-              Redwood adventure?
-            </Trans>
+            Ready to start your own <br />
+            Redwood adventure?
           </h3>
           <a
             href="https://redwoodjs.com/docs/tutorial"
             className="button bg-rw-500 px-9 text-white hover:bg-rw-700"
           >
-            {t('HomePage.FinalCTASection.link')}
+            Start the Tutorial
           </a>
         </section>
       </section>

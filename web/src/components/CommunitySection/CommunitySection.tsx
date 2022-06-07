@@ -1,5 +1,3 @@
-import { Trans } from 'react-i18next'
-
 const communities = [
   {
     name: 'Twitter',
@@ -21,18 +19,13 @@ const communities = [
 const CommunitySection = () => {
   return (
     <section className="mx-auto max-w-6xl space-y-12 p-4">
-      <p className="font-serif text-xl sm:text-center sm:text-2xl md:text-4xl lg:text-6xl  lg:leading-tight">
-        <Trans
-          i18nKey="HomePage.CommunitySection.text"
-          components={{ bold: <span className="font-bold" /> }}
-        >
-          On top of the technology,{' '}
-          <span className="font-bold">
-            we warmly welcome you to join our community,{' '}
-          </span>
-          because going from side project to startup is hard, and{' '}
-          <span className="font-bold">nobody should have to do it alone.</span>
-        </Trans>
+      <p className="font-serif text-xl sm:text-center sm:text-2xl md:text-4xl lg:text-6xl lg:leading-tight">
+        On top of the technology,{' '}
+        <span className="font-bold">
+          we warmly welcome you to join our community,{' '}
+        </span>
+        because going from side project to startup is hard, and{' '}
+        <span className="font-bold">nobody should have to do it alone.</span>
       </p>
       <ul className="flex items-center justify-center space-x-8">
         {communities.map((item) => (
