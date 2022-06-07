@@ -18,12 +18,12 @@ const Routes = () => {
     <Router>
       <Set wrap={MainLayout}>
         <Route path="/login" page={LoginPage} name="login" />
-        {/* <Route path="/signup" page={SignupPage} name="signup" /> */}
+        { process.env.CONTEXT !== 'production' && <Route path="/signup" page={SignupPage} name="signup" /> }
 
         <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
         <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
         <Route path="/examples" page={ExamplesPage} name="examples" />
-        <Route path="/jobs/new" page={JobsNewJobPage} name="newJob" />
+        <Route path="/jobs/new" page={JobsNewJobPage} name="newJob" /> 
         <Route path="/jobs/all" page={JobsAllJobsPage} name="allJobs" />
         <Route path="/jobs/{id:Int}" page={JobsJobPage} name="job" />
         <Route path="/jobs/{id:Int}/edit" page={JobsEditJobPage} name="editJob" />
