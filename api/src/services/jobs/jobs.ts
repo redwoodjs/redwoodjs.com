@@ -1,6 +1,6 @@
 import type { Prisma } from '@prisma/client'
+import { AuthenticationError } from '@redwoodjs/graphql-server'
 import { db } from 'src/lib/db'
-import { AuthenticationError, context } from '@redwoodjs/graphql-server'
 
 import { newJob as sendNewJobEmail } from '../email'
 
@@ -59,17 +59,13 @@ export const createJob = async ({ input }: CreateJobArgs) => {
   return newJob
 }
 
-interface UpdateJobArgs extends Prisma.JobWhereUniqueInput {
+interface UpdateJobArgs extends Prisma.JobWhereInput {
   input: Prisma.JobUpdateInput
 }
 
 export const updateJob = async ({ id, token, input }: UpdateJobArgs) => {
-  const where = context.currentUser.roles.includes('admin')
-    ? { id }
-    : { id, token }
-
   const job = db.job.findFirst({
-    where,
+    where: { id, token },
   })
 
   if (job) {

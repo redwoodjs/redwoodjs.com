@@ -18,6 +18,7 @@ export const QUERY = gql`
       title
       aboutJob
       createdAt
+      token
     }
   }
 `
@@ -84,7 +85,10 @@ export const Success = ({ jobs }) => {
                 <nav className="rw-table-actions">
                   <Link
                     onClick={() => {
-                      window.open(routes.editJob({ id: job.id }), '_blank')
+                      window.open(
+                        routes.editJob({ id: job.id, token: job.token }),
+                        '_blank'
+                      )
                     }}
                     title={'Edit showcase ' + job.id}
                     to="#"
