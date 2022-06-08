@@ -11,7 +11,7 @@ const DELETE_JOB_MUTATION = gql`
 `
 
 export const QUERY = gql`
-  query JobsQuery($limit: Int) {
+  query AdminJobsQuery($limit: Int) {
     jobs(limit: $limit) {
       id
       company

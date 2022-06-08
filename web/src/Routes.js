@@ -52,7 +52,7 @@ const Routes = () => {
           <Route path="/admin/showcase-localizations" page={AdminShowcaseLocalizationShowcaseLocalizationsPage} name="showcaseLocalizations" />
         </Set>
         <Set wrap={[AdminLayout]} roles={'admin'}>
-          <Route path="/admin-jobs" page={AdminJobsJobsPage} name="adminJobs" />
+          <Route path="/admin/jobs" page={AdminJobsJobsPage} name="adminJobs" />
           <Route path="/admin/users/new" page={AdminUserNewUserPage} name="newUser" />
           <Route path="/admin/users/{id:Int}/edit" page={AdminUserEditUserPage} name="editUser" />
           <Route path="/admin/users/{id:Int}" page={AdminUserUserPage} name="user" />

@@ -21,13 +21,13 @@ export const QUERY = gql`
 `
 
 export const Loading = () => (
-  <div className="flex justify-center bg-white py-12 rounded-lg text-gray-400">
-    <span className="icon animate-spin mr-2">refresh</span> Loading...
+  <div className="flex justify-center rounded-lg bg-white py-12 text-gray-400">
+    <span className="icon mr-2 animate-spin">refresh</span> Loading...
   </div>
 )
 
 export const Empty = () => (
-  <div className="flex justify-center bg-white py-24 rounded-lg text-gray-400">
+  <div className="flex justify-center rounded-lg bg-white py-24 text-gray-400">
     No job postings yet!
   </div>
 )
@@ -79,7 +79,7 @@ export const Success = ({ jobs, showAll }: CellSuccessProps<JobsQuery>) => {
           <tr>
             <td
               colSpan={3}
-              className="mt-8 sm:mt-0 duration-250 cursor-pointer rounded-b-lg text-center font-serif font-semibold text-2xl transition"
+              className="duration-250 mt-8 cursor-pointer rounded-b-lg text-center font-serif text-2xl font-semibold transition sm:mt-0"
             >
               <Link
                 to={routes.allJobs()}
