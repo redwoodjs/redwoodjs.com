@@ -18,12 +18,12 @@ const Routes = () => {
     <Router>
       <Set wrap={MainLayout}>
         <Route path="/login" page={LoginPage} name="login" />
-        {/* <Route path="/signup" page={SignupPage} name="signup" /> */}
+        { process.env.CONTEXT !== 'production' && <Route path="/signup" page={SignupPage} name="signup" /> }
 
         <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
         <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
         <Route path="/examples" page={ExamplesPage} name="examples" />
-        <Route path="/jobs/new" page={JobsNewJobPage} name="newJob" />
+        <Route path="/jobs/new" page={JobsNewJobPage} name="newJob" /> 
         <Route path="/jobs/all" page={JobsAllJobsPage} name="allJobs" />
         <Route path="/jobs/{id:Int}" page={JobsJobPage} name="job" />
         <Route path="/jobs/{id:Int}/edit" page={JobsEditJobPage} name="editJob" />
@@ -52,6 +52,7 @@ const Routes = () => {
           <Route path="/admin/showcase-localizations" page={AdminShowcaseLocalizationShowcaseLocalizationsPage} name="showcaseLocalizations" />
         </Set>
         <Set wrap={[AdminLayout]} roles={'admin'}>
+          <Route path="/admin/jobs" page={AdminJobsJobsPage} name="adminJobs" />
           <Route path="/admin/users/new" page={AdminUserNewUserPage} name="newUser" />
           <Route path="/admin/users/{id:Int}/edit" page={AdminUserEditUserPage} name="editUser" />
           <Route path="/admin/users/{id:Int}" page={AdminUserUserPage} name="user" />

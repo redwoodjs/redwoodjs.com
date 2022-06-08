@@ -24,13 +24,13 @@ export const QUERY = gql`
 `
 
 export const Loading = () => (
-  <div className="flex justify-center bg-white py-12 rounded-lg text-gray-400">
-    <span className="icon animate-spin mr-2">refresh</span> Loading...
+  <div className="flex justify-center rounded-lg bg-white py-12 text-gray-400">
+    <span className="icon mr-2 animate-spin">refresh</span> Loading...
   </div>
 )
 
 export const Empty = () => (
-  <div className="flex justify-center bg-white py-12 rounded-lg text-gray-400">
+  <div className="flex justify-center rounded-lg bg-white py-12 text-gray-400">
     No job postings yet!
   </div>
 )
@@ -78,10 +78,10 @@ export const Success = ({
               className={`py-4 text-center text-gray-500 sm:py-8 sm:px-4 sm:text-left`}
             >
               <div className="justify flex flex-col items-start">
-                <ReactMarkdown className="whitespace-nowrap w-full">
+                <ReactMarkdown className="w-full whitespace-nowrap">
                   {profile.locations.join('\n\n')}
                 </ReactMarkdown>
-                <div className="-ml-1 mt-1 sm:text-center w-full sm:w-auto px-12 sm:px-0">
+                <div className="-ml-1 mt-1 w-full px-12 sm:w-auto sm:px-0 sm:text-center">
                   <Status
                     status={profile.status}
                     textClassName=""
@@ -96,7 +96,7 @@ export const Success = ({
           <tr className="">
             <td
               colSpan={3}
-              className="duration-250 cursor-pointer rounded-b-lg text-center font-serif font-semibold text-2xl transition"
+              className="duration-250 cursor-pointer rounded-b-lg text-center font-serif text-2xl font-semibold transition"
             >
               <Link
                 to={routes.allJobProfiles()}

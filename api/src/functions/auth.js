@@ -102,15 +102,18 @@ export const handler = async (event, context) => {
     // If this returns anything else, it will be returned by the
     // `signUp()` function in the form of: `{ message: 'String here' }`.
     handler: ({ username, hashedPassword, salt, userAttributes }) => {
-      throw new Error()
-      // return db.user.create({
-      //   data: {
-      //     email: username,
-      //     hashedPassword: hashedPassword,
-      //     salt: salt,
-      //     // name: userAttributes.name
-      //   },
-      // })
+      if (process.env.CONTEXT === 'production') {
+        throw new Error()
+      } else {
+        return db.user.create({
+          data: {
+            email: username,
+            hashedPassword: hashedPassword,
+            salt: salt,
+            // name: userAttributes.name
+          },
+        })
+      }
     },
 
     errors: {

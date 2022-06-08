@@ -1,7 +1,6 @@
 import type { Prisma } from '@prisma/client'
-
-import { db } from 'src/lib/db'
 import { AuthenticationError } from '@redwoodjs/graphql-server'
+import { db } from 'src/lib/db'
 
 import { newJob as sendNewJobEmail } from '../email'
 
@@ -60,7 +59,7 @@ export const createJob = async ({ input }: CreateJobArgs) => {
   return newJob
 }
 
-interface UpdateJobArgs extends Prisma.JobWhereUniqueInput {
+interface UpdateJobArgs extends Prisma.JobWhereInput {
   input: Prisma.JobUpdateInput
 }
 

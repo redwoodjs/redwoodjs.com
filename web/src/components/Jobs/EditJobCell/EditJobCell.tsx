@@ -47,7 +47,7 @@ export const Failure = ({ error }: CellFailureProps) => {
   toast.error(error.message)
 
   return (
-    <div className="mt-32 mb-12 text-center text-red-500 max-w-screen-sm mx-auto">
+    <div className="mx-auto mt-32 mb-12 max-w-screen-sm text-center text-red-500">
       <img src="/images/logo.svg" alt="Redwood cone" className="opacity-20" />
     </div>
   )
@@ -73,9 +73,9 @@ export const Success = ({ token, job }: CellSuccessProps<FindEditJobQuery>) => {
         description="Looking to hire RedwoodJS developers? Post on the Redwood job board!"
       />
 
-      <div className="max-w-screen-lg mx-auto job">
+      <div className="job mx-auto max-w-screen-lg">
         <header className="mt-36">
-          <h1 className="relative text-5xl px-16 text-teal-800 tracking-normal text-center">
+          <h1 className="relative px-16 text-center text-5xl tracking-normal text-teal-800">
             Editing {job.title} Job
           </h1>
         </header>
