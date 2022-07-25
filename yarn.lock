@@ -14050,7 +14050,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"highlight.js@npm:^10.4.1, highlight.js@npm:^10.5.0, highlight.js@npm:~10.7.0":
+"highlight.js@npm:^10.4.1, highlight.js@npm:~10.7.0":
   version: 10.7.3
   resolution: "highlight.js@npm:10.7.3"
   checksum: 073837eaf816922427a9005c56c42ad8786473dc042332dfe7901aa065e92bc3d94ebf704975257526482066abb2c8677cc0326559bb8621e046c21c5991c434
@@ -20738,18 +20738,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-highlight@npm:^0.14.0":
-  version: 0.14.0
-  resolution: "react-highlight@npm:0.14.0"
-  dependencies:
-    highlight.js: ^10.5.0
-  peerDependencies:
-    react: ^15.0.0 || ^16.0.0 || ^17.0.0
-    react-dom: ^15.0.0 || ^16.0.0 || ^17.0.0
-  checksum: e2a4224977da519025986fa9a844f37d7ceea9c01004ddd6b2bbd5e2a421b949e1b72d2b1e3b4619d69c27faacf429b13f5aae9c1a7fe81edc93caf263a7eaf6
-  languageName: node
-  linkType: hard
-
 "react-hook-form@npm:7.31.1":
   version: 7.31.1
   resolution: "react-hook-form@npm:7.31.1"
@@ -24932,7 +24920,6 @@ __metadata:
     prop-types: 15.8.1
     react: 17.0.2
     react-dom: 17.0.2
-    react-highlight: ^0.14.0
     react-i18next: ^11.15.4
     react-markdown: ^8.0.0
     sass: ^1.49.7

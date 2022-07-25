@@ -1,6 +1,4 @@
-import { SparklesIcon, InboxIcon } from '@heroicons/react/solid'
-import StorybookIcon from 'public/images/3p-logos/storybook.svg'
-import FeaturesSectionStories from './FeaturesSection.stories'
+import Picture from 'src/components/Picture'
 
 const Image = ({ name, alt, ...rest }) => (
   <img src={`/images/3p-logos/${name}`} alt={alt} {...rest} />
@@ -18,7 +16,11 @@ const features = {
         about data.
       </p>
     ),
-    img: { src: '/images/storybook.png', alt: 'Storybook' },
+    img: {
+      src: '/images/storybook.webp',
+      fallback: '/images/storybook.png',
+      alt: 'Storybook',
+    },
     learnMore: 'https://redwoodjs.com/docs/storybook',
   },
   test: {
@@ -91,7 +93,11 @@ const features = {
         .
       </p>
     ),
-    img: { src: '/images/auth.png', alt: 'Auth and Security' },
+    img: {
+      src: '/images/home-page/auth.webp',
+      fallback: '/images/home-page/auth.png',
+      alt: 'Auth and Security',
+    },
     learnMore: 'https://redwoodjs.com/docs/authentication',
   },
   data: {
@@ -108,7 +114,11 @@ const features = {
         <a href="https://redwoodjs.com/docs/services">Services</a>.
       </p>
     ),
-    img: { src: '/images/datafetching.png', alt: 'Data & Transport' },
+    img: {
+      src: '/images/home-page/datafetching.webp',
+      fallback: '/images/home-page/datafetching.png',
+      alt: 'Data & Transport',
+    },
     learnMore: 'https://redwoodjs.com/docs/graphql',
   },
   deploy: {
@@ -129,7 +139,11 @@ const features = {
         to <a href="https://redwoodjs.com/docs/deploy/baremetal">bare metal</a>.
       </p>
     ),
-    img: { src: '/images/deploy.png', alt: 'Deploy' },
+    img: {
+      src: '/images/deploy.webp',
+      fallback: '/images/deploy.png',
+      alt: 'Deploy',
+    },
     learnMore: 'https://redwoodjs.com/docs/deploy/introduction',
   },
 }
@@ -162,7 +176,7 @@ const Feature = ({ feature, imgSide = 'right' }) => {
           <div className="mt-6">
             <a
               href={feature.learnMore}
-              className="text-rw-500 inline-flex rounded-md text-lg"
+              className="inline-flex rounded-md text-lg text-rw-500"
             >
               Learn more
             </a>
@@ -170,8 +184,9 @@ const Feature = ({ feature, imgSide = 'right' }) => {
         </div>
 
         <div className="mt-12  flex-1 md:mt-0 ">
-          <img
+          <Picture
             src={feature.img.src}
+            fallback={feature.img.fallback}
             alt={feature.img.alt}
             className="w-50 rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 md:w-full"
           />
