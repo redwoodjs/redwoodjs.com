@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import videoThumbnail from './thumbnail.jpg'
 import { PlayIcon } from '@heroicons/react/solid'
+import Picture from 'src/components/Picture'
 
 const VideoTutorialSection = () => {
   const [showVideo, setShowVideo] = useState(false)
@@ -32,8 +32,10 @@ const VideoTutorialSection = () => {
             <div className="background-green-300 flex justify-center">
               <button className="group" onClick={() => setShowVideo(true)}>
                 <PlayIcon className="absolute top-1/2 left-1/2 w-32 -translate-x-1/2 -translate-y-1/2 transform text-rw-500 text-opacity-95 transition-transform group-hover:scale-125" />
-                <img
-                  src={videoThumbnail}
+
+                <Picture
+                  src="images/home-page/tutorial-facade.webp"
+                  fallback="images/home-page/tutorial-facade.jpg"
                   alt="Play Tutorial Video"
                   className="h-full w-auto object-cover object-center md:h-[480px] lg:h-[620px]"
                 />

@@ -17,8 +17,8 @@ const features = {
       </p>
     ),
     img: {
-      src: '/images/storybook.webp',
-      fallback: '/images/storybook.png',
+      src: '/images/home-page/storybook.webp',
+      fallback: '/images/home-page/storybook.png',
       alt: 'Storybook',
     },
     learnMore: 'https://redwoodjs.com/docs/storybook',
@@ -140,8 +140,8 @@ const features = {
       </p>
     ),
     img: {
-      src: '/images/deploy.webp',
-      fallback: '/images/deploy.png',
+      src: '/images/home-page/deploy.webp',
+      fallback: '/images/home-page/deploy.png',
       alt: 'Deploy',
     },
     learnMore: 'https://redwoodjs.com/docs/deploy/introduction',
