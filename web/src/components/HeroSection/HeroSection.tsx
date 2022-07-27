@@ -1,7 +1,7 @@
 import { ChevronDownIcon } from '@heroicons/react/solid'
 const HeroSection = () => {
   return (
-    <section className="relative flex min-h-[calc(100vh-64px)] bg-cover bg-bottom bg-no-repeat">
+    <section className="relative flex min-h-[calc(100vh-64px)]">
       <div className="flex flex-1">
         <div className="absolute top-0 left-0 -z-10 h-full w-full bg-gradient-to-t from-black object-cover object-center" />
         <img
