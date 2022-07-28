@@ -1,3 +1,5 @@
+import Picture from 'src/components/Picture'
+
 const GraphqlSection = () => {
   return (
     <section className="mx-auto lg:max-w-6xl">
@@ -14,7 +16,11 @@ const GraphqlSection = () => {
         </div>
       </h3>
       <div className="mt-12 md:mt-32">
-        <img src="/images/graphql-server.png" alt="GraphQL Server" />
+        <Picture
+          src="/images/home-page/graphql-server.webp"
+          fallback="/images/home-page/graphql-server.png"
+          alt="GraphQL Server"
+        />
       </div>
     </section>
   )

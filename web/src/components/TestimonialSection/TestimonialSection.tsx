@@ -16,11 +16,18 @@ const TestimonialSection = () => {
               className="col-span-1 space-y-4 rounded-xl bg-white p-4"
             >
               <div className="flex lg:-mt-16 lg:flex-col lg:items-center lg:justify-center">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="mr-4 h-12 w-12 rounded-full lg:h-28 lg:w-28"
-                />
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcSet={testimonial.optimizedImage}
+                  />
+                  <source type="image/jpeg" srcSet={testimonial.image} />
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="mr-4 h-12 w-12 rounded-full lg:h-28 lg:w-28"
+                  />
+                </picture>
                 <div>
                   <div className="text-lg font-bold">{testimonial.name}</div>
                   <div className="text-xs font-light text-gray-600">
