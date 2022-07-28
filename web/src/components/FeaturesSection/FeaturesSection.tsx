@@ -165,7 +165,7 @@ const Feature = ({ feature, imgSide = 'right' }) => {
                 key={tool.alt}
                 name={tool.src}
                 alt={tool.alt}
-                className="h-12 w-12 grid-rows-1"
+                className="grid-rows-1"
               />
             ))}
           </div>
