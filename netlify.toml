@@ -88,7 +88,11 @@ functions = "api/dist/functions"
 
 [[redirects]]
   from = "/good-first-issue"
-  to = "https://github.com/redwoodjs/redwood/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+sort%3Aupdated-desc"
+  to = "https://github.com/orgs/redwoodjs/projects/11"
+  
+[[redirects]]
+  from = "/nodeconf"
+  to = "https://redwoodjs.notion.site/NodeConf-EU-2022-78e671b43c3f47cda09305b6b3efcb5e"
 
 [[redirects]]
   from = "/reference/command-line-interface"
