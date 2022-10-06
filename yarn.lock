@@ -21770,9 +21770,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass-loader@npm:^12.6.0":
-  version: 12.6.0
-  resolution: "sass-loader@npm:12.6.0"
+"sass-loader@npm:13.1.0":
+  version: 13.1.0
+  resolution: "sass-loader@npm:13.1.0"
   dependencies:
     klona: ^2.0.4
     neo-async: ^2.6.2
@@ -21791,7 +21791,7 @@ __metadata:
       optional: true
     sass-embedded:
       optional: true
-  checksum: e1ef655f3898cc4c45f02b3c627f8baf998139993a9a79c524153a80814282bfe20d8d8d703b8cf1d05457c1930940b65e2156d11285ed0861f9a1016f993e53
+  checksum: e69071a91e38154d75743b610682b2b6ab156b8712ab840146b55e8c7bc0267d2ee6dfc335ac8fbf62578bafc04a7c9b202aa8dd3796b0f1400aba9084289848
   languageName: node
   linkType: hard
 
@@ -24923,7 +24923,7 @@ __metadata:
     react-i18next: ^11.15.4
     react-markdown: ^8.0.0
     sass: ^1.49.7
-    sass-loader: ^12.6.0
+    sass-loader: 13.1.0
     tailwindcss: ^3.0.23
   languageName: unknown
   linkType: soft
