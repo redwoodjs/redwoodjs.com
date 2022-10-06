@@ -93,6 +93,14 @@ functions = "api/dist/functions"
 [[redirects]]
   from = "/nodeconf"
   to = "https://redwoodjs.notion.site/NodeConf-EU-2022-78e671b43c3f47cda09305b6b3efcb5e"
+  
+[[redirects]]
+  from = "/hacktoberfest"
+  to = "https://github.com/redwoodjs/redwood/issues/1266"
+  
+[[redirects]]
+  from = "/contributing"
+  to = "https://redwoodjs.com/docs/contributing"
 
 [[redirects]]
   from = "/reference/command-line-interface"
