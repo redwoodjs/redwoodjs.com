@@ -19,7 +19,7 @@
     "@redwoodjs/forms": "^1.5.1",
     "@redwoodjs/router": "^1.5.1",
     "@redwoodjs/web": "^1.5.1",
-    "classnames": "^2.3.1",
+    "classnames": "2.3.2",
     "clsx": "^1.1.1",
     "date-fns": "^2.28.0",
     "filestack-js": "^3.25.0",
