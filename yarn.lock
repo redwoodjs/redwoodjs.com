@@ -20122,6 +20122,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss@npm:8.4.18, postcss@npm:^8.2.15, postcss@npm:^8.3.5, postcss@npm:^8.4.12, postcss@npm:^8.4.7":
+  version: 8.4.18
+  resolution: "postcss@npm:8.4.18"
+  dependencies:
+    nanoid: ^3.3.4
+    picocolors: ^1.0.0
+    source-map-js: ^1.0.2
+  checksum: df38b43e0cd79b115305fb787f4586d376b38c515692ef7429785af84d00ebe86f2276b98071d3f62848daf8639ee4ef6057618b34c292196dc6af072eeede5e
+  languageName: node
+  linkType: hard
+
 "postcss@npm:^7.0.14, postcss@npm:^7.0.26, postcss@npm:^7.0.32, postcss@npm:^7.0.36, postcss@npm:^7.0.5, postcss@npm:^7.0.6":
   version: 7.0.39
   resolution: "postcss@npm:7.0.39"
@@ -20129,17 +20140,6 @@ __metadata:
     picocolors: ^0.2.1
     source-map: ^0.6.1
   checksum: fd27ee808c0d02407582cccfad4729033e2b439d56cd45534fb39aaad308bb35a290f3b7db5f2394980e8756f9381b458a625618550808c5ff01a125f51efc53
-  languageName: node
-  linkType: hard
-
-"postcss@npm:^8.2.15, postcss@npm:^8.3.5, postcss@npm:^8.4.12, postcss@npm:^8.4.6, postcss@npm:^8.4.7":
-  version: 8.4.14
-  resolution: "postcss@npm:8.4.14"
-  dependencies:
-    nanoid: ^3.3.4
-    picocolors: ^1.0.0
-    source-map-js: ^1.0.2
-  checksum: 2a4cfa28e2f1bfd358313501f7771bd596e494487c7b735c492e2f8b1faf493d24fcb43e2e6ad825863fc65a77abb949ca8f228602ae46a022f02dc812c4ac8b
   languageName: node
   linkType: hard
 
@@ -24963,7 +24963,7 @@ __metadata:
     i18next: 21.10.0
     i18next-browser-languagedetector: 6.1.8
     plausible-tracker: ^0.3.5
-    postcss: ^8.4.6
+    postcss: 8.4.18
     postcss-loader: 7.0.1
     prettier-plugin-tailwindcss: ^0.1.8
     prop-types: 15.8.1
