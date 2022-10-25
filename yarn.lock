@@ -2742,7 +2742,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@heroicons/react@npm:^1.0.6":
+"@heroicons/react@npm:1.0.6":
   version: 1.0.6
   resolution: "@heroicons/react@npm:1.0.6"
   peerDependencies:
@@ -3686,7 +3686,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redwoodjs/api@npm:1.5.1, @redwoodjs/api@npm:^1.5.1":
+"@redwoodjs/api@npm:1.5.1":
   version: 1.5.1
   resolution: "@redwoodjs/api@npm:1.5.1"
   dependencies:
@@ -3723,7 +3723,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redwoodjs/auth@npm:1.5.1, @redwoodjs/auth@npm:^1.5.1":
+"@redwoodjs/auth@npm:1.5.1":
   version: 1.5.1
   resolution: "@redwoodjs/auth@npm:1.5.1"
   dependencies:
@@ -3780,7 +3780,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redwoodjs/core@npm:^1.5.1":
+"@redwoodjs/core@npm:1.5.1":
   version: 1.5.1
   resolution: "@redwoodjs/core@npm:1.5.1"
   dependencies:
@@ -3879,7 +3879,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redwoodjs/forms@npm:^1.5.1":
+"@redwoodjs/forms@npm:1.5.1":
   version: 1.5.1
   resolution: "@redwoodjs/forms@npm:1.5.1"
   dependencies:
@@ -3894,7 +3894,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redwoodjs/graphql-server@npm:1.5.1, @redwoodjs/graphql-server@npm:^1.5.1":
+"@redwoodjs/graphql-server@npm:1.5.1":
   version: 1.5.1
   resolution: "@redwoodjs/graphql-server@npm:1.5.1"
   dependencies:
@@ -3985,7 +3985,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redwoodjs/router@npm:1.5.1, @redwoodjs/router@npm:^1.5.1":
+"@redwoodjs/router@npm:1.5.1":
   version: 1.5.1
   resolution: "@redwoodjs/router@npm:1.5.1"
   dependencies:
@@ -4085,7 +4085,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redwoodjs/web@npm:1.5.1, @redwoodjs/web@npm:^1.5.1":
+"@redwoodjs/web@npm:1.5.1":
   version: 1.5.1
   resolution: "@redwoodjs/web@npm:1.5.1"
   dependencies:
@@ -6901,7 +6901,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"accept-language-parser@npm:^1.5.0":
+"accept-language-parser@npm:1.5.0":
   version: 1.5.0
   resolution: "accept-language-parser@npm:1.5.0"
   checksum: d736afcd9e47eef82b821c2548c114882f41498c68f43a2223fe1800b4bed7524fc3ad72e16d0f70e0ffc90ef006ac8e2f74df27532e8aecbd4699834949aea1
@@ -7290,12 +7290,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "api@workspace:api"
   dependencies:
-    "@redwoodjs/api": ^1.5.1
-    "@redwoodjs/graphql-server": ^1.5.1
-    accept-language-parser: ^1.5.0
+    "@redwoodjs/api": 1.5.1
+    "@redwoodjs/graphql-server": 1.5.1
+    accept-language-parser: 1.5.0
     node-fetch: 3.2.10
     nodemailer: 6.8.0
-    slugify: ^1.6.5
+    slugify: 1.6.5
   languageName: unknown
   linkType: soft
 
@@ -9338,7 +9338,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clsx@npm:^1.1.1":
+"clsx@npm:1.1.1":
   version: 1.1.1
   resolution: "clsx@npm:1.1.1"
   checksum: 5c34e1d5623e3dce0dbf22eedd4f3cc7cd0dee6b1b1ef3ad49d042c9d86372a1dc7788c2ca3213ec08e65ad0e91572ae7cb77183a478c9977bd5327e8f43ffe5
@@ -10376,17 +10376,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"date-fns@npm:2.28.0, date-fns@npm:^2.0.1, date-fns@npm:^2.16.1":
+  version: 2.28.0
+  resolution: "date-fns@npm:2.28.0"
+  checksum: ecdacd36326e7f5f8c4f1e78ae931a8997109f1c841f5163053b866585ca899521b0e7a114eeb48a9fe5135a550787bd4bbd8baa321cded0b4d823f847889a80
+  languageName: node
+  linkType: hard
+
 "date-fns@npm:^1.27.2":
   version: 1.30.1
   resolution: "date-fns@npm:1.30.1"
   checksum: bad6ad7c15180121e15d61ad62a4a214c108d66f35b35f5eeb6ade837a3c29aa4444b9528a93a5374b95ba11231c142276351bf52f4d168676f9a1e17ce3726a
-  languageName: node
-  linkType: hard
-
-"date-fns@npm:^2.0.1, date-fns@npm:^2.16.1, date-fns@npm:^2.28.0":
-  version: 2.28.0
-  resolution: "date-fns@npm:2.28.0"
-  checksum: ecdacd36326e7f5f8c4f1e78ae931a8997109f1c841f5163053b866585ca899521b0e7a114eeb48a9fe5135a550787bd4bbd8baa321cded0b4d823f847889a80
   languageName: node
   linkType: hard
 
@@ -12795,7 +12795,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"filestack-js@npm:^3.25.0":
+"filestack-js@npm:3.25.0":
   version: 3.25.0
   resolution: "filestack-js@npm:3.25.0"
   dependencies:
@@ -19597,7 +19597,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"plausible-tracker@npm:^0.3.5":
+"plausible-tracker@npm:0.3.8":
   version: 0.3.8
   resolution: "plausible-tracker@npm:0.3.8"
   checksum: e711dac9e07d4d4d6b9fbd4102ff00212e3105ed17f65ea741f1e92df4d0363555fac8856f8f231946a1da3722374f3379a96efe479c70dab5e5accef7878a86
@@ -20122,17 +20122,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^7.0.14, postcss@npm:^7.0.26, postcss@npm:^7.0.32, postcss@npm:^7.0.36, postcss@npm:^7.0.5, postcss@npm:^7.0.6":
-  version: 7.0.39
-  resolution: "postcss@npm:7.0.39"
-  dependencies:
-    picocolors: ^0.2.1
-    source-map: ^0.6.1
-  checksum: fd27ee808c0d02407582cccfad4729033e2b439d56cd45534fb39aaad308bb35a290f3b7db5f2394980e8756f9381b458a625618550808c5ff01a125f51efc53
-  languageName: node
-  linkType: hard
-
-"postcss@npm:^8.2.15, postcss@npm:^8.3.5, postcss@npm:^8.4.12, postcss@npm:^8.4.6, postcss@npm:^8.4.7":
+"postcss@npm:8.4.14, postcss@npm:^8.2.15, postcss@npm:^8.3.5, postcss@npm:^8.4.12, postcss@npm:^8.4.7":
   version: 8.4.14
   resolution: "postcss@npm:8.4.14"
   dependencies:
@@ -20140,6 +20130,16 @@ __metadata:
     picocolors: ^1.0.0
     source-map-js: ^1.0.2
   checksum: 2a4cfa28e2f1bfd358313501f7771bd596e494487c7b735c492e2f8b1faf493d24fcb43e2e6ad825863fc65a77abb949ca8f228602ae46a022f02dc812c4ac8b
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^7.0.14, postcss@npm:^7.0.26, postcss@npm:^7.0.32, postcss@npm:^7.0.36, postcss@npm:^7.0.5, postcss@npm:^7.0.6":
+  version: 7.0.39
+  resolution: "postcss@npm:7.0.39"
+  dependencies:
+    picocolors: ^0.2.1
+    source-map: ^0.6.1
+  checksum: fd27ee808c0d02407582cccfad4729033e2b439d56cd45534fb39aaad308bb35a290f3b7db5f2394980e8756f9381b458a625618550808c5ff01a125f51efc53
   languageName: node
   linkType: hard
 
@@ -20173,7 +20173,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-tailwindcss@npm:^0.1.8":
+"prettier-plugin-tailwindcss@npm:0.1.11":
   version: 0.1.11
   resolution: "prettier-plugin-tailwindcss@npm:0.1.11"
   peerDependencies:
@@ -20847,7 +20847,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-markdown@npm:^8.0.0":
+"react-markdown@npm:8.0.3":
   version: 8.0.3
   resolution: "react-markdown@npm:8.0.3"
   dependencies:
@@ -21656,7 +21656,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@redwoodjs/core": ^1.5.1
+    "@redwoodjs/core": 1.5.1
   languageName: unknown
   linkType: soft
 
@@ -21830,7 +21830,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.49.7":
+"sass@npm:1.52.2":
   version: 1.52.2
   resolution: "sass@npm:1.52.2"
   dependencies:
@@ -22348,7 +22348,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"slugify@npm:^1.6.5":
+"slugify@npm:1.6.5":
   version: 1.6.5
   resolution: "slugify@npm:1.6.5"
   checksum: 264059d9ea7aa95e472e66d19a1042ea54c75d3f60096c2cc57af4d66c6fb6ac1d8b4672326f276f52574fac489f59cb08848bfb97e44291c7e45211acb2b185
@@ -23272,7 +23272,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:^3.0.23":
+"tailwindcss@npm:3.0.24":
   version: 3.0.24
   resolution: "tailwindcss@npm:3.0.24"
   dependencies:
@@ -24949,31 +24949,31 @@ __metadata:
   resolution: "web@workspace:web"
   dependencies:
     "@headlessui/react": 1.7.3
-    "@heroicons/react": ^1.0.6
-    "@redwoodjs/auth": ^1.5.1
-    "@redwoodjs/forms": ^1.5.1
-    "@redwoodjs/router": ^1.5.1
-    "@redwoodjs/web": ^1.5.1
+    "@heroicons/react": 1.0.6
+    "@redwoodjs/auth": 1.5.1
+    "@redwoodjs/forms": 1.5.1
+    "@redwoodjs/router": 1.5.1
+    "@redwoodjs/web": 1.5.1
     autoprefixer: 10.4.12
     classnames: 2.3.2
-    clsx: ^1.1.1
-    date-fns: ^2.28.0
-    filestack-js: ^3.25.0
+    clsx: 1.1.1
+    date-fns: 2.28.0
+    filestack-js: 3.25.0
     i18n: 0.15.1
     i18next: 21.10.0
     i18next-browser-languagedetector: 6.1.8
-    plausible-tracker: ^0.3.5
-    postcss: ^8.4.6
+    plausible-tracker: 0.3.8
+    postcss: 8.4.14
     postcss-loader: 7.0.1
-    prettier-plugin-tailwindcss: ^0.1.8
+    prettier-plugin-tailwindcss: 0.1.11
     prop-types: 15.8.1
     react: 17.0.2
     react-dom: 17.0.2
     react-i18next: 11.18.6
-    react-markdown: ^8.0.0
-    sass: ^1.49.7
+    react-markdown: 8.0.3
+    sass: 1.52.2
     sass-loader: 13.1.0
-    tailwindcss: ^3.0.23
+    tailwindcss: 3.0.24
   languageName: unknown
   linkType: soft
 

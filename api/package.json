@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@redwoodjs/api": "^1.5.1",
-    "@redwoodjs/graphql-server": "^1.5.1",
-    "accept-language-parser": "^1.5.0",
+    "@redwoodjs/api": "1.5.1",
+    "@redwoodjs/graphql-server": "1.5.1",
+    "accept-language-parser": "1.5.0",
     "node-fetch": "3.2.10",
     "nodemailer": "6.8.0",
-    "slugify": "^1.6.5"
+    "slugify": "1.6.5"
   }
 }
