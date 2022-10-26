@@ -21,7 +21,7 @@
     "@redwoodjs/web": "^1.5.1",
     "classnames": "2.3.2",
     "clsx": "^1.1.1",
-    "date-fns": "^2.28.0",
+    "date-fns": "2.29.3",
     "filestack-js": "^3.25.0",
     "i18n": "0.15.1",
     "i18next": "21.10.0",
