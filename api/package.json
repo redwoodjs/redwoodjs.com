@@ -7,7 +7,7 @@
     "@redwoodjs/graphql-server": "^1.5.1",
     "accept-language-parser": "^1.5.0",
     "node-fetch": "2.6.7",
-    "nodemailer": "^6.7.3",
+    "nodemailer": "6.8.0",
     "slugify": "^1.6.5"
   }
 }
