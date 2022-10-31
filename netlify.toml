@@ -1,5 +1,8 @@
 [build]
-command = "yarn rw deploy netlify"
+# command = "yarn rw deploy netlify"
+# Oct 31 2022 - deploy netlify is failing due to dataMigrations
+# we disable it to get passing deploy previews
+command = "yarn rw build --verbose && yarn rw prisma migrate deploy"
 publish = "web/dist"
 functions = "api/dist/functions"
 
