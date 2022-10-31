@@ -1,6 +1,5 @@
 [build]
-# command = "yarn rw deploy netlify"
-command = "yarn rw build --verbose && yarn rw prisma migrate deploy"
+command = "yarn rw deploy netlify"
 publish = "web/dist"
 functions = "api/dist/functions"
 
