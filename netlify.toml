@@ -23,6 +23,24 @@ functions = "api/dist/functions"
   force = true
 
 [[redirects]]
+  from = "/docs/1.0/*"
+  to = "https://redwoodjs-docs.netlify.app/docs/1.3/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/docs/1.1/*"
+  to = "https://redwoodjs-docs.netlify.app/docs/1.3/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/docs/1.2/*"
+  to = "https://redwoodjs-docs.netlify.app/docs/1.3/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/cookbook"
   to = "/docs/how-to/index"
   status = 301
