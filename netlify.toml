@@ -17,24 +17,6 @@ functions = "api/dist/functions"
   port = 8888
 
 [[redirects]]
-  from = "/docs/1.0/*"
-  to = "/docs/1.3/:splat"
-  status = 302
-  force = true
-
-[[redirects]]
-  from = "/docs/1.1/*"
-  to = "/docs/1.3/:splat"
-  status = 302
-  force = true
-
-[[redirects]]
-  from = "/docs/1.2/*"
-  to = "/docs/1.3/:splat"
-  status = 302
-  force = true
-
-[[redirects]]
   from = "/docs/*"
   to = "https://redwoodjs-docs.netlify.app/docs/:splat"
   status = 200
