@@ -65,10 +65,7 @@ const features = {
       { src: 'firebase.svg', alt: 'Firebase' },
       { src: 'netlify.svg', alt: 'Netlify' },
       { src: 'clerk.svg', alt: 'Clerk' },
-      { src: 'magic-link.svg', alt: 'Magic.Link' },
-      { src: 'nhost.svg', alt: 'Nhost' },
       { src: 'supabase.svg', alt: 'Supabase' },
-      { src: 'ethereum.svg', alt: 'Ethereum' },
       { src: 'supertokens.png', alt: 'SuperTokens' },
     ],
     title: 'Auth & Security',
@@ -159,7 +156,7 @@ const Feature = ({ feature, imgSide = 'right' }) => {
         <div
           className={`flex-1 ${imgSide === 'right' ? 'md:mr-24' : 'md:ml-24'}`}
         >
-          <div className="mb-8 grid max-w-[240px] grid-cols-5 gap-2 gap-y-2">
+          <div className="mb-8 grid max-w-[290px] grid-cols-6 gap-2 gap-y-2">
             {feature.tools.map((tool) => (
               <Image
                 key={tool.alt}
