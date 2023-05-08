@@ -110,6 +110,18 @@ functions = "api/dist/functions"
   force = true
 
 [[redirects]]
+  from = "/quick-start"
+  to = "/docs/quick-start"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/quickstart"
+  to = "/docs/quick-start"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/200.html"
   status = 200
