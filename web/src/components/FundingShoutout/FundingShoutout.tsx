@@ -65,7 +65,7 @@ const FundingShoutout = () => {
             Startups using Redwood <br />
             have raised over
           </div>
-          <div className="text-6xl font-bold md:text-8xl">$39M</div>
+          <div className="text-6xl font-bold md:text-8xl">$52M</div>
         </div>
         <div className="mx-auto mt-6 grid grid-cols-1 gap-0.5 overflow-hidden rounded-xl md:grid-cols-3 lg:mt-8 lg:max-w-6xl">
           {companies.map((company, i) => (
