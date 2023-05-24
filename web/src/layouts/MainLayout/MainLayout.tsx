@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 import { Toaster } from '@redwoodjs/web/toast'
-// import { XIcon, SpeakerphoneIcon } from '@heroicons/react/solid'
+import { XIcon, SpeakerphoneIcon } from '@heroicons/react/solid'
 
 import Navbar from './Navigation/Navbar'
 import Footer from 'src/components/Footer'
@@ -13,7 +13,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <>
       <Toaster toastOptions={{ className: 'mt-16' }} />
-      {/* <div className="relative bg-gradient-to-l from-teal-700 to-teal-500">
+      <div className="relative bg-gradient-to-l from-teal-700 to-teal-500">
         <div className="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">
           <div className="sm:px-16 sm:text-center">
             <p className="font-medium text-white">
@@ -25,17 +25,17 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                       aria-hidden="true"
                     />
                   </span>
-                  <span className="md:hidden">Redwood is 1.0!</span>
-                  <span className="hidden md:inline">Redwood is 1.0!</span>
+                  <span className="md:hidden">RedwoodJS Showcase 2023 Event</span>
+                  <span className="hidden md:inline">RedwoodJS Showcase 2023 Event</span>
                 </div>
                 <span className="ml-2 block">
                   <a
                     target={'_blank'}
-                    href="https://v1launchweek.redwoodjs.com"
+                    href="https://showcase.redwoodjs.com"
                     className="font-bold text-white underline hover:text-teal-900 hover:underline"
                     rel="noreferrer"
                   >
-                    Watch recordings from launch week{' '}
+                    Details and Free Registration{' '}
                     <span aria-hidden="true">&rarr;</span>
                   </a>
                 </span>
@@ -52,8 +52,8 @@ const MainLayout = ({ children }: MainLayoutProps) => {
             </button>
           </div>
         </div>
-      </div> */}
-      {/*
+      </div>
+{/*
       <div className="bg-rw-500">
         <div className="mx-auto max-w-7xl py-2 px-1 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-between">
@@ -66,19 +66,18 @@ const MainLayout = ({ children }: MainLayoutProps) => {
               </span>
               <p className="ml-3 truncate font-medium text-white">
                 <span className="md:hidden">
-                  Redwood 1.0 Launch Week is happening now!
+                  RedwoodJS Showcase 2023 Product and Startup Demo Event
                 </span>
                 <span className="hidden md:inline">
-                  Redwood v1 Launch Week is here!!!
+                  RedwoodJS Showcase 2023 Event
                 </span>
               </p>
             </div>
             <div className="order-3 mt-2 w-full flex-shrink-0 sm:order-2 sm:mt-0 sm:w-auto">
               <a
-                href="https://v1launchweek.redwoodjs.com"
+                href="https://showcase.redwoodjs.com"
                 className="text-rw-500 hover:bg-rw-50 flex items-center justify-center rounded border border-transparent bg-white px-2 py-1 text-xs font-medium no-underline shadow-sm"
               >
-                F
               </a>
             </div>
           </div>
