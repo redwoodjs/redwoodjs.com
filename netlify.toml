@@ -18,7 +18,7 @@ functions = "api/dist/functions"
 
 [[redirects]]
   from = "/docs/*"
-  to = "/docs/:splat"
+  to = "https://redwoodjs-docs.netlify.app/docs/:splat"
   status = 200
   force = true
 
@@ -48,13 +48,13 @@ functions = "api/dist/functions"
 
 [[redirects]]
   from = "/assets/*"
-  to = "/assets/:splat"
+  to = "https://redwoodjs-docs.netlify.app/assets/:splat"
   status = 200
   force = true
 
 [[redirects]]
   from = "/img/*"
-  to = "/img/:splat"
+  to = "https://redwoodjs-docs.netlify.app/img/:splat"
   status = 200
   force = true
 
@@ -101,11 +101,11 @@ functions = "api/dist/functions"
 
 [[redirects]]
   from = "/contributing"
-  to = "/docs/contributing"
+  to = "https://redwoodjs.com/docs/contributing"
 
 [[redirects]]
   from = "/reference/command-line-interface"
-  to = "/docs/cli-commands"
+  to = "https://redwoodjs-docs.netlify.app/docs/cli-commands"
   status = 301
   force = true
 
@@ -120,10 +120,6 @@ functions = "api/dist/functions"
   to = "/docs/quick-start"
   status = 301
   force = true
-
-[[redirects]]
-  from ="/showcase"
-  to ="https://showcase.redwoodjs.com/"
 
 [[redirects]]
   from = "/*"
