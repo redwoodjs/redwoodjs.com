@@ -1,4 +1,4 @@
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 import { Toaster } from '@redwoodjs/web/toast'
 import { XIcon, SpeakerphoneIcon } from '@heroicons/react/solid'
 
@@ -10,10 +10,15 @@ type MainLayoutProps = {
 }
 
 const MainLayout = ({ children }: MainLayoutProps) => {
+  const [showcaseBannerVisible, setShowcaseBannerVisible] = useState(true)
   return (
     <>
       <Toaster toastOptions={{ className: 'mt-16' }} />
-      <div className="relative bg-gradient-to-l from-teal-700 to-teal-500">
+      <div
+        className={`relative bg-gradient-to-l from-teal-700 to-teal-500 transition-all duration-500 ease-out ${
+          showcaseBannerVisible ? 'max-h-32 md:max-h-16' : 'max-h-0'
+        }`}
+      >
         <div className="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">
           <div className="sm:px-16 sm:text-center">
             <p className="font-medium text-white">
@@ -25,8 +30,12 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                       aria-hidden="true"
                     />
                   </span>
-                  <span className="md:hidden">RedwoodJS Showcase 2023 Event</span>
-                  <span className="hidden md:inline">RedwoodJS Showcase 2023 Event</span>
+                  <span className="md:hidden">
+                    RedwoodJS Showcase 2023 Event
+                  </span>
+                  <span className="hidden md:inline">
+                    RedwoodJS Showcase 2023 Event
+                  </span>
                 </div>
                 <span className="ml-2 block">
                   <a
@@ -46,6 +55,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
             <button
               type="button"
               className="flex rounded-md p-2 hover:bg-rw-500 focus:outline-none focus:ring-2 focus:ring-white"
+              onClick={() => setShowcaseBannerVisible(false)}
             >
               <span className="sr-only">Dismiss</span>
               <XIcon className="h-6 w-6 text-white" aria-hidden="true" />
@@ -53,7 +63,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
           </div>
         </div>
       </div>
-{/*
+      {/*
       <div className="bg-rw-500">
         <div className="mx-auto max-w-7xl py-2 px-1 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-between">
