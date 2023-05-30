@@ -84,10 +84,6 @@ functions = "api/dist/functions"
   to ="https://forms.gle/fYsacoY4uKQmP24o8"
 
 [[redirects]]
-  from = "/roadmap"
-  to = "https://community.redwoodjs.com/t/post-v1-roadmap-feedback-wanted/3013"
-
-[[redirects]]
   from = "/good-first-issue"
   to = "https://github.com/orgs/redwoodjs/projects/11"
 
