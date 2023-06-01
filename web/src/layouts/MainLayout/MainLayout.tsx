@@ -34,7 +34,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                     <a
                       target={'_blank'}
                       href="https://showcase.redwoodjs.com"
-                      className="font-bold text-white underline hover:text-teal-900 hover:underline"
+                      className="text-white underline hover:text-teal-900 hover:underline"
                       rel="noreferrer"
                     >
                       Conference | Demos | ❤️ RSC{' '}
@@ -45,7 +45,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                     <a
                       target={'_blank'}
                       href="https://showcase.redwoodjs.com"
-                      className="font-bold text-white underline hover:text-teal-900 hover:underline"
+                      className="text-white underline hover:text-teal-900 hover:underline"
                       rel="noreferrer"
                     >
                       RedwoodJS Conference | Showcase Demos | Redwood ❤️ RSC{' '}
