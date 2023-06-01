@@ -31,13 +31,29 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                     />
                   </span>
                   <span className="md:hidden">
-                    RedwoodJS Showcase 2023 Event
+                    <a
+                      target={'_blank'}
+                      href="https://showcase.redwoodjs.com"
+                      className="font-bold text-white underline hover:text-teal-900 hover:underline"
+                      rel="noreferrer"
+                    >
+                      Conference | Demos | ❤️ RSC{' '}
+                      <span aria-hidden="true">&rarr;</span>
+                    </a>
                   </span>
                   <span className="hidden md:inline">
-                    RedwoodJS Showcase 2023 Event
+                    <a
+                      target={'_blank'}
+                      href="https://showcase.redwoodjs.com"
+                      className="font-bold text-white underline hover:text-teal-900 hover:underline"
+                      rel="noreferrer"
+                    >
+                      RedwoodJS Conference | Showcase Demos | Redwood ❤️ RSC{' '}
+                      <span aria-hidden="true">&rarr;</span>
+                    </a>
                   </span>
                 </div>
-                <span className="ml-2 block">
+                {/* <span className="ml-2 block">
                   <a
                     target={'_blank'}
                     href="https://showcase.redwoodjs.com"
@@ -47,7 +63,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                     Details and Free Registration{' '}
                     <span aria-hidden="true">&rarr;</span>
                   </a>
-                </span>
+                </span> */}
               </div>
             </p>
           </div>
