@@ -18,7 +18,7 @@ const navigation = {
     { name: 'Security', href: '/security' },
     {
       name: 'Roadmap',
-      href: 'https://community.redwoodjs.com/t/post-v1-roadmap-feedback-wanted/3013',
+      href: 'https://redwoodjs.com/roadmap',
     },
     // { name: 'Releases', href: 'https://github.com/redwoodjs/redwood' },
   ],
