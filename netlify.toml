@@ -136,6 +136,12 @@ functions = "api/dist/functions"
   force = true
 
 [[redirects]]
+  from = "/build-competition"
+  to = "https://build.redwoodjs.com"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/200.html"
   status = 200
