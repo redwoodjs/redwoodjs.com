@@ -123,6 +123,7 @@ const MainLayoutNavbar = () => {
 
     { name: 'Jobs', route: routes.jobs() },
     { name: 'Shop', link: 'https://shop.redwoodjs.com' },
+    { name: 'Conference', link: 'https://redwoodjsconf.com' },
   ]
 
   const [isVisible, setIsVisible] = useState(false)
