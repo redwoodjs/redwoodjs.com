@@ -9,21 +9,40 @@ const HeroSection = () => {
           alt="forest"
           className="absolute top-0 left-0 -z-20 h-full w-full object-cover object-center"
         />
-        <div className="mb-10 flex flex-1 items-center p-4 md:p-12 lg:p-32">
-          <div className="flex flex-1 flex-col space-y-12 rounded-2xl p-8 text-left text-white lg:items-center lg:justify-center lg:px-12 lg:py-24 lg:text-center">
-            <h1 className="flex flex-col font-serif text-4xl font-bold md:text-6xl  2xl:text-7xl 2xl:leading-[100px]">
-              <span>Focus on building your startup,</span>
-              <span>not fighting your framework.</span>
+        <div className="mb-10 grid md:grid-cols-2 lg:grid-cols-[2fr_1fr] xl:grid-rows-2">
+          <div className="flex flex-1 flex-col space-y-12 rounded-2xl p-8 text-left text-white md:col-span-2 md:row-span-2 md:p-12 lg:col-span-1 lg:items-center lg:justify-center lg:p-32">
+            <h1 className="font-serif text-4xl font-bold md:text-6xl 2xl:text-7xl 2xl:leading-[1.1]">
+              <span className="inline">Focus on building your startup, </span>
+              <span className="inline">not fighting your framework.</span>
             </h1>
-            <h2 className="text-xl md:text-3xl lg:max-w-3xl lg:text-2xl lg:leading-relaxed">
+            <h2 className="text-xl md:text-3xl lg:text-2xl lg:leading-relaxed">
               Redwood is the full-stack web framework designed to help you grow
               from side project to startup.
             </h2>
+          </div>
+          <div className="lg:self-end 2xl:self-stretch 2xl:bg-black">
             <a
-              href="https://redwoodjs.com/docs/tutorial"
-              className="button max-w-[200px]"
+              href="https://redwoodjsconf.com"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-auto xl:mt-0"
             >
-              Start the Tutorial
+              <img
+                src="/images/ad-conference.png"
+                alt="RedwoodJS Conference: The Conference for Builders"
+              />
+            </a>
+          </div>
+          <div className="2xl:bg-black">
+            <a
+              href="https://build.redwoodjs.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src="/images/ad-build-competition.png"
+                alt="Build Competition: 4 Weeks to Build, 3 Finalists, $10k in Prizes"
+              />
             </a>
           </div>
         </div>
