@@ -35,13 +35,13 @@ const HeroSection = () => {
           </div>
           <div className="2xl:bg-black">
             <a
-              href="https://build.redwoodjs.com"
+              href="https://ticket.redwoodjs.com"
               target="_blank"
               rel="noreferrer"
             >
               <img
-                src="/images/ad-build-competition.png"
-                alt="Build Competition: 4 Weeks to Build, 3 Finalists, $10k in Prizes"
+                src="/images/ad-badge.png"
+                alt="Register to Get Your Free Virtual Ticket"
               />
             </a>
           </div>
