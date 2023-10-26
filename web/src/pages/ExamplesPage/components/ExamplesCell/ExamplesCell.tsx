@@ -2,6 +2,7 @@ import Card, { CardVariant } from 'src/components/Card/Card'
 import i18n from 'src/i18n'
 import useFilters from 'src/pages/ExamplesPage/components/Filters/useFilters'
 import { FindExamples } from 'types/graphql'
+import UiLoading from 'src/components/Loading/Loading'
 
 interface SuccessProps extends FindExamples {
   tag?: string
@@ -34,9 +35,16 @@ export const QUERY = gql`
         id
         label
       }
+      socialLinks {
+        id
+        link
+        platform
+      }
     }
   }
 `
+
+export const Loading = () => <UiLoading placeholder={'Examples'} />
 
 export const Success: React.FC<SuccessProps> = ({
   examples,

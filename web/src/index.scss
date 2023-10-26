@@ -123,12 +123,20 @@ $color_neutral: #1A202C;
     h2 {
       @apply text-3xl font-bold pb-2.5 mb-4 border-b border-stone-300;
     }
+
     h3 {
       @apply text-xl font-semibold;
     }
-    h4 {}
-    h5 {}
-    h6 {}
+
+    h4 {
+    }
+
+    h5 {
+    }
+
+    h6 {
+    }
+
     blockquote {
       @apply pl-4 py-1.5 space-y-2.5 border-l-4 border-stone-300 text-stone-600;
     }
@@ -147,6 +155,7 @@ $color_neutral: #1A202C;
     ol, ul {
       @apply list-outside ml-4 pl-4;
     }
+
     ul {
       @apply list-disc;
 
@@ -154,17 +163,18 @@ $color_neutral: #1A202C;
         @apply list-[circle];
       }
     }
+
     ol {
       @apply list-decimal;
     }
+
     li {
       @apply list-item py-1;
     }
   }
 
   .card {
-    @apply flex rounded md:w-64 md:ml-4;
-    background-color: $color_accent;
+    @apply flex rounded md:w-64;
   }
 
   .card.external header {
@@ -178,24 +188,21 @@ $color_neutral: #1A202C;
   }
 
   .card .content > div {
-    @apply flex flex-col text-sm py-8 px-4;
+    @apply flex flex-col text-sm py-4 px-4;
 
-    a {
-      @apply text-white;
-    }
 
     a:not([target="_blank"]) {
       @apply underline;
     }
   }
 
-  .card.external {
-    min-width: 90px;
+  .external {
+    @apply flex rounded;
     border: 1px solid $color_accent2;
   }
 
   .tag {
-    @apply text-xs px-2 py-1 rounded shadow;
+    @apply text-xs px-2 py-1 rounded-lg shadow;
     background-color: $color_bg;
   }
 
@@ -223,31 +230,6 @@ $color_neutral: #1A202C;
     .button {
       @apply py-0 font-normal;
     }
-  }
-
-  .page_examples section.highlights {
-
-    .card {
-      @apply mt-8;
-      background-color: $color_bg;
-    }
-
-    .card.highlight {
-
-      @apply grid grid-cols-1 grid-rows-2 w-full m-auto mt-4;
-      @apply md:w-2/3 md:grid-cols-2 md:grid-rows-1;
-      @apply bg-gradient-to-r from-forest-600 to-forest-800;
-
-      .content div {
-        @apply relative float-right;
-      }
-
-    }
-
-    .card.highlight:nth-child(2n+2) {
-      background-color: $color_neutral;
-    }
-
   }
 
   .jobForm {
