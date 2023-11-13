@@ -60,7 +60,7 @@ functions = "api/dist/functions"
 
 [[redirects]]
   from = "/newsletter"
-  to = "https://redwoodjs.us19.list-manage.com/subscribe/post?u=0c27354a06a7fdf4d83ce07fc&id=09f634eea4"
+  to = "https://mailchi.mp/redwoodjs/redwoodjs-newsletter"
   force = true
 
 [[redirects]]
@@ -151,7 +151,7 @@ functions = "api/dist/functions"
   from = "/reactsummit"
   to = "https://redwoodjs.notion.site/redwoodjs/React-Summit-5af495a07ba846ba995686dc9529357a"
   status = 301
-  force = true 
+  force = true
 
 [[redirects]]
   from = "/*"
