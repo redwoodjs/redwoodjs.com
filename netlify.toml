@@ -142,6 +142,18 @@ functions = "api/dist/functions"
   force = true
 
 [[redirects]]
+  from = "/react-summit"
+  to = "https://redwoodjs.notion.site/redwoodjs/React-Summit-5af495a07ba846ba995686dc9529357a"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/reactsummit"
+  to = "https://redwoodjs.notion.site/redwoodjs/React-Summit-5af495a07ba846ba995686dc9529357a"
+  status = 301
+  force = true 
+
+[[redirects]]
   from = "/*"
   to = "/200.html"
   status = 200
