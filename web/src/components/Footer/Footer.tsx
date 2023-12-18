@@ -6,7 +6,7 @@ const navigation = {
     },
     {
       name: 'Core Team',
-      href: 'https://github.com/redwoodjs/redwood#contributors',
+      href: 'https://github.com/redwoodjs/redwood#core-team-leadership',
     },
     {
       name: 'All Contributors',
