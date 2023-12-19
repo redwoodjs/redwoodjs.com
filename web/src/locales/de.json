@@ -1,0 +1,63 @@
+{
+  "ExamplesPage": {
+    "canon": {
+      "description": "Diese Community-Beispiele zeigen dir, wie das geht<italic> kreativ</italic>sein kannst mit <bold> Redwood</bold> und aus vielen Situationen das Beste herausholen",
+      "title": "Community's Standouts!"
+    },
+    "community": {
+      "title": "Aber warte! Es gibt noch viel mehr..."
+    },
+    "contact": {
+      "action": "Erreiche uns",
+      "guidelines": "Seien Sie nett, lesen Sie die Richtlinien!",
+      "subtitle": "Bitte nimm dir  die Zeit, sich und Ihre Arbeit im Bereich <b>„Show and Tell“</b> des Forums vorzustellen.<br /> Wir streben nach einer entspannten und einladenden Atmosphäre – teile uns also gerne alles mit, was Dir relevant erscheint, und scheue Dich nicht, um Hilfe zu bitten.",
+      "title": "Sind Sie der Autor eines großartigen Redwood-Beispiels?"
+    },
+    "filters": {
+      "browseBy": "Stöber weiter<straight> Großartigkeit</straight> von",
+      "clear": "Klar",
+      "text": "Du suchst nach:"
+    },
+    "subtitle": "Beispiele dafür, was die RedwoodJS-Community mit dem Framework erreichen kann.",
+    "title": "<teal>RedwoodJS</teal> Beispiele"
+  },
+  "HomePage": {
+    "hero": {
+      "links": {
+        "docs": "Lese die Docs",
+        "tutorial": "Starte das Tutorial"
+      },
+      "text": "<strong>Versende  heute mit Architektur von morgen.</strong> RedwoodJS bietet Bereitstellungsunterstützung für Netlify, Vercel, Render.com, AWS und mehr. Stellen Sie serverlos oder servervoll bereit und skalieren Sie von null Servern auf tausend. Basierend auf <strong>React</strong> , <strong>GraphQL</strong> und <strong>Prisma</strong> , mit vollständiger <strong>TypeScript-</strong> Unterstützung und <strong>Webpack/Babel,</strong> sofort einsatzbereit, ohne Konfiguration. Redwood bietet Dir den Workflow, den Du liebst, aber mit einfachen Konventionen und Helfern, um Dein Erlebnis noch besser zu machen.",
+      "title": "Das JS App Framework<break /> für Startups"
+    },
+    "info": "Finde mich",
+    "link": "Link zu mir mit",
+    "route": "Meine Standardroute ist benannt",
+    "title": "Startseite"
+  },
+  "SocialLink": {
+    "Field": {
+      "addLink": "Füge Dein $t(SocialLink.platforms. {{ platform } }) sozialen Link hinzu",
+      "field": "$t(SocialLink.platforms. {{ platform } }) sozialer Link",
+      "placeholder": {
+        "discord": "Link zu einem Discord-Profil oder Server",
+        "github": "Link zu einer GitHub-Organisation, einem GitHub-Profil oder einem Repository",
+        "linkedin": "Link zu einem LinkedIn-Job oder -Profil",
+        "productHunt": "Link zu einem Product Hunt-Beitrag oder -Profil",
+        "twitter": "Link zu einem Twitter-Profil"
+      },
+      "removeLink": "Entfern den sozialen Link $t(SocialLink.platforms. {{ platform } }).",
+      "select": "Wähle einen sozialen Link aus"
+    },
+    "platforms": {
+      "discord": "Discord",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "productHunt": "Product Hunt",
+      "twitter": "Twitter"
+    }
+  },
+  "Welcome to RedwoodJS": "Willkommen bei RedwoodJS",
+  "info": "Dies ist Ihre Übersetzungsdatei",
+  "see": "https://www.i18next.com/translation-function/essentials"
+}
