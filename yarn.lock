@@ -2732,13 +2732,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@headlessui/react@npm:1.7.3":
-  version: 1.7.3
-  resolution: "@headlessui/react@npm:1.7.3"
+"@headlessui/react@npm:1.7.18":
+  version: 1.7.18
+  resolution: "@headlessui/react@npm:1.7.18"
+  dependencies:
+    "@tanstack/react-virtual": ^3.0.0-beta.60
+    client-only: ^0.0.1
   peerDependencies:
     react: ^16 || ^17 || ^18
     react-dom: ^16 || ^17 || ^18
-  checksum: e7182ee172c31e42b40c9f7e3e150b242eba4da64bc2333ac88a9f082377680df46cc4ef83690c7dec4934afceb12c2095ec6f68d45b20359a193e58c2a577cb
+  checksum: 2d88d10874879182d4b9ed9a7779266032214034481129ba544e858d3624c8d12333e6a9d9d8263f2f116bc823bcfd43a2d1f69800fbf6a47b34d989370346e5
   languageName: node
   linkType: hard
 
@@ -5429,6 +5432,25 @@ __metadata:
   dependencies:
     defer-to-connect: ^1.0.1
   checksum: 0594140e027ce4e98970c6d176457fcbff80900b1b3101ac0d08628ca6d21d70e0b94c6aaada94d4f76c1423fcc7195af83da145ce0fd556fc0595ca74a17b8b
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-virtual@npm:^3.0.0-beta.60":
+  version: 3.0.1
+  resolution: "@tanstack/react-virtual@npm:3.0.1"
+  dependencies:
+    "@tanstack/virtual-core": 3.0.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 2b9464dab8a975734b651211402a4eaf10e4ae6d9570138576891db350cfabe11e444fea8f17ef0b26ef8ede0adc230bec9c8fe859e61ca66147831076b77bb2
+  languageName: node
+  linkType: hard
+
+"@tanstack/virtual-core@npm:3.0.0":
+  version: 3.0.0
+  resolution: "@tanstack/virtual-core@npm:3.0.0"
+  checksum: d0899fe470b43f80a2ccc567a01138cc015900f13d91b82abc784fc7bc46419e9c8b99c102a5c6ee76d15933db61aecc68c0ae8e92e9cb9ded9ae2f51a01cf4c
   languageName: node
   linkType: hard
 
@@ -9286,6 +9308,13 @@ __metadata:
   version: 3.0.0
   resolution: "cli-width@npm:3.0.0"
   checksum: 125a62810e59a2564268c80fdff56c23159a7690c003e34aeb2e68497dccff26911998ff49c33916fcfdf71e824322cc3953e3f7b48b27267c7a062c81348a9a
+  languageName: node
+  linkType: hard
+
+"client-only@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "client-only@npm:0.0.1"
+  checksum: 9d6cfd0c19e1c96a434605added99dff48482152af791ec4172fb912a71cff9027ff174efd8cdb2160cc7f377543e0537ffc462d4f279bc4701de3f2a3c4b358
   languageName: node
   linkType: hard
 
@@ -24911,7 +24940,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "web@workspace:web"
   dependencies:
-    "@headlessui/react": 1.7.3
+    "@headlessui/react": 1.7.18
     "@heroicons/react": ^1.0.6
     "@redwoodjs/auth": ^1.5.1
     "@redwoodjs/forms": ^1.5.1
