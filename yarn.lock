@@ -21768,15 +21768,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass-loader@npm:13.1.0":
-  version: 13.1.0
-  resolution: "sass-loader@npm:13.1.0"
+"sass-loader@npm:13.3.3":
+  version: 13.3.3
+  resolution: "sass-loader@npm:13.3.3"
   dependencies:
-    klona: ^2.0.4
     neo-async: ^2.6.2
   peerDependencies:
     fibers: ">= 3.1.0"
-    node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
+    node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
     sass: ^1.3.0
     sass-embedded: "*"
     webpack: ^5.0.0
@@ -21789,7 +21788,7 @@ __metadata:
       optional: true
     sass-embedded:
       optional: true
-  checksum: e69071a91e38154d75743b610682b2b6ab156b8712ab840146b55e8c7bc0267d2ee6dfc335ac8fbf62578bafc04a7c9b202aa8dd3796b0f1400aba9084289848
+  checksum: 5e955a4ffce35ee0a46fce677ce51eaa69587fb5371978588c83af00f49e7edc36dcf3bb559cbae27681c5e24a71284463ebe03a1fb65e6ecafa1db0620e3fc8
   languageName: node
   linkType: hard
 
@@ -24935,7 +24934,7 @@ __metadata:
     react-i18next: 11.18.6
     react-markdown: ^8.0.0
     sass: ^1.49.7
-    sass-loader: 13.1.0
+    sass-loader: 13.3.3
     tailwindcss: ^3.0.23
   languageName: unknown
   linkType: soft
