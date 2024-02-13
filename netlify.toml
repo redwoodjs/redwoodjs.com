@@ -17,6 +17,12 @@ functions = "api/dist/functions"
   port = 8888
 
 [[redirects]]
+  from = "/sitemap.xml"
+  to = "https://redwoodjs-docs.netlify.app/sitemap.xml"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/docs/*"
   to = "https://redwoodjs-docs.netlify.app/docs/:splat"
   status = 200
